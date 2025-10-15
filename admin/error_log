@@ -1,0 +1,9 @@
+[05-Dec-2024 11:50:03 Asia/Kolkata] PHP Warning:  move_uploaded_file(../uploads/banner/banner_67502f471b6307.39801728.png): failed to open stream: No such file or directory in /home/webcreatah/newrajaneyecare.companyonline.in/admin/update_banner.php on line 19
+[05-Dec-2024 11:50:03 Asia/Kolkata] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpWGJ5uu' to '../uploads/banner/banner_67502f471b6307.39801728.png' in /home/webcreatah/newrajaneyecare.companyonline.in/admin/update_banner.php on line 19
+[09-Sep-2025 13:04:56 UTC] PHP Warning:  Undefined variable $footer_text in /home/webcreatah/scansworld.companyonline.in/admin/include/footer.php on line 16
+[09-Sep-2025 13:05:00 UTC] PHP Warning:  Undefined variable $footer_text in /home/webcreatah/scansworld.companyonline.in/admin/include/footer.php on line 16
+[09-Sep-2025 13:05:02 UTC] PHP Warning:  Undefined variable $footer_text in /home/webcreatah/scansworld.companyonline.in/admin/include/footer.php on line 16
+[12-Sep-2025 08:47:53 UTC] PHP Warning:  Undefined variable $footer_text in /home/webcreatah/scansworld.companyonline.in/admin/include/footer.php on line 16
+[22-Sep-2025 09:01:22 UTC] PHP Warning:  Undefined variable $footer_text in /home/webcreatah/scansworld.companyonline.in/admin/include/footer.php on line 16
+[22-Sep-2025 09:29:06 UTC] PHP Warning:  Undefined variable $footer_text in /home/webcreatah/scansworld.companyonline.in/admin/include/footer.php on line 16
+[13-Oct-2025 09:17:17 UTC] PHP Warning:  Undefined variable $footer_text in /home/webcreatah/scansworld.companyonline.in/admin/include/footer.php on line 16

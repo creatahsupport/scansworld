@@ -1,0 +1,15 @@
+   <script src="<?php echo $url_config ?>/js/jquery-3.6.0.min.js"></script>
+    <script src="<?php echo $url_config ?>/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="<?php echo $url_config ?>/js/bootstrap.min.js"></script> 
+    <script src="<?php echo $url_config ?>/js/jquery.easing.js"></script>    
+    <script src="<?php echo $url_config ?>/js/jquery-waypoints.js"></script>    
+    <script src="<?php echo $url_config ?>/js/jquery-validate.js"></script> 
+    <script src="<?php echo $url_config ?>/js/jquery.prettyPhoto.js"></script>
+    <script src="<?php echo $url_config ?>/js/slick.min.js"></script>
+    <script src="<?php echo $url_config ?>/js/numinate.min.js"></script>
+    <script src="<?php echo $url_config ?>/js/imagesloaded.min.js"></script>
+    <script src="<?php echo $url_config ?>/js/jquery-isotope.js"></script>
+    <script src="<?php echo $url_config ?>/js/jquery.event.move.js"></script>
+    <script src="<?php echo $url_config ?>/js/jquery.twentytwenty.js"></script>
+    <script src="<?php echo $url_config ?>/js/main.js"></script>
+    <script src="<?php echo $url_config ?>/js/common.js"></script>

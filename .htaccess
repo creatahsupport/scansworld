@@ -1,0 +1,39 @@
+Options +FollowSymLinks -MultiViews
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Force HTTPS if not already using HTTPS (but only once)
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+    # Prevent rewrite loop by excluding already rewritten URLs (e.g., *.php)
+    RewriteCond %{REQUEST_URI} !\.php$
+
+    # If the request is not for an existing directory, rewrite to .php only if a PHP file exists
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}.php -f
+    RewriteRule ^([^/]+)$ $1.php [L,QSA]
+
+    # Rule for blog with non-numeric slug (e.g., /blog/slug)
+      RewriteRule ^blog_category/page/([0-9]+)/?$  blog_category.php?page=$1 [NC,QSA,L]
+    RewriteRule ^blog/([^/]+)/page/([0-9]+)/?$ blog.php?bids=$1&page=$2 [NC,QSA,L]
+    RewriteRule ^blog/([^/]+)/?$ blog.php?bids=$1 [NC,QSA,L]
+    RewriteRule ^blog/page/([0-9]+)/?$  blog.php?page=$1 [NC,QSA,L] 
+    RewriteRule ^blog-details/([^/]+)/?$ blog-details.php?bid=$1 [NC,QSA,L]
+    RewriteRule ^blog_search/([^/]+)$ blog_search.php?q=$1 [L,QSA]
+    RewriteRule ^blog_search/([^/]+)/page/([0-9]+)/?$ blog_search.php?q=$1&page=$2 [NC,QSA,L]
+    RewriteRule ^gallery/page/([0-9]+)/?$  gallery.php?page=$1 [NC,QSA,L]
+    RewriteRule ^testimonials/page/([0-9]+)/?$  testimonials.php?page=$1 [NC,QSA,L]
+    RewriteRule ^news-and-events/page/([0-9]+)/?$  news-and-events.php?page=$1 [NC,QSA,L]
+    RewriteRule ^news-and-events/([^/]+)/?$ news-and-events-details.php?slug=$1 [NC,QSA,L]
+    RewriteRule ^our-doctors/([^/]+)/?$ doctor_details.php?slugs=$1 [NC,QSA,L]
+    RewriteRule ^our-doctors/page/([0-9]+)/?$  our-doctors.php?page=$1 [NC,QSA,L]
+    RewriteRule ^publications/page/([0-9]+)/?$  publications.php?page=$1 [NC,QSA,L]
+    RewriteRule ^publications/([^/]+)/?$ publication_details.php?bids=$1 [NC,QSA,L]
+    
+    RewriteRule ^book-appointment-thanks/([0-9]+)$ book-appointment-thanks.php?id=$1 [NC,QSA,L]
+
+    
+
+</IfModule>
