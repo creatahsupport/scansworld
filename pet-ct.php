@@ -68,7 +68,7 @@
               <h3 class="fw-semibold">Advanced Imaging with Minimal Radiation Exposure for Your Safety</h3>
               <p><b>Experience the Future of Diagnostic Imaging: Faster, Safer, and More Accurate.</b> Our new <b>digital PET CT</b> system offers upto <b>3x faster scans</b> and <b>significantly lower radiation exposure</b> compared to conventional systems. With faster results, less radiation, and the same high-precision imaging, we provide the most advanced care — with your safety and comfort in mind.
               </p>
-<p>1. <strong>Faster Scans, better Precision </strong>: Our new digital 160 slice PET CT scan is  upto 70% faster than conventional systems, providing you with quicker, more efficient results with exceptional image quality</p>
+<p>1. <strong>Faster Scans, Better Precision </strong>: Our new digital 160 slice PET CT scan is  upto 70% faster than conventional systems, providing you with quicker, more efficient results with exceptional image quality</p>
 <p>2. <strong>Reduced Radiation Exposure</strong>: We use the latest digital technology to significantly  reduce radiation levels, providing a safer imaging experience without compromising on the quality or accuracy of your diagnosis.</p>
 <p>3. <strong>Increased Safety</strong>: By minimizing the amount of medicine needed for the scan, we ensure a safer and more comfortable experience for patients, especially those who require repeat imaging</p>
           

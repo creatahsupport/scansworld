@@ -28,9 +28,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !isset($_POST['loaddetails'])) {
     }
 
     // Insert using prepared statements
-    $sql = "INSERT INTO book_appointment 
-            (patient_name, phone, appointment_date, branch, appointment_time, service, enquiry_date, status, fees) 
-            VALUES (?, ?, ?, ?, ?, ?, ?, 0, 0)";
+    $sql = "INSERT INTO book_appointment
+(patient_name, phone, appointment_date, branch, appointment_time, service, enquiry_date, status, fees)
+VALUES (?, ?, ?, ?, ?, ?, ?, 0, 0)";
+
     if ($stmt = $con->prepare($sql)) {
         $stmt->bind_param(
             "sssssss",
@@ -111,19 +112,27 @@ if (isset($_POST['loaddetails'])) {
     }
 
     // Robust SELECT: shows branch/service name if join works; otherwise falls back to raw values
-$sql = "SELECT 
-          b.*,
-         COALESCE(
-  (SELECT branch_name FROM branch WHERE id = b.branch LIMIT 1),
-  CASE WHEN b.branch = 0 THEN 'Not Selected' ELSE b.branch END
-) AS branch_display,
-COALESCE(
-  (SELECT service_name FROM service WHERE id = b.service LIMIT 1),
-  CASE WHEN b.service = 0 THEN 'Not Selected' ELSE b.service END
-) AS service_display
+$sql = "
+SELECT 
+  b.id,
+  b.patient_name,
+  b.phone,
+  COALESCE(br.branch_name, b.branch, 'Not Selected') AS branch_display,
+  COALESCE(s.service_name, b.service, 'Not Selected') AS service_display,
+  b.enquiry_date,
+  b.appointment_date,
+  b.appointment_time,
+  b.status,
+  b.follow_up_date,
+  b.fees,
+  b.reason
+FROM book_appointment b
+LEFT JOIN branch br ON br.id = b.branch
+LEFT JOIN service s ON s.id = b.service
+WHERE 1=1
+";
 
-        FROM book_appointment b
-        WHERE 1=1";
+
 
 
     if ($filterdate && $converteddate && $converteddate1) {

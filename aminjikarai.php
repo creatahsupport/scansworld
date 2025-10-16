@@ -95,9 +95,11 @@ $latest_doctors = mysqli_query($con, $doctors_query);
                                 <li><i class="fas fa-shield-check text-theme2"></i> Automated Laboratory</li>
                             </ul>
                         </div>
+                         <a href="book-appointment" class="th-btn mt-3">Online Appointment</a>
                     </div>
+                    
                     <div>
-                        <a href="book-appointment" class="th-btn">Online Appointment</a>
+                       
                     </div>
                 </div>
                 <div class="col-xl-6 mb-40 mb-xl-0">

@@ -44,10 +44,10 @@
   <div class="breadcumb-wrapper " data-bg-src="assets/scan-world/breadcrumb.png">
     <div class="container">
       <div class="breadcumb-content">
-        <h1 class="breadcumb-title text-white">Digital Xray </h1>
+        <h1 class="breadcumb-title text-white">Digital X-ray </h1>
         <ul class="breadcumb-menu">
           <li><a href="./" class="text-white">Home</a></li>
-          <li>Digital Xray</li>
+          <li>Digital X-ray</li>
         </ul>
       </div>
     </div>
@@ -57,9 +57,9 @@
       <div class="row flex-row-reverse">
         <div class="col-xxl-8 col-lg-8">
           <div class="page-single single-right mb-30">
-            <h3 class="fw-semibold">Digital Xray</h3>
+            <h3 class="fw-semibold">Digital X-ray</h3>
             <!-- <div class="page-img">
-              <img src="assets/scan-world/services/digital-xray.webp" alt="Service Image">
+              <img src="assets/scan-world/services/digital-X-ray.webp" alt="Service Image">
             </div> -->
             <div class="page-content">
              
@@ -68,7 +68,7 @@
               <h3 class="h5 mt-1">Common uses of X-rays include :</h3>
               <div class="checklist mb-25">
                 <ul>
-                  <li><i class="fas fa-check-circle"></i> Full limb / full spine X ray</li>
+                  <li><i class="fas fa-check-circle"></i> Full limb / full spine X-ray</li>
                   <li><i class="fas fa-check-circle"></i> Bone fractures and joint problems</li>
                   <li><i class="fas fa-check-circle"></i> Chest X-rays for lung and heart conditions</li>
                   <li><i class="fas fa-check-circle"></i> Dental X-rays for assessing oral health</li>

@@ -83,7 +83,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
                         </div>
                     </div>
                     <div>
-                        <a href="book-appointment" class="th-btn">Online Appointment</a>
+                        <a href="book-appointment" class="th-btn mb-3">Online Appointment</a>
                     </div>
                 </div>
                 <div class="col-xl-6 mb-40 mb-xl-0">

@@ -10,9 +10,9 @@ $blog_image_path = "uploads/blog/";
 $blog_query = "SELECT * FROM blog WHERE del_i = 0 ORDER BY id DESC LIMIT 20";
 $latest_blog = mysqli_query($con, $blog_query);
 
-// Fetch latest 20 doctors
+// ✅ Fetch only active doctors (status = 1)
 $doctor_image_path = "uploads/doctor_images/";
-$doctors_query = "SELECT * FROM doctors WHERE del_i = 0 ORDER BY id ASC LIMIT 20";
+$doctors_query = "SELECT * FROM doctors WHERE del_i = 0 AND status = 1 ORDER BY id ASC LIMIT 20";
 $latest_doctors = mysqli_query($con, $doctors_query);
 ?>
 
@@ -286,7 +286,15 @@ $latest_doctors = mysqli_query($con, $doctors_query);
     </div>
   </section>
 
+<style>
 
+  @media screen and (max-width: 767px) {
+     h3.box-title{
+    text-align: center
+  } 
+    
+  }
+</style>
   <section class="overflow-hidden bg-smoke space" id="service-sec" data-bg-src="assets/scan-world/home/service_bg_1.webp">
     <div class="container">
       <div class="row justify-content-center">
@@ -300,7 +308,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
       <div class="row gy-4 justify-content-center">
         <div class="container">
           <div class="row">
-            <div class="col-md-3 col-sm-6 col-12">
+            <div class="col-md-3 col-sm-6 col-6">
               <a href="mri-scan">
                 <div class="feature-box text-center">
                   <div class="box-icon">
@@ -312,8 +320,8 @@ $latest_doctors = mysqli_query($con, $doctors_query);
                 </div>
               </a>
             </div>
-            <div class="col-md-3 col-sm-6 col-12">
-              <a href="ct-scan">
+            <div class="col-md-3 col-sm-6 col-6">
+              <a href="pet-ct">
                 <div class="feature-box text-center">
                   <div class="box-icon">
                     <img src="assets/scan-world/service-icon/ct-scan.png" alt="icon">
@@ -324,7 +332,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
                 </div>
               </a>
             </div>
-            <div class="col-md-3 col-sm-6 col-12">
+            <div class="col-md-3 col-sm-6 col-6">
               <a href="160-slice-cardiac-ct">
               <div class="feature-box text-center">
                 <div class="box-icon">
@@ -336,7 +344,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
               </div>
               </a>
             </div>
-            <div class="col-md-3 col-sm-6 col-12">
+            <div class="col-md-3 col-sm-6 col-6">
               <a href="gamma-camera">
                 <div class="feature-box text-center">
                   <div class="box-icon">
@@ -351,7 +359,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
 
           </div>
           <div class="row">
-            <div class="col-md-3 col-sm-6 col-12">
+            <div class="col-md-3 col-sm-6 col-6">
               <a href="multislice-ct-scan">
                 <div class="feature-box text-center">
                   <div class="box-icon">
@@ -364,7 +372,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
               </a>
             </div>
 
-            <div class="col-md-3 col-sm-6 col-12">
+            <div class="col-md-3 col-sm-6 col-6">
               <a href="digital-mammography">
                 <div class="feature-box text-center">
                   <div class="box-icon">
@@ -376,7 +384,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
                 </div>
               </a>
             </div>
-            <div class="col-md-3 col-sm-6 col-12">
+            <div class="col-md-3 col-sm-6 col-6">
               <a href="color-doppler">
                 <div class="feature-box text-center">
                   <div class="box-icon">
@@ -388,8 +396,8 @@ $latest_doctors = mysqli_query($con, $doctors_query);
                 </div>
               </a>
             </div>
-               <div class="col-md-3 col-sm-6 col-12">
-              <a href="color-doppler">
+               <div class="col-md-3 col-sm-6 col-6">
+              <a href="echo">
                 <div class="feature-box text-center">
                   <div class="box-icon">
                     <img src="assets/scan-world/service-icon/radiotherapy.png" alt="icon">
@@ -401,7 +409,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
               </a>
             </div>
           
-            <div class="col-md-3 col-sm-6 col-12">
+            <div class="col-md-3 col-sm-6 col-6">
               <a href="eeg">
                 <div class="feature-box text-center">
                   <div class="box-icon">
@@ -413,7 +421,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
                 </div>
               </a>
             </div>
-            <div class="col-md-3 col-sm-6 col-12">
+            <div class="col-md-3 col-sm-6 col-6">
               <a href="eeg">
                 <div class="feature-box text-center">
                   <div class="box-icon">
@@ -425,7 +433,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
                 </div>
               </a>
             </div>
-            <div class="col-md-3 col-sm-6 col-12">
+            <div class="col-md-3 col-sm-6 col-6">
               <a href="dexa">
                 <div class="feature-box text-center">
                   <div class="box-icon">
@@ -437,7 +445,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
                 </div>
               </a>
             </div>
-            <div class="col-md-3 col-sm-6 col-12">
+            <div class="col-md-3 col-sm-6 col-6">
               <a href="digital-xray">
                 <div class="feature-box text-center">
                   <div class="box-icon">
@@ -450,7 +458,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
               </a>
             </div>
 
-            <div class="col-md-3 col-sm-6 col-12">
+            <div class="col-md-3 col-sm-6 col-6">
               <a href="opg">
                 <div class="feature-box text-center">
                   <div class="box-icon">
@@ -463,7 +471,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
               </a>
             </div>
 
-          <div class="col-md-3 col-sm-6 col-12">
+          <div class="col-md-3 col-sm-6 col-6">
             <a href="colonoscopy-and-endoscopy">
               <div class="feature-box text-center">
                 <div class="box-icon">
@@ -476,7 +484,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
             </a>
           </div>
          
-            <div class="col-md-3 col-sm-6 col-12">
+            <div class="col-md-3 col-sm-6 col-6">
               <a href="fanc">
                 <div class="feature-box text-center">
                   <div class="box-icon">
@@ -489,7 +497,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
               </a>
             </div>
        
-            <div class="col-md-3 col-sm-6 col-12">
+            <div class="col-md-3 col-sm-6 col-6">
               <a href="automated-laboratory">
               <div class="feature-box text-center">
                 <div class="box-icon">
@@ -568,33 +576,51 @@ $latest_doctors = mysqli_query($con, $doctors_query);
           </h2>
           <p class="box-text text-white"><b>Over 1 Crore Patients Served</b></p>
         </div>
-
+ <div class="divider"></div>
+        <div class="counter-card">
+          <h2 class="box-number">
+            <img src="assets/scan-world/analytics.png" alt="">
+          </h2>
+          <p class="box-text text-white"><b>Advanced Reporting Systems</b></p>
+        </div>
       </div>
     </div>
 
-    <section class="space">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-6 col-md-8">
-            <div class="title-area text-center pt-5">
-              <span class="sub-title"><img src="assets/scan-world/icon.webp" alt="Icon">Our Experts</span>
-              <h2 class="sec-title">Meet Our Expert Doctors</h2>
-            </div>
-          </div>
+<section class="space">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6 col-md-8">
+        <div class="title-area text-center pt-5">
+          <span class="sub-title">
+            <img src="assets/scan-world/icon.webp" alt="Icon">Our Experts
+          </span>
+          <h2 class="sec-title">Meet Our Expert Doctors</h2>
         </div>
-        <div class="slider-area">
-          <div class="swiper th-slider has-shadow" id="teamSlider3" data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"2"},"768":{"slidesPerView":"2"},"992":{"slidesPerView":"3"},"1200":{"slidesPerView":"4"}}}'>
-            <div class="swiper-wrapper">
-              <?php if ($latest_doctors->num_rows > 0) { ?>
-              <?php while ($row = $latest_doctors->fetch_assoc()) { ?>
+      </div>
+    </div>
+
+    <div class="slider-area">
+      <div class="swiper th-slider has-shadow" id="teamSlider3" data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":2},"768":{"slidesPerView":2},"992":{"slidesPerView":3},"1200":{"slidesPerView":4}}}'>
+        <div class="swiper-wrapper">
+          <?php if ($latest_doctors && $latest_doctors->num_rows > 0) { ?>
+            <?php while ($row = $latest_doctors->fetch_assoc()) { ?>
               <div class="swiper-slide">
                 <div class="th-team team-grid">
                   <div class="box-img">
-                    <img src="<?php echo htmlspecialchars($url_config . '/' . $doctor_image_path . $row['doctor_image']); ?>" alt="<?= htmlspecialchars($row['image_alttag']); ?>" title="<?= htmlspecialchars($row['image_title']); ?>">
+                    <img src="<?= htmlspecialchars($url_config . '/' . $doctor_image_path . $row['doctor_image']); ?>"
+                         alt="<?= htmlspecialchars($row['image_alttag']); ?>"
+                         title="<?= htmlspecialchars($row['image_title']); ?>">
                   </div>
                   <div class="box-content">
                     <h3 class="box-title">
-                      <a href="#" class="doctor-detail" data-name="<?= htmlspecialchars($row['doctor_name']); ?>" data-studies="<?= htmlspecialchars($row['doctor_studies']); ?>" data-image="<?= htmlspecialchars($url_config . '/' . $doctor_image_path . $row['doctor_image']); ?>" data-content="<?= htmlspecialchars($row['doctor_content']); ?>" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      <a href="#"
+                         class="doctor-detail"
+                         data-name="<?= htmlspecialchars($row['doctor_name']); ?>"
+                         data-studies="<?= htmlspecialchars($row['doctor_studies']); ?>"
+                         data-image="<?= htmlspecialchars($url_config . '/' . $doctor_image_path . $row['doctor_image']); ?>"
+                         data-content="<?= htmlspecialchars($row['doctor_content']); ?>"
+                         data-bs-toggle="modal"
+                         data-bs-target="#exampleModal">
                         <?= htmlspecialchars($row['doctor_name']); ?>
                       </a>
                     </h3>
@@ -602,23 +628,26 @@ $latest_doctors = mysqli_query($con, $doctors_query);
                   </div>
                 </div>
               </div>
-              <?php } ?>
-              <?php } else { ?>
-              <div class="col-12">
-                <div class="text-center" role="alert">
-                  No Data Found.
-                </div>
+            <?php } ?>
+          <?php } else { ?>
+            <div class="col-12">
+              <div class="text-center" role="alert">
+                No Data Found.
               </div>
-              <?php } ?>
-
-
             </div>
-          </div>
-          <button data-slider-prev="#teamSlider3" class="slider-arrow slider-prev"><i class="far fa-arrow-left"></i></button>
-          <button data-slider-next="#teamSlider3" class="slider-arrow slider-next"><i class="far fa-arrow-right"></i></button>
+          <?php } ?>
         </div>
       </div>
-    </section>
+
+      <button data-slider-prev="#teamSlider3" class="slider-arrow slider-prev">
+        <i class="far fa-arrow-left"></i>
+      </button>
+      <button data-slider-next="#teamSlider3" class="slider-arrow slider-next">
+        <i class="far fa-arrow-right"></i>
+      </button>
+    </div>
+  </div>
+</section>
 
     <section class="space" id="blog-sec" data-bg-src="assets/img/bg/blog_bg_1.jpg">
       <div class="container">
@@ -631,7 +660,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
           </div>
           <div class="col-lg-auto d-none d-lg-block">
             <div>
-              <a href="blog_category" class="th-btn">View All Blogs</a>
+              <a href="blog" class="th-btn">View All Blogs</a>
             </div>
           </div>
         </div>

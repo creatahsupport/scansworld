@@ -42,8 +42,7 @@ $latest_category = mysqli_query($con, $category_query);
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <?php include_once("seo.php");?>
-    
+    <title>Scans World | <?php echo htmlspecialchars($title); ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="apple-touch-icon" sizes="57x57" href="<?php echo $url_config ; ?>/assets/img/favicons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="<?php echo $url_config ; ?>/assets/img/favicons/apple-icon-60x60.png">
@@ -113,18 +112,21 @@ $latest_category = mysqli_query($con, $category_query);
                          
                             </div>
                             <h2 class="blog-title"><?php echo htmlspecialchars($title); ?></h2>
-                            <p><?php
-                            // Convert <oembed> tags to iframe for embedded videos
-                            $display_content = preg_replace_callback(
-                                '/<oembed\s+url="([^"]+)"><\/oembed>/i',
-                                function ($matches) {
-                                    $url = htmlspecialchars($matches[1], ENT_QUOTES);
-                                    return '<div class="video-container"><iframe width="560" height="315" src="' . $url . '" frameborder="0" allowfullscreen></iframe></div>';
-                                },
-                                $content
-                            );
-                            echo $display_content;
-                            ?></p>
+                            <?php
+// Convert <oembed> tags to iframe for embedded videos
+$display_content = preg_replace_callback(
+    '/<oembed\s+url="([^"]+)"><\/oembed>/i',
+    function ($matches) {
+        $url = htmlspecialchars($matches[1], ENT_QUOTES);
+        return '<div class="video-container"><iframe width="560" height="315" src="' . $url . '" frameborder="0" allowfullscreen></iframe></div>';
+    },
+    $content
+);
+
+// ✅ Output CKEditor HTML directly — don't wrap in <p> or escape
+echo stripslashes($display_content);
+?>
+
                           
                         </div>
                     </div>
@@ -140,17 +142,21 @@ $latest_category = mysqli_query($con, $category_query);
                         </div>
                         <div class="widget widget_categories  ">
                             <h3 class="widget_title">Categories</h3>
-                            <ul>
-                            <?php if (mysqli_num_rows($latest_category) > 0) { ?>
-                                <?php while ($category = mysqli_fetch_assoc($latest_category)) { ?>
-                                <li>
-                                    <a href="<?php echo $url_config; ?>/blog/<?php echo urlencode($category['slug']); ?>"><?php echo htmlspecialchars(substr($category['name'], 0, 20)); ?></a>
-                                </li>
-                                <?php } ?>
-<?php } else { ?>
-    <li>No categories available.</li>
-<?php } ?>
-                            </ul>
+                         <ul>
+    <?php if (mysqli_num_rows($latest_category) > 0): ?>
+        <?php while ($category = mysqli_fetch_assoc($latest_category)): ?>
+            <li>
+                <a href="<?= $url_config; ?>/blog_category.php?bids=<?= urlencode($category['slug']); ?>"
+                   title="<?= htmlspecialchars($category['name']); ?>">
+                    <?= htmlspecialchars(mb_strimwidth($category['name'], 0, 20, '...')); ?>
+                </a>
+            </li>
+        <?php endwhile; ?>
+    <?php else: ?>
+        <li>No categories available.</li>
+    <?php endif; ?>
+</ul>
+
                         </div>
                         <div class="widget  ">
                             <h3 class="widget_title">Recent Posts</h3>

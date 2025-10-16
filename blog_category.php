@@ -4,47 +4,50 @@ include("includes/config.php");
 if (isset($_GET['bids'])) {
     $bids = mysqli_real_escape_string($con, $_GET["bids"]);
 
-    // Fetch category details using a prepared statement
-    $BLOGSQLS = "SELECT id, name, slug FROM categories WHERE slug = ? AND del_i = 0";
-    $stmt = mysqli_prepare($con, $BLOGSQLS);
-    mysqli_stmt_bind_param($stmt, "s", $bids);
-    mysqli_stmt_execute($stmt);
-    $BLOG_RESULTS = mysqli_stmt_get_result($stmt);
+    // 1. Get category details
+    $sqlCategory = "SELECT id, name, slug, category_image FROM categories WHERE slug = ? AND del_i = 0";
+    $stmtCategory = mysqli_prepare($con, $sqlCategory);
+    mysqli_stmt_bind_param($stmtCategory, "s", $bids);
+    mysqli_stmt_execute($stmtCategory);
+    $resCategory = mysqli_stmt_get_result($stmtCategory);
 
-    if ($BLOG_ROW = mysqli_fetch_assoc($BLOG_RESULTS)) {
+    if ($BLOG_ROW = mysqli_fetch_assoc($resCategory)) {
         $category_id = $BLOG_ROW['id'];
+        $category_name = $BLOG_ROW['name'];
+        $category_image = $BLOG_ROW['category_image'];
     } else {
         echo "<h1>Category not found!</h1>";
         exit;
     }
+    mysqli_stmt_close($stmtCategory);
 
-    mysqli_stmt_close($stmt); // Close the statement
-
+    // 2. Pagination setup
     $base_image = "uploads/blog/";
     $limit = 9;
-    $page = isset($_GET['page']) ? intval($_GET['page']) : 1;
+    $page = isset($_GET['page']) ? max(1, intval($_GET['page'])) : 1;
     $start = ($page - 1) * $limit;
 
-    // Fetch blogs for the category
-    $RECENTSQL = "SELECT * FROM blog WHERE category = ? AND del_i = 0 ORDER BY id DESC LIMIT ?, ?";
-    $stmt = mysqli_prepare($con, $RECENTSQL);
-    mysqli_stmt_bind_param($stmt, "iii", $category_id, $start, $limit);
-    mysqli_stmt_execute($stmt);
-    $RECENT_RESULT = mysqli_stmt_get_result($stmt);
+    // 3. Fetch blogs under this category
+    $sqlPosts = "SELECT * FROM blog WHERE category = ? AND del_i = 0 ORDER BY id DESC LIMIT ?, ?";
+    $stmtPosts = mysqli_prepare($con, $sqlPosts);
+    mysqli_stmt_bind_param($stmtPosts, "iii", $category_id, $start, $limit);
+    mysqli_stmt_execute($stmtPosts);
+    $RECENT_RESULT = mysqli_stmt_get_result($stmtPosts);
+    mysqli_stmt_close($stmtPosts);
 
-    // Get total number of posts for pagination
-    $totalPostsSQL = "SELECT COUNT(*) as total FROM blog WHERE category = ? AND del_i = 0";
-    $stmt = mysqli_prepare($con, $totalPostsSQL);
-    mysqli_stmt_bind_param($stmt, "i", $category_id);
-    mysqli_stmt_execute($stmt);
-    $totalPostsResult = mysqli_stmt_get_result($stmt);
-    $totalPosts = mysqli_fetch_assoc($totalPostsResult)['total'];
+    // 4. Count total blogs for pagination
+    $sqlCount = "SELECT COUNT(*) AS total FROM blog WHERE category = ? AND del_i = 0";
+    $stmtCount = mysqli_prepare($con, $sqlCount);
+    mysqli_stmt_bind_param($stmtCount, "i", $category_id);
+    mysqli_stmt_execute($stmtCount);
+    $resCount = mysqli_stmt_get_result($stmtCount);
+    $totalPosts = mysqli_fetch_assoc($resCount)['total'] ?? 0;
+    mysqli_stmt_close($stmtCount);
 
-    $totalPages = ceil($totalPosts / $limit);
+    $totalPages = max(1, ceil($totalPosts / $limit));
     $prevPage = ($page > 1) ? $page - 1 : false;
     $nextPage = ($page < $totalPages) ? $page + 1 : false;
 
-    mysqli_stmt_close($stmt); // Close statement
 } else {
     echo "<h1>Invalid request</h1>";
     exit;
@@ -57,7 +60,7 @@ if (isset($_GET['bids'])) {
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <?php include_once("seo.php");?>
+   <title> Scans World | <?= htmlspecialchars($category_name) ?> </title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicons/apple-icon-57x57.png">
@@ -92,70 +95,75 @@ if (isset($_GET['bids'])) {
 <body>
 <?php include 'header.php'; ?>
 
-    <div class="breadcumb-wrapper " data-bg-src="assets/scan-world/breadcrumb-blog.png">
-        <div class="container">
-            <div class="breadcumb-content">
-                <h1 class="breadcumb-title text-white">Blogs category</h1>
-                <ul class="breadcumb-menu">
-                    <li><a href="./" class="text-white">Home</a></li>
-                    <li>Blogs category</li>
-                </ul>
-            </div>
-        </div>
+<div class="breadcumb-wrapper" data-bg-src="assets/scan-world/breadcrumb-blog.png">
+  <div class="container">
+    <div class="breadcumb-content">
+      <h1 class="breadcumb-title text-white"><?= htmlspecialchars($category_name) ?></h1>
+      <ul class="breadcumb-menu">
+        <li><a href="./" class="text-white">Home</a></li>
+        <li><?= htmlspecialchars($category_name) ?></li>
+      </ul>
     </div>
+  </div>
+</div>
 
-    <section class="space" id="blog-sec" data-bg-src="assets/img/bg/blog_bg_1.jpg">
-    <div class="container">
-        <div class="row">
 
-        <?php if (mysqli_num_rows($RECENT_RESULT) > 0) { ?>
-                    <?php while ($RECENT_ROW = mysqli_fetch_array($RECENT_RESULT)) { ?>
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="blog-card">
-                    <div class="blog-img">
-                    <img src="<?php echo $url_config . '/' . $base_image . htmlspecialchars($RECENT_ROW['category_image']); ?>" 
-                                         alt="<?php echo htmlspecialchars($RECENT_ROW['name']); ?>" 
-                                         title="<?php echo htmlspecialchars($RECENT_ROW['name']); ?>">
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                           
-                            <a href="<?php echo $url_config; ?>/blog-details/<?= urlencode(htmlspecialchars($RECENT_ROW['slug'])); ?>"><i class="fal fa-calendar"></i><?php echo date('d-M-Y', strtotime($RECENT_ROW['created_date'])); ?></a>
-                        </div>
-                        <h3 class="box-title"><a href="<?php echo $url_config; ?>/blog-details/<?= urlencode(htmlspecialchars($RECENT_ROW['slug'])); ?>"><?php 
-                                                $title = htmlspecialchars($RECENT_ROW['name']);
-                                                echo (strlen($title) > 200) ? substr($title, 0, 200) . '...' : $title; 
-                                            ?></a></h3>
-                        <a href="<?php echo $url_config; ?>/blog-details/<?= urlencode(htmlspecialchars($RECENT_ROW['slug'])); ?>" class="th-btn btn-sm">Read More</a>
-                    </div>
+<section class="space" id="blog-sec">
+  <div class="container">
+    <div class="row">
+      <?php if ($RECENT_RESULT && mysqli_num_rows($RECENT_RESULT) > 0): ?>
+        <?php while ($RECENT_ROW = mysqli_fetch_assoc($RECENT_RESULT)): ?>
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="blog-card">
+              <div class="blog-img">
+                <?php 
+                $imageFile = !empty($RECENT_ROW['image']) ? $RECENT_ROW['image'] : $category_image;
+                $imgPath = $url_config . '/' . $base_image . htmlspecialchars($imageFile);
+                $altTag = htmlspecialchars($RECENT_ROW['image_alt_tag'] ?? $category_name);
+                $titleTag = htmlspecialchars($RECENT_ROW['image_title'] ?? $RECENT_ROW['title']);
+                ?>
+                <img src="<?= $imgPath ?>" alt="<?= $altTag ?>" title="<?= $titleTag ?>" loading="lazy">
+              </div>
+
+              <div class="blog-content">
+                <div class="blog-meta">
+                  <span><i class="fal fa-calendar"></i>
+                    <?= !empty($RECENT_ROW['created_date']) ? date('d M, Y', strtotime($RECENT_ROW['created_date'])) : 'Date not available'; ?>
+                  </span>
                 </div>
+                <h3 class="box-title">
+                  <a href="<?= $url_config; ?>/blog-details/<?= urlencode($RECENT_ROW['slug']); ?>">
+                    <?= htmlspecialchars(mb_strimwidth($RECENT_ROW['title'], 0, 60, '...')); ?>
+                  </a>
+                </h3>
+                <a href="<?= $url_config; ?>/blog-details/<?= urlencode($RECENT_ROW['slug']); ?>" class="th-btn btn-sm">Read More</a>
+              </div>
             </div>
-   <?php } ?>
-                <?php } else { ?>
-                    <div class="col-12">
-                        <div class="text-center" role="alert">
-                            No Data Found.
-                        </div>
-                    </div>
-                <?php } ?>
-        </div>
-        
+          </div>
+        <?php endwhile; ?>
+      <?php else: ?>
+        <div class="col-12 text-center"><p>No blogs found in this category.</p></div>
+      <?php endif; ?>
     </div>
-                 <div class="th-pagination text-center">
-                         <ul>
-                <?php if ($prevPage) { ?>
-                    <li><a href="?page=<?= $prevPage ?>"><i class="fas fa-angle-left"></i></a></li>
-                <?php } ?>
-                
-                <?php for ($i = 1; $i <= $totalPages; $i++) { ?>
-                    <li><a href="?page=<?= $i ?>" class="<?= ($i == $page) ? 'active' : '' ?>"> <?= $i ?> </a></li>
-                <?php } ?>
-                
-                <?php if ($nextPage) { ?>
-                    <li><a href="?page=<?= $nextPage ?>"><i class="fas fa-angle-right"></i></a></li>
-                <?php } ?>
-            </ul>
-                    </div>
+
+    <?php if ($totalPages > 1): ?>
+      <div class="th-pagination text-center">
+        <ul>
+          <?php if ($prevPage): ?>
+            <li><a href="?bids=<?= urlencode($bids) ?>&page=<?= $prevPage ?>"><i class="fas fa-angle-left"></i></a></li>
+          <?php endif; ?>
+
+          <?php for ($i = 1; $i <= $totalPages; $i++): ?>
+            <li><a href="?bids=<?= urlencode($bids) ?>&page=<?= $i ?>" class="<?= ($i == $page) ? 'active' : '' ?>"><?= $i ?></a></li>
+          <?php endfor; ?>
+
+          <?php if ($nextPage): ?>
+            <li><a href="?bids=<?= urlencode($bids) ?>&page=<?= $nextPage ?>"><i class="fas fa-angle-right"></i></a></li>
+          <?php endif; ?>
+        </ul>
+      </div>
+    <?php endif; ?>
+  </div>
 </section>
 
 

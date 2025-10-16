@@ -13,20 +13,20 @@
           <a href="#">Our Services</a>
           <ul class="sub-menu">
             <li><a href="<?php echo $url_config; ?>/mri-scan">3 Tesla MRI</a></li>
-            <li><a href="<?php echo $url_config; ?>/ct-scan">160 Slice Digital PET CT</a></li>
-            <li><a href="<?php echo $url_config; ?>#">160 Slice Cardiac CT / Coronary angiogram</a></li>
-            <li><a href="<?php echo $url_config; ?>#">Nuclear Scans / Gamma camera</a></li>
+            <li><a href="<?php echo $url_config; ?>/pet-ct">160 Slice Digital PET CT</a></li>
+            <li><a href="<?php echo $url_config; ?>/160-slice-cardiac-ct">160 Slice Cardiac CT / Coronary angiogram</a></li>
+            <li><a href="<?php echo $url_config; ?>/gamma-camera">Nuclear Scans / Gamma camera</a></li>
             <li><a href="<?php echo $url_config; ?>/ct-scan">Multislice CT Scan</a></li>
             <li><a href="<?php echo $url_config; ?>/digital-mammography">Digital Mammography</a></li>
-            <li><a href="<?php echo $url_config; ?>#">Ultra Sonogram 2D/4D / Fibro Scan / Color Doppler</a></li>
+            <li><a href="<?php echo $url_config; ?>/color-doppler">Ultra Sonogram 2D/4D / Fibro Scan / Color Doppler</a></li>
             <li><a href="<?php echo $url_config; ?>/echo">ECHO / ECG / Treadmill / Holter</a></li>
             <li><a href="<?php echo $url_config; ?>/eeg">EEG / EMG / NCS / PFT</a></li>
             <li><a href="<?php echo $url_config; ?>/dexa">Bone Mineral Densitometry / DEXA</a></li>
             <li><a href="<?php echo $url_config; ?>/digital-xray">Digital X-Ray</a></li>
             <li><a href="<?php echo $url_config; ?>/opg">OPG </a></li>
             <li><a href="<?php echo $url_config; ?>/colonoscopy-and-endoscopy">Endoscopy / Colonoscopy</a></li>
-            <li><a href="<?php echo $url_config; ?>#">Image-guided biopsy /FNAC / Drainage procedures</a></li>
-            <li><a href="<?php echo $url_config; ?>#">Automated Laboratory</a></li>
+            <li><a href="<?php echo $url_config; ?>/fnac">Image-guided biopsy /FNAC / Drainage procedures</a></li>
+            <li><a href="<?php echo $url_config; ?>/automated-laboratory">Automated Laboratory</a></li>
           </ul>
         </li>
         <li><a href="<?php echo $url_config; ?>/master-health-check-packages">Health Packages</a></li>
@@ -162,7 +162,7 @@
           <div class="col-auto">
             <div class="header-button">
 
-              <a href="book-appointment" class="th-btn">Online Appointment</a>
+              <a href="<?php echo $url_config; ?>/book-appointment" class="th-btn">Online Appointment</a>
 
               <button type="button" class="th-menu-toggle d-block d-lg-none"><i class="far fa-bars"></i></button>
             </div>

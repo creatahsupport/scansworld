@@ -78,12 +78,12 @@
                 <input type="text" class="form-control" name="title" value="<?= $title ?>" required placeholder="Name" aria-label="Title" aria-describedby="basic-addon1">
                 </div>
               </div>
-              <div class="col-sm-4">
+              <!-- <div class="col-sm-4">
                 <div class="mb-3">
                 <label class="form-label">Review</label>
                 <input type="text" class="form-control" name="review" value="<?= $review ?>" required placeholder="Review" aria-label="Review" aria-describedby="basic-addon1">
                 </div>
-              </div>
+              </div> -->
               <div class="col-sm-4">
                 <div class="mb-3">
                 <label class="form-label">Content</label>

@@ -71,7 +71,7 @@ function truncateWords($text, $wordLimit = 80) {
                             <tr>
                           <th>Id</th>
                           <th>Title</th>
-                          <th>Review</th>
+                          <!-- <th>Review</th> -->
                           <th>content</th>
                           <th>Action</th>
                             </tr>
@@ -84,7 +84,7 @@ function truncateWords($text, $wordLimit = 80) {
                               <tr>
                                   <td><?php echo $i; ?></td>
                                   <td><?php echo $row['title']; ?></td>
-                                  <td><?php echo $row['review']; ?></td>
+                                  <!-- <td><?php echo $row['review']; ?></td> -->
                                   <td><div class="text-3"><?= truncateWords($row['content'], 5) ?></td>
                                   <td>
                                       <div class="d-flex">

@@ -33,9 +33,14 @@
   <link rel="stylesheet" href="assets/css/fontawesome.min.css">
   <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
   <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-  <link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-datepicker@1.9.0/dist/css/bootstrap-datepicker.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
-
+<style>
+  .form-control:disabled, .form-control[readonly] {
+    background-color: #ffffff;
+    opacity: 1;
+}
+</style>
 </head>
 
 <body>
@@ -56,70 +61,76 @@
 
   <div class="space pb-0 appointment">
     <div class="container">
-      <form action="save_contact" method="post" onsubmit="return validateForm();" class="contact-form" data-bg-src="assets/scan-world/book-appointment.png">
-        <div class="input-wrap">
-          <h2 class="sec-title">Book Appointment</h2>
-          <div class="row">
-            <div class="form-group col-12">
-              <input type="text" class="form-control" name="name" id="name" placeholder="Your Name" autoComplete='none' oncopy="return false;" onpaste="return false;" oninput="this.value = this.value.replace(/[^a-z. A-Z]/g, '').replace(/(\..*)\./g, '$1');" required>
-              <i class="fal fa-user"></i>
-            </div>
-            <div class="form-group col-12">
-              <input type="text" class="form-control" name="phone" id="number" placeholder="Phone Number" required autocomplete="off" inputmode="numeric" pattern="[1-9]{1}[0-9]{9}" title="Please enter exactly 10 digits, starting with 1-9" oncopy="return false;" onpaste="return false;" oncut="return false;" oncontextmenu="return false;" onkeypress="return isNumberKey(event)" oninput="validatePhoneNumber(this);">
-              <i class="fal fa-phone"></i>
-            </div>
+   <form action="save_contact.php" method="post" onsubmit="return validateForm();" class="contact-form" data-bg-src="assets/scan-world/book-appointment.png">
+  <div class="input-wrap">
+    <h2 class="sec-title">Book Appointment</h2>
+    <div class="row">
 
-            <div class="form-group col-6">
-              <select name="subject" id="subject" class="form-select">
-                <option value="" disabled selected hidden>Select Center</option>
-                <option value="Nandanam">Nandanam</option>
-                <option value="Nanganallur">Nanganallur</option>
-                <option value="Aminjikarai">Aminjikarai</option>
-             
-              </select>
-              <i class="fal fa-chevron-down"></i>
-            </div>
-            <div class="form-group col-6">
-              <select name="subject" id="subject" class="form-select">
-                <option value="" disabled selected hidden>Select the Test Name</option>
-                <option value="MRI">MRI</option>
-                <option value="CT">CT</option>
-                <option value="XRAY">XRAY</option>
-                <option value="ECG">ECG</option>
-              </select>
-              <i class="fal fa-chevron-down"></i>
-            </div>
-            <div class="form-group col-12">
-              <select name="subject" id="subject" class="form-select">
-                <option value="" disabled selected hidden>Select Service</option>
-                <option value="Nandanam">CAUTION DEPOSIT FOR CT/MRI</option>
-                <option value="Nanganallur">3D CBCT WITH REPORT - 1 SEGMENT</option>
-                <option value="Aminjikarai">2D DIGITAL CEPH LATERAL XRAY ONLY SOFT COPY</option>
-                <option value="#">Computerised ECG</option>
-              </select>
-              <i class="fal fa-chevron-down"></i>
-            </div>
-            <div class="form-group col-6">
-              <input type="text" class="date-pick form-control" name="date" id="date-pick" placeholder="Date">
-            </div>
-            <div class="form-group col-6">
-              <input type="text" class="time-pick form-control" name="time" id="time-pick" placeholder="Time">
-            </div>
+      <div class="form-group col-12">
+        <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+        <i class="fal fa-user"></i>
+      </div>
 
-            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-            <label for="vehicle1"> By signing in with <strong>schedul.co</strong>, you agree to our 
-  <a href="terms-and-conditions" target="_blank">Terms & Conditions</a> & 
-  <a href="privacy-policy" target="_blank">Privacy Policy</a>.</label>
+      <div class="form-group col-12">
+        <input type="text" class="form-control" name="phone" placeholder="Phone Number" required pattern="[1-9]{1}[0-9]{9}">
+        <i class="fal fa-phone"></i>
+      </div>
 
+      <!-- Select Center -->
+      <div class="form-group col-6">
+        <select name="branch" class="form-select" required>
+          <option value="" disabled selected hidden>Select Center</option>
+          <option value="1">Nandanam</option>
+          <option value="2">Nanganallur</option>
+          <option value="3">Aminjikarai</option>
+        </select>
+        <i class="fal fa-chevron-down"></i>
+      </div>
 
-            <div class="form-btn col-12">
-              <button class="th-btn btn-fw" type="submit">Submit</button>
-            </div>
-          </div>
-          <p class="form-messages mb-0 mt-3"></p>
-        </div>
+      <!-- Select Service -->
+      <div class="form-group col-6">
+        <select name="service" class="form-select" required>
+          <option value="" disabled selected hidden>Select Service</option>
+          <option value="1">MRI</option>
+          <option value="2">CT</option>
+          <option value="3">X-Ray</option>
+          <option value="4">ECG</option>
+        </select>
+        <i class="fal fa-chevron-down"></i>
+      </div>
 
-      </form>
+      <!-- Optional: Select Test -->
+      <div class="form-group col-12">
+        <select name="test_name" class="form-select">
+          <option value="" disabled selected hidden>Select Test</option>
+          <option value="Caution Deposit for CT/MRI">Caution Deposit for CT/MRI</option>
+          <option value="3D CBCT with Report - 1 Segment">3D CBCT with Report - 1 Segment</option>
+          <option value="2D Digital Ceph Lateral X-Ray">2D Digital Ceph Lateral X-Ray</option>
+          <option value="Computerised ECG">Computerised ECG</option>
+        </select>
+        <i class="fal fa-chevron-down"></i>
+      </div>
+
+      <div class="form-group col-6">
+       <input name="date" 
+             type="text" 
+             class="form-control" 
+             id="bookingdate" 
+             placeholder="Select Date*" 
+             autocomplete="off" 
+             required>
+      </div>
+      <div class="form-group col-6">
+        <input type="text" class="time-pick form-control" name="time" placeholder="Time">
+      </div>
+
+      <div class="form-btn col-12 mt-3">
+        <button class="th-btn btn-fw" type="submit">Submit</button>
+      </div>
+    </div>
+  </div>
+</form>
+
     </div>
   </div>
   <section class="space">
@@ -179,16 +190,46 @@
     </svg>
   </div>
 
-  <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
-  <script src="assets/js/swiper-bundle.min.js"></script>
-  <script src="assets/js/bootstrap.min.js"></script>
-  <script src="assets/js/jquery.magnific-popup.min.js"></script>
-  <script src="assets/js/jquery.counterup.min.js"></script>
-  <script src="assets/js/jquery.datetimepicker.min.js"></script>
-  <script src="assets/js/jquery-ui.min.js"></script>
-  <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/js/isotope.pkgd.min.js"></script>
-  <script src="assets/js/main.js"></script>
-</body>
+
+<!-- jQuery FIRST -->
+<script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
+
+<!-- Bootstrap JS (pick ONE; remove other bootstrap.js to avoid conflicts) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+
+<!-- Bootstrap Datepicker JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-datepicker@1.9.0/dist/js/bootstrap-datepicker.min.js"></script>
+
+<!-- Initialize Datepicker -->
+<script>
+  // Optional: prevent manual typing so users can't type past dates
+  document.getElementById('bookingdate').setAttribute('readonly', 'readonly');
+
+  $('#bookingdate').datepicker({
+    format: 'yyyy-mm-dd',   // consistent backend format
+    autoclose: true,        // close after pick
+    todayHighlight: true,   // highlight today
+    startDate: new Date(),  // 🚫 disables all past dates
+    daysOfWeekDisabled: [0] // 🚫 disable Sundays (0 = Sunday)
+  }).on('changeDate', function (e) {
+    // Extra guard if someone manages to inject a Sunday
+    var d = e.date;
+    if (d.getDay() === 0) {
+      alert('Bookings are not available on Sunday. Please choose a different date.');
+      $(this).datepicker('clearDate'); // correct method name for v1.9
+    }
+  });
+</script>
+
+<!-- Your other plugins/scripts AFTER the picker init -->
+<script src="assets/js/swiper-bundle.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script> <!-- REMOVE this if it conflicts; keep only one Bootstrap JS -->
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<script src="assets/js/jquery.counterup.min.js"></script>
+<script src="assets/js/jquery.ui.min.js"></script>
+<script src="assets/js/imagesloaded.pkgd.min.js"></script>
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<script src="assets/js/main.js"></script>
+
 
 </html>

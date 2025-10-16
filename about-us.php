@@ -96,7 +96,7 @@ include("includes/config.php"); ?>
                             <ul>
                                 <li><i class="fas fa-shield-check text-theme2"></i>1. Scans World is one of Chennai’s most trusted diagnostic centers, backed by over 35 years of excellence in medical imaging. </li>
                                 <li><i class="fas fa-shield-check text-theme2"></i> 2. Committed to delivering precise, efficient, and affordable diagnostic solutions. </li>
-                                <li><i class="fas fa-shield-check text-theme2"></i> 3. Equipped with cutting-edge technologies includingDigital PET-CT, 3T MRI, and other advanced imaging systems.</li>
+                                <li><i class="fas fa-shield-check text-theme2"></i> 3. Equipped with cutting-edge technologies including Digital PET-CT, 3T MRI, and other advanced imaging systems.</li>
                              
                             </ul>
                         </div>

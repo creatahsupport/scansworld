@@ -77,7 +77,7 @@ exit();
       <div class="breadcumb-content">
         <h1 class="breadcumb-title text-white">Master Health Checkup Packages</h1>
         <ul class="breadcumb-menu">
-          <li><a href="home-medical-clinic.html" class="text-white">Home</a></li>
+          <li><a href="./" class="text-white">Home</a></li>
           <li>Master Health Checkup</li>
         </ul>
       </div>

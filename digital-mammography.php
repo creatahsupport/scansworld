@@ -64,7 +64,7 @@
             <h3 class="fw-semibold">Digital Mammography</h3>
             <div class="page-content">
               <p>At Scans world we offer Digital Mammography — the latest in breast cancer screening / diagnostic
-                technology..</p>
+                technology.</p>
               <h3 class="h5 mt-1">Why choose Digital Mammography ?</h3>
               <div class="checklist mb-25">
                 <ul>
@@ -93,7 +93,7 @@
                     experienced precancerous breast lesions, consider starting your mammogram screenings before the age
                     of 40.</li>
                   <li><i class="fas fa-check-circle"></i> Early screening can help detect issues earlier, improving
-                    treatment outcomes..</li>
+                    treatment outcomes.</li>
 
                 </ul>
               </div>

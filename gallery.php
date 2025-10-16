@@ -88,8 +88,24 @@ $nextPage = ($page < $totalPages) ? $page + 1 : false;
              title="<?= htmlspecialchars($row['image_title']) ?>">
     </div>
 <?php } elseif ($row['media_type'] === 'video') { ?>
+    <?php
+    // Extract YouTube video ID from URL
+    $videoUrl = $row['video'];
+    $video_id = '';
+
+    if (preg_match('/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|shorts\/|embed\/))([a-zA-Z0-9_-]{11})/', $videoUrl, $matches)) {
+        $video_id = $matches[1];
+    }
+
+    // If valid YouTube ID found, embed properly
+    if ($video_id) {
+        $embedUrl = "https://www.youtube.com/embed/" . $video_id;
+    } else {
+        $embedUrl = htmlspecialchars($videoUrl);
+    }
+    ?>
     <iframe class="img-fluid" style="height: 300px; max-width: 100%;" 
-            src="<?= htmlspecialchars($row['video']) ?>" 
+            src="<?= $embedUrl ?>" 
             frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
             allowfullscreen>
@@ -98,6 +114,7 @@ $nextPage = ($page < $totalPages) ? $page + 1 : false;
         <p class="gallery-content"><?= htmlspecialchars($row['video_title']) ?></p>
     </div>
 <?php } ?>
+
 
 
                 <div class="box-content">
