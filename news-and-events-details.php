@@ -68,7 +68,7 @@ $latest_news = mysqli_query($con, $latest_news_query);
       <div class="breadcumb-content">
         <h1 class="breadcumb-title text-white">News & Events Details</h1>
         <ul class="breadcumb-menu">
-          <li><a href="./" class="text-white">Home</a></li>
+          <li><a href="<?php echo $url_config; ?>/" class="text-white">Home</a></li>
           <li>News & Events Details</li>
         </ul>
       </div>

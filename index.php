@@ -485,7 +485,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
           </div>
          
             <div class="col-md-3 col-sm-6 col-6">
-              <a href="fanc">
+              <a href="fnac">
                 <div class="feature-box text-center">
                   <div class="box-icon">
                     <img src="assets/scan-world/service-icon/endoscopy.png" alt="icon">

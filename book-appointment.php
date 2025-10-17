@@ -101,7 +101,7 @@
 
       <!-- Optional: Select Test -->
       <div class="form-group col-12">
-        <select name="test_name" class="form-select">
+        <select name="test_name" class="form-select" required>
           <option value="" disabled selected hidden>Select Test</option>
           <option value="Caution Deposit for CT/MRI">Caution Deposit for CT/MRI</option>
           <option value="3D CBCT with Report - 1 Segment">3D CBCT with Report - 1 Segment</option>
@@ -120,8 +120,41 @@
              autocomplete="off" 
              required>
       </div>
+      <script>
+  // Prevent manual typing in the date field
+  document.getElementById('bookingdate').setAttribute('readonly', 'readonly');
+
+  // Initialize datepicker
+  $('#bookingdate').datepicker({
+    format: 'yyyy-mm-dd',
+    autoclose: true,
+    todayHighlight: true,
+    startDate: new Date(), // disable past dates
+    daysOfWeekDisabled: [0] // disable Sundays
+  }).on('changeDate', function (e) {
+    var d = e.date;
+    if (d.getDay() === 0) {
+      alert('Bookings are not available on Sunday. Please choose a different date.');
+      $(this).datepicker('clearDates');
+    }
+  });
+
+  // ✅ Validation before form submission
+  function validateForm() {
+    var dateInput = document.getElementById('bookingdate');
+    var dateVal = dateInput.value.trim();
+
+    if (!dateVal) {
+      alert('Please select a date before submitting.');
+      dateInput.focus();
+      return false;
+    }
+    return true;
+  }
+</script>
+
       <div class="form-group col-6">
-        <input type="text" class="time-pick form-control" name="time" placeholder="Time">
+        <input type="text" class="time-pick form-control" name="time" placeholder="Time" required>
       </div>
 
       <div class="form-btn col-12 mt-3">
