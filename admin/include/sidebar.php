@@ -80,7 +80,7 @@
           </a>
           <ul class="pc-submenu">
             <li class="pc-item"><a class="pc-link" href="book_appointment_report.php">Book Appointment</a></li>
-            <li class="pc-item"><a class="pc-link" href="follow_up_report.php">Followup Report</a></li>
+            <!-- <li class="pc-item"><a class="pc-link" href="follow_up_report.php">Followup Report</a></li> -->
           </ul>
         </li>
         <?php } ?>

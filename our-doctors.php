@@ -4,15 +4,26 @@ $base_image = "uploads/doctor_images/";
 $limit = 12; 
 $page = isset($_GET['page']) ? intval($_GET['page']) : 1;
 $start = ($page - 1) * $limit;
-$RECENTSQL = "SELECT * FROM doctors WHERE status=1 ORDER BY id ASC LIMIT $start, $limit";
+
+// ✅ Fetch only active + not deleted doctors
+$RECENTSQL = "
+  SELECT * FROM doctors 
+  WHERE status = 1 AND del_i = 0 
+  ORDER BY id ASC 
+  LIMIT $start, $limit
+";
 $RECENT_RESULT = mysqli_query($con, $RECENTSQL);
-$totalPostsSQL = "SELECT COUNT(*) as total FROM doctors WHERE del_i=0";
+
+// ✅ Total count only for not deleted doctors
+$totalPostsSQL = "SELECT COUNT(*) as total FROM doctors WHERE status = 1 AND del_i = 0";
 $totalPostsResult = mysqli_query($con, $totalPostsSQL);
 $totalPosts = mysqli_fetch_assoc($totalPostsResult)['total'];
+
 $totalPages = ceil($totalPosts / $limit);
 $prevPage = ($page > 1) ? $page - 1 : false;
 $nextPage = ($page < $totalPages) ? $page + 1 : false;
 ?>
+
 
 <!doctype html>
 <html class="no-js" lang="zxx">

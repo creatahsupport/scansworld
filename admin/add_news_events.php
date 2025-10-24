@@ -94,12 +94,12 @@
                     </div>
                 </div>
                 </div>
-                <div class="col-sm-12">
+                <!-- <div class="col-sm-12">
                 <div class="mb-3">
                   <label class="form-label">Description</label>
                   <textarea class="form-control" id="Description" required name="description" aria-label="Description"></textarea>
                </div>
-                </div>
+                </div> -->
                 <div class="col-sm-12">
                 <div class="mb-3">
                   <label class="form-label">Content</label>

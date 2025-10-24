@@ -154,7 +154,41 @@
 </script>
 
       <div class="form-group col-6">
-        <input type="text" class="time-pick form-control" name="time" placeholder="Time" required>
+       <select name="time" id="timeSlot" class="form-select" required>
+  <option value="" disabled selected hidden>Select Time</option>
+  <option value="07:30 AM">07:30 AM</option>
+  <option value="08:00 AM">08:00 AM</option>
+  <option value="08:30 AM">08:30 AM</option>
+  <option value="09:00 AM">09:00 AM</option>
+  <option value="09:30 AM">09:30 AM</option>
+  <option value="10:00 AM">10:00 AM</option>
+  <option value="10:30 AM">10:30 AM</option>
+  <option value="11:00 AM">11:00 AM</option>
+  <option value="11:30 AM">11:30 AM</option>
+  <option value="12:00 PM">12:00 PM</option>
+  <option value="12:30 PM">12:30 PM</option>
+  <option value="01:00 PM">01:00 PM</option>
+  <option value="01:30 PM">01:30 PM</option>
+  <option value="02:00 PM">02:00 PM</option>
+  <option value="02:30 PM">02:30 PM</option>
+  <option value="03:00 PM">03:00 PM</option>
+  <option value="03:30 PM">03:30 PM</option>
+  <option value="04:00 PM">04:00 PM</option>
+  <option value="04:30 PM">04:30 PM</option>
+  <option value="05:00 PM">05:00 PM</option>
+  <option value="05:30 PM">05:30 PM</option>
+  <option value="06:00 PM">06:00 PM</option>
+  <option value="06:30 PM">06:30 PM</option>
+  <option value="07:00 PM">07:00 PM</option>
+  <option value="07:30 PM">07:30 PM</option>
+  <option value="08:00 PM">08:00 PM</option>
+  <option value="08:30 PM">08:30 PM</option>
+  <option value="09:00 PM">09:00 PM</option>
+  <option value="09:30 PM">09:30 PM</option>
+  <option value="10:00 PM">10:00 PM</option>
+  <option value="10:30 PM">10:30 PM</option>
+</select>
+
       </div>
 
       <div class="form-btn col-12 mt-3">
@@ -252,6 +286,56 @@
       $(this).datepicker('clearDate'); // correct method name for v1.9
     }
   });
+</script>
+<script>
+  // Hide past time slots if today is selected and time has passed (e.g., after 10AM)
+  function hidePastTimes() {
+    const dateInput = document.getElementById('bookingdate');
+    const timeSelect = document.getElementById('timeSlot');
+    const now = new Date();
+    const selectedDate = new Date(dateInput.value);
+    const isToday = selectedDate.toDateString() === now.toDateString();
+
+    // Make all options visible again
+    for (let opt of timeSelect.options) opt.hidden = false;
+
+    if (isToday) {
+      const currentMinutes = now.getHours() * 60 + now.getMinutes(); // current time in minutes
+
+      // Loop through every time option
+      for (let opt of timeSelect.options) {
+        if (!opt.value) continue; // skip placeholder
+        const [t, mer] = opt.value.split(' ');
+        let [h, m] = t.split(':').map(Number);
+
+        // Convert to 24-hour format
+        if (mer === 'PM' && h !== 12) h += 12;
+        if (mer === 'AM' && h === 12) h = 0;
+        const totalMinutes = h * 60 + m;
+
+        // Hide if this time has already passed
+        if (totalMinutes <= currentMinutes) {
+          opt.hidden = true;
+        }
+      }
+
+      // If user opens form after 10:00 PM, all slots will be hidden
+      // so we can show a fallback message
+      const visibleOptions = [...timeSelect.options].filter(o => !o.hidden && o.value);
+      if (visibleOptions.length === 0) {
+        const msg = document.createElement('option');
+        msg.textContent = 'No slots available today';
+        msg.disabled = true;
+        timeSelect.appendChild(msg);
+      }
+    }
+  }
+
+  // Trigger the function when the date changes
+  $('#bookingdate').on('changeDate', hidePastTimes);
+
+  // Also run on page load in case today's date is prefilled
+  document.addEventListener('DOMContentLoaded', hidePastTimes);
 </script>
 
 <!-- Your other plugins/scripts AFTER the picker init -->

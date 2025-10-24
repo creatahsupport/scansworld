@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $image_alt_tag = $_POST['image_alt_tag'];
     $image_title = $_POST['image_title'];
     $meta_title = $_POST['meta_title'];
-    $description = $_POST['description'];
+    // $description = $_POST['description'];
     $content = $_POST['content'];
     $user_id = $_POST['user_id'];
     $update_date=date("Y-m-d H:i:s");
@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     }
 
-    $sql_update = "UPDATE news_events SET  title = '$title',slug = '$slug', image_alt = '$image_alt_tag', image_title = '$image_title', meta_title = '$meta_title', meta_description = '$description',content = '$content', image = '$image',update_date='$update_date' ,user_id='$user_id' WHERE id = '$id'";
+    $sql_update = "UPDATE news_events SET  title = '$title',slug = '$slug', image_alt = '$image_alt_tag', image_title = '$image_title', meta_title = '$meta_title',content = '$content', image = '$image',update_date='$update_date' ,user_id='$user_id' WHERE id = '$id'";
 
     if (mysqli_query($con, $sql_update)) {
         echo "<script>alert('News and Events Updated successfully.');</script>";

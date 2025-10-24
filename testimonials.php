@@ -48,7 +48,30 @@ $nextPage = ($page < $totalPages) ? $page + 1 : false;
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+<style>
+    .box-text {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  line-height: 1.6;
+  font-size: 16px;
+  color: #000;
+}
 
+.cs_testimonial_box {
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .cs_testimonial_box {
+    min-height: auto;
+  }
+}
+
+</style>
 </head>
 
 <body>
@@ -81,11 +104,10 @@ $nextPage = ($page < $totalPages) ? $page + 1 : false;
                     <div class="box-quote">
                         <img src="assets/img/icon/quote_1.svg" alt="Icon">
                     </div>
-                    <div class="">
-                        <p class="box-text">
-                        <?= $RECENT_ROW['content'] ?>
-                        </p>
-                    </div>
+              <div class="cs_testimonial_box">
+    <p class="box-text"><?= $RECENT_ROW['content'] ?></p>
+</div>
+
                     <div class="box-profile">
                         <div class="box-img">
                             <img src="assets/scan-world/testimonial.png" alt="Avatar">

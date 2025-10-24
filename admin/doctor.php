@@ -5,27 +5,9 @@ include_once("include/header.php");
 $user_role = $_SESSION['role'];
 $user_name = $_SESSION['user_name'];
 
-if ($user_role == "admin") {
-  // Query for admin users (fetch all doctors)
-  $sql = "SELECT * FROM doctors WHERE del_i = 0 ORDER BY id DESC";
-  $result = $con->query($sql);
-} else {
-  // Fetch branch_id for non-admin users
-  $sql1 = "SELECT branch_id FROM admin WHERE role = '$user_role' AND user_name = '$user_name' AND status = 1 AND del_i = 0";
-  $result1 = $con->query($sql1);
-
-  if ($result1 && $result1->num_rows === 1) {
-      $row = $result1->fetch_assoc();
-      $branch_id = $row['branch_id'];
-
-      // Query to fetch only doctors related to the specific branch_id
-      $sql = "SELECT * FROM doctors WHERE del_i = 0 AND branch_id = '$branch_id' ORDER BY id DESC";
-      $result = $con->query($sql);
-  } else {
-      $result = null; // No valid branch found
-  }
-}
-
+// ✅ Simplified: Both admin and branch users see all doctors (del_i = 0)
+$sql = "SELECT * FROM doctors WHERE del_i = 0 ORDER BY id DESC";
+$result = $con->query($sql);
 ?>
 <!doctype html>
 <html lang="en">

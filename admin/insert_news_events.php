@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $image_title = $_POST['image_title'];
     $meta_title = $_POST['meta_title'];
     $image_alt_tag = $_POST['image_alt_tag'];
-    $description = $_POST['description'];
+    // $description = $_POST['description'];
     $content = $_POST['content'];
     $user_id = $_POST['user_id'];
     $created_date = date("Y-m-d H:i:s");
@@ -44,8 +44,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo "<script>alert('Image upload error.');</script>";
         exit();
     }
-    $query = "INSERT INTO news_events (title, slug, image, image_title, meta_title, meta_description, content ,created_date,image_alt,user_id) 
-              VALUES ('$title', '$slug', '$file_name', '$image_title', '$meta_title', '$description', '$content','$created_date','$image_alt_tag','$user_id')";
+    $query = "INSERT INTO news_events (title, slug, image, image_title, meta_title, content ,created_date,image_alt,user_id) 
+              VALUES ('$title', '$slug', '$file_name', '$image_title', '$meta_title', '$content','$created_date','$image_alt_tag','$user_id')";
 
     if (mysqli_query($con, $query)) {
         echo "<script>alert('News Events added successfully.');</script>";
