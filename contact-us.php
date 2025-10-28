@@ -112,7 +112,7 @@ echo "<script>alert('Enquiry submitted  successfully')</script>";
                         </p>
                         <p class="footer-info">
                             <i class="far fa-map"></i>
-                            <a href="https://maps.app.goo.gl/FjEBDCCANQBi3duh6" target="_blank"
+                            <a href="https://maps.app.goo.gl/NL2V41KzwXQVUJrg6" target="_blank"
                                 class="info-box_link">Get Direction</a>
                         </p>
                     </div>

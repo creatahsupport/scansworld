@@ -79,7 +79,7 @@ $nextPage = ($page < $totalPages) ? $page + 1 : false;
             <?php if ($RECENT_RESULT->num_rows > 0) { ?>
     <?php while ($row = $RECENT_RESULT->fetch_assoc()) { ?>
         <div class="col-lg-4 col-md-4 col-sm-6 filter-item col-xl-auto col-md-6">
-            <div class="featured-imagebox featured-imagebox-portfolio style2 gallery-card style2">
+            <div class="featured-imagebox featured-imagebox-portfolio style2 gallery-card style2" style="background: #0079c0;">
             <?php if ($row['media_type'] === 'image') { ?>
     <div class="box-img">
         <img class="img-fluid" style="height: 300px; max-width: 100%;" 
@@ -111,7 +111,7 @@ $nextPage = ($page < $totalPages) ? $page + 1 : false;
             allowfullscreen>
     </iframe>
     <div class="gallery-iframe-title-bgcolor">
-        <p class="gallery-content"><?= htmlspecialchars($row['video_title']) ?></p>
+        <p class="gallery-content text-white"><?= htmlspecialchars($row['video_title']) ?></p>
     </div>
 <?php } ?>
 

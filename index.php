@@ -2,7 +2,7 @@
 include("includes/config.php");
 
 // Fetch latest 3 testimonials
-$testimonial_query = "SELECT * FROM testimonial WHERE del_i = 0 ORDER BY id DESC LIMIT 3";
+$testimonial_query = "SELECT * FROM testimonial WHERE del_i = 0 ORDER BY id DESC LIMIT 50";
 $latest_testimonial = mysqli_query($con, $testimonial_query);
 
 // Fetch latest 20 blogs
