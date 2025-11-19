@@ -78,8 +78,8 @@ $result = $con->query($sql);
                               <tr>
                                   <td><?php echo $i; ?></td>
                                   <td><?php echo $row['page_url']; ?></td>
-                                  <td><?php echo $row['meta_title']; ?></td>
-                                  <td><?php echo $row['meta_description']; ?></td>
+                                 <td><?php echo substr($row['meta_title'], 0, 40); ?></td>
+                                <td><?php echo substr($row['meta_description'], 0, 40); ?></td>
                                   <td><?= date("d-m-Y", strtotime($row['created_at'])) ?></td>
                                 
                                   <td>
