@@ -118,12 +118,12 @@
         </div>
     </footer>
 
-<a href="https://wa.me/919445439999" target="_blank" class="contact-button whatsapp-button">
+<a href="https://wa.me/919944618362" target="_blank" class="contact-button whatsapp-button">
 <img src="<?php echo $url_config ?>/assets/scan-world/whatsapp-icon.webp" width="70px" alt="whatsapp-icon" title="Whatsapp-icon">
 </a>
 
 <div class="appoint">
-<a href="tel:+919445439999" class="bt_tt">
+<a href="tel:+919944618362" class="bt_tt">
   <img src="<?php echo $url_config ?>/assets/scan-world/phone.webp" alt="call-now" title="Call Now">Call Now
 </a>
 <a href="https://wa.me/919626959999" class="bt_tt" target="_blank">
