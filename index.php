@@ -67,14 +67,14 @@ $latest_doctors = mysqli_query($con, $doctors_query);
         <div class="col-xl-6 mb-30 mb-xl-0">
           <div class="img-box6">
             <div class="img1">
-              <img src="assets/scan-world/home/about-2.webp" alt="About">
+              <img src="assets/scan-world/services/mri.jpg" alt="About">
             </div>
           </div>
         </div>
         <div class="col-xl-6">
           <div class="ps-xxl-4 ms-xl-2 text-center text-xl-start">
             <div class="title-area mb-32">
-              <span class="sub-title"><img src="assets/scan-world/icon.webp" alt="shape">Scans World – Chennai’s Trusted Diagnostic Centre for 35+ Years</span>
+              <span class="sub-title"><img src="assets/scan-world/icon.webp" alt="shape">Scans World – Chennai’s Trusted Diagnostic Centre for 15+ Years</span>
               <!-- <h2 class="sec-title">About Scans World</h2> -->
               <p class="sec-text">Delivering fast, accurate, and affordable medical imaging, Scans World is the preferred choice for patients and clinicians alike.</p>
             </div>
