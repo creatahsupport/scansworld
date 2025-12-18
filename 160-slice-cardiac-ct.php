@@ -69,12 +69,12 @@
             <div class="page-content">
 
 
-              <p>1. Higher Slice Count = Better Resolution: Our 160-slice CT scanner provides incredibly detailed,
-                high-resolution images, ensuring you get the clearest, most accurate results. </p>
-              <p>2. Faster Scans, Less Waiting: With advanced technology, our 160-slice CT scans are faster, reducing
-                your time in the machine while providing faster diagnosis and treatment. </p>
-              <p>3. State-of-the-Art Technology: The latest in CT technology delivers superior results, allowing for
-                precise imaging in less time.</p>
+              <p>1. Clearer Heart Images with Higher Slice Count: </p>
+              <p>Our 160-slice Coronary CT scanner captures highly detailed, high-resolution images of your heart and blood vessels, helping your doctor see even tiny blockages with great accuracy.</p>
+              <p>2.Faster Scanning, Less Waiting: </p>
+              <p>Thanks to advanced technology, the 160-slice CT completes the heart scan quickly, reducing the time you spend in the machine while providing fast and reliable results.</p>
+              <p>3.Advanced Technology for Better Diagnosis:</p>
+              <p>This state-of-the-art cardiac CT system ensures precise imaging of coronary arteries, supporting earlier detection and better management of heart conditions.</p>
 
 
             </div>

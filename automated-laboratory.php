@@ -63,7 +63,10 @@
           <div class="page-single single-right mb-30">
             <h3 class="fw-semibold">Automated Laboratory</h3>
             <div class="page-content">
-
+            <div class="page-img">
+              <img src="assets/scan-world/automated_laboratory.jpg" alt="Service Image"
+                style="height: 600px; width: 800px; object-fit: cover;">
+            </div>
               <p>The Automated Lab uses state-of-the-art tech to provide swift, precise, and dependable diagnostic
                 outcomes. Employing advanced automated analyzers, it optimizes the testing workflow for blood, urine,
                 and other biological samples, thus reducing mistakes and cutting down on processing time. This

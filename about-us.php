@@ -94,7 +94,7 @@ include("includes/config.php"); ?>
                         <!-- <h3 class="box-title">Annual Awards</h3> -->
                         <div class="checklist style2">
                             <ul>
-                                <li><i class="fas fa-shield-check text-theme2"></i>1. Scans World is one of Chennai’s most trusted diagnostic centers, backed by over 35 years of excellence in medical imaging. </li>
+                                <li><i class="fas fa-shield-check text-theme2"></i>1. Scans World is one of Chennai’s most trusted diagnostic centers, backed by over 15 years of excellence in medical imaging. </li>
                                 <li><i class="fas fa-shield-check text-theme2"></i> 2. Committed to delivering precise, efficient, and affordable diagnostic solutions. </li>
                                 <li><i class="fas fa-shield-check text-theme2"></i> 3. Equipped with cutting-edge technologies including Digital PET-CT, 3T MRI, and other advanced imaging systems.</li>
                              
@@ -144,7 +144,7 @@ include("includes/config.php"); ?>
                         <div class="mb-4 mt-n1">
                         <div class="checklist style2">
                             <ul>
-                                <li><i class="fas fa-shield-check text-theme2"></i> Scans World is Chennai’s leading diagnostic center with 35+ years of experience.</li>
+                                <li><i class="fas fa-shield-check text-theme2"></i> Scans World is Chennai’s leading diagnostic center with  of experience.</li>
                                 <li><i class="fas fa-shield-check text-theme2"></i> Provides precise, fast, and affordable diagnostics.</li>
                                 <li><i class="fas fa-shield-check text-theme2"></i> Features advanced imaging technologies like PET CT, 1.5T Silent MRI, and Dynamic FibroScan.</li>
                              

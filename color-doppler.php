@@ -59,9 +59,10 @@
       <div class="row flex-row-reverse">
         <div class="col-xxl-8 col-lg-8">
           <div class="page-single single-right mb-30">
-            <!-- <div class="page-img">
-              <img src="assets/scan-world/services/color-doppler.webp" alt="Service Image">
-            </div> -->
+          <div class="page-img">
+              <img src="assets/scan-world/colour_doppler.jpg" alt="Service Image"
+                style="height: 600px; width: 800px; object-fit: cover;">
+            </div>
             <div class="page-content">
               <h3 class="h5 mt-1">What is Color Doppler Ultrasound? </h3>
               <p>Color Doppler is a non-invasive diagnostic tool that allows us to assess blood flow, tissue movement, and vascular health in real time. This is crucial for detecting conditions such as:</p>

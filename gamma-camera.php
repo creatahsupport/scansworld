@@ -61,7 +61,12 @@
       <div class="row flex-row-reverse">
         <div class="col-xxl-8 col-lg-8">
           <div class="page-single single-right mb-30">
+          
             <h3 class="fw-semibold">Nuclear Scans / Gamma camera</h3>
+            <div class="page-img">
+              <img src="assets/scan-world/gamma_camera.jpg" alt="Service Image"
+                style="height: 600px; width: 800px; object-fit: cover;">
+            </div>
             <div class="page-content">
               <p>Our Gamma Camera / SPECT CT combines cutting-edge technology to deliver superior, high-resolution
                 images with faster results. From detecting cancer and heart disease to providing clear insights into

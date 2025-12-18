@@ -433,7 +433,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
                 <div class="col-lg-7 col-md-8">
                     <div class="title-area text-center">
                         <span class="sub-title"><img src="assets/scan-world/icon.webp" alt="shape">Why Choose Us</span>
-                        <h2 class="sec-title">We Have 25 Years Experience in Medical Health Services</h2>
+                        <h2 class="sec-title">We Have 15 Years Experience in Medical Health Services</h2>
                     </div>
                 </div>
             </div>

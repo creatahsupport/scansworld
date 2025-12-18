@@ -58,9 +58,10 @@
         <div class="col-xxl-8 col-lg-8">
           <div class="page-single single-right mb-30">
             <h3 class="fw-semibold">EEG, EMG, and NCS</h3>
-              <!-- <div class="page-img">
-                <img src="assets/scan-world/services/eeg.webp" alt="Service Image">
-              </div> -->
+            <div class="page-img">
+              <img src="assets/scan-world/ncs_service.jpg" alt="Service Image"
+                style="height: 600px; width: 800px; object-fit: cover;">
+            </div>
             <div class="page-content">
              
               <p>We offer advanced EEG (Electroencephalogram), EMG (Electromyography), and NCS (Nerve Conduction Studies) to provide crucial insights into your nervous system and muscle health. </p>

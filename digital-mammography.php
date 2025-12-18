@@ -60,8 +60,13 @@
     <div class="container">
       <div class="row flex-row-reverse">
         <div class="col-xxl-8 col-lg-8">
+       
           <div class="page-single single-right mb-30">
             <h3 class="fw-semibold">Digital Mammography</h3>
+            <div class="page-img">
+              <img src="assets/scan-world/digital_mammography.jpg" alt="Service Image"
+                style="height: 600px; width: 800px; object-fit: cover;">
+            </div>
             <div class="page-content">
               <p>At Scans world we offer Digital Mammography — the latest in breast cancer screening / diagnostic
                 technology.</p>

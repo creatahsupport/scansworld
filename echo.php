@@ -59,9 +59,10 @@
       <div class="row flex-row-reverse">
         <div class="col-xxl-8 col-lg-8">
           <div class="page-single single-right mb-30">
-            <!-- <div class="page-img">
-              <img src="assets/scan-world/services/color-doppler.webp" alt="Service Image">
-            </div> -->
+          <div class="page-img">
+              <img src="assets/scan-world/echo.jpg" alt="Service Image"
+                style="height: 600px; width: 800px; object-fit: cover;">
+            </div>
             <div class="page-content">
               <h3 class="h5 mt-1">Prioritize Your Heart Health with an Echocardiogram at Scans world </h3>
               <p>Your heart deserves the best care.  Echocardiogram, an advanced, non-invasive diagnostic test that provides detailed images of your heart, allowing us to detect potential issues early and guide your treatment plan effectively.</p>

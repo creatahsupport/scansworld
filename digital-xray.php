@@ -58,9 +58,10 @@
         <div class="col-xxl-8 col-lg-8">
           <div class="page-single single-right mb-30">
             <h3 class="fw-semibold">Digital X-ray</h3>
-            <!-- <div class="page-img">
-              <img src="assets/scan-world/services/digital-X-ray.webp" alt="Service Image">
-            </div> -->
+            <div class="page-img">
+              <img src="assets/scan-world/xray_service.jpg" alt="Service Image"
+                style="height: 600px; width: 800px; object-fit: cover;">
+            </div>
             <div class="page-content">
              
               <p>We offer high-quality X-ray imaging to help diagnose a wide range of conditions. X-rays are essential for detecting bone fractures, joint issues, lung diseases, infections and much more. </p>
