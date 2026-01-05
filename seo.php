@@ -43,18 +43,21 @@ foreach ($result as $row) {
     $twitter_site = $row["twitter_site"] ?? '';
 }
 ?>
-<title>Scans World | <?= !empty($meta_title) ? htmlspecialchars($meta_title) : '' ?></title>
+<title>Scansworldonchamiersroad | <?= !empty($meta_title) ? htmlspecialchars($meta_title) : '' ?></title>
 <?php if (!empty($meta_description)): ?>
 <meta name="description" content="<?= htmlspecialchars($meta_description) ?>">
 <?php endif; ?>
 <?php if (!empty($keywords)): ?>
 <meta name="keywords" content="<?= htmlspecialchars($keywords) ?>">
 <?php endif; ?>
-<?php if (!empty($canonical)): ?>
-<?php $current_url = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>
+<?php if (!empty($topic)): ?>
+<meta name="topic" content="<?= htmlspecialchars($topic) ?>">
+<?php endif; ?>
+<?php
+$current_url = "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+?>
 <link rel="canonical" href="<?php echo htmlspecialchars($current_url); ?>">
 <meta property="og:url" content="<?php echo htmlspecialchars($current_url); ?>">
-<?php endif; ?>
 <?php if (!empty($publisher)): ?>
 <meta name="publisher" content="<?= htmlspecialchars($publisher) ?>">
 <?php endif; ?>
@@ -88,9 +91,6 @@ foreach ($result as $row) {
 <?php endif; ?>
 <?php if (!empty($og_alt_tag)): ?>
 <meta property="og:image:alt" content="<?= htmlspecialchars($og_alt_tag) ?>">
-<?php endif; ?>
-<?php if (!empty($current_url)): ?>
-<meta property="og:url" content="<?= htmlspecialchars($current_url) ?>">
 <?php endif; ?>
 <?php if (!empty($og_position)): ?>
 <meta name="geo.position" content="<?= htmlspecialchars($og_position) ?>">

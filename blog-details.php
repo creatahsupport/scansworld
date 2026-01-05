@@ -37,7 +37,7 @@ $latest_category = mysqli_query($con, $category_query);
 ?>
 
 <!doctype html>
-<html class="no-js" lang="zxx">
+<html class="no-js" lang="en">
 
 <head>
     <meta charset="utf-8">

@@ -1,7 +1,7 @@
 <?php include("includes/config.php"); ?>
 
 <!doctype html>
-<html class="no-js" lang="zxx">
+<html class="no-js" lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -61,14 +61,13 @@
       <div class="row flex-row-reverse">
         <div class="col-xxl-8 col-lg-8">
           <div class="page-single single-right mb-30">
-            <h3 class="fw-semibold">WIDE BORE 3 TESLA MRI</h3>
+            <h1 class="fw-semibold">MRI Scan in Chennai – Advanced Imaging at Scans World</h1>
             <div class="page-img">
               <img src="assets/scan-world/services/mri.jpg" alt="Service Image">
             </div>
             <div class="page-content">
 
-              <h3 class="fw-semibold">Chennai’s Only New 3-Tesla MRI System – Unmatched Precision and Clarity
-              </h3>
+              <h2 class="fw-semibold">Why Choose Scans World for Your MRI Scan in Chennai</h2>
 
 
               <div class="row mt-10">

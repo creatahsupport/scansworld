@@ -7,7 +7,7 @@ $doctors_query = "SELECT * FROM doctors WHERE del_i = 0 ORDER BY id ASC LIMIT 20
 $latest_doctors = mysqli_query($con, $doctors_query);
 ?>
 <!doctype html>
-<html class="no-js" lang="zxx">
+<html class="no-js" lang="en">
 
 <head>
     <meta charset="utf-8">

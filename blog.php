@@ -44,7 +44,7 @@ if ($stmtCount)  mysqli_stmt_close($stmtCount);
 ?>
 
 <!doctype html>
-<html class="no-js" lang="zxx">
+<html class="no-js" lang="en">
 
 <head>
     <meta charset="utf-8">

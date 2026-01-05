@@ -1,7 +1,7 @@
 <?php include("includes/config.php"); ?>
 
 <!doctype html>
-<html class="no-js" lang="zxx">
+<html class="no-js" lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -61,13 +61,13 @@
       <div class="row flex-row-reverse">
         <div class="col-xxl-8 col-lg-8">
           <div class="page-single single-right mb-30"> 
-            <h3 class="fw-semibold">160 Slice Cardiac CT / Coronary angiogram</h3>
+            <h1 class="fw-semibold">160 Slice Cardiac CT Scan in Chennai – Advanced Heart Imaging</h1>
             <div class="page-img">
               <img src="assets/scan-world/160-slice-cardiac-ct.jpg" alt="Service Image"
                 style="height: 600px; width: 800px; object-fit: cover;">
             </div>
             <div class="page-content">
-
+             <h2 class="fw-semibold">Why Choose Scans World Cardiac CT Scan Services?</h2>
 
               <p>1. Clearer Heart Images with Higher Slice Count: </p>
               <p>Our 160-slice Coronary CT scanner captures highly detailed, high-resolution images of your heart and blood vessels, helping your doctor see even tiny blockages with great accuracy.</p>

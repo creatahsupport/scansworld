@@ -17,7 +17,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
 ?>
 
 <!doctype html>
-<html class="no-js" lang="zxx">
+<html class="no-js" lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -74,7 +74,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
         <div class="col-xl-6">
           <div class="ps-xxl-4 ms-xl-2 text-center text-xl-start">
             <div class="title-area mb-32">
-              <span class="sub-title"><img src="assets/scan-world/icon.webp" alt="shape">Scans World – Chennai’s Trusted Diagnostic Centre for 15+ Years</span>
+              <h1><span class="sub-title"><img src="assets/scan-world/icon.webp" alt="shape">Best Diagnostic Centre in Chennai for Advanced Scans & Accurate Reports</span></h1>
               <!-- <h2 class="sec-title">About Scans World</h2> -->
               <p class="sec-text">Delivering fast, accurate, and affordable medical imaging, Scans World is the preferred choice for patients and clinicians alike.</p>
             </div>
@@ -529,7 +529,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
         </div>
         <div class="col-xl-6 mt-30 mt-xl-0 text-center text-xl-start">
           <div class="title-area mb-32">
-            <span class="sub-title"><img src="assets/scan-world/icon.webp" alt="shape">Why Scans World ?</span>
+           <h2> <span class="sub-title"><img src="assets/scan-world/icon.webp" alt="shape">Why Scans World Is a Leading Diagnostic Centre in Chennai</span></h2>
             <h2 class="sec-title">Trusted Diagnostics at Scans World</h2>
             <p class="sec-text">At Scans World, we prioritize accuracy, convenience, and patient care to ensure the best diagnostic experience for you. Here’s why you should choose us:</p>
           </div>

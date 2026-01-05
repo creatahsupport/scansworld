@@ -7,7 +7,7 @@ $doctors_query = "SELECT * FROM doctors WHERE del_i = 0 ORDER BY id ASC LIMIT 20
 $latest_doctors = mysqli_query($con, $doctors_query);
 ?>
 <!doctype html>
-<html class="no-js" lang="zxx">
+<html class="no-js" lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -67,8 +67,8 @@ $latest_doctors = mysqli_query($con, $doctors_query);
 
                 <div class="col-xl-6 text-center text-xl-start">
                     <div class="title-area mb-32">
-                        <span class="sub-title"><img src="assets/scan-world/icon.webp" alt="shape">Tamilnadu’s most
-                            expansive diagnostic centre featuring state- of -the- art facilities</span>
+                        <h1><span class="sub-title"><img src="assets/scan-world/icon.webp" alt="shape">Diagnostic Centre in Aminjikarai – Advanced Scans & Imaging Services</span></h1>
+                        <h2 class="box-title">State-of-the-Art Facilities at a Leading Diagnostic Centre in Chennai—Scansworld</h2>
                         <!-- <h2 class="sec-title">The Best Diagnostic Centre in Chennai</h2> -->
                         <!-- <p class="sec-text">As the best diagnostic center in Chennai, we provide advanced imaging and diagnostic solutions, including PET-CT, MRI, ECG, and comprehensive health checkups. With cutting-edge technology and expert care, we ensure accurate and timely diagnoses for better health outcomes.</p> -->
                     </div>

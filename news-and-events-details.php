@@ -22,7 +22,7 @@ $latest_news_query = "SELECT * FROM news_events WHERE del_i = 0 ORDER BY id DESC
 $latest_news = mysqli_query($con, $latest_news_query);
 ?>
 <!doctype html>
-<html class="no-js" lang="zxx">
+<html class="no-js" lang="en">
 
 <head>
   <meta charset="utf-8">
