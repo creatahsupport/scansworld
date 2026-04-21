@@ -5,10 +5,41 @@
 require_once("mail/mail.php"); 
 
 if(isset($_POST['submit_flag'])) {
-    $b_name = $_POST['name'];
-    $b_mail = $_POST["email"];
-    $b_phone = $_POST["phone"];
-    $be_package = $_POST['package'];
+    // Verify Cloudflare Turnstile
+    $cf_turnstile_response = $_POST['cf-turnstile-response'] ?? '';
+    global $cloudflare_secret_key;
+    if (!verifyCloudflareTurnstile($cf_turnstile_response, $cloudflare_secret_key)) {
+        http_response_code(403);
+        echo "<script>alert('Captcha verification failed. Please try again.'); window.history.back();</script>";
+        exit;
+    }
+
+    // Check for blacklisted words
+    global $blacklist_words;
+    $all_inputs = implode(" ", $_POST);
+    if (containsBlacklistedWords($all_inputs, $blacklist_words)) {
+        http_response_code(403);
+        echo "<script>alert('Invalid input detected. Please remove restricted words.'); window.history.back();</script>";
+        exit;
+    }
+
+    // Backend validation matching frontend
+    $b_name = trim($_POST['name'] ?? '');
+    $b_mail = trim($_POST["email"] ?? '');
+    $b_phone = trim($_POST["phone"] ?? '');
+    $be_package = trim($_POST['package'] ?? '');
+
+    if (!preg_match('/^[a-z. A-Z]+$/', $b_name)) {
+        http_response_code(400);
+        echo "<script>alert('Invalid name format. Only letters, spaces, and dots are allowed.'); window.history.back();</script>";
+        exit;
+    }
+
+    if (!preg_match('/^[1-9]{1}[0-9]{9}$/', $b_phone)) {
+        http_response_code(400);
+        echo "<script>alert('Invalid phone number. It must be exactly 10 digits starting with 1-9.'); window.history.back();</script>";
+        exit;
+    }
 
     $subject = "New Enquiry - Request Callback";
     $admin_msg = "<p>Dear Admin,</p>
@@ -21,6 +52,7 @@ if(isset($_POST['submit_flag'])) {
     // Send email
     mailer($subject, $admin_msg, $To_email);
 
+    http_response_code(200);
     echo "<script>
     setTimeout(function() {
         window.location.href = 'packages-thankyou';
@@ -66,6 +98,8 @@ exit();
   <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
   <link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Cloudflare Turnstile -->
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
 </head>
 
@@ -302,8 +336,9 @@ exit();
                 <i class="fal fa-chevron-down"></i>
               </div>
 
-              <div class="form-btn col-12">
-                <button class="th-btn btn-fw" type="submit" id="submit_btn" value="Submit" name="submit_flag">
+              <div class="form-btn col-12 text-center">
+                <div class="cf-turnstile d-inline-block" data-sitekey="<?php echo $cloudflare_site_key; ?>" style="margin-top: 15px; margin-bottom: 15px;"></div>
+                <button class="th-btn btn-fw mt-3" type="submit" id="submit_btn" value="Submit" name="submit_flag">
                   BOOK NOW
                 </button>
               </div>

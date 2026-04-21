@@ -35,6 +35,8 @@
   <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-datepicker@1.9.0/dist/css/bootstrap-datepicker.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Cloudflare Turnstile -->
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 <style>
   .form-control:disabled, .form-control[readonly] {
     background-color: #ffffff;
@@ -191,8 +193,9 @@
 
       </div>
 
-      <div class="form-btn col-12 mt-3">
-        <button class="th-btn btn-fw" type="submit">Submit</button>
+      <div class="form-btn col-12 mt-3 text-center">
+        <div class="cf-turnstile d-inline-block" data-sitekey="<?php echo $cloudflare_site_key; ?>" style="margin-top: 15px; margin-bottom: 15px;"></div>
+        <button class="th-btn btn-fw mt-3" type="submit">Submit</button>
       </div>
     </div>
   </div>
