@@ -60,11 +60,12 @@ $result = $con->query($sql);
                     <table class="table table-hover" id="pc-dt-simple">
                         <thead>
                             <tr>
-                            <th>Id</th>
+                             <th>Id</th>
                              <th>Name</th>
                              <th>Phone</th>
                              <th>Email</th>
                              <th>Message</th>
+                             <th>IP Address</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -78,6 +79,7 @@ $result = $con->query($sql);
                                   <td><?php echo $row['phone']; ?></td>
                                   <td><?php echo $row['email']; ?></td>
                                   <td><?php echo $row['message']; ?></td>
+                                  <td><?php echo $row['ip_address'] ?? '-'; ?></td>
                               </tr>
                           <?php
                               }

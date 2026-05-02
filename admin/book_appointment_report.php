@@ -64,7 +64,12 @@ if (isset($_POST['loaddetails'])) {
       b.test_name,
       b.enquiry_date,
       b.appointment_date,
-      b.appointment_time
+      b.appointment_time,
+      b.utm_source,
+      b.utm_medium,
+      b.utm_campaign,
+      b.utm_term,
+      b.utm_content
     FROM book_appointment b
     WHERE 1=1
     ";
@@ -259,10 +264,15 @@ if (isset($_POST['loaddetails'])) {
                                         <th>Phone</th>
                                         <th>Branch</th>
                                         <th>Service</th>
-                                        <th>Test Name</th>
+                                        
                                         <th>Enquiry Date</th>
                                         <th>Appointment Date</th>
                                         <th>Appointment Time</th>
+                                        <th>UTM Source</th>
+                                        <th>UTM Medium</th>
+                                        <th>UTM Campaign</th>
+                                        <th>UTM Term</th>
+                                        <th>UTM Content</th>
                                       </tr>
                                    </thead>
 
@@ -275,10 +285,15 @@ if (isset($_POST['loaddetails'])) {
                                                   <td><?php echo htmlspecialchars($row['phone']); ?></td>
                                                   <td><?php echo htmlspecialchars($row['branch_display'] ?? '-'); ?></td>
                                                   <td><?php echo htmlspecialchars($row['service_display'] ?? '-'); ?></td>
-                                                  <td><?php echo htmlspecialchars($row['test_name'] ?? '-'); ?></td>
+                                                  
                                                   <td><?php echo !empty($row['enquiry_date']) ? date("d-m-Y", strtotime($row['enquiry_date'])) : "-"; ?></td>
                                                   <td><?php echo !empty($row['appointment_date']) ? date("d-m-Y", strtotime($row['appointment_date'])) : "-"; ?></td>
                                                   <td><?php echo !empty($row['appointment_time']) ? date("h:i A", strtotime($row['appointment_time'])) : "-"; ?></td>
+                                                  <td><?php echo htmlspecialchars($row['utm_source'] ?? '-'); ?></td>
+                                                  <td><?php echo htmlspecialchars($row['utm_medium'] ?? '-'); ?></td>
+                                                  <td><?php echo htmlspecialchars($row['utm_campaign'] ?? '-'); ?></td>
+                                                  <td><?php echo htmlspecialchars($row['utm_term'] ?? '-'); ?></td>
+                                                  <td><?php echo htmlspecialchars($row['utm_content'] ?? '-'); ?></td>
                                               </tr>
                                           <?php endwhile; ?>
                                       <?php else: ?>

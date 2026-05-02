@@ -1,7 +1,7 @@
 <?php
 date_default_timezone_set('Asia/Kolkata');
 require_once('PHPMailerAutoload.php');
-$To_email = "creatahmailinquiry@gmail.com";     
+$To_email =$_ENV['To_Email'];   
 function mailer($subject,$message,$receiver)
 {    
 
@@ -10,14 +10,14 @@ function mailer($subject,$message,$receiver)
   $mail->SMTPDebug = 0;
   $mail->SMTPAuth = TRUE;
   $mail->SMTPSecure = "ssl";
-  $mail->Port     = 465;  
-  $mail->Username = "enquiry@companyonline.in";
-  $mail->Password = "ZMW.7oSxu3&9";
-  $mail->Host     = "companyonline.in";
+  $mail->Port     = $_ENV['MAIL_PORT'];  
+  $mail->Username = $_ENV['SMTP_USERNAME'];
+    $mail->Password =$_ENV['SMTP_PASSWORD'];
+    $mail->Host = $_ENV['SMTP_HOST'];
   
   
   $mail->Mailer   = "smtp";
- $mail->SetFrom("noreply@gmail.com", "New Enquiry");
+  $mail->SetFrom($_ENV['SMTP_SETFROM'], "New Enquiry");
   $mail->AddAddress($receiver);
   
   $mail->Subject =$subject;

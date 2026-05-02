@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     global $cloudflare_secret_key;
     if (!verifyCloudflareTurnstile($cf_turnstile_response, $cloudflare_secret_key)) {
         http_response_code(403);
-        echo "<script>alert('Captcha verification failed. Please try again.'); window.history.back();</script>";
+        echo "<script>alert('CloudFare verification failed. Please try again.'); window.history.back();</script>";
         exit;
     }
 
@@ -45,8 +45,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $test_name = htmlspecialchars(trim($_POST['test_name'] ?? 'N/A'));
     $appointment_date = htmlspecialchars(trim($_POST['date']));
     $appointment_time = htmlspecialchars(trim($_POST['time']));
+    $utm_source = htmlspecialchars(trim($_POST['utm_source'] ?? null));
+    $utm_medium = htmlspecialchars(trim($_POST['utm_medium'] ?? null));
+    $utm_campaign = htmlspecialchars(trim($_POST['utm_campaign'] ?? null));
+    $utm_term = htmlspecialchars(trim($_POST['utm_term'] ?? null));
+    $utm_content = htmlspecialchars(trim($_POST['utm_content'] ?? null));
     $enquiry_date = date('Y-m-d');
-
+    $ip_address = getUserIP();
     /* -----------------------------------------
        Convert IDs to names
     ------------------------------------------*/
@@ -57,10 +62,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     ];
 
     $service_map = [
-        "1" => "MRI",
-        "2" => "CT",
+        "1" => "Wide Bore 3 Tesla MRI Scan",
+        "2" => "MRI Scan",
         "3" => "X-Ray",
-        "4" => "ECG"
+        "4" => "ECG",
+        "5" => "CT Scan",
+        "6" => "PET - CT Scan",
     ];
 
     $branch_name = $branch_map[$branch_id] ?? "Unknown";
@@ -68,12 +75,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
     $sql = "INSERT INTO book_appointment 
-        (patient_name, phone, appointment_date, branch, appointment_time, service, test_name, enquiry_date, appointment_status) 
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, 0)";
+    (patient_name, phone, appointment_date, branch, appointment_time, service, test_name, enquiry_date, utm_source, utm_medium, utm_campaign, utm_term, utm_content, appointment_status,ip_address) 
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0,?)";
 
     $stmt = $con->prepare($sql);
     $stmt->bind_param(
-        "ssssssss",
+        "ssssssssssssss",
         $patient_name,
         $phone,
         $appointment_date,
@@ -81,8 +88,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $appointment_time,
         $service_name,
         $test_name,
-        $enquiry_date
+        $enquiry_date,
+        $utm_source,
+        $utm_medium,
+        $utm_campaign,
+        $utm_term,
+        $utm_content,
+        $ip_address
     );
+
 
     if ($stmt->execute()) {
         // Email notification

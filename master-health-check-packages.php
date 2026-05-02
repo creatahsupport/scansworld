@@ -41,13 +41,16 @@ if(isset($_POST['submit_flag'])) {
         exit;
     }
 
+    $ip_address = getUserIP();
+
     $subject = "New Enquiry - Request Callback";
     $admin_msg = "<p>Dear Admin,</p>
     <p>You have received a request callback enquiry. Please check the details below:</p>
     <p>Name: ".$b_name."</p>
     <p>Email: ".$b_mail."</p>
     <p>Phone: ".$b_phone."</p>
-    <p>Package: ".$be_package."</p>";
+    <p>Package: ".$be_package."</p>
+    <p>IP Address: ".$ip_address."</p>";
 
     // Send email
     mailer($subject, $admin_msg, $To_email);

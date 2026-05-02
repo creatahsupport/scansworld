@@ -117,7 +117,24 @@
             </div>
         </div>
     </footer>
+<?php
+$request_uri = $_SERVER['REQUEST_URI'];
+$last_segment = basename(parse_url($request_uri, PHP_URL_PATH));
+if($last_segment=="book-appointment") {?>
+<a href="https://wa.me/919944618362" target="_blank" class="contact-button whatsapp-button">
+<img src="<?php echo $url_config ?>/assets/scan-world/whatsapp-icon.webp" width="70px" alt="whatsapp-icon" title="Whatsapp-icon">
+</a>
 
+<div class="appoint">
+<a href="tel:+919944618362" class="bt_tt" style="margin-left: 70px;">
+  <img src="<?php echo $url_config ?>/assets/scan-world/phone.webp" alt="call-now" title="Call Now">Call Now
+</a>
+<a href="https://wa.me/919626959999" class="bt_tt" target="_blank">
+  <img src="<?php echo $url_config ?>/assets/scan-world/whatsapp.webp" alt="WhatsApp">
+  <span>WhatsApp</span>
+</a>
+
+<?php } else { ?>
 <a href="https://wa.me/919944618362" target="_blank" class="contact-button whatsapp-button">
 <img src="<?php echo $url_config ?>/assets/scan-world/whatsapp-icon.webp" width="70px" alt="whatsapp-icon" title="Whatsapp-icon">
 </a>
@@ -134,4 +151,5 @@
   <img src="<?php echo $url_config ?>/assets/scan-world/book-an-appointment.png" alt="Book Appointment">
   <span>Book Appt.</span>
 </a>
+<?php } ?>
 </div>

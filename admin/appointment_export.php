@@ -44,7 +44,12 @@ if (isset($_POST['export_to_excel'])) {
             b.test_name,
             b.enquiry_date,
             b.appointment_date,
-            b.appointment_time
+            b.appointment_time,
+            b.utm_source,
+            b.utm_medium,
+            b.utm_campaign,
+            b.utm_term,
+            b.utm_content
         FROM book_appointment b
     ";
 
@@ -70,7 +75,12 @@ if (isset($_POST['export_to_excel'])) {
         'Test Name',
         'Enquiry Date',
         'Appointment Date',
-        'Appointment Time'
+        'Appointment Time',
+        'UTM Source',
+        'UTM Medium',
+        'UTM Campaign',
+        'UTM Term',
+        'UTM Content'
     ]);
 
     // CSV Data
@@ -83,7 +93,12 @@ if (isset($_POST['export_to_excel'])) {
             $row['test_name'] ?: '-',
             !empty($row['enquiry_date']) ? date("d-m-Y", strtotime($row['enquiry_date'])) : '-',
             !empty($row['appointment_date']) ? date("d-m-Y", strtotime($row['appointment_date'])) : '-',
-            $row['appointment_time'] ?: '-'
+            $row['appointment_time'] ?: '-',
+            $row['utm_source'] ?: '-',
+            $row['utm_medium'] ?: '-',
+            $row['utm_campaign'] ?: '-',
+            $row['utm_term'] ?: '-',
+            $row['utm_content'] ?: '-'
         ]);
     }
 

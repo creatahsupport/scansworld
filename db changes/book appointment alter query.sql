@@ -1,0 +1,1 @@
+ALTER TABLE `book_appointment` ADD `utm_source` VARCHAR(255) NOT NULL AFTER `enquiry_date`, ADD `utm_medium` VARCHAR(255) NOT NULL AFTER `utm_source`, ADD `utm_campaign` VARCHAR(255) NOT NULL AFTER `utm_medium`, ADD `utm_term` VARCHAR(255) NOT NULL AFTER `utm_campaign`, ADD `utm_content` VARCHAR(255) NOT NULL AFTER `utm_term`;

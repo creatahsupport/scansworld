@@ -21,7 +21,7 @@ if(isset($_POST['submit_flag']))
         echo "<script>alert('Invalid input detected. Please remove restricted words.'); window.history.back();</script>";
         exit;
     }
-
+    $ip_address = getUserIP();
     // Backend validation matching frontend
     $b_name = trim($_POST['name'] ?? '');
     $b_mail = trim($_POST["email"] ?? '');
@@ -41,15 +41,24 @@ if(isset($_POST['submit_flag']))
     }
 
 
-    
+    $enquiry_date = date('Y-m-d H:i:s');
+
+    // Save to DB
+    $sql = "INSERT INTO enquiry (name, email, phone, message, ip_address, created_at) VALUES (?, ?, ?, ?, ?, ?)";
+    $stmt = $con->prepare($sql);
+    $stmt->bind_param("ssssss", $b_name, $b_mail, $b_phone, $be_msg, $ip_address, $enquiry_date);
+    $stmt->execute();
+    $stmt->close();
+
 $subject="New Enquiry - Request Callback ";
 $admin_msg =  "<p>Dear Admin,</p>
 <p>You have received request call back enquiry. Please check the below details</p>
 <p></p>
-<p>Name: ".$_POST['name']."</p>
-<p>email: ".$_POST['email']."</p>
-<p>phone: ".$_POST['phone']."</p>
-<p>message: ".$_POST['message']."</p>";
+<p>Name: ".$b_name."</p>
+<p>Email: ".$b_mail."</p>
+<p>Phone: ".$b_phone."</p>
+<p>Message: ".$be_msg."</p>
+<p>IP Address: ".$ip_address."</p>";
 
     mailer($subject,$admin_msg,$To_email);
 
