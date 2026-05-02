@@ -1,6 +1,9 @@
-<?php include("includes/config.php"); ?>
+<?php include("includes/config.php");
+
 $testimonial_query = "SELECT * FROM testimonial WHERE del_i = 0 ORDER BY id DESC LIMIT 50";
 $latest_testimonial = mysqli_query($con, $testimonial_query);
+?>
+
 <!doctype html>
 <html class="no-js" lang="en">
 
@@ -75,13 +78,17 @@ $latest_testimonial = mysqli_query($con, $testimonial_query);
           <div class="row">
 
             <div class="form-group col-12">
-              <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+              <input type="text" class="form-control" name="name" placeholder="Your Name" required minlength="3"
+                maxlength="50" oninput="this.value = this.value.replace(/[^a-zA-Z ]/g, '');"
+                title="Letters and spaces only.">
               <i class="fal fa-user"></i>
             </div>
 
             <div class="form-group col-12">
               <input type="text" class="form-control" name="phone" placeholder="Phone Number" required
-                pattern="[1-9]{1}[0-9]{9}">
+                inputmode="numeric" pattern="[1-9][0-9]{9}" maxlength="10" title="Enter exactly 10 digits."
+                onkeydown="if(event.key.length===1 && !/[0-9]/.test(event.key)) event.preventDefault();"
+                oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10);">
               <i class="fal fa-phone"></i>
             </div>
 

@@ -25,15 +25,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $raw_name = trim($_POST['name'] ?? '');
     $raw_phone = trim($_POST['phone'] ?? '');
 
-    if (!preg_match('/^[a-z. A-Z]+$/', $raw_name)) {
+    if (!preg_match('/^[a-zA-Z ]{3,50}$/', $raw_name)) {
         http_response_code(400);
-        echo "<script>alert('Invalid name format. Only letters, spaces, and dots are allowed.'); window.history.back();</script>";
+        echo "<script>alert('Invalid name. Only letters and spaces are allowed'); window.history.back();</script>";
         exit;
     }
 
-    if (!preg_match('/^[1-9]{1}[0-9]{9}$/', $raw_phone)) {
+    if (!preg_match('/^[1-9][0-9]{9}$/', $raw_phone)) {
         http_response_code(400);
-        echo "<script>alert('Invalid phone number. It must be exactly 10 digits starting with 1-9.'); window.history.back();</script>";
+        echo "<script>alert('Invalid phone number. Must be exactly 10 digits.'); window.history.back();</script>";
         exit;
     }
 

@@ -1,9 +1,8 @@
 <?php
 include("includes/config.php");
-require_once("mail/mail.php"); 
+require_once("mail/mail.php");
 
-if(isset($_POST['submit_flag']))
-{
+if (isset($_POST['submit_flag'])) {
     // Verify Cloudflare Turnstile
     $cf_turnstile_response = $_POST['cf-turnstile-response'] ?? '';
     global $cloudflare_secret_key;
@@ -26,20 +25,31 @@ if(isset($_POST['submit_flag']))
     $b_name = trim($_POST['name'] ?? '');
     $b_mail = trim($_POST["email"] ?? '');
     $b_phone = trim($_POST["phone"] ?? '');
-    $be_msg =  trim($_POST['message'] ?? '');
+    $be_msg = trim($_POST['message'] ?? '');
 
-    if (!preg_match('/^[a-z. A-Z]+$/', $b_name)) {
+    if (!preg_match('/^[a-zA-Z ]{3,50}$/', $b_name)) {
         http_response_code(400);
-        echo "<script>alert('Invalid name format. Only letters, spaces, and dots are allowed.'); window.history.back();</script>";
+        echo "<script>alert('Invalid name. Only letters and spaces are allowed.'); window.history.back();</script>";
         exit;
     }
 
-    if (!preg_match('/^[1-9]{1}[0-9]{9}$/', $b_phone)) {
+    if (!filter_var($b_mail, FILTER_VALIDATE_EMAIL)) {
         http_response_code(400);
-        echo "<script>alert('Invalid phone number. It must be exactly 10 digits starting with 1-9.'); window.history.back();</script>";
+        echo "<script>alert('Invalid email address. Please enter a valid email.'); window.history.back();</script>";
         exit;
     }
 
+    if (!preg_match('/^[1-9][0-9]{9}$/', $b_phone)) {
+        http_response_code(400);
+        echo "<script>alert('Invalid phone number. Must be exactly 10 digits.'); window.history.back();</script>";
+        exit;
+    }
+
+    if (empty($be_msg) || mb_strlen($be_msg) > 150) {
+        http_response_code(400);
+        echo "<script>alert('Message is required and must not exceed 150 characters.'); window.history.back();</script>";
+        exit;
+    }
 
     $enquiry_date = date('Y-m-d H:i:s');
 
@@ -50,20 +60,20 @@ if(isset($_POST['submit_flag']))
     $stmt->execute();
     $stmt->close();
 
-$subject="New Enquiry - Request Callback ";
-$admin_msg =  "<p>Dear Admin,</p>
+    $subject = "New Enquiry - Request Callback ";
+    $admin_msg = "<p>Dear Admin,</p>
 <p>You have received request call back enquiry. Please check the below details</p>
 <p></p>
-<p>Name: ".$b_name."</p>
-<p>Email: ".$b_mail."</p>
-<p>Phone: ".$b_phone."</p>
-<p>Message: ".$be_msg."</p>
-<p>IP Address: ".$ip_address."</p>";
+<p>Name: " . $b_name . "</p>
+<p>Email: " . $b_mail . "</p>
+<p>Phone: " . $b_phone . "</p>
+<p>Message: " . $be_msg . "</p>
+<p>IP Address: " . $ip_address . "</p>";
 
-    mailer($subject,$admin_msg,$To_email);
+    mailer($subject, $admin_msg, $To_email);
 
-http_response_code(200);
-echo "<script>alert('Enquiry submitted  successfully')</script>";
+    http_response_code(200);
+    echo "<script>alert('Enquiry submitted  successfully')</script>";
 }
 
 ?>
@@ -90,7 +100,7 @@ echo "<script>alert('Enquiry submitted  successfully')</script>";
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicons/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
-    
+
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="assets/img/favicons/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
@@ -274,16 +284,16 @@ echo "<script>alert('Enquiry submitted  successfully')</script>";
     </div>
     <div class="space-bottom">
         <div class="container">
-            <form method="post" onsubmit="return validateForm();"
-                class="contact-form" data-bg-src="assets/scan-world/contact-us.png">
+            <form method="post" onsubmit="return validateForm();" class="contact-form"
+                data-bg-src="assets/scan-world/contact-us.png">
                 <div class="input-wrap">
                     <h2 class="sec-title">Get In Touch!</h2>
                     <div class="row">
                         <div class="form-group col-12">
                             <input type="text" class="form-control" name="name" id="name" placeholder="Your Name"
-                                autoComplete='none' oncopy="return false;" onpaste="return false;"
-                                oninput="this.value = this.value.replace(/[^a-z. A-Z]/g, '').replace(/(\..*)\./g, '$1');"
-                                required>
+                                autoComplete='none' oncopy="return false;" onpaste="return false;" minlength="3"
+                                maxlength="50" oninput="this.value = this.value.replace(/[^a-zA-Z ]/g, '');"
+                                title="Name must be 3–50 characters. Letters and spaces only." required>
                             <i class="fal fa-user"></i>
                         </div>
                         <div class="form-group col-12">
@@ -293,21 +303,28 @@ echo "<script>alert('Enquiry submitted  successfully')</script>";
                         </div>
                         <div class="form-group col-12">
                             <input type="text" class="form-control" name="phone" id="number" placeholder="Phone Number"
-                                required autocomplete="off" inputmode="numeric" pattern="[1-9]{1}[0-9]{9}"
-                                title="Please enter exactly 10 digits, starting with 1-9" oncopy="return false;"
-                                onpaste="return false;" oncut="return false;" oncontextmenu="return false;"
-                                onkeypress="return isNumberKey(event)" oninput="validatePhoneNumber(this);">
+                                required autocomplete="off" inputmode="numeric" pattern="[1-9][0-9]{9}" maxlength="10"
+                                title="Enter exactly 10 digits." oncopy="return false;" onpaste="return false;"
+                                oncut="return false;" oncontextmenu="return false;"
+                                onkeydown="if(event.key.length===1 && !/[0-9]/.test(event.key)) event.preventDefault();"
+                                oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10);"
+                                onkeypress="return isNumberKey(event)">
                             <i class="fal fa-phone"></i>
                         </div>
 
                         <div class="form-group col-12">
                             <textarea name="message" id="message" cols="30" rows="3" class="form-control"
-                                placeholder="Type Appointment Note..." required oncopy="return false;"
-                                onpaste="return false;" oncut="return false;" oncontextmenu="return false;"></textarea>
+                                placeholder="Type Appointment Note..." required maxlength="150" oncopy="return false;"
+                                onpaste="return false;" oncut="return false;" oncontextmenu="return false;"
+                                oninput="document.getElementById('msg-count').textContent = 150 - this.value.length;"></textarea>
+                            <small class="text-muted d-block text-end" style="font-size:12px;">
+                                <span id="msg-count">150</span> characters remaining
+                            </small>
                             <i class="fal fa-pencil"></i>
                         </div>
                         <div class="form-btn col-12 text-center">
-                            <div class="cf-turnstile d-inline-block" data-sitekey="<?php echo $cloudflare_site_key; ?>" style="margin-top: 15px; margin-bottom: 15px;"></div>
+                            <div class="cf-turnstile d-inline-block" data-sitekey="<?php echo $cloudflare_site_key; ?>"
+                                style="margin-top: 15px; margin-bottom: 15px;"></div>
                             <button class="th-btn btn-fw mt-3" type="submit" name="submit_flag">Submit</button>
                         </div>
                     </div>

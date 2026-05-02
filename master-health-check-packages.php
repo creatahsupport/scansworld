@@ -1,67 +1,67 @@
 <?php include("includes/config.php"); ?>
 
-<?php  
+<?php
 
-require_once("mail/mail.php"); 
+require_once("mail/mail.php");
 
-if(isset($_POST['submit_flag'])) {
-    // Verify Cloudflare Turnstile
-    $cf_turnstile_response = $_POST['cf-turnstile-response'] ?? '';
-    global $cloudflare_secret_key;
-    if (!verifyCloudflareTurnstile($cf_turnstile_response, $cloudflare_secret_key)) {
-        http_response_code(403);
-        echo "<script>alert('Captcha verification failed. Please try again.'); window.history.back();</script>";
-        exit;
-    }
+if (isset($_POST['submit_flag'])) {
+  // Verify Cloudflare Turnstile
+  $cf_turnstile_response = $_POST['cf-turnstile-response'] ?? '';
+  global $cloudflare_secret_key;
+  if (!verifyCloudflareTurnstile($cf_turnstile_response, $cloudflare_secret_key)) {
+    http_response_code(403);
+    echo "<script>alert('Captcha verification failed. Please try again.'); window.history.back();</script>";
+    exit;
+  }
 
-    // Check for blacklisted words
-    global $blacklist_words;
-    $all_inputs = implode(" ", $_POST);
-    if (containsBlacklistedWords($all_inputs, $blacklist_words)) {
-        http_response_code(403);
-        echo "<script>alert('Invalid input detected. Please remove restricted words.'); window.history.back();</script>";
-        exit;
-    }
+  // Check for blacklisted words
+  global $blacklist_words;
+  $all_inputs = implode(" ", $_POST);
+  if (containsBlacklistedWords($all_inputs, $blacklist_words)) {
+    http_response_code(403);
+    echo "<script>alert('Invalid input detected. Please remove restricted words.'); window.history.back();</script>";
+    exit;
+  }
 
-    // Backend validation matching frontend
-    $b_name = trim($_POST['name'] ?? '');
-    $b_mail = trim($_POST["email"] ?? '');
-    $b_phone = trim($_POST["phone"] ?? '');
-    $be_package = trim($_POST['package'] ?? '');
+  // Backend validation matching frontend
+  $b_name = trim($_POST['name'] ?? '');
+  $b_mail = trim($_POST["email"] ?? '');
+  $b_phone = trim($_POST["phone"] ?? '');
+  $be_package = trim($_POST['package'] ?? '');
 
-    if (!preg_match('/^[a-z. A-Z]+$/', $b_name)) {
-        http_response_code(400);
-        echo "<script>alert('Invalid name format. Only letters, spaces, and dots are allowed.'); window.history.back();</script>";
-        exit;
-    }
+  if (!preg_match('/^[a-zA-Z ]{3,50}$/', $b_name)) {
+    http_response_code(400);
+    echo "<script>alert('Invalid name. Only letters and spaces are allowed.'); window.history.back();</script>";
+    exit;
+  }
 
-    if (!preg_match('/^[1-9]{1}[0-9]{9}$/', $b_phone)) {
-        http_response_code(400);
-        echo "<script>alert('Invalid phone number. It must be exactly 10 digits starting with 1-9.'); window.history.back();</script>";
-        exit;
-    }
+  if (!preg_match('/^[1-9][0-9]{9}$/', $b_phone)) {
+    http_response_code(400);
+    echo "<script>alert('Invalid phone number. Must be exactly 10 digits.'); window.history.back();</script>";
+    exit;
+  }
 
-    $ip_address = getUserIP();
+  $ip_address = getUserIP();
 
-    $subject = "New Enquiry - Request Callback";
-    $admin_msg = "<p>Dear Admin,</p>
+  $subject = "New Enquiry - Request Callback";
+  $admin_msg = "<p>Dear Admin,</p>
     <p>You have received a request callback enquiry. Please check the details below:</p>
-    <p>Name: ".$b_name."</p>
-    <p>Email: ".$b_mail."</p>
-    <p>Phone: ".$b_phone."</p>
-    <p>Package: ".$be_package."</p>
-    <p>IP Address: ".$ip_address."</p>";
+    <p>Name: " . $b_name . "</p>
+    <p>Email: " . $b_mail . "</p>
+    <p>Phone: " . $b_phone . "</p>
+    <p>Package: " . $be_package . "</p>
+    <p>IP Address: " . $ip_address . "</p>";
 
-    // Send email
-    mailer($subject, $admin_msg, $To_email);
+  // Send email
+  mailer($subject, $admin_msg, $To_email);
 
-    http_response_code(200);
-    echo "<script>
+  http_response_code(200);
+  echo "<script>
     setTimeout(function() {
         window.location.href = 'packages-thankyou';
     }, 2000);
 </script>";
-exit();
+  exit();
 
 }
 ?>
@@ -72,8 +72,8 @@ exit();
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <?php include_once("seo.php");?>
-  
+  <?php include_once("seo.php"); ?>
+
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicons/favicon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicons/favicon-60x60.png">
@@ -88,13 +88,15 @@ exit();
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
-  
+
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="assets/img/favicons/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/fontawesome.min.css">
   <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
@@ -160,260 +162,268 @@ exit();
   </section> -->
 
   <section class="space">
-  <div class="container mt-4">
-    <div class="row">
-   
+    <div class="container mt-4">
+      <div class="row">
+
         <div class="col-md-4">
-            <div class="card card-custom">
-                <div class="card-header-custom text-white">
-                    Advanced Health Checkup
-                </div>
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-6">
-                            <h6><strong>RADIOLOGY TESTS: 12</strong></h6>
-                            <div class="checklist mb-25">
-                            <ul>
-                                <li><i class="fas fa-check-circle"></i> CT Scan</li>
-                                <li><i class="fas fa-check-circle"></i> Ultrasound</li>
-                                <li><i class="fas fa-check-circle"></i> X-Ray Chest</li>
-                            </ul>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <h6><strong>LAB TESTS: 78</strong></h6>
-                            <div class="checklist mb-25">
-                            <ul>
-                                <li><i class="fas fa-check-circle"></i> CT Scan</li>
-                                <li><i class="fas fa-check-circle"></i> Ultrasound</li>
-                                <li><i class="fas fa-check-circle"></i> X-Ray Chest</li>
-                            </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-center my-3">
-                        <a href="#QuickView" class="know-more">Know more →</a>
-                    </div>
-                    <div class="text-center">
-                        <h3><strong>400+</strong> DISEASES SCREENED</h3>
-                    </div>
-                    <div class="price-box">
-                        <div>Market Price <br><span style="text-decoration: line-through;">₹50000</span></div>
-                        <div>Our Price <br>₹25000</div>
-                    </div>
-                    <div class="text-center mt-3">
-                        <a href="#QuickView" class="btn btn-custom">Book Now</a>
-                    </div>
-                </div>
+          <div class="card card-custom">
+            <div class="card-header-custom text-white">
+              Advanced Health Checkup
             </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-6">
+                  <h6><strong>RADIOLOGY TESTS: 12</strong></h6>
+                  <div class="checklist mb-25">
+                    <ul>
+                      <li><i class="fas fa-check-circle"></i> CT Scan</li>
+                      <li><i class="fas fa-check-circle"></i> Ultrasound</li>
+                      <li><i class="fas fa-check-circle"></i> X-Ray Chest</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <h6><strong>LAB TESTS: 78</strong></h6>
+                  <div class="checklist mb-25">
+                    <ul>
+                      <li><i class="fas fa-check-circle"></i> CT Scan</li>
+                      <li><i class="fas fa-check-circle"></i> Ultrasound</li>
+                      <li><i class="fas fa-check-circle"></i> X-Ray Chest</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="text-center my-3">
+                <a href="#QuickView" class="know-more">Know more →</a>
+              </div>
+              <div class="text-center">
+                <h3><strong>400+</strong> DISEASES SCREENED</h3>
+              </div>
+              <div class="price-box">
+                <div>Market Price <br><span style="text-decoration: line-through;">₹50000</span></div>
+                <div>Our Price <br>₹25000</div>
+              </div>
+              <div class="text-center mt-3">
+                <a href="#QuickView" class="btn btn-custom">Book Now</a>
+              </div>
+            </div>
+          </div>
         </div>
         <!-- Card 2 -->
         <div class="col-md-4">
-            <div class="card card-custom">
-                <div class="card-header-custom text-white">
-                    Advanced Health Checkup
-                </div>
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-6">
-                            <h6><strong>RADIOLOGY TESTS: 12</strong></h6>
-                            <div class="checklist mb-25">
-                            <ul>
-                                <li><i class="fas fa-check-circle"></i> CT Scan</li>
-                                <li><i class="fas fa-check-circle"></i> Ultrasound</li>
-                                <li><i class="fas fa-check-circle"></i> X-Ray Chest</li>
-                            </ul>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <h6><strong>LAB TESTS: 78</strong></h6>
-                            <div class="checklist mb-25">
-                            <ul>
-                                <li><i class="fas fa-check-circle"></i> CT Scan</li>
-                                <li><i class="fas fa-check-circle"></i> Ultrasound</li>
-                                <li><i class="fas fa-check-circle"></i> X-Ray Chest</li>
-                            </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-center my-3">
-                        <a href="#QuickView" class="know-more">Know more →</a>
-                    </div>
-                    <div class="text-center">
-                        <h3><strong>400+</strong> DISEASES SCREENED</h3>
-                    </div>
-                    <div class="price-box">
-                        <div>Market Price <br><span style="text-decoration: line-through;">₹50000</span></div>
-                        <div>Our Price <br>₹25000</div>
-                    </div>
-                    <div class="text-center mt-3">
-                        <a href="#QuickView" class="btn btn-custom">Book Now</a>
-                    </div>
-                </div>
+          <div class="card card-custom">
+            <div class="card-header-custom text-white">
+              Advanced Health Checkup
             </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-6">
+                  <h6><strong>RADIOLOGY TESTS: 12</strong></h6>
+                  <div class="checklist mb-25">
+                    <ul>
+                      <li><i class="fas fa-check-circle"></i> CT Scan</li>
+                      <li><i class="fas fa-check-circle"></i> Ultrasound</li>
+                      <li><i class="fas fa-check-circle"></i> X-Ray Chest</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <h6><strong>LAB TESTS: 78</strong></h6>
+                  <div class="checklist mb-25">
+                    <ul>
+                      <li><i class="fas fa-check-circle"></i> CT Scan</li>
+                      <li><i class="fas fa-check-circle"></i> Ultrasound</li>
+                      <li><i class="fas fa-check-circle"></i> X-Ray Chest</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="text-center my-3">
+                <a href="#QuickView" class="know-more">Know more →</a>
+              </div>
+              <div class="text-center">
+                <h3><strong>400+</strong> DISEASES SCREENED</h3>
+              </div>
+              <div class="price-box">
+                <div>Market Price <br><span style="text-decoration: line-through;">₹50000</span></div>
+                <div>Our Price <br>₹25000</div>
+              </div>
+              <div class="text-center mt-3">
+                <a href="#QuickView" class="btn btn-custom">Book Now</a>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- Card 3 -->
         <div class="col-md-4">
-            <div class="card card-custom">
-                <div class="card-header-custom text-white">
-                    Basic Health Package
-                </div>
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-6">
-                            <h6><strong>RADIOLOGY TESTS: 5</strong></h6>
-                            <div class="checklist mb-25">
-                            <ul>
-                                <li><i class="fas fa-check-circle"></i> CT Scan</li>
-                                <li><i class="fas fa-check-circle"></i> Ultrasound</li>
-                                <li><i class="fas fa-check-circle"></i> X-Ray Chest</li>
-                            </ul>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <h6><strong>LAB TESTS: 50</strong></h6>
-                            <div class="checklist mb-25">
-                            <ul>
-                                <li><i class="fas fa-check-circle"></i> CT Scan</li>
-                                <li><i class="fas fa-check-circle"></i> Ultrasound</li>
-                                <li><i class="fas fa-check-circle"></i> X-Ray Chest</li>
-                            </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-center my-3">
-                        <a href="#QuickView" class="know-more">Know more →</a>
-                    </div>
-                    <div class="text-center">
-                        <h3><strong>200+</strong> DISEASES SCREENED</h3>
-                    </div>
-                    <div class="price-box">
-                        <div>Market Price <br><span style="text-decoration: line-through;">₹25000</span></div>
-                        <div>Our Price <br>₹12000</div>
-                    </div>
-                    <div class="text-center mt-3">
-                        <a href="#QuickView" class="btn btn-custom">Book Now</a>
-                    </div>
-                </div>
+          <div class="card card-custom">
+            <div class="card-header-custom text-white">
+              Basic Health Package
             </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-6">
+                  <h6><strong>RADIOLOGY TESTS: 5</strong></h6>
+                  <div class="checklist mb-25">
+                    <ul>
+                      <li><i class="fas fa-check-circle"></i> CT Scan</li>
+                      <li><i class="fas fa-check-circle"></i> Ultrasound</li>
+                      <li><i class="fas fa-check-circle"></i> X-Ray Chest</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <h6><strong>LAB TESTS: 50</strong></h6>
+                  <div class="checklist mb-25">
+                    <ul>
+                      <li><i class="fas fa-check-circle"></i> CT Scan</li>
+                      <li><i class="fas fa-check-circle"></i> Ultrasound</li>
+                      <li><i class="fas fa-check-circle"></i> X-Ray Chest</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="text-center my-3">
+                <a href="#QuickView" class="know-more">Know more →</a>
+              </div>
+              <div class="text-center">
+                <h3><strong>200+</strong> DISEASES SCREENED</h3>
+              </div>
+              <div class="price-box">
+                <div>Market Price <br><span style="text-decoration: line-through;">₹25000</span></div>
+                <div>Our Price <br>₹12000</div>
+              </div>
+              <div class="text-center mt-3">
+                <a href="#QuickView" class="btn btn-custom">Book Now</a>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
   </section>
 
 
 
-<div id="QuickView" class="white-popup mfp-hide">
-  <div class="container bg-white rounded-10">
-    <div class="row gx-60">
-      <div class="col-lg-6">
-        <div class="product-big-img">
-          <div class="img"><img src="assets/scan-world/package.png" alt="Product Image"></div>
+  <div id="QuickView" class="white-popup mfp-hide">
+    <div class="container bg-white rounded-10">
+      <div class="row gx-60">
+        <div class="col-lg-6">
+          <div class="product-big-img">
+            <div class="img"><img src="assets/scan-world/package.png" alt="Product Image"></div>
+          </div>
         </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="ps-xxl-5">
-          <form method="post" onsubmit="return validateForm();" class="faq-form2">
-            <h4 class="box-title text-center">Book Your Package</h4>
-            <div class="row">
-              <div class="form-group col-12">
-                <input type="text" class="form-control" name="name" id="name" placeholder="Your Name" required>
-                <i class="fal fa-user"></i>
-              </div>
-              <div class="form-group col-12">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Email Address" required>
-                <i class="fal fa-envelope"></i>
-              </div>
-              <div class="form-group col-12">
-                <input type="tel" class="form-control" name="phone" id="number" placeholder="Phone Number" required>
-                <i class="fal fa-phone"></i>
-              </div>
-              <div class="form-group col-12">
-                <select name="package" id="packageSelect" class="form-select" required>
-                  <option value="" disabled selected hidden>Select Package</option>
-                  <option value="Basic Health Package">Basic Health Package</option>
-                  <option value="Advanced Health Checkup">Advanced Health Checkup</option>
-                  <option value="Premium Health Checkup">Premium Health Checkup</option>
-                </select>
-                <i class="fal fa-chevron-down"></i>
-              </div>
+        <div class="col-lg-6">
+          <div class="ps-xxl-5">
+            <form method="post" onsubmit="return validateForm();" class="faq-form2">
+              <h4 class="box-title text-center">Book Your Package</h4>
+              <div class="row">
+                <div class="form-group col-12">
+                  <input type="text" class="form-control" name="name" id="name" placeholder="Your Name" minlength="3"
+                    maxlength="50" required oninput="this.value = this.value.replace(/[^a-zA-Z ]/g, '');"
+                    title="Name must be 3–50 characters. Letters and spaces only.">
+                  <i class="fal fa-user"></i>
+                </div>
+                <div class="form-group col-12">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Email Address" required>
+                  <i class="fal fa-envelope"></i>
+                </div>
+                <div class="form-group col-12">
+                  <input type="tel" class="form-control" name="phone" id="number" placeholder="Phone Number" required
+                    inputmode="numeric" pattern="[1-9][0-9]{9}" maxlength="10" title="Enter exactly 10 digits."
+                    onkeydown="if(event.key.length===1 && !/[0-9]/.test(event.key)) event.preventDefault();"
+                    oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10);">
+                  <i class="fal fa-phone"></i>
+                </div>
+                <div class="form-group col-12">
+                  <select name="package" id="packageSelect" class="form-select" required>
+                    <option value="" disabled selected hidden>Select Package</option>
+                    <option value="Basic Health Package">Basic Health Package</option>
+                    <option value="Advanced Health Checkup">Advanced Health Checkup</option>
+                    <option value="Premium Health Checkup">Premium Health Checkup</option>
+                  </select>
+                  <i class="fal fa-chevron-down"></i>
+                </div>
 
-              <div class="form-btn col-12 text-center">
-                <div class="cf-turnstile d-inline-block" data-sitekey="<?php echo $cloudflare_site_key; ?>" style="margin-top: 15px; margin-bottom: 15px;"></div>
-                <button class="th-btn btn-fw mt-3" type="submit" id="submit_btn" value="Submit" name="submit_flag">
-                  BOOK NOW
-                </button>
+                <div class="form-btn col-12 text-center">
+                  <div class="cf-turnstile d-inline-block" data-sitekey="<?php echo $cloudflare_site_key; ?>"
+                    style="margin-top: 15px; margin-bottom: 15px;"></div>
+                  <button class="th-btn btn-fw mt-3" type="submit" id="submit_btn" value="Submit" name="submit_flag">
+                    BOOK NOW
+                  </button>
+                </div>
               </div>
-            </div>
-            <p class="form-messages mb-0 mt-3"></p>
-          </form>
+              <p class="form-messages mb-0 mt-3"></p>
+            </form>
+          </div>
         </div>
       </div>
+      <button title="Close (Esc)" type="button" class="mfp-close">×</button>
     </div>
-    <button title="Close (Esc)" type="button" class="mfp-close">×</button>
   </div>
-</div>
 
 
-     <div id="loading-overlay" class="loading-overlay">
-         <div class="spinner"></div>
-     </div>
-<!-- Include Magnific Popup CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+  <div id="loading-overlay" class="loading-overlay">
+    <div class="spinner"></div>
+  </div>
+  <!-- Include Magnific Popup CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
 
-<!-- Include Magnific Popup JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+  <!-- Include Magnific Popup JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
 
-<script>
-$(document).ready(function () {
-  // Initialize Magnific Popup
-  $('.btn-custom, .know-more').magnificPopup({
-    type: 'inline',
-    midClick: true,
-    removalDelay: 300,
-    mainClass: 'mfp-fade',
-    callbacks: {
-      open: function() {
-        // Get package name from clicked button
-        var packageName = $.magnificPopup.instance.st.el.data('package');
-        if (packageName) {
-          $('#packageSelect').val(packageName);
-        } else {
-          $('#packageSelect').val('');
+  <script>
+    $(document).ready(function () {
+      // Initialize Magnific Popup
+      $('.btn-custom, .know-more').magnificPopup({
+        type: 'inline',
+        midClick: true,
+        removalDelay: 300,
+        mainClass: 'mfp-fade',
+        callbacks: {
+          open: function () {
+            // Get package name from clicked button
+            var packageName = $.magnificPopup.instance.st.el.data('package');
+            if (packageName) {
+              $('#packageSelect').val(packageName);
+            } else {
+              $('#packageSelect').val('');
+            }
+          }
         }
+      });
+
+      // Attach package name to each button
+      $('.btn-custom').each(function () {
+        var pkg = $(this).closest('.card').find('.card-header-custom').text().trim();
+        $(this).attr('data-package', pkg);
+      });
+    });
+    function validateForm() {
+      let name = $('#name').val().trim();
+      let email = $('#email').val().trim();
+      let phone = $('#number').val().trim();
+      let pkg = $('#packageSelect').val();
+
+      if (!name || !email || !phone || !pkg) {
+        alert('Please fill all fields.');
+        return false;
       }
+      return true;
     }
-  });
 
-  // Attach package name to each button
-  $('.btn-custom').each(function() {
-    var pkg = $(this).closest('.card').find('.card-header-custom').text().trim();
-    $(this).attr('data-package', pkg);
-  });
-});
-function validateForm() {
-  let name = $('#name').val().trim();
-  let email = $('#email').val().trim();
-  let phone = $('#number').val().trim();
-  let pkg = $('#packageSelect').val();
-
-  if (!name || !email || !phone || !pkg) {
-    alert('Please fill all fields.');
-    return false;
-  }
-  return true;
-}
-
-</script>
+  </script>
 
 
 
   <?php include("footer.php") ?>
   <div class="scroll-top">
     <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"></path>
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+        style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;">
+      </path>
     </svg>
   </div>
 
