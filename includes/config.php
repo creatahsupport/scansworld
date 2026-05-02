@@ -1,4 +1,10 @@
 <?php
+require_once __DIR__ . '/../vendor/autoload.php';
+
+// Load .env
+$dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__));
+$dotenv->load();
+
 if ($_SERVER['HTTP_HOST'] == 'localhost') {
     $request_uri_segments = explode('/', $_SERVER['REQUEST_URI']);
     $first_segment = '/' . $request_uri_segments[1];
@@ -17,21 +23,21 @@ if ($_SERVER['HTTP_HOST'] == 'localhost') {
     $path = parse_url($current_url, PHP_URL_PATH);
     $segments = explode('/', trim($path, '/'));
     $last_segment = end($segments);
-    $server = "localhost";
-    $username = "root";
-    $password = "";
-    $database_name = "scanworld";
+    $server = $_ENV['DB_HOST'];
+    $username = $_ENV['DB_USER'];
+    $password = $_ENV['DB_PASS'];
+    $database_name = $_ENV['DB_NAME'];
 
-} elseif ($_SERVER['HTTP_HOST'] == 'scansworld.companyonline.in') {
+} elseif ($_SERVER['HTTP_HOST'] == 'scansworldonchamiersroad.com') {
     $current_url = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
     $path = parse_url($current_url, PHP_URL_PATH);
     $segments = explode('/', trim($path, '/'));
     $last_segment = end($segments);
 
-    $server = "localhost";
-    $username = "webcreatah_scansworld";
-    $password = "[5b_#]*u;_BE";
-    $database_name = "scanworld";
+    $server = $_ENV['DB_HOST'];
+    $username = $_ENV['DB_USER'];
+    $password = $_ENV['DB_PASS'];
+    $database_name = $_ENV['DB_NAME'];
 
 } else {
 
@@ -43,8 +49,8 @@ if (mysqli_connect_errno()) {
 }
 
 // Cloudflare Turnstile Settings
-$cloudflare_site_key = ""; // Dummy test site key that always renders
-$cloudflare_secret_key = ""; // Dummy test secret key
+$cloudflare_site_key = $_ENV['TURNSTILE_SITE_KEY'];
+$cloudflare_secret_key = $_ENV['TURNSTILE_SECRET_KEY'];
 
 // Blacklist Words
 $blacklist_words = [
@@ -189,5 +195,22 @@ if (!function_exists('verifyCloudflareTurnstile')) {
         curl_close($verify);
         $responseData = json_decode($response);
         return $responseData->success ?? false;
+    }
+}
+if (!function_exists('getUserIP')) {
+    /**
+     * Gets the user's real IP address, accounting for Cloudflare.
+     * @return string
+     */
+    function getUserIP()
+    {
+        if (isset($_SERVER["HTTP_CF_CONNECTING_IP"])) {
+            return $_SERVER["HTTP_CF_CONNECTING_IP"];
+        } elseif (isset($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+            $ips = explode(',', $_SERVER['HTTP_X_FORWARDED_FOR']);
+            return trim($ips[0]);
+        } else {
+            return $_SERVER['REMOTE_ADDR'];
+        }
     }
 }
