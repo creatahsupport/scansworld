@@ -1,6 +1,20 @@
 <?php
 include("includes/config.php");
 
+if (isset($_GET['bids'])) {
+    $bids = mysqli_real_escape_string($con, $_GET['bids']);
+    $checkCat = mysqli_query($con, "SELECT id FROM categories WHERE slug = '$bids' AND del_i = 0");
+    if (mysqli_num_rows($checkCat) == 0) {
+        header("Location: " . $url_config . "/");
+        exit;
+    } else {
+        header("Location: " . $url_config . "/blog_category.php?bids=" . urlencode($bids));
+        exit;
+    }
+} else {
+    $bids = "";
+}
+
 $base_image = "uploads/blog/";
 $limit = 9;
 $page = isset($_GET['page']) ? max(1, intval($_GET['page'])) : 1;
@@ -78,6 +92,44 @@ if ($stmtCount)  mysqli_stmt_close($stmtCount);
     <link rel="stylesheet" href="<?php echo $url_config; ?>/assets/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="<?php echo $url_config; ?>/assets/css/jquery.datetimepicker.min.css">
     <link rel="stylesheet" href="<?php echo $url_config; ?>/assets/css/style.css">
+    <style>
+        /* Premium High-Contrast Blog Cards styling */
+        .blog-card {
+            background: #ffffff !important;
+            border: 1px solid #e0e6ed !important;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important;
+            border-radius: 12px !important;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+        }
+        .blog-card:hover {
+            transform: translateY(-5px) !important;
+            box-shadow: 0 10px 30px rgba(28, 69, 165, 0.15) !important;
+        }
+        .blog-card .blog-content {
+            padding: 25px !important;
+            background: #ffffff !important;
+        }
+        .blog-card .box-title a {
+            color: #142d56 !important; /* Premium Dark Navy */
+            font-weight: 700 !important;
+            font-size: 20px !important;
+            line-height: 1.4 !important;
+            transition: color 0.2s ease !important;
+        }
+        .blog-card .box-title a:hover {
+            color: #1c45a5 !important; /* Brand Blue */
+        }
+        .blog-card .blog-meta a {
+            color: #4a5568 !important; /* High contrast slate grey */
+            font-weight: 600 !important;
+            font-size: 14px !important;
+        }
+        .blog-card .blog-meta i {
+            color: #ff851f !important; /* Vivid Orange Accent */
+            margin-right: 8px !important;
+        }
+    </style>
 
 </head>
 

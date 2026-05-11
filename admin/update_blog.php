@@ -39,6 +39,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     // ✅ Use properly escaped values
+    $check_query = "SELECT id FROM blog WHERE title = '$title' AND id != '$id'";
+    $check_result = mysqli_query($con, $check_query);
+    if (mysqli_num_rows($check_result) > 0) {
+        echo "<script>alert('Blog title already exists!'); window.history.back();</script>";
+        exit();
+    }
+
     $sql_update = "
         UPDATE blog SET 
             title = '$title',

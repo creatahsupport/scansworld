@@ -99,6 +99,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $og_image_name = $con->real_escape_string($uploaded_images['og_image']);
         $twitter_image_name = $con->real_escape_string($uploaded_images['twitter_image']);
         
+        $check_query = "SELECT id FROM seo_management WHERE page_url = '$page_url'";
+        $check_result = $con->query($check_query);
+        if ($check_result->num_rows > 0) {
+            echo "<script>alert('SEO data for this Page URL already exists!'); window.history.back();</script>";
+            exit();
+        }
+
         $sql = "INSERT INTO seo_management (
             page_url, meta_title, meta_description, og_alt_tag, og_type, og_place_name, 
             og_country, og_postal_code, icbm, scheme, og_image, og_description, og_local, 

@@ -6,10 +6,43 @@
 require_once("mail/mail.php"); 
 
 if(isset($_POST['submit_flag'])) {
-    $b_name = $_POST['name'];
-    $b_mail = $_POST["email"];
-    $b_phone = $_POST["phone"];
-    $be_package = $_POST['package'];
+    // Verify Cloudflare Turnstile
+    $cf_turnstile_response = $_POST['cf-turnstile-response'] ?? '';
+    global $cloudflare_secret_key;
+    if (!verifyCloudflareTurnstile($cf_turnstile_response, $cloudflare_secret_key)) {
+        http_response_code(403);
+        echo "<script>alert('Captcha verification failed. Please try again.'); window.history.back();</script>";
+        exit;
+    }
+
+    // Check for blacklisted words
+    global $blacklist_words;
+    $all_inputs = implode(" ", $_POST);
+    if (containsBlacklistedWords($all_inputs, $blacklist_words)) {
+        http_response_code(403);
+        echo "<script>alert('Invalid input detected. Please remove restricted words.'); window.history.back();</script>";
+        exit;
+    }
+
+    // Backend validation matching frontend
+    $b_name = trim($_POST['name'] ?? '');
+    $b_mail = trim($_POST["email"] ?? '');
+    $b_phone = trim($_POST["phone"] ?? '');
+    $be_package = trim($_POST['package'] ?? '');
+
+    if (!preg_match('/^[a-zA-Z ]{3,50}$/', $b_name)) {
+        http_response_code(400);
+        echo "<script>alert('Invalid name. Only letters and spaces are allowed (min 3, max 50 characters).'); window.history.back();</script>";
+        exit;
+    }
+
+    if (!preg_match('/^[1-9][0-9]{9}$/', $b_phone)) {
+        http_response_code(400);
+        echo "<script>alert('Invalid phone number. Must be exactly 10 digits starting with 1-9, no letters allowed.'); window.history.back();</script>";
+        exit;
+    }
+
+    $ip_address = getUserIP();
 
     $subject = "New Enquiry - Request Callback";
     $admin_msg = "<p>Dear Admin,</p>
@@ -17,11 +50,13 @@ if(isset($_POST['submit_flag'])) {
     <p>Name: ".$b_name."</p>
     <p>Email: ".$b_mail."</p>
     <p>Phone: ".$b_phone."</p>
-    <p>Package: ".$be_package."</p>";
+    <p>Package: ".$be_package."</p>
+    <p>IP Address: ".$ip_address."</p>";
 
     // Send email
     mailer($subject, $admin_msg, $To_email);
 
+    http_response_code(200);
     echo "<script>
     setTimeout(function() {
         window.location.href = 'packages-thankyou';
@@ -67,6 +102,8 @@ exit();
   <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
   <link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Cloudflare Turnstile -->
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
 </head>
 
@@ -292,7 +329,10 @@ exit();
                             <h4 class="box-title text-center">Book Your Package</h4>
                             <div class="row">
                                 <div class="form-group col-12">
-                                    <input type="text" class="form-control" name="name" id="name" placeholder="Your Name">
+                                    <input type="text" class="form-control" name="name" id="name" placeholder="Your Name"
+                                      minlength="3" maxlength="50"
+                                      oninput="this.value = this.value.replace(/[^a-zA-Z ]/g, '');"
+                                      title="Name must be 3–50 characters. Letters and spaces only.">
                                     <i class="fal fa-user"></i>
                                 </div>
                                 <div class="form-group col-12">
@@ -300,7 +340,11 @@ exit();
                                     <i class="fal fa-envelope"></i>
                                 </div>
                                 <div class="form-group col-12">
-                                    <input type="tel" class="form-control" name="phone" id="number" placeholder="Phone Number">
+                                    <input type="tel" class="form-control" name="phone" id="number" placeholder="Phone Number"
+                                      inputmode="numeric" pattern="[1-9][0-9]{9}"
+                                      maxlength="10" title="Enter exactly 10 digits."
+                                      onkeydown="if(event.key.length===1 && !/[0-9]/.test(event.key)) event.preventDefault();"
+                                      oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10);">
                                     <i class="fal fa-phone"></i>
                                 </div>
                                 <div class="form-group col-12">
@@ -311,8 +355,9 @@ exit();
                                     <i class="fal fa-chevron-down"></i>
                                 </div>
                              
-                                <div class="form-btn col-12">
-                                    <button class="th-btn btn-fw" type="submit" id="submit_btn" value="Submit" name="submit_flag">BOOK NOW</button>
+                                <div class="form-btn col-12 text-center">
+                                    <div class="cf-turnstile d-inline-block" data-sitekey="<?php echo $cloudflare_site_key; ?>" style="margin-top: 15px; margin-bottom: 15px;"></div>
+                                    <button class="th-btn btn-fw mt-3" type="submit" id="submit_btn" value="Submit" name="submit_flag">BOOK NOW</button>
                                 </div>
                             </div>
                             <p class="form-messages mb-0 mt-3"></p>

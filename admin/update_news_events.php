@@ -36,6 +36,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     }
 
+    $title_clean = mysqli_real_escape_string($con, $title);
+    $check_query = "SELECT id FROM news_events WHERE title = '$title_clean' AND id != '$id'";
+    $check_result = mysqli_query($con, $check_query);
+    if (mysqli_num_rows($check_result) > 0) {
+        echo "<script>alert('News & Events title already exists!'); window.history.back();</script>";
+        exit();
+    }
+
     $sql_update = "UPDATE news_events SET  title = '$title',slug = '$slug', image_alt = '$image_alt_tag', image_title = '$image_title', meta_title = '$meta_title',content = '$content', image = '$image',update_date='$update_date' ,user_id='$user_id' WHERE id = '$id'";
 
     if (mysqli_query($con, $sql_update)) {

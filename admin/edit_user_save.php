@@ -19,6 +19,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $password = $_POST['password'];
     $password_encoded = $password ? base64_encode($password) : '';
 
+    $check_stmt = $con->prepare("SELECT id FROM admin WHERE (user_name = ? OR emailid = ?) AND id != ?");
+    $check_stmt->bind_param("ssi", $user_name, $email, $id);
+    $check_stmt->execute();
+    $check_stmt->store_result();
+    if ($check_stmt->num_rows > 0) {
+        echo "<script>alert('User Name or Email already exists!'); window.history.back();</script>";
+        $check_stmt->close();
+        exit();
+    }
+    $check_stmt->close();
+
     $sql = "UPDATE admin SET user_name = '$user_name',emailid = '$email',phone = '$phone',branch_id = '$branch_id',role = '$role',dashboard = '$dashboard',settings = '$settings',general = '$general',seo_management = '$seo_management',reports = '$reports',update_date = '$update_date', status = '$status'";
 
     if ($password_encoded) {

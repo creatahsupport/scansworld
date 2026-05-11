@@ -182,6 +182,21 @@ if (!function_exists('verifyCloudflareTurnstile')) {
         if (empty($cf_turnstile_response)) {
             return false;
         }
+
+        // Start session if not already started to track used tokens
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
+
+        if (!isset($_SESSION['used_turnstile_tokens'])) {
+            $_SESSION['used_turnstile_tokens'] = array();
+        }
+
+        // Reject if token has already been submitted in this session
+        if (in_array($cf_turnstile_response, $_SESSION['used_turnstile_tokens'])) {
+            return false;
+        }
+
         $data = array(
             'secret' => $secret_key,
             'response' => $cf_turnstile_response
@@ -194,7 +209,17 @@ if (!function_exists('verifyCloudflareTurnstile')) {
         $response = curl_exec($verify);
         curl_close($verify);
         $responseData = json_decode($response);
-        return $responseData->success ?? false;
+
+        $success = $responseData->success ?? false;
+        if ($success) {
+            // Register token as used
+            $_SESSION['used_turnstile_tokens'][] = $cf_turnstile_response;
+            // Limit session array size
+            if (count($_SESSION['used_turnstile_tokens']) > 15) {
+                array_shift($_SESSION['used_turnstile_tokens']);
+            }
+        }
+        return $success;
     }
 }
 if (!function_exists('getUserIP')) {

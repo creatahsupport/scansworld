@@ -45,12 +45,14 @@ if (isset($_POST['export_to_excel'])) {
             b.enquiry_date,
             b.appointment_date,
             b.appointment_time,
+            t.time_value AS appointment_time_string,
             b.utm_source,
             b.utm_medium,
             b.utm_campaign,
             b.utm_term,
             b.utm_content
         FROM book_appointment b
+        LEFT JOIN appointment_time t ON b.appointment_time = t.id
     ";
 
     if (!empty($whereClauses)) {
@@ -84,16 +86,35 @@ if (isset($_POST['export_to_excel'])) {
     ]);
 
     // CSV Data
+    $branch_map = [];
+    $b_res = mysqli_query($con, "SELECT id, branch_name FROM branch");
+    if ($b_res) {
+        while ($b_row = mysqli_fetch_assoc($b_res)) {
+            $branch_map[(string)$b_row['id']] = $b_row['branch_name'];
+        }
+    }
+
+    $service_map = [];
+    $s_res = mysqli_query($con, "SELECT id, service_name FROM service");
+    if ($s_res) {
+        while ($s_row = mysqli_fetch_assoc($s_res)) {
+            $service_map[(string)$s_row['id']] = $s_row['service_name'];
+        }
+    }
+
     while ($row = mysqli_fetch_assoc($result)) {
+        $b_name = $branch_map[$row['branch_name']] ?? $row['branch_name'] ?? '-';
+        $s_name = $service_map[$row['service_name']] ?? $row['service_name'] ?? '-';
+
         fputcsv($output, [
             $row['patient_name'] ?: '-',
             "\t" . $row['phone'], // forces Excel to keep full number
-            $row['branch_name'] ?: '-',
-            $row['service_name'] ?: '-',
+            $b_name,
+            $s_name,
             $row['test_name'] ?: '-',
             !empty($row['enquiry_date']) ? date("d-m-Y", strtotime($row['enquiry_date'])) : '-',
             !empty($row['appointment_date']) ? date("d-m-Y", strtotime($row['appointment_date'])) : '-',
-            $row['appointment_time'] ?: '-',
+            (!empty($row['appointment_time_string']) ? $row['appointment_time_string'] : ($row['appointment_time'] ?: '-')),
             $row['utm_source'] ?: '-',
             $row['utm_medium'] ?: '-',
             $row['utm_campaign'] ?: '-',

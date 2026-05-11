@@ -51,6 +51,13 @@ if (isset($_POST['submit_flag'])) {
         exit;
     }
 
+    if (!preg_match('/^[a-zA-Z0-9\s\.,\?!-_\(\)\'@]+$/', $be_msg)) {
+        http_response_code(400);
+        echo "<script>alert('Message contains invalid characters. Standard text and punctuation only.'); window.history.back();</script>";
+        exit;
+    }
+
+
     $enquiry_date = date('Y-m-d H:i:s');
 
     // Save to DB

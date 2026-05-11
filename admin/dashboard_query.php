@@ -23,28 +23,28 @@ if ($user_name == 'admin') {
     $sql = "SELECT COUNT(*) AS count FROM book_appointment";
     $result = mysqli_query($con, $sql);
     if ($row = mysqli_fetch_assoc($result)) {
-        $book_appointment_count = (int)$row['count'];
+        $book_appointment_count = (int) $row['count'];
     }
 
     // Today's Bookings
     $sql = "SELECT COUNT(*) AS count FROM book_appointment WHERE appointment_date='$today_date'";
     $result = mysqli_query($con, $sql);
     if ($row = mysqli_fetch_assoc($result)) {
-        $today_booking_count = (int)$row['count'];
+        $today_booking_count = (int) $row['count'];
     }
 
     // Today's Turned
     $sql = "SELECT COUNT(*) AS count FROM book_appointment WHERE appointment_date='$today_date' AND appointment_status=1";
     $result = mysqli_query($con, $sql);
     if ($row = mysqli_fetch_assoc($result)) {
-        $today_turned = (int)$row['count'];
+        $today_turned = (int) $row['count'];
     }
 
     // Today's Not Turned
     $sql = "SELECT COUNT(*) AS count FROM book_appointment WHERE appointment_date='$today_date' AND appointment_status=0";
     $result = mysqli_query($con, $sql);
     if ($row = mysqli_fetch_assoc($result)) {
-        $today_not_turned = (int)$row['count'];
+        $today_not_turned = (int) $row['count'];
     }
 
     // ✅ Total Fees (for turned appointments)
@@ -58,22 +58,22 @@ if ($user_name == 'admin') {
     $sql = "SELECT COUNT(*) AS count FROM blog WHERE del_i = 0";
     $result = mysqli_query($con, $sql);
     if ($row = mysqli_fetch_assoc($result)) {
-        $total_blog_count = (int)$row['count'];
+        $total_blog_count = (int) $row['count'];
     }
 
     // ✅ Total Doctors
     $sql = "SELECT COUNT(*) AS count FROM doctors WHERE del_i = 0";
     $result = mysqli_query($con, $sql);
     if ($row = mysqli_fetch_assoc($result)) {
-        $total_doctor_count = (int)$row['count'];
+        $total_doctor_count = (int) $row['count'];
     }
 
     // ✅ Total News & Events
-    $sql = "SELECT COUNT(*) AS count FROM news WHERE del_i = 0";
-    // $result = mysqli_query($con, $sql);
-    // if ($row = mysqli_fetch_assoc($result)) {
-    //     $total_news_count = (int)$row['count'];
-    // }
+    $sql = "SELECT COUNT(*) AS count FROM news_events WHERE del_i = 0";
+    $result = mysqli_query($con, $sql);
+    if ($row = mysqli_fetch_assoc($result)) {
+        $total_news_count = (int) $row['count'];
+    }
 
     // ✅ Branch-wise appointments (last 6 months)
     $query = "
@@ -118,60 +118,68 @@ else {
         $branch_id = $row['branch_id'];
     }
 
+    // Build branch filter condition to support both numeric IDs, string branch names, or empty fallback
+    $branch_where = "";
+    $branch_where_and = "";
+    if (!empty($branch_id) && $branch_id !== '0') {
+        $branch_where = " WHERE (branch='$branch_id' OR branch=(SELECT id FROM branch WHERE branch_name='$branch_id' LIMIT 1))";
+        $branch_where_and = " AND (branch='$branch_id' OR branch=(SELECT id FROM branch WHERE branch_name='$branch_id' LIMIT 1))";
+    }
+
     // Total Appointments (Branch)
-    $sql = "SELECT COUNT(*) AS count FROM book_appointment WHERE branch='$branch_id'";
+    $sql = "SELECT COUNT(*) AS count FROM book_appointment" . $branch_where;
     $result = mysqli_query($con, $sql);
     if ($row = mysqli_fetch_assoc($result)) {
-        $book_appointment_count = (int)$row['count'];
+        $book_appointment_count = (int) $row['count'];
     }
 
     // Today's Bookings (Branch)
-    $sql = "SELECT COUNT(*) AS count FROM book_appointment WHERE appointment_date='$today_date' AND branch='$branch_id'";
+    $sql = "SELECT COUNT(*) AS count FROM book_appointment WHERE appointment_date='$today_date'" . $branch_where_and;
     $result = mysqli_query($con, $sql);
     if ($row = mysqli_fetch_assoc($result)) {
-        $today_booking_count = (int)$row['count'];
+        $today_booking_count = (int) $row['count'];
     }
 
     // Today's Turned (Branch)
-    $sql = "SELECT COUNT(*) AS count FROM book_appointment WHERE appointment_date='$today_date' AND appointment_status=1 AND branch='$branch_id'";
+    $sql = "SELECT COUNT(*) AS count FROM book_appointment WHERE appointment_date='$today_date' AND appointment_status=1" . $branch_where_and;
     $result = mysqli_query($con, $sql);
     if ($row = mysqli_fetch_assoc($result)) {
-        $today_turned = (int)$row['count'];
+        $today_turned = (int) $row['count'];
     }
 
     // Today's Not Turned (Branch)
-    $sql = "SELECT COUNT(*) AS count FROM book_appointment WHERE appointment_date='$today_date' AND appointment_status=0 AND branch='$branch_id'";
+    $sql = "SELECT COUNT(*) AS count FROM book_appointment WHERE appointment_date='$today_date' AND appointment_status=0" . $branch_where_and;
     $result = mysqli_query($con, $sql);
     if ($row = mysqli_fetch_assoc($result)) {
-        $today_not_turned = (int)$row['count'];
+        $today_not_turned = (int) $row['count'];
     }
 
     // ✅ Total Fees (Branch)
     $sql = "SELECT SUM(fees) AS total_fees FROM book_appointment WHERE appointment_status=1 AND branch='$branch_id'";
     $result = mysqli_query($con, $sql);
     if ($row = mysqli_fetch_assoc($result)) {
-        $total_fees = (float)($row['total_fees'] ?? 0);
+        $total_fees = (float) ($row['total_fees'] ?? 0);
     }
 
     // ✅ Total Blogs
     $sql = "SELECT COUNT(*) AS count FROM blog WHERE del_i = 0";
     $result = mysqli_query($con, $sql);
     if ($row = mysqli_fetch_assoc($result)) {
-        $total_blog_count = (int)$row['count'];
+        $total_blog_count = (int) $row['count'];
     }
 
     // ✅ Total Doctors
     $sql = "SELECT COUNT(*) AS count FROM doctors WHERE del_i = 0";
     $result = mysqli_query($con, $sql);
     if ($row = mysqli_fetch_assoc($result)) {
-        $total_doctor_count = (int)$row['count'];
+        $total_doctor_count = (int) $row['count'];
     }
 
     // ✅ Total News & Events
-    $sql = "SELECT COUNT(*) AS count FROM news WHERE del_i = 0";
+    $sql = "SELECT COUNT(*) AS count FROM news_events WHERE del_i = 0";
     $result = mysqli_query($con, $sql);
     if ($row = mysqli_fetch_assoc($result)) {
-        $total_news_count = (int)$row['count'];
+        $total_news_count = (int) $row['count'];
     }
 
     // ✅ Branch-wise chart (single branch)

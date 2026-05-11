@@ -1,8 +1,4 @@
-<?php include("includes/config.php");
-
-$testimonial_query = "SELECT * FROM testimonial WHERE del_i = 0 ORDER BY id DESC LIMIT 50";
-$latest_testimonial = mysqli_query($con, $testimonial_query);
-?>
+<?php include("includes/config.php"); ?>
 
 <!doctype html>
 <html class="no-js" lang="en">
@@ -78,17 +74,13 @@ $latest_testimonial = mysqli_query($con, $testimonial_query);
           <div class="row">
 
             <div class="form-group col-12">
-              <input type="text" class="form-control" name="name" placeholder="Your Name" required minlength="3"
-                maxlength="50" oninput="this.value = this.value.replace(/[^a-zA-Z ]/g, '');"
-                title="Letters and spaces only.">
+              <input type="text" class="form-control" name="name" placeholder="Your Name" required>
               <i class="fal fa-user"></i>
             </div>
 
             <div class="form-group col-12">
               <input type="text" class="form-control" name="phone" placeholder="Phone Number" required
-                inputmode="numeric" pattern="[1-9][0-9]{9}" maxlength="10" title="Enter exactly 10 digits."
-                onkeydown="if(event.key.length===1 && !/[0-9]/.test(event.key)) event.preventDefault();"
-                oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10);">
+                pattern="[1-9]{1}[0-9]{9}">
               <i class="fal fa-phone"></i>
             </div>
 
@@ -96,9 +88,12 @@ $latest_testimonial = mysqli_query($con, $testimonial_query);
             <div class="form-group col-12">
               <select name="branch" class="form-select" required>
                 <option value="" disabled selected hidden>Select Center</option>
-                <option value="1">Nandanam</option>
-                <option value="2">Nanganallur</option>
-                <option value="3">Aminjikarai</option>
+                <?php
+                $branch_query = mysqli_query($con, "SELECT id, branch_name FROM branch WHERE del_i = 0 ORDER BY id ASC");
+                while ($branch_row = mysqli_fetch_assoc($branch_query)) {
+                    echo '<option value="' . htmlspecialchars((string)$branch_row['id']) . '">' . htmlspecialchars($branch_row['branch_name']) . '</option>';
+                }
+                ?>
               </select>
               <i class="fal fa-chevron-down"></i>
             </div>
@@ -107,12 +102,12 @@ $latest_testimonial = mysqli_query($con, $testimonial_query);
             <div class="form-group col-12">
               <select name="service" class="form-select" required>
                 <option value="" disabled selected hidden>Select Service</option>
-                <option value="1">Wide Bore 3 Tesla MRI Scan</option>
-                <option value="2">MRI Scan</option>
-                <option value="3">X-Ray</option>
-                <option value="4">ECG</option>
-                <option value="5">CT Scan</option>
-                <option value="6">PET - CT Scan</option>
+                <?php
+                $service_query = mysqli_query($con, "SELECT id, service_name FROM service WHERE del_i = 0 ORDER BY id ASC");
+                while ($service_row = mysqli_fetch_assoc($service_query)) {
+                    echo '<option value="' . htmlspecialchars((string)$service_row['id']) . '">' . htmlspecialchars($service_row['service_name']) . '</option>';
+                }
+                ?>
               </select>
               <i class="fal fa-chevron-down"></i>
             </div>
@@ -169,39 +164,13 @@ $latest_testimonial = mysqli_query($con, $testimonial_query);
             <div class="form-group col-12">
               <select name="time" id="timeSlot" class="form-select" required>
                 <option value="" disabled selected hidden>Select Time</option>
-                <option value="07:30 AM">07:30 AM</option>
-                <option value="08:00 AM">08:00 AM</option>
-                <option value="08:30 AM">08:30 AM</option>
-                <option value="09:00 AM">09:00 AM</option>
-                <option value="09:30 AM">09:30 AM</option>
-                <option value="10:00 AM">10:00 AM</option>
-                <option value="10:30 AM">10:30 AM</option>
-                <option value="11:00 AM">11:00 AM</option>
-                <option value="11:30 AM">11:30 AM</option>
-                <option value="12:00 PM">12:00 PM</option>
-                <option value="12:30 PM">12:30 PM</option>
-                <option value="01:00 PM">01:00 PM</option>
-                <option value="01:30 PM">01:30 PM</option>
-                <option value="02:00 PM">02:00 PM</option>
-                <option value="02:30 PM">02:30 PM</option>
-                <option value="03:00 PM">03:00 PM</option>
-                <option value="03:30 PM">03:30 PM</option>
-                <option value="04:00 PM">04:00 PM</option>
-                <option value="04:30 PM">04:30 PM</option>
-                <option value="05:00 PM">05:00 PM</option>
-                <option value="05:30 PM">05:30 PM</option>
-                <option value="06:00 PM">06:00 PM</option>
-                <option value="06:30 PM">06:30 PM</option>
-                <option value="07:00 PM">07:00 PM</option>
-                <option value="07:30 PM">07:30 PM</option>
-                <option value="08:00 PM">08:00 PM</option>
-                <option value="08:30 PM">08:30 PM</option>
-                <option value="09:00 PM">09:00 PM</option>
-                <option value="09:30 PM">09:30 PM</option>
-                <option value="10:00 PM">10:00 PM</option>
-                <option value="10:30 PM">10:30 PM</option>
+                <?php
+                $time_query = mysqli_query($con, "SELECT id, time_value FROM appointment_time ORDER BY id ASC");
+                while ($time_row = mysqli_fetch_assoc($time_query)) {
+                  echo '<option value="' . htmlspecialchars((string) $time_row['id']) . '">' . htmlspecialchars($time_row['time_value']) . '</option>';
+                }
+                ?>
               </select>
-
             </div>
             <input type="hidden" name="utm_source" id="utm_source">
             <input type="hidden" name="utm_medium" id="utm_medium">
@@ -557,7 +526,7 @@ $latest_testimonial = mysqli_query($con, $testimonial_query);
         // Loop through every time option
         for (let opt of timeSelect.options) {
           if (!opt.value) continue; // skip placeholder
-          const [t, mer] = opt.value.split(' ');
+          const [t, mer] = opt.text.split(' ');
           let [h, m] = t.split(':').map(Number);
 
           // Convert to 24-hour format

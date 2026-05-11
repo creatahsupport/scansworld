@@ -5,8 +5,10 @@ include_once("include/header.php");
 
 $user_role = $_SESSION['role'];
  $user_name=$_SESSION['user_name'] ;
+  // print_r($user_role);die;
 if ($user_role == "admin") {
     $sql = "SELECT * FROM branch WHERE del_i = 0 ORDER BY id DESC";
+   
     $result = $con->query($sql);
 } else {
     // Fetch branch_id from admin table

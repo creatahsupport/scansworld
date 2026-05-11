@@ -96,6 +96,14 @@ if (isset($_FILES['doctor_photo']) && $_FILES['doctor_photo']['error'] == UPLOAD
 }
 
 // ========== Update Query (Cleaned) ==========
+$doctor_name_clean = mysqli_real_escape_string($con, $doctor_name);
+$check_query = "SELECT id FROM doctors WHERE doctor_name = '$doctor_name_clean' AND id != $id";
+$check_result = mysqli_query($con, $check_query);
+if (mysqli_num_rows($check_result) > 0) {
+    echo "<script>alert('Doctor name already exists!'); window.history.back();</script>";
+    exit();
+}
+
 $query = "
     UPDATE doctors 
     SET 

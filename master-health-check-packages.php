@@ -41,6 +41,22 @@ if (isset($_POST['submit_flag'])) {
     exit;
   }
 
+  // Validate Email
+  if (!filter_var($b_mail, FILTER_VALIDATE_EMAIL)) {
+    http_response_code(400);
+    echo "<script>alert('Invalid email format.'); window.history.back();</script>";
+    exit;
+  }
+
+  // Validate Package
+  $valid_packages = ["Basic Health Package", "Advanced Health Checkup", "Premium Health Checkup"];
+  if (!in_array($be_package, $valid_packages)) {
+    http_response_code(400);
+    echo "<script>alert('Invalid package selected.'); window.history.back();</script>";
+    exit;
+  }
+
+
   $ip_address = getUserIP();
 
   $subject = "New Enquiry - Request Callback";

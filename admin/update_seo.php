@@ -125,6 +125,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $twitter_description = mysqli_real_escape_string($con, $twitter_description);
     $twitter_site = mysqli_real_escape_string($con, $twitter_site);
 
+    $check_query = "SELECT id FROM seo_management WHERE page_url = '$page_url' AND id != $seo_id";
+    $check_result = $con->query($check_query);
+    if ($check_result->num_rows > 0) {
+        echo "<script>alert('SEO data for this Page URL already exists!'); window.history.back();</script>";
+        exit();
+    }
+
     // Update the SEO data in the database
     $sql = "UPDATE seo_management SET
         page_url = '$page_url',

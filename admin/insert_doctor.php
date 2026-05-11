@@ -82,6 +82,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     // ====== Insert Doctor Data (no branch / publication) ======
+    $check_query = "SELECT id FROM doctors WHERE doctor_name = '$doctor_name'";
+    $check_result = mysqli_query($con, $check_query);
+    if (mysqli_num_rows($check_result) > 0) {
+        echo "<script>alert('Doctor name already exists!'); window.history.back();</script>";
+        exit();
+    }
+
     $query = "
         INSERT INTO doctors 
         (doctor_name, slug, doctor_studies, doctor_image, image_alttag, image_title, doctor_content, created_date, status, user_id) 

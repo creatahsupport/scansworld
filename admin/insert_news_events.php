@@ -44,6 +44,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo "<script>alert('Image upload error.');</script>";
         exit();
     }
+    $title_clean = mysqli_real_escape_string($con, $title);
+    $check_query = "SELECT id FROM news_events WHERE title = '$title_clean'";
+    $check_result = mysqli_query($con, $check_query);
+    if (mysqli_num_rows($check_result) > 0) {
+        echo "<script>alert('News & Events title already exists!'); window.history.back();</script>";
+        exit();
+    }
+
     $query = "INSERT INTO news_events (title, slug, image, image_title, meta_title, content ,created_date,image_alt,user_id) 
               VALUES ('$title', '$slug', '$file_name', '$image_title', '$meta_title', '$content','$created_date','$image_alt_tag','$user_id')";
 
