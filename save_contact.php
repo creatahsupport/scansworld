@@ -71,7 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $time_query = mysqli_query($con, "SELECT time_value FROM appointment_time WHERE id = $time_id");
     if ($time_row = mysqli_fetch_assoc($time_query)) {
         $appointment_time_string = $time_row['time_value'];
-        $appointment_time = (string)$time_id; // Store ID in database
+        $appointment_time = (string) $time_id; // Store ID in database
     } else {
         http_response_code(400);
         echo "<script>alert('Invalid time selected.'); window.history.back();</script>";
@@ -96,18 +96,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
        Convert IDs to names dynamically from DB
     ------------------------------------------*/
     $branch_map = [];
-    $b_res = mysqli_query($con, "SELECT id, branch_name FROM branch");
+    $b_res = mysqli_query($con, "SELECT id, branch_name FROM branch where del_i=0 order by id desc");
     if ($b_res) {
         while ($b_row = mysqli_fetch_assoc($b_res)) {
-            $branch_map[(string)$b_row['id']] = $b_row['branch_name'];
+            $branch_map[(string) $b_row['id']] = $b_row['branch_name'];
         }
     }
 
     $service_map = [];
-    $s_res = mysqli_query($con, "SELECT id, service_name FROM service");
+    $s_res = mysqli_query($con, "SELECT id, service_name FROM service where del_i=0 order by id desc");
     if ($s_res) {
         while ($s_row = mysqli_fetch_assoc($s_res)) {
-            $service_map[(string)$s_row['id']] = $s_row['service_name'];
+            $service_map[(string) $s_row['id']] = $s_row['service_name'];
         }
     }
 

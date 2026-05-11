@@ -348,8 +348,8 @@ if (isset($_POST['loaddetails'])) {
     <script>
         const dataTable = new simpleDatatables.DataTable('#pc-dt-simple', {
             sortable: false,
-            perPage: 5,
-            perPageSelect: [5, 10, 25, 50, 100]
+            perPage: 20,
+            perPageSelect: [20, 30, 40, 50, 100]
         });
     </script>
     <div class="modal fade" id="viewModal" tabindex="-1" aria-labelledby="viewModalLabel" aria-hidden="true">

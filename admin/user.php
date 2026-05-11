@@ -131,7 +131,7 @@ $result = $con->query($sql);
   <script>
     const dataTable = new simpleDatatables.DataTable('#pc-dt-simple', {
       sortable: false,
-      perPage: 5
+      perPage: 20
     });
   </script>
   <script>
