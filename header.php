@@ -48,7 +48,7 @@
             <li><a href="<?php echo $url_config; ?>/aminjikarai">Aminjikarai</a></li>
             <li><a href="<?php echo $url_config; ?>/nandanam">Nandanam</a></li>
             <li><a href="<?php echo $url_config; ?>/nanganallur">Nanganallur</a></li>
-            <!-- <li><a href="<?php echo $url_config; ?>/mylapore">Mylapore</a></li> -->
+            <li><a href="<?php echo $url_config; ?>/vellore">Vellore</a></li>
 
           </ul>
         </li>
@@ -109,7 +109,7 @@
                     <li><a href="<?php echo $url_config; ?>/aminjikarai">Aminjikarai</a></li>
                     <li><a href="<?php echo $url_config; ?>/nandanam">Nandanam</a></li>
                     <li><a href="<?php echo $url_config; ?>/nanganallur">Nanganallur</a></li>
-                    <!-- <li><a href="<?php echo $url_config; ?>/mylapore">Mylapore</a></li> -->
+                    <li><a href="<?php echo $url_config; ?>/vellore">Vellore</a></li>
 
                   </ul>
                 </li>

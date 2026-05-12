@@ -208,24 +208,25 @@ $latest_doctors = mysqli_query($con, $doctors_query);
             </div>
           </div>
       
-          <!-- <div class="swiper-slide">
+          <div class="swiper-slide">
             <div class="pe-xxl-5">
               <div class="faq-img2">
-                <img src="assets/scan-world/centers/mylapore.png" alt="centers">
+                <img src="assets/scan-world/centers/vellore.webp" alt="centers">
                 <div class="box-content">
-                  <h3 class="box-title">Mylapore</h3>
+                  <h3 class="box-title">Vellore</h3>
                   <div>
-                    <a href="mylapore" class="th-btn center">Visit Center</a>
+                    <a href="vellore" class="th-btn center">Visit Center</a>
                   </div>
-                  <div class="box-review pt-3"><a href="https://www.google.com/search?q=Scans+World+-+Mylapore&sca_esv=fd0b6290a00de74f&rlz=1C1ONGR_enIN1108IN1108&biw=1536&bih=738&sxsrf=AHTn8zrTorVx5uLCgs8RGRmlw5Wnn-ZbFA%3A1743428552776&ei=yJvqZ66QL_W7seMP05iYsAw&ved=0ahUKEwiulNG8ubSMAxX1XWwGHVMMBsYQ4dUDCBA&uact=5&oq=Scans+World+-+Mylapore&gs_lp=Egxnd3Mtd2l6LXNlcnAiFlNjYW5zIFdvcmxkIC0gTXlsYXBvcmUyChAAGLADGNYEGEcyChAAGLADGNYEGEcyChAAGLADGNYEGEcyChAAGLADGNYEGEcyChAAGLADGNYEGEcyChAAGLADGNYEGEcyDRAAGLADGNYEGEcYyQMyChAAGLADGNYEGEcyDhAAGIAEGLADGJIDGIoFSPeEA1AAWABwAXgAkAEAmAFuoAFuqgEDMC4xuAEDyAEAmAIBoAIImAMAiAYBkAYJkgcBMaAH-QU&sclient=gws-wiz-serp#lrd=0x3a526642b433cbb1:0x3c4faf28d0dc443c,1,,,," target="_blank">
-                      <div class="rating d-flex align-items-center">
-                        <span class="review-count">4.6</span>
+                  <div class="box-review pt-3"><a href="https://www.google.com/search?sca_esv=fd0b6290a00de74f&rlz=1C1ONGR_enIN1108IN1108&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOQtmu7EFxM8abXHMlT4Pyo9Da8A6_6f0gEwUcOBvZGwyJHMnnmg9cM_GLxAi5lJrsseIH3uMYT51g2K3W1-vnjuoUSXhN5_91G2mi4EeOrTBxNX-2g%3D%3D&q=Scans+World+Vellore+Reviews&sa=X&ved=2ahUKEwjJsYyniLOUAxVcafUHHW-hCy4Q0bkNegQIMxAH&biw=1536&bih=738&dpr=1.25">
+                  <div class="rating d-flex align-items-center">
+                        <span class="review-count">5.0 </span>
                         <div class="da-star-rating">
                           <span class="star full-star">★</span>
                           <span class="star full-star">★</span>
                           <span class="star full-star">★</span>
                           <span class="star full-star">★</span>
-                          <span class="star half-star"><svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <span class="star full-star">★</span>
+                          
                               <defs>
                                 <linearGradient id="grad">
                                   <stop offset="70%" stop-color="gold" />
@@ -237,41 +238,6 @@ $latest_doctors = mysqli_query($con, $doctors_query);
                           </span>
                         </div>
                       </div>
-                    </a>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-          </div> -->
-          <!-- <div class="swiper-slide">
-            <div class="pe-xxl-5">
-              <div class="faq-img2">
-                <img src="assets/scan-world/centers/nanganallur.webp" alt="faq">
-                <div class="box-content">
-                  <h3 class="box-title">Nungambakkam</h3>
-                  <div>
-                    <a href="nungambakkam" class="th-btn">Visit Center</a>
-                  </div>
-                  <div class="box-review pt-3"><a href="https://www.google.com/search?sca_esv=fd0b6290a00de74f&rlz=1C1ONGR_enIN1108IN1108&sxsrf=AHTn8zrhxNfY-5eErebJR8zJA6FFpgY2NA:1743428795579&si=APYL9bvoDGWmsM6h2lfKzIb8LfQg_oNQyUOQgna9TyfQHAoqUsAJ88OFDCk9LalUFLl2rWU_SW9-tMZwtOIRM68bNyS1csWJHMOfvmKN0Scr_m84UUpqnX6SY3dPGEzZNtYtMdDFiNW8&q=Scans+World+Reviews&sa=X&ved=2ahUKEwiBz7SwurSMAxXfRmwGHdw9BmgQ0bkNegQIHxAE&biw=1536&bih=738&dpr=1.25#lrd=0x3a526642b433cbb1:0x3c4faf28d0dc443c,1,,,," target="_blank">
-                      <div class="rating d-flex align-items-center">
-                        <span class="review-count">4.7</span>
-                        <div class="da-star-rating">
-                          <span class="star full-star">★</span>
-                          <span class="star full-star">★</span>
-                          <span class="star full-star">★</span>
-                          <span class="star full-star">★</span>
-                          <span class="star half-star"><svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <defs>
-                                <linearGradient id="grad">
-                                  <stop offset="80%" stop-color="gold" />
-                                  <stop offset="80%" stop-color="gray" />
-                                </linearGradient>
-                              </defs>
-                              <path fill="url(#grad)" d="M12 2l3 7h7l-5 5 2 7-7-4-7 4 2-7-5-5h7z" />
-                            </svg>
-                          </span>
-                        </div>
                       </div>
                     </a>
                   </div>
@@ -279,8 +245,8 @@ $latest_doctors = mysqli_query($con, $doctors_query);
                 </div>
               </div>
             </div>
-          </div> -->
-        </div>
+          </div>
+        
         <div class="slider-pagination"></div>
       </div>
     </div>

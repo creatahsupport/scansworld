@@ -52,7 +52,7 @@
                             <div class="th-widget-location">
                             <h3 class="widget_title">Our Branches</h3>
                             <div class="location-box">
-                                    <h3 class="box-title">1. Aminjikarai Branches:</h3>
+                                    <h3 class="box-title">1. Aminjikarai :</h3>
                                     <p class="footer-info">
                                         <i class="fal fa-location-dot"></i>
                                         No. 575, Rakhi Plaza, Poonamallee High Road, Aminjikarai, Chennai – 600 029.
@@ -64,7 +64,7 @@
                                     </p>
                                 </div>
                                 <div class="location-box">
-                                    <h3 class="box-title">2. Nandanam Branches:</h3>
+                                    <h3 class="box-title">2. Nandanam :</h3>
                                     <p class="footer-info">
                                         <i class="fal fa-location-dot"></i>
                                         No. 127, Basement, Chamiers Road, Nandanam, Chennai – 600 035.
@@ -75,7 +75,7 @@
                                     </p>
                                 </div>
                                 <div class="location-box">
-                                    <h3 class="box-title">3. Nanganallur Branches:</h3>
+                                    <h3 class="box-title">3. Nanganallur :</h3>
                                     <p class="footer-info">
                                         <i class="fal fa-location-dot"></i>
                                         No. 19, 29th Street, Nanganallur, Chennai – 600 061.
@@ -86,17 +86,17 @@
                                     </p>
                                 </div>
                               
-                                <!-- <div class="location-box">
-                                    <h3 class="box-title">4. Mylapore Branches:</h3>
+                                <div class="location-box">
+                                    <h3 class="box-title">4. Vellore :</h3>
                                     <p class="footer-info">
                                         <i class="fal fa-location-dot"></i>
-                                        No. 47, Oliver Road, Mylapore, Chennai – 600004
+                                        No. 54, Dharmaraja Koil Street, Thottapalayam, Vellore-632 004.
                                     </p>
                                     <p class="footer-info">
                                         <i class="fal fa-phone"></i>
-                                        <a href="tel:+917305884341" class="info-box_link">+91 73058 84341</a>
-                                    </p>
-                                </div> -->
+                                        <a href="tel:+919944717999" class="info-box_link">+91 99447 17999</a>
+                                    </p>    
+                                </div>
                             
                             </div>
                         </div>

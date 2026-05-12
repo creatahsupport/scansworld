@@ -146,7 +146,7 @@ if (isset($_POST['submit_flag'])) {
     <div class="space">
         <div class="container">
             <div class="row gy-4">
-                <div class="col-xl-4 col-md-6">
+                <div class="col-xl-6 col-md-6">
                     <div class="location-card">
                         <h3 class="box-title">Aminjikarai</h3>
                         <p class="footer-info">
@@ -175,7 +175,7 @@ if (isset($_POST['submit_flag'])) {
                     </div>
 
                 </div>
-                <div class="col-xl-4 col-md-6">
+                <div class="col-xl-6 col-md-6">
                     <div class="location-card active">
                         <h3 class="box-title">Nandanam</h3>
                         <p class="footer-info">
@@ -203,7 +203,7 @@ if (isset($_POST['submit_flag'])) {
                     </div>
 
                 </div>
-                <div class="col-xl-4 col-md-6">
+                <div class="col-xl-6 col-md-6">
                     <div class="location-card ">
                         <h3 class="box-title">Nanganallur</h3>
                         <p class="footer-info">
@@ -232,60 +232,35 @@ if (isset($_POST['submit_flag'])) {
 
                 </div>
 
-                <!-- <div class="col-xl-4 col-md-6">
+                <div class="col-xl-6 col-md-6">
                     <div class="location-card active">
-                        <h3 class="box-title">Mylapore</h3>
+                        <h3 class="box-title">Vellore</h3>
                         <p class="footer-info">
                             <i class="far fa-location-dot"></i>
-                            No. 47, Oliver Road, Mylapore, Chennai – 600004
+                            No. 54, Dharmaraja Koil Street, Thottapalayam, Vellore-632 004.
                         </p>
                         <p class="footer-info">
                             <i class="far fa-envelope"></i>
-                            <a href="mailto:scanpointctscans@gmail.com"
-                                class="info-box_link">scanpointctscans@gmail.com</a>
+                            <a href="mailto:scansworldatvellore@gmail.com"
+                                class="info-box_link">scansworldatvellore@gmail.com</a>
                         </p>
                         <p class="footer-info">
                             <i class="far fa-phone"></i>
-                            <a href="tel:+04435059999" class="info-box_link">444 - 3331 000</a>
+                            <a href="tel:+04163509999" class="info-box_link">0416 - 3509999</a>
                         </p>
                         <p class="footer-info">
                             <i class="far fa-mobile"></i>
-                            <a href="tel:+917305884341" class="info-box_link">+91 73058 84341</a>
+                            <a href="tel:+919944717999" class="info-box_link">+91 99447 17999</a>
                         </p>
                         <p class="footer-info">
                             <i class="far fa-map"></i>
-                            <a href="https://maps.app.goo.gl/ywemjafUaHRSCPCJ7" target="_blank"
+                            <a href="https://maps.app.goo.gl/EChV34GkkGibYPB66" target="_blank"
                                 class="info-box_link">Get Direction</a>
                         </p>
                     </div>
 
-                </div> -->
-                <!-- <div class="col-xl-4 col-md-6">
-                    <div class="location-card ">
-                        <h3 class="box-title">Nungambakkam</h3>
-                        <p class="footer-info">
-                            <i class="far fa-location-dot"></i>
-                            119, Rama St, Nungambakkam, Chennai - 600034
-                        </p>
-                        <p class="footer-info">
-                            <i class="far fa-envelope"></i>
-                            <a href="mailto:scanpointctscans@gmail.com" class="info-box_link">scanpointctscans@gmail.com</a>
-                        </p>
-                        <p class="footer-info">
-                            <i class="far fa-phone"></i>
-                            <a href="tel:+04435059999" class="info-box_link">444 - 3331 000</a>
-                        </p>
-                        <p class="footer-info">
-                            <i class="far fa-mobile"></i>
-                            <a href="tel:+917305884341" class="info-box_link">+91 73058 84341</a>
-                        </p>
-                        <p class="footer-info">
-                            <i class="far fa-map"></i>
-                            <a href="https://maps.app.goo.gl/EmbGabwJ87Bqd2o76" target="_blank" class="info-box_link">Get Direction</a>
-                        </p>
-                    </div>
-         
-                </div> -->
+                </div>
+                
             </div>
         </div>
     </div>
