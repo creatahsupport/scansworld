@@ -78,6 +78,184 @@
                 </ul>
               </div>
             </div>
+
+            <div class="mt-40">
+              <div class="title-area mb-25">
+                <h2 class="sec-title fw-semibold">Frequently Asked Questions</h2>
+              </div>
+              <div class="accordion" id="faqAccordion">
+                <div class="accordion-card">
+                  <div class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                      1. What is a Digital X-Ray and how is it different from a regular X-Ray?
+                    </button>
+                  </div>
+                  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      <p class="faq-text">A <a href="https://scansworldonchamiersroad.com/digital-xray" target="_blank">Digital X-Ray</a> uses advanced electronic sensors instead of traditional film
+                        to capture images delivering faster results higher image clarity and lower radiation exposure
+                        compared to conventional X-rays.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-card">
+                  <div class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      2. What conditions can be diagnosed with a Digital X-Ray at Scans World?
+                    </button>
+                  </div>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/digital-xray" target="_blank">Digital X-Ray</a> helps detect bone fractures, joint problems, lung diseases,
+                        chest infections, heart conditions, digestive blockages, abdominal issues and oral health
+                        problems covering a wide range of diagnostic needs.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-card">
+                  <div class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      3. What types of X-Ray scans are available at Scans World Chennai?
+                    </button>
+                  </div>
+                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      <p class="faq-text">Scans World offers full limb <a href="https://scansworldonchamiersroad.com/digital-xray" target="_blank">X-rays</a>, full spine X-rays, chest X-rays, abdominal
+                        X-rays, dental X-rays, joint X-rays, and X-ray-guided procedures all using state-of-the-art
+                        digital equipment.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-card">
+                  <div class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                      4. What is a Chest X-Ray used for?
+                    </button>
+                  </div>
+                  <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      <p class="faq-text">A <a href="https://scansworldonchamiersroad.com/digital-xray" target="_blank">Chest X-Ray</a> is used to evaluate the lungs, heart and surrounding structures.
+                        It helps detect pneumonia, tuberculosis, lung infections, heart enlargement and other chest
+                        related conditions accurately and quickly.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-card">
+                  <div class="accordion-header" id="headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                      5. Which doctors refer patients for a Digital X-Ray?
+                    </button>
+                  </div>
+                  <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      <p class="faq-text">General physicians, orthopaedic surgeons, pulmonologists, dentists,
+                        gastroenterologists and emergency care doctors often refer patients for <a href="https://scansworldonchamiersroad.com/digital-xray" target="_blank">Digital X-Ray</a> to
+                        evaluate injuries, infections and chronic conditions.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-card">
+                  <div class="accordion-header" id="headingSix">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                      6. Which is the best Digital X-Ray centre near me in Chennai?
+                    </button>
+                  </div>
+                  <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/" target="_blank">Scans World</a> provides high quality Digital X-Ray services at three convenient
+                        locations Aminjikarai, Nandanam (Chamiers Road) and Nanganallur with experienced radiologists
+                        and state-of-the-art equipments.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-card">
+                  <div class="accordion-header" id="headingSeven">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                      7. How long does a Digital X-Ray take at Scans World?
+                    </button>
+                  </div>
+                  <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      <p class="faq-text">The scan is one of the fastest diagnostic procedures results are available
+                        quickly making it ideal for routine check-ups, emergencies and follow-up assessment. The scan
+                        itself takes just a few minutes.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-card">
+                  <div class="accordion-header" id="headingEight">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                      8. How safe is a Digital X-Ray?
+                    </button>
+                  </div>
+                  <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/digital-xray" target="_blank">Digital X-Ray</a> uses less radiation than traditional film X-rays and is
+                        therefore a safer option. It’s a common diagnostic test performed daily on patients of all ages
+                        and it’s a trusted procedure around the world.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-card">
+                  <div class="accordion-header" id="headingNine">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                      9. How should I prepare for a Digital X-Ray at Scans World?
+                    </button>
+                  </div>
+                  <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      <p class="faq-text">Most <a href="https://scansworldonchamiersroad.com/digital-xray" target="_blank">X-Rays</a> require no special preparation. You may be asked to remove
+                        jewellery or metal objects from the area being scanned. For abdominal X-Rays, your doctor may
+                        advise fasting. The Scans World team will guide you with any specific instructions at the time
+                        of booking.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-card">
+                  <div class="accordion-header" id="headingTen">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                      10. How do I book a Digital X-Ray appointment at Scans World Chennai?
+                    </button>
+                  </div>
+                  <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      <p class="faq-text">You can book online through their website, WhatsApp at +91 96269 59999, or
+                        call directly. Walk-ins are also welcome at all three branches <a href="https://scansworldonchamiersroad.com/aminjikarai" target="_blank">Aminjikarai</a>, Nandanam and
+                        <a href="https://scansworldonchamiersroad.com/nanganallur" target="_blank">Nanganallur</a>.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <?php include("services-list.php") ?>

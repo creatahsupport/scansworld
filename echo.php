@@ -45,10 +45,10 @@
   <div class="breadcumb-wrapper " data-bg-src="assets/scan-world/breadcrumb.png">
     <div class="container">
       <div class="breadcumb-content">
-        <h1 class="breadcumb-title text-white">ECHO </h1>
+        <h1 class="breadcumb-title text-white">ECHO, ECG & Treadmill</h1>
         <ul class="breadcumb-menu">
           <li><a href="./" class="text-white">Home</a></li>
-          <li>ECHO</li>
+          <li>ECHO, ECG & Treadmill</li>
         </ul>
       </div>
     </div>
@@ -91,6 +91,185 @@
                 </ul>
               </div>
 
+            </div>
+
+            <div class="mt-40">
+              <div class="title-area mb-25">
+                <h2 class="sec-title fw-semibold">Frequently Asked Questions</h2>
+              </div>
+              <div class="accordion" id="faqAccordion">
+                <div class="accordion-card">
+                  <div class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                      1. What is an Echocardiogram (Echo Test)?
+                    </button>
+                  </div>
+                  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      <p class="faq-text">An <a href="https://scansworldonchamiersroad.com/echo" target="_blank">Echocardiogram</a> is a non-invasive heart scan that uses high-frequency sound
+                        waves to produce real-time images of the heart's structure and function. It helps doctors assess
+                        heart health and detect cardiovascular conditions accurately.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-card">
+                  <div class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      2. What conditions can an Echo Test detect?
+                    </button>
+                  </div>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      <p class="faq-text">An <a href="https://scansworldonchamiersroad.com/echo" target="_blank">Echo Test</a> can help diagnose problems with heart valves (such as mitral
+                        valve regurgitation or stenosis), heart failure, birth defects of the heart, cardiomyopathy,
+                        pericardial effusion (fluid around the heart) and abnormal blood flow within the heart.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-card">
+                  <div class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      3. What is the difference between ECG and Echocardiogram?
+                    </button>
+                  </div>
+                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      <p class="faq-text">An <a href="https://scansworldonchamiersroad.com/echo" target="_blank">ECG (Electrocardiogram)</a> is a test that records the electrical activity of
+                        the heart. An Echocardiogram is an imaging test that shows detailed pictures of the heart's
+                        structure and motion. The two tests combined give a better picture of heart health.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-card">
+                  <div class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                      4. What is a Treadmill Test and how is it different from a resting Echo?
+                    </button>
+                  </div>
+                  <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      <p class="faq-text">A <a href="https://scansworldonchamiersroad.com/echo" target="_blank">Treadmill Test (TMT)</a> monitors your heart's response to physical stress you
+                        walk on a treadmill while your heart rate and ECG are recorded. A resting Echo is done while you
+                        are still. Together they help detect exercise-induced heart problems..</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-card">
+                  <div class="accordion-header" id="headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                      5. What is a Holter Monitor Test?
+                    </button>
+                  </div>
+                  <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      <p class="faq-text">A Holter Monitor is a portable <a href="https://scansworldonchamiersroad.com/echo" target="_blank">ECG</a> device worn for 24–48 hours to continuously
+                        record heart activity during your daily routine. It can pick up irregular heart rhythms
+                        (arrhythmias) that might not be found on a short clinic visit.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-card">
+                  <div class="accordion-header" id="headingSix">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                      6. Who should consider getting an Echo Test done?
+                    </button>
+                  </div>
+                  <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      <p class="faq-text">An <a href="https://scansworldonchamiersroad.com/echo" target="_blank">Echo Test</a> might be suggested for individuals with a family history of heart
+                        disease, people who have chest pain, shortness of breath or fatigue, individuals with high blood
+                        pressure, diabetes or high cholesterol, and pregnant women who are at risk for heart
+                        complications.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-card">
+                  <div class="accordion-header" id="headingSeven">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                      7. How is an Echocardiogram performed at Scans World?
+                    </button>
+                  </div>
+                  <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      <p class="faq-text">A trained technician puts a small amount of gel on your chest and moves a
+                        hand-held device (transducer) over it. The probe sends sound waves that create real time
+                        pictures of your heart on a monitor. The test is painless and takes about 30-45 minutes.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-card">
+                  <div class="accordion-header" id="headingEight">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                      8. How should I prepare for an Echo Test or ECG?
+                    </button>
+                  </div>
+                  <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      <p class="faq-text">No special preparation is necessary for a standard <a href="https://scansworldonchamiersroad.com/echo" target="_blank">echo or ECG</a>. Treadmill Test
+                        Wear comfortable clothes and shoes. Do not eat heavy meals 2-3 hours before the test. Inform
+                        your doctor about any medications you are taking.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-card">
+                  <div class="accordion-header" id="headingNine">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                      9. How long does it take to get the Echo Test report at Scans World?
+                    </button>
+                  </div>
+                  <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      <p class="faq-text">At <a href="https://scansworldonchamiersroad.com/" target="_blank">Scans World</a>, Echo Test reports are typically available the same day or
+                        within 24 hours and are reviewed and interpreted by experienced cardiologists and
+                        radiologists.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-card">
+                  <div class="accordion-header" id="headingTen">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                      10. Which is the best center for Echo Test in Chennai?
+                    </button>
+                  </div>
+                  <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/" target="_blank">Scans World – Cardiac Diagnostic Center in Chennai</a> Scans World is the most
+                        trusted cardiac diagnostic centre in Chennai. We have the latest technology and top class
+                        expertise in Echo, ECG, Treadmill Test and Holter Monitoring. We are located at Aminjikarai,
+                        Nandanam (Chamiers Road) & Nanganallur.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

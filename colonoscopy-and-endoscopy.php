@@ -45,10 +45,10 @@
   <div class="breadcumb-wrapper " data-bg-src="assets/scan-world/breadcrumb.png">
     <div class="container">
       <div class="breadcumb-content">
-        <h1 class="breadcumb-title text-white">High Field Digital Mammogram </h1>
+        <h1 class="breadcumb-title text-white">Colonoscopy & Endoscopy</h1>
         <ul class="breadcumb-menu">
           <li><a href="./" class="text-white">Home</a></li>
-          <li>Digital Mammography</li>
+          <li>Colonoscopy & Endoscopy</li>
         </ul>
       </div>
     </div>
@@ -65,6 +65,184 @@
               <p>At Scans world , we provide Colonoscopy and Endoscopy procedures to assess and diagnose gastrointestinal conditions.  </p>
               <p>Early detection through these tests can help identify conditions like stomach ulcers, Colon cancer and other digestive issues. </p>
               <p>Our expert team ensures precise, minimally invasive procedures with quick recovery times. Contact us today to schedule your appointment.</p>
+            </div>
+
+            <div class="mt-40">
+              <div class="title-area mb-25">
+                <h2 class="sec-title fw-semibold">Frequently Asked Questions</h2>
+              </div>
+              <div class="accordion" id="faqAccordion">
+                <div class="accordion-card">
+                  <div class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                      1. What is an Endoscopy and why is it done?
+                    </button>
+                  </div>
+                  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      <p class="faq-text">An <a href="https://scansworldonchamiersroad.com/colonoscopy-and-endoscopy" target="_blank">Endoscopy</a> is a minimally invasive procedure that uses a thin, flexible
+                        camera to check the upper part of the digestive system including the food pipe, stomach and
+                        small intestine. It is used to find conditions such as stomach ulcers, acid reflux, bleeding and
+                        inflammation.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-card">
+                  <div class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      2. What is a Colonoscopy and what does it detect?
+                    </button>
+                  </div>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      <p class="faq-text">A <a href="https://scansworldonchamiersroad.com/colonoscopy-and-endoscopy" target="_blank">Colonoscopy</a> is a test that uses a long, flexible tube with a camera on the
+                        end to view the inside of the large intestine (colon). It may help to find colon cancer, polyps,
+                        inflammatory bowel disease, unexplained bleeding and other digestive problems early.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-card">
+                  <div class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      3. What is the difference between Endoscopy and Colonoscopy?
+                    </button>
+                  </div>
+                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/colonoscopy-and-endoscopy" target="_blank">Endoscopy</a> looks at the upper digestive tract ( food pipe , stomach , small
+                        intestine ) Colonoscopy looks at the lower digestive tract ( large intestine and rectum ) . Both
+                        are minimally invasive procedures conducted by expert gastroenterologists.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-card">
+                  <div class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                      4. What conditions can be diagnosed through Colonoscopy and Endoscopy at Scans World?
+                    </button>
+                  </div>
+                  <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      <p class="faq-text">These procedures help detect stomach ulcers, colon cancer, polyps, acid reflux
+                        (GERD), inflammatory bowel disease, internal bleeding, digestive blockages, and other
+                        gastrointestinal conditions accurately and early.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-card">
+                  <div class="accordion-header" id="headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                      5. Which doctors refer patients for Endoscopy or Colonoscopy?
+                    </button>
+                  </div>
+                  <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      <p class="faq-text">Gastroenterologists, general surgeons, general physicians and oncologists
+                        refer these procedures when evaluating digestive symptoms like persistent stomach pain, blood in
+                        stools, unexplained weight loss or chronic acidity.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-card">
+                  <div class="accordion-header" id="headingSix">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                      6. Which centre in Chennai offers Colonoscopy and Endoscopy with quick recovery?
+                    </button>
+                  </div>
+                  <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      <p class="faq-text">Scans World provides <a href="https://scansworldonchamiersroad.com/colonoscopy-and-endoscopy" target="_blank">Colonoscopy and Endoscopy</a> services in Aminjikarai,
+                        Nandanam (Chamiers Road) and Nanganallur branches with minimally invasive techniques and rapid
+                        recovery times with expert care .</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-card">
+                  <div class="accordion-header" id="headingSeven">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                      7. How is an Endoscopy procedure performed at Scans World?
+                    </button>
+                  </div>
+                  <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      <p class="faq-text">A thin bendable tube with a camera (endoscope) is carefully inserted through
+                        the mouth into the digestive tract. This is done by an experienced specialist and is intended to
+                        be as comfortable and minimally invasive as possible.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-card">
+                  <div class="accordion-header" id="headingEight">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                      8. How should I prepare for a Colonoscopy or Endoscopy at Scans World?
+                    </button>
+                  </div>
+                  <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      <p class="faq-text">For <a href="https://scansworldonchamiersroad.com/colonoscopy-and-endoscopy" target="_blank">Endoscopy</a>, fasting for minimum 6-8 hours prior to procedure is required.
+                        For Colonoscopy, bowel preparation (clearing out the colon) is needed the day before. Scans
+                        World will give detailed preparation instructions at the time of booking.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-card">
+                  <div class="accordion-header" id="headingNine">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                      9. How long does an Endoscopy or Colonoscopy take at Scans World Chennai?
+                    </button>
+                  </div>
+                  <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      <p class="faq-text">An <a href="https://scansworldonchamiersroad.com/colonoscopy-and-endoscopy" target="_blank">Endoscopy</a> usually takes 15 to 30 minutes and a Colonoscopy takes 30 to 60
+                        minutes depending on the extent of the examination. Most patients can return to normal
+                        activities the same day and recover quickly.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-card">
+                  <div class="accordion-header" id="headingTen">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                      10. How do I book a Colonoscopy or Endoscopy appointment at Scans World Chennai?
+                    </button>
+                  </div>
+                  <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      <p class="faq-text">You can book online through their website, WhatsApp at +91 96269 59999 or call
+                        directly. Walk-ins are also welcome at all three branches Aminjikarai, <a href="https://scansworldonchamiersroad.com/nandanam" target="_blank">Nandanam</a>, and
+                        Nanganallur.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

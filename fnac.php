@@ -73,6 +73,190 @@
                 planning. They are carried out by skilled radiologists in sterile, controlled settings to achieve the
                 best results for the patient.</p>
             </div>
+
+            <div class="mt-40">
+              <div class="title-area mb-25">
+                <h2 class="sec-title fw-semibold">Frequently Asked Questions</h2>
+              </div>
+              <div class="accordion" id="faqAccordion">
+                <div class="accordion-card">
+                  <div class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                      1. What is FNAC and what does it stand for?
+                    </button>
+                  </div>
+                  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/fnac" target="_blank">FNAC</a> means Fine Needle Aspiration Cytology. It is a minimally invasive
+                        diagnostic procedure where a thin needle is used to get a small sample of cells from a lump or
+                        abnormal tissue. The sample is then examined under a microscope for signs of infections, cysts or
+                        cancerous cells.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-card">
+                  <div class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      2. What is Image-Guided Biopsy?
+                    </button>
+                  </div>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/fnac" target="_blank">Image Guided Biopsy</a> is a procedure that uses real-time imaging (ultrasound or
+                        CT scan) to direct a needle to the precise location of an abnormal tissue or lump in order to
+                        obtain a sample for laboratory analysis. It's more accurate and less uncomfortable than the
+                        traditional surgical biopsy.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-card">
+                  <div class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      3. What conditions can FNAC detect?
+                    </button>
+                  </div>
+                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/fnac" target="_blank">FNAC</a> can diagnose benign (non-cancerous) cysts, abscesses, lymph node
+                        enlargements, thyroid nodules, breast lumps, salivary gland swellings and early stage cancerous
+                        cells. It is one of the most accurate initial tests for investigating unexplained lumps in the
+                        body.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-card">
+                  <div class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                      4. How is FNAC performed at Scans World?
+                    </button>
+                  </div>
+                  <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      <p class="faq-text">This is done by a radiologist or a trained specialist . Ultrasound imaging is
+                        used to guide a fine , thin needle into the lump or swelling and a small sample of cells is
+                        gently drawn out . The procedure is done under sterile conditions and with minimal pain and takes
+                        just a few minutes.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-card">
+                  <div class="accordion-header" id="headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                      5. What is an Image-Guided Drainage Procedure?
+                    </button>
+                  </div>
+                  <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/fnac" target="_blank">Image guided</a> drainage procedure: This procedure uses real-time imaging with
+                        ultrasound or CT to safely and accurately insert a needle or small catheter into a fluid
+                        collection such as an abscess, cyst or effusion to drain the fluid. This avoids open surgery, and
+                        allows faster recovery.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-card">
+                  <div class="accordion-header" id="headingSix">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                      6. How is an Image-Guided Drainage Procedure different from surgery?
+                    </button>
+                  </div>
+                  <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      <p class="faq-text">Image-guided drainage is a minimally invasive procedure, as opposed to
+                        traditional surgery. It does not require large incisions, causes less pain, has a lower risk of
+                        complications and allows patients to recover much faster. Most procedures are done in one
+                        outpatient visit.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-card">
+                  <div class="accordion-header" id="headingSeven">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                      7. Which imaging technique is used to guide FNAC and biopsy at Scans World?
+                    </button>
+                  </div>
+                  <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      <p class="faq-text">Scans World performs <a href="https://scansworldonchamiersroad.com/fnac" target="_blank">FNAC</a> and biopsy procedures under real time ultrasound or
+                        CT scanning depending on the location and depth of the lesion. This allows the needle to be
+                        accurately and safely delivered to the target location.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-card">
+                  <div class="accordion-header" id="headingEight">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                      8. How should I prepare for an FNAC or Image-Guided Biopsy?
+                    </button>
+                  </div>
+                  <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      <p class="faq-text">Tell your doctor if you are taking any blood-thinning drugs – you might need
+                        to stop taking them before the procedure. If sedation is planned, avoid eating or drinking for a
+                        few hours. On the day of your procedure, wear loose, comfortable clothing.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-card">
+                  <div class="accordion-header" id="headingNine">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                      9. How long does it take to get the FNAC report at Scans World?
+                    </button>
+                  </div>
+                  <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/fnac" target="_blank">Scans World FNAC</a> reports normally take 24-48 hours depending on the complexity
+                        of the analysis. Our pathologists and radiologists work together to ensure your results are
+                        accurate and on time.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-card">
+                  <div class="accordion-header" id="headingTen">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                      10. Which is the best center for FNAC and Image-Guided Biopsy in Chennai?
+                    </button>
+                  </div>
+                  <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/" target="_blank">Scans World is a trusted diagnostic center in Chennai</a> offering image guided
+                        FNAC, Biopsy and Drainage procedures with advanced ultrasound and CT guidance, experienced
+                        Radiologists and a fully sterile safe environment. Branches at Aminjikarai, Nandanam (Chamiers
+                        Road) and Nanganallur.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <?php include("services-list.php") ?>
