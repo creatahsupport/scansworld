@@ -237,7 +237,7 @@ if (isset($_POST['submit_flag'])) {
                         <h3 class="box-title">Vellore</h3>
                         <p class="footer-info">
                             <i class="far fa-location-dot"></i>
-                            No. 54, Dharmaraja Koil Street, Thottapalayam, Vellore-632 004.
+                            No. 54/3, Dharmaraja Koil Street, Thottapalayam, Vellore-632 004.
                         </p>
                         <p class="footer-info">
                             <i class="far fa-envelope"></i>
@@ -260,7 +260,7 @@ if (isset($_POST['submit_flag'])) {
                     </div>
 
                 </div>
-                
+
             </div>
         </div>
     </div>
