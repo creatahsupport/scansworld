@@ -61,7 +61,7 @@
                         <div class="th-widget-location">
                             <h3 class="widget_title">Our Branches</h3>
                             <div class="location-box">
-                                <h3 class="box-title">1. Aminjikarai :</h3>
+                                <h3 class="box-title">1. Aminjikarai</h3>
                                 <p class="footer-info">
                                     <i class="fal fa-location-dot"></i>
                                     No. 575, Rakhi Plaza, Poonamallee High Road, Aminjikarai, Chennai – 600 029.
@@ -73,7 +73,7 @@
                                 </p>
                             </div>
                             <div class="location-box">
-                                <h3 class="box-title">2. Nandanam :</h3>
+                                <h3 class="box-title">2. Nandanam</h3>
                                 <p class="footer-info">
                                     <i class="fal fa-location-dot"></i>
                                     No. 127, Basement, Chamiers Road, Nandanam, Chennai – 600 035.
@@ -84,7 +84,7 @@
                                 </p>
                             </div>
                             <div class="location-box">
-                                <h3 class="box-title">3. Nanganallur :</h3>
+                                <h3 class="box-title">3. Nanganallur</h3>
                                 <p class="footer-info">
                                     <i class="fal fa-location-dot"></i>
                                     No. 19, 29th Street, Nanganallur, Chennai – 600 061.
@@ -96,7 +96,7 @@
                             </div>
 
                             <div class="location-box">
-                                <h3 class="box-title">4. Vellore :</h3>
+                                <h3 class="box-title">4. Vellore</h3>
                                 <p class="footer-info">
                                     <i class="fal fa-location-dot"></i>
                                     No. 54/3, Dharmaraja Koil Street, Thottapalayam, Vellore-632 004.
@@ -118,9 +118,10 @@
             <div class="row gy-2 align-items-center">
                 <div class="col-md-12">
                     <p class="copyright-text text-center">Copyright <i class="fal fa-copyright"></i>
-                        <?php echo date("Y"); ?> <a href="./" class="text-white">Scans World.</a> All Rights Reserved. |
-                        <a href="terms-and-conditions" class="text-white">Terms and Conditions</a> | <a
-                            href="privacy-policy" class="text-white">Privacy policy</a></p>
+                        <?php echo date("Y"); ?> <a href="<?php echo $url_config ?>" class="text-white">Scans World.</a> All Rights Reserved. |
+                        <a href="<?php echo $url_config; ?>/terms-and-conditions" class="text-white">Terms and Conditions</a> | <a
+                            href="<?php echo $url_config; ?>/privacy-policy" class="text-white">Privacy policy</a>
+                    </p>
                 </div>
                 <!-- <div class="col-md-5 text-center text-md-end">
                     <p class="copyright-text"> Designed & Developed by <a href="https://www.kay.org.in/" target="_blank" >KAY Multimedia Solutions</a></p>
