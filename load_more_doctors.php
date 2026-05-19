@@ -1,32 +1,59 @@
 <?php
 include("includes/config.php");
 
-$base_image = "uploads/doctor_images/";
-$limit = 12;
+header('Content-Type: application/json');
+
 $page = isset($_POST['page']) ? intval($_POST['page']) : 1;
+$limit = 12;
 $start = ($page - 1) * $limit;
 
-$RECENTSQL = "SELECT * FROM doctors WHERE status=1 ORDER BY id ASC LIMIT $start, $limit";
-$RECENT_RESULT = mysqli_query($con, $RECENTSQL);
+// Get total count of active doctors
+$totalSQL = "SELECT COUNT(*) as total FROM doctors WHERE status = 1 AND del_i = 0";
+$totalResult = mysqli_query($con, $totalSQL);
 
-$response = [];
+if (!$totalResult) {
+    echo json_encode([
+        'error' => 'Database error: ' . mysqli_error($con),
+        'doctors' => [],
+        'hasMore' => false
+    ]);
+    exit;
+}
 
-while ($row = mysqli_fetch_assoc($RECENT_RESULT)) {
-    $response['doctors'][] = [
+$total = mysqli_fetch_assoc($totalResult)['total'];
+$totalPages = ceil($total / $limit);
+
+// Fetch doctors for this page
+$sql = "SELECT * FROM doctors WHERE status = 1 AND del_i = 0 ORDER BY id ASC LIMIT $start, $limit";
+$result = mysqli_query($con, $sql);
+
+if (!$result) {
+    echo json_encode([
+        'error' => 'Database error: ' . mysqli_error($con),
+        'doctors' => [],
+        'hasMore' => false
+    ]);
+    exit;
+}
+
+$doctors = [];
+$base_image = "uploads/doctor_images/";
+
+while ($row = mysqli_fetch_assoc($result)) {
+    $doctors[] = [
         'doctor_name' => htmlspecialchars($row['doctor_name']),
         'doctor_studies' => htmlspecialchars($row['doctor_studies']),
-        'doctor_image' => htmlspecialchars($base_image . '/' . $row['doctor_image']),
+        'doctor_image' => $base_image . htmlspecialchars($row['doctor_image']),
         'image_alttag' => htmlspecialchars($row['image_alttag']),
         'doctor_content' => htmlspecialchars($row['doctor_content'])
     ];
 }
 
-$totalPostsSQL = "SELECT COUNT(*) as total FROM doctors WHERE status=1";
-$totalPostsResult = mysqli_query($con, $totalPostsSQL);
-$totalPosts = mysqli_fetch_assoc($totalPostsResult)['total'];
-$totalPages = ceil($totalPosts / $limit);
-
-$response['hasMore'] = ($page * $limit) < $totalPosts;
-
-echo json_encode($response);
+echo json_encode([
+    'doctors' => $doctors,
+    'hasMore' => ($page < $totalPages),
+    'currentPage' => $page,
+    'totalPages' => $totalPages,
+    'totalDoctors' => $total
+]);
 ?>

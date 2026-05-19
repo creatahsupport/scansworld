@@ -1,4 +1,6 @@
-<?php include("includes/config.php"); ?>
+<?php include("includes/config.php"); 
+$testimonial_query = "SELECT * FROM testimonial WHERE del_i = 0 ORDER BY id DESC";
+$latest_testimonial = mysqli_query($con, $testimonial_query);?>
 
 <!doctype html>
 <html class="no-js" lang="en">

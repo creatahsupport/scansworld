@@ -22,6 +22,7 @@ $totalPosts = mysqli_fetch_assoc($totalPostsResult)['total'];
 $totalPages = ceil($totalPosts / $limit);
 $prevPage = ($page > 1) ? $page - 1 : false;
 $nextPage = ($page < $totalPages) ? $page + 1 : false;
+$hasMorePages = ($page < $totalPages); // Add this flag
 ?>
 
 
@@ -113,59 +114,83 @@ $nextPage = ($page < $totalPages) ? $page + 1 : false;
 
         </div>
       </div>
-      <div class="text-center pt-5">
-        <button id="loadMore" class="th-btn">Load More</button>
+      <div class="text-center pt-5" id="loadMoreContainer">
+        <?php if ($hasMorePages) { ?>
+          <button id="loadMore" class="th-btn">Load More</button>
+        <?php } ?>
       </div>
   </section>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
-    let currentPage = 1;
+    let currentPage = <?php echo $page; ?>; // Start from current page
+    let totalPages = <?php echo $totalPages; ?>; // Store total pages
+
+    function checkAndHideLoadMore() {
+        if (currentPage >= totalPages) {
+            $("#loadMore").hide();
+        }
+    }
+
+    // Check on initial load
+    checkAndHideLoadMore();
 
     $("#loadMore").click(function () {
-      currentPage++;
+        currentPage++;
+        
+        // Disable button to prevent multiple clicks
+        $(this).prop('disabled', true).text('Loading...');
 
-      $.ajax({
-        url: "load_more_doctors.php",
-        type: "POST",
-        data: {
-          page: currentPage
-        },
-        dataType: "json",
-        success: function (response) {
-          if (response.doctors.length > 0) {
-            response.doctors.forEach(function (doctor) {
-              $("#blog-list").append(`
-                        <div class="col-xl-3 col-lg-4 col-sm-6 doc">
-                            <div class="th-team team-card">
-                                <div class="box-img">
-                                    <img src="${doctor.doctor_image}" alt="${doctor.image_alttag}" class="card-img-top">
+        $.ajax({
+            url: "load_more_doctors.php",
+            type: "POST",
+            data: {
+                page: currentPage
+            },
+            dataType: "json",
+            success: function (response) {
+                if (response.doctors.length > 0) {
+                    response.doctors.forEach(function (doctor) {
+                        $("#blog-list .row").append(`
+                            <div class="col-xl-3 col-lg-4 col-sm-6 doc">
+                                <div class="th-team team-card">
+                                    <div class="box-img">
+                                        <img src="${doctor.doctor_image}" alt="${doctor.image_alttag}" class="card-img-top">
+                                    </div>
+                                    <h3 class="box-title">
+                                        <a href="#" class="doctor-detail" 
+                                            data-name="${doctor.doctor_name}" 
+                                            data-studies="${doctor.doctor_studies}" 
+                                            data-image="${doctor.doctor_image}" 
+                                            data-content="${doctor.doctor_content}" 
+                                            data-bs-toggle="modal" 
+                                            data-bs-target="#exampleModal">
+                                            ${doctor.doctor_name}
+                                        </a>
+                                    </h3>
+                                    <span class="team-desig">${doctor.doctor_studies}</span>
                                 </div>
-                                <h3 class="box-title">
-                                    <a href="#" class="doctor-detail" 
-                                        data-name="${doctor.doctor_name}" 
-                                        data-studies="${doctor.doctor_studies}" 
-                                        data-image="${doctor.doctor_image}" 
-                                        data-content="${doctor.doctor_content}" 
-                                        data-bs-toggle="modal" 
-                                        data-bs-target="#exampleModal">
-                                        ${doctor.doctor_name}
-                                    </a>
-                                </h3>
-                                <span class="team-desig">${doctor.doctor_studies}</span>
                             </div>
-                        </div>
-                    `);
-            });
+                        `);
+                    });
 
-            if (!response.hasMore) {
-              $("#loadMore").hide();
+                    // Check if we've loaded all pages
+                    if (!response.hasMore || currentPage >= totalPages) {
+                        $("#loadMore").hide();
+                    } else {
+                        // Re-enable button if there are more pages
+                        $("#loadMore").prop('disabled', false).text('Load More');
+                    }
+                } else {
+                    $("#loadMore").hide();
+                }
+            },
+            error: function() {
+                // Re-enable button on error
+                $("#loadMore").prop('disabled', false).text('Load More');
+                alert('An error occurred. Please try again.');
             }
-          } else {
-            $("#loadMore").hide();
-          }
-        }
-      });
+        });
     });
   </script>
 
