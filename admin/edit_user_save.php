@@ -3,9 +3,9 @@ include("../includes/config.php");
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $id = $_POST['user_id'];
-    $user_name = $_POST['user_name'];
-    $email = $_POST['emailid'];
-    $phone = $_POST['phone'];
+    $user_name = trim($_POST['user_name']);
+    $email = trim($_POST['emailid']);
+    $phone = trim($_POST['phone']);
     $branch_id = $_POST['branch_id'];
     $role = $_POST['role'];
     $status = $_POST['status'];
@@ -17,8 +17,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $update_date = date("Y-m-d H:i:s");
 
     $password = $_POST['password'];
-    $password_encoded = $password ? base64_encode($password) : '';
 
+    // 1. Check for Duplicate Username or Email
     $check_stmt = $con->prepare("SELECT id FROM admin WHERE (user_name = ? OR emailid = ?) AND id != ?");
     $check_stmt->bind_param("ssi", $user_name, $email, $id);
     $check_stmt->execute();
@@ -30,20 +30,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
     $check_stmt->close();
 
-    $sql = "UPDATE admin SET user_name = '$user_name',emailid = '$email',phone = '$phone',branch_id = '$branch_id',role = '$role',dashboard = '$dashboard',settings = '$settings',general = '$general',seo_management = '$seo_management',reports = '$reports',update_date = '$update_date', status = '$status'";
-
-    if ($password_encoded) {
-        $sql .= ", password = '$password_encoded'";
-    }
-    $sql .= " WHERE id = '$id'";
-
-    if (mysqli_query($con, $sql)) {
-        echo "<script>alert('User Updated successfully.');</script>";
-        echo "<script>window.location.href = 'user.php';</script>";
+    // 2. Prepare Update Query
+    if (!empty($password)) {
+        $password_hashed = password_hash($password, PASSWORD_BCRYPT);
+        $stmt = $con->prepare("UPDATE admin SET user_name = ?, emailid = ?, phone = ?, branch_id = ?, role = ?, dashboard = ?, settings = ?, general = ?, seo_management = ?, reports = ?, update_date = ?, status = ?, password = ? WHERE id = ?");
+        $stmt->bind_param("sssssiiiiiiisi", $user_name, $email, $phone, $branch_id, $role, $dashboard, $settings, $general, $seo_management, $reports, $update_date, $status, $password_hashed, $id);
     } else {
-        echo "Error updating user: " . mysqli_error($con);
+        $stmt = $con->prepare("UPDATE admin SET user_name = ?, emailid = ?, phone = ?, branch_id = ?, role = ?, dashboard = ?, settings = ?, general = ?, seo_management = ?, reports = ?, update_date = ?, status = ? WHERE id = ?");
+        $stmt->bind_param("sssssiiiiiiis", $user_name, $email, $phone, $branch_id, $role, $dashboard, $settings, $general, $seo_management, $reports, $update_date, $status, $id);
     }
 
-    mysqli_close($con);
+    if ($stmt->execute()) {
+        echo "<script>alert('User Updated successfully.'); window.location.href = 'user.php';</script>";
+    } else {
+        echo "<script>alert('Error updating user: " . addslashes($stmt->error) . "'); window.history.back();</script>";
+    }
+
+    $stmt->close();
+    $con->close();
 }
 ?>

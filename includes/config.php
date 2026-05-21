@@ -1,6 +1,17 @@
 <?php
 require_once __DIR__ . '/../vendor/autoload.php';
 
+// Session Security Configuration
+if (session_status() === PHP_SESSION_NONE) {
+    ini_set('session.cookie_httponly', 1);
+    ini_set('session.use_only_cookies', 1);
+    ini_set('session.cookie_samesite', 'Lax');
+    if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') {
+        ini_set('session.cookie_secure', 1);
+    }
+    session_start();
+}
+
 // Load .env
 $dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__));
 $dotenv->load();
@@ -237,5 +248,43 @@ if (!function_exists('getUserIP')) {
         } else {
             return $_SERVER['REMOTE_ADDR'];
         }
+    }
+}
+
+if (!function_exists('checkAdminLogin')) {
+    function checkAdminLogin()
+    {
+        if (!isset($_SESSION['admin_id'])) {
+            header('Location: index.php');
+            exit();
+        }
+        $timeout = 1800;
+        if (isset($_SESSION['last_activity']) && (time() - $_SESSION['last_activity'] > $timeout)) {
+            session_unset();
+            session_destroy();
+            echo "<script>alert('Session expired. Please login again.'); window.location.href = 'index.php';</script>";
+            exit();
+        }
+        $_SESSION['last_activity'] = time();
+    }
+}
+
+if (!function_exists('hasPermission')) {
+    function hasPermission($username, $permission_column)
+    {
+        global $con;
+        $allowed = ['dashboard', 'settings', 'general', 'seo_management', 'reports'];
+        if (!in_array($permission_column, $allowed))
+            return false;
+        $stmt = $con->prepare("SELECT $permission_column FROM admin WHERE user_name = ? AND del_i = 0");
+        $stmt->bind_param("s", $username);
+        if ($stmt->execute()) {
+            $result = $stmt->get_result();
+            if ($result && $result->num_rows > 0) {
+                $row = $result->fetch_assoc();
+                return $row[$permission_column] == 1;
+            }
+        }
+        return false;
     }
 }
