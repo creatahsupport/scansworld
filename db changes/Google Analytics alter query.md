@@ -1,0 +1,1 @@
+ALTER TABLE `settings` ADD `ga_client_id` VARCHAR(255) NOT NULL AFTER `updated_by`, ADD `ga_client_secret` VARCHAR(255) NOT NULL AFTER `ga_client_id`, ADD `ga_refresh_token` VARCHAR(255) NOT NULL AFTER `ga_client_secret`, ADD `ga_property_id` VARCHAR(50) NOT NULL AFTER `ga_refresh_token`, ADD `ga_access_token` TEXT NOT NULL AFTER `ga_property_id`;

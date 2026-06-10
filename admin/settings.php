@@ -51,7 +51,7 @@ $result = $con->query($sql);
 
             <div class="col-md-12">
               <div class="page-header-title">
-                <h2 class="mb-0">Admin Settings</h2>
+                <h2 class="mb-0">Settings List</h2>
               </div>
             </div>
 
@@ -65,7 +65,7 @@ $result = $con->query($sql);
           <div class="card border-0 table-card user-profile-list">
             <div class="card-body">
               <div class="table-responsive">
-                <table class="table table-hover">
+                <table class="table table-hover" id="pc-dt-simple">
                   <thead>
                     <tr>
                       <th>Id</th>
@@ -115,7 +115,7 @@ $result = $con->query($sql);
   <script>
     const dataTable = new simpleDatatables.DataTable('#pc-dt-simple', {
       sortable: false,
-      perPage: 20
+      perPage: 5
     });
   </script>
   <script>

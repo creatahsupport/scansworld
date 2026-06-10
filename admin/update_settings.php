@@ -20,6 +20,13 @@ $support_mail = $_POST['support_mail'];
 $design_develop = $_POST['design_develop'];
 $user_id = $_POST['user_id'];
 
+// GA Settings
+$ga_client_id = mysqli_real_escape_string($con, $_POST['ga_client_id'] ?? '');
+$ga_client_secret = mysqli_real_escape_string($con, $_POST['ga_client_secret'] ?? '');
+$ga_access_token = mysqli_real_escape_string($con, $_POST['ga_access_token'] ?? '');
+$ga_refresh_token = mysqli_real_escape_string($con, $_POST['ga_refresh_token'] ?? '');
+$ga_property_id = mysqli_real_escape_string($con, $_POST['ga_property_id'] ?? '');
+
 function uploadImage($file, $fieldName, $currentPath) {
     $allowedExtensions = ['png', 'webp'];
     $uploadDir = '../uploads/settings/';
@@ -49,7 +56,12 @@ $sql = "UPDATE settings SET
             website_logo='$imagePath', 
             sidebar_logo='$sidebarLogoPath', 
             updated_by='$user_id', 
-            favicon_logo='$faviconPath'";
+            favicon_logo='$faviconPath',
+            ga_client_id='$ga_client_id',
+            ga_client_secret='$ga_client_secret',
+            ga_access_token='$ga_access_token',
+            ga_refresh_token='$ga_refresh_token',
+            ga_property_id='$ga_property_id'";
 
 if (mysqli_query($con, $sql)) {
     echo "<script>
