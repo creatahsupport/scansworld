@@ -22,7 +22,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
-  
+
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="assets/img/favicons/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
@@ -61,10 +61,15 @@
       <div class="row flex-row-reverse">
         <div class="col-xxl-8 col-lg-8">
           <div class="page-single single-right mb-30">
-            <h3 class="fw-semibold">FNAC / Drainage procedures</h3>
+            <div class="page-img">
+              <img src="assets/scan-world/fnac.webp" alt="FNAC / Drainage procedures"
+                style="height: 600px; width: 800px; object-fit: cover;">
+            </div>
+            <h1 class="fw-semibold">FNAC / Drainage procedures</h1>
             <div class="page-content">
               <p>Procedures guided by imaging, like biopsies, FNAC (Fine Needle Aspiration Cytology), and draining
-                fluids, are minimally invasive methods employed to accurately diagnose and manage various health issues.
+                fluids, are minimally invasive methods employed to accurately diagnose and manage various health
+                issues.
                 These procedures use real-time imaging—like ultrasound or CT scans—to precisely target the region of
                 interest, thereby ensuring enhanced safety, greater precision, and reduced patient discomfort.</p>
               <p>Whether acquiring tissue samples for diagnosis or draining fluids, such as abscesses or cysts,
@@ -72,7 +77,103 @@
                 traditional surgical approaches. These techniques are crucial for early detection and treatment
                 planning. They are carried out by skilled radiologists in sterile, controlled settings to achieve the
                 best results for the patient.</p>
+              <p>Finding a lump, a swelling, or an abnormal growth is frightening and the most important thing in that
+                moment is getting a clear, accurate answer as quickly as possible. At Scans World, our FNAC,
+                <a href="https://scansworldonchamiersroad.com/fnac" target="_blank">image-guided biopsy</a> and drainage
+                procedures are designed to do exactly that providing a precise tissue
+                diagnosis without the need for major surgery, performed by experienced radiologists under real-time
+                imaging guidance.
+              </p>
+              <p>These minimally invasive procedures are available at our Aminjikarai, Nandanam (Chamiers Road),
+                Nanganallur, and Vellore centres in a fully sterile, controlled environment with same-day or 24–48 hour
+                reports.</p>
+              <div class="col-auto">
+                <div class="header-button">
+                  <a href="<?php echo $url_config; ?>/book-appointment" class="th-btn" target="_blank">Book Now</a>
+                </div>
+              </div><br>
+              <h2 class="sec-title fw-semibold">Why Choose Scans World for FNAC & Biopsy in Chennai</h2>
+              <ul>
+                <li>Imaging-guided precision - Every procedure guided by real-time ultrasound or CT needle placed with
+                  exact accuracy.</li>
+                <li> Expert interventional radiologists - Performed by experienced radiologists specialist skill for
+                  complex or deep-seated lesions.</li>
+                <li>Minimally invasive - No major incisions, no general anaesthesia for most procedures. Single
+                  outpatient visit.</li>
+                <li>Fast reports - FNAC: 24–48 hours. Biopsy histopathology: 3–5 working days. Urgent cases prioritised.
+                </li>
+                <li>4 centres - <a href="https://scansworldonchamiersroad.com/aminjikarai"
+                    target="_blank">Aminjikarai,</a> Nandanam, Nanganallur and Vellore.</li>
+                <li>Sterile, controlled environment All procedures under strict sterile conditions.</li>
+              </ul>
+              <h2 class="sec-title fw-semibold">Procedures available at Scans World</h2>
+              <h3 class="h5 mt-1">FNAC (Fine Needle Aspiration Cytology)</h3>
+              <p>An ultrasound is used to guide a very fine needle to take a small sample of cells from a lump or
+                abnormal tissue. Cytopathologist evaluates to determine if benign or malignant.
+                Turnaround Time: 5-10 min Report: 24-48 hr
+              </p>
+              <h3 class="h5 mt-1">Image-guided Biopsy (Core needle/tru-cut)</h3>
+              <p>The larger needle takes a small core of tissue from a deep lesion under <a
+                  href="https://scansworldonchamiersroad.com/color-doppler" target="_blank">ultrasound</a> or CT
+                control.
+                Provides a histopathology sample for detailed tissue analysis.
+                Time: 15–30 minutes | Report: 3–5 working days
+              </p>
+              <h3 class="h5 mt-1">Image-guided Drainage (Cyst / abcess / effusion)</h3>
+              <p>A needle or catheter can be guided into a fluid collection for safe drainage with ultrasound or CT
+                guidance.Avoids open surgery. Fluid can be sent for lab analysis.
+                Time: 20–45 minutes | Same-day fluid analysis possible
+              </p>
+              <h2 class="sec-title fw-semibold">What conditions do these procedures diagnose & treat? </h2>
+              <h3 class="h5 mt-1">Fnac & Biopsy Detects</h3>
+              <ul>
+                <li>Breast lumps - benign vs malignant</li>
+                <li>Thyroid nodules - benign cysts vs cancer</li>
+                <li>Lymph node enlargement - infection vs lymphoma</li>
+                <li>Salivary gland swellings</li>
+                <li>Soft tissue masses - lipoma, sarcoma</li>
+                <li>Liver lesions - cysts, HCC, metastasis</li>
+                <li>Lung nodules - infection vs malignancy</li>
+              </ul>
+              <h3 class="h5 mt-1">Drainage Treats: </h3>
+              <ul>
+                <li>Abscesses - liver, breast, soft tissue</li>
+                <li>Cysts - ovarian, renal, hepatic</li>
+                <li>Pleural effusion - fluid around lungs</li>
+                <li>Ascites - abdominal fluid</li>
+                <li>Pericardial effusion - fluid around heart</li>
+                <li>Post-surgical fluid collections</li>
+                <li>Joint effusions, Haematomas</li>
+              </ul>
+              <h2 class="sec-title fw-semibold">FNAC vs Biopsy Which one do you need?</h2>
+              <ul>
+                <li><b>FNAC</b> - Best for superficial, easily accessible lumps (breast, thyroid, lymph nodes). Quick,
+                  virtually painless, minimal risk. Provides cell-level diagnosis.</li>
+                <li><b>Core biopsy</b> - Better for deep lesions or when tissue architecture is needed (liver, lung,
+                  kidney,
+                  bone). More tissue sample - allows detailed histopathology.</li>
+                <li><b>Image-guided drainage</b> - When fluid collections need to be drained for treatment or analysis.
+                  Done in
+                  the same setting as FNAC or biopsy if needed.</li>
+              </ul>
+              <p><b>NOTE:</b> At Scans World, our radiologist will assess your imaging and recommend the most
+                appropriate
+                procedure before proceeding.</p>
+              <h2 class="sec-title fw-semibold">What to expect — before, during & after?</h2>
+              <h3 class="h5 mt-1">Before The Procedure</h3>
+              <p>Inform our team if you are on blood-thinning medications (aspirin, warfarin, clopidogrel) you may need
+                to pause them a few days before. If sedation is planned, fast for 4–6 hours. Wear comfortable, loose
+                clothing. Bring any previous imaging reports (ultrasound, CT, MRI) of the lesion.</p>
+              <h3 class="h5 mt-1">During The Procedure</h3>
+              <p>You will lie comfortably on the procedure table. The skin is cleaned and local anaesthetic applied. The
+                radiologist then uses ultrasound or CT in real time to guide the needle to the target. For FNAC: 5–10
+                minutes. For core biopsy: 15–30 minutes.</p>
+              <h3 class="h5 mt-1">After The Procedure</h3>
+              <p>A small dressing is applied. Most patients rest for 15–30 minutes before going home. Mild soreness at
+                the site is normal for 1–2 days. You can return to normal light activities the same day. Avoid strenuous
+                activity for 24 hours.</p>
             </div>
+
 
             <div class="mt-40">
               <div class="title-area mb-25">
@@ -89,9 +190,11 @@
                   <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/fnac" target="_blank">FNAC</a> means Fine Needle Aspiration Cytology. It is a minimally invasive
+                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/fnac" target="_blank">FNAC</a>
+                        means Fine Needle Aspiration Cytology. It is a minimally invasive
                         diagnostic procedure where a thin needle is used to get a small sample of cells from a lump or
-                        abnormal tissue. The sample is then examined under a microscope for signs of infections, cysts or
+                        abnormal tissue. The sample is then examined under a microscope for signs of infections, cysts
+                        or
                         cancerous cells.</p>
                     </div>
                   </div>
@@ -107,7 +210,8 @@
                   <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/fnac" target="_blank">Image Guided Biopsy</a> is a procedure that uses real-time imaging (ultrasound or
+                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/fnac" target="_blank">Image
+                          Guided Biopsy</a> is a procedure that uses real-time imaging (ultrasound or
                         CT scan) to direct a needle to the precise location of an abnormal tissue or lump in order to
                         obtain a sample for laboratory analysis. It's more accurate and less uncomfortable than the
                         traditional surgical biopsy.</p>
@@ -125,8 +229,10 @@
                   <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/fnac" target="_blank">FNAC</a> can diagnose benign (non-cancerous) cysts, abscesses, lymph node
-                        enlargements, thyroid nodules, breast lumps, salivary gland swellings and early stage cancerous
+                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/fnac" target="_blank">FNAC</a>
+                        can diagnose benign (non-cancerous) cysts, abscesses, lymph node
+                        enlargements, thyroid nodules, breast lumps, salivary gland swellings and early stage
+                        cancerous
                         cells. It is one of the most accurate initial tests for investigating unexplained lumps in the
                         body.</p>
                     </div>
@@ -143,9 +249,11 @@
                   <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text">This is done by a radiologist or a trained specialist . Ultrasound imaging is
+                      <p class="faq-text">This is done by a radiologist or a trained specialist . Ultrasound imaging
+                        is
                         used to guide a fine , thin needle into the lump or swelling and a small sample of cells is
-                        gently drawn out . The procedure is done under sterile conditions and with minimal pain and takes
+                        gently drawn out . The procedure is done under sterile conditions and with minimal pain and
+                        takes
                         just a few minutes.</p>
                     </div>
                   </div>
@@ -161,9 +269,11 @@
                   <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/fnac" target="_blank">Image guided</a> drainage procedure: This procedure uses real-time imaging with
+                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/fnac" target="_blank">Image
+                          guided</a> drainage procedure: This procedure uses real-time imaging with
                         ultrasound or CT to safely and accurately insert a needle or small catheter into a fluid
-                        collection such as an abscess, cyst or effusion to drain the fluid. This avoids open surgery, and
+                        collection such as an abscess, cyst or effusion to drain the fluid. This avoids open surgery,
+                        and
                         allows faster recovery.</p>
                     </div>
                   </div>
@@ -180,7 +290,8 @@
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
                       <p class="faq-text">Image-guided drainage is a minimally invasive procedure, as opposed to
-                        traditional surgery. It does not require large incisions, causes less pain, has a lower risk of
+                        traditional surgery. It does not require large incisions, causes less pain, has a lower risk
+                        of
                         complications and allows patients to recover much faster. Most procedures are done in one
                         outpatient visit.</p>
                     </div>
@@ -197,7 +308,8 @@
                   <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text">Scans World performs <a href="https://scansworldonchamiersroad.com/fnac" target="_blank">FNAC</a> and biopsy procedures under real time ultrasound or
+                      <p class="faq-text">Scans World performs <a href="https://scansworldonchamiersroad.com/fnac"
+                          target="_blank">FNAC</a> and biopsy procedures under real time ultrasound or
                         CT scanning depending on the location and depth of the lesion. This allows the needle to be
                         accurately and safely delivered to the target location.</p>
                     </div>
@@ -215,7 +327,8 @@
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
                       <p class="faq-text">Tell your doctor if you are taking any blood-thinning drugs – you might need
-                        to stop taking them before the procedure. If sedation is planned, avoid eating or drinking for a
+                        to stop taking them before the procedure. If sedation is planned, avoid eating or drinking for
+                        a
                         few hours. On the day of your procedure, wear loose, comfortable clothing.</p>
                     </div>
                   </div>
@@ -231,7 +344,8 @@
                   <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/fnac" target="_blank">Scans World FNAC</a> reports normally take 24-48 hours depending on the complexity
+                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/fnac" target="_blank">Scans
+                          World FNAC</a> reports normally take 24-48 hours depending on the complexity
                         of the analysis. Our pathologists and radiologists work together to ensure your results are
                         accurate and on time.</p>
                     </div>
@@ -248,7 +362,9 @@
                   <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/" target="_blank">Scans World is a trusted diagnostic center in Chennai</a> offering image guided
+                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/" target="_blank">Scans World
+                          is
+                          a trusted diagnostic center in Chennai</a> offering image guided
                         FNAC, Biopsy and Drainage procedures with advanced ultrasound and CT guidance, experienced
                         Radiologists and a fully sterile safe environment. Branches at Aminjikarai, Nandanam (Chamiers
                         Road) and Nanganallur.</p>

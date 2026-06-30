@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <?php include_once("seo.php");?>
+  <?php include_once("seo.php"); ?>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicons/favicon-57x57.png">
@@ -22,13 +22,15 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
-  
+
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="assets/img/favicons/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/fontawesome.min.css">
   <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
@@ -59,12 +61,75 @@
       <div class="row flex-row-reverse">
         <div class="col-xxl-8 col-lg-8">
           <div class="page-single single-right mb-30">
-           <h3 class="fw-semibold">Multislice CT Scan</h3>
-            <div class="page-content">
-            <p>The Multislice CT Scan uses cutting-edge technology to generate fast, high-quality images, aiding in precise diagnoses and the development of effective treatment plans. This sophisticated system obtains several cross-sectional body images in one spin, generating clear, three-dimensional visuals of the inner organs, skeletal structure, and bodily tissues. The result is incredibly detailed imaging with minimal scan duration and a more comfortable patient experience.</p>
-            <p>The Multislice CT Scan accurately identifies conditions like brain and spine disorders, evaluates issues in the chest and abdomen, and pinpoints vascular irregularities. This technology provides dependable results with reduced radiation exposure. Supported by experienced radiologists and state-of-the-art equipment, it offers trustworthy diagnoses within a safe, comfortable, and supportive setting.</p>
+
+            <div class="page-img">
+              <img src="assets/scan-world/multislice.webp" alt="Multislice CT Scan"
+                style="height: 600px; width: 800px; object-fit: cover;">
             </div>
-            
+            <h1 class="fw-semibold">Multislice CT Scan</h1>
+            <div class="page-content">
+              <p>The Multislice CT Scan uses cutting-edge technology to generate fast, high-quality images, aiding in
+                precise diagnoses and the development of effective treatment plans. This sophisticated system obtains
+                several cross-sectional body images in one spin, generating clear, three-dimensional visuals of the
+                inner organs, skeletal structure, and bodily tissues. The result is incredibly detailed imaging with
+                minimal scan duration and a more comfortable patient experience.</p>
+              <p>The Multislice CT Scan accurately identifies conditions like brain and spine disorders, evaluates
+                issues in the chest and abdomen, and pinpoints vascular irregularities. This technology provides
+                dependable results with reduced radiation exposure. Supported by experienced radiologists and
+                state-of-the-art equipment, it offers trustworthy diagnoses within a safe, comfortable, and supportive
+                setting.</p>
+              <p>When your doctor recommends a CT scan you want results that are fast, clear and dependable. At Scans
+                World, our <a href="https://scansworldonchamiersroad.com/multislice-ct-scan" target="_blank"> Multislice
+                  CT Scanner</a> delivers all of that and more. Located conveniently on Chamiers Road, Nandanam (with
+                additional centers in Aminjikarai and Nanganallur) we combine cutting-edge imaging technology with
+                expert radiologist interpretation to give you answers you can trust.</p>
+              <div class="col-auto">
+                <div class="header-button">
+                  <a href="<?php echo $url_config; ?>/book-appointment" class="th-btn" target="_blank">Book Now</a>
+                </div>
+              </div><br>
+
+              <h2 class="fw-semibold">What is a Multislice CT Scan?</h2>
+              <p>A CT scan, or computed tomography scan, uses X-rays and computer processing to create detailed,
+                cross-sectional images of the inside of your body. A <a
+                  href="https://scansworldonchamiersroad.com/multislice-ct-scan" target="_blank">multislice CT
+                  scanner</a> can take multiple image
+                slices at once with each rotation . This means the scan takes less time, produces higher resolution
+                images, and is more comfortable for the patient than older single slice machines.</p>
+              <p>The result is crystal-clear 3D images of your organs, blood vessels, bones, and soft tissues, helping
+                your doctor make an accurate diagnosis without surgery or guesswork.</p>
+              <h2 class="fw-semibold">Why Choose Scans World for Your CT Scan in Chennai?</h2>
+              <ul>
+                <li>Multislice technology - More image slices in a single rotation Faster scan Sharper detail</li>
+                <li>Radiologists, experts - Reports interpreted by qualified, expert radiologists</li>
+                <li>Same day reporting - Fast turnaround so your doctor can act without delay</li>
+                <li>Low radiation dose - Modern techniques for dose reduction to minimize and keep your exposure safe
+                </li>
+                <li>Easy Appointment – Book online by phone or walk in</li>
+                <li>3 branches in Chennai - <a href="https://scansworldonchamiersroad.com/aminjikarai" target="_blank">
+                    Aminjikarai</a>,
+                  Nandanam & Nanganallur</li>
+              </ul>
+              <h2 class="fw-semibold">What conditions does a CT scan diagnose?</h2>
+              <ul>
+                <li>Brain and nervous system conditions - tumours, strokes, bleeds, head injury</li>
+                <li>Chest and lung problems - lung infections, pulmonary embolisms, nodules</li>
+                <li>Abdominal and pelvic organs-liver, kidney, appendix, gallbladder, pancreas</li>
+                <li>Problems of the spine - disc problems, fractures, nerve compression</li>
+                <li>Vascular conditions - aneurysms, blockages, vascular abnormalities</li>
+                <li>Detecting and staging cancer - finding tumors and how far they have spread</li>
+                <li>Trauma assessment - evaluating injuries after accidents</li>
+                <li>Sinus and ENT disorders - chronic sinusitis, nasal polyps</li>
+              </ul>
+              <h2 class="fw-semibold">What to expect during your CT scan?</h2>
+              <p>The process is simple and painless. You will lie on a motorized table that moves through a large,
+                ring-shaped scanner. The scan itself takes only a few minutes. Our trained staff will guide you through
+                every step from preparation (which may include removing jewelry or fasting if contrast dye is needed) to
+                the moment you receive your report.</p>
+              <p>For most scans, there's no need for sedation or lengthy preparation. You can return to normal
+                activities immediately after.</p>
+            </div>
+
             <div class="mt-40">
               <div class="title-area mb-25">
                 <h2 class="sec-title fw-semibold">Frequently Asked Questions</h2>
@@ -80,7 +145,8 @@
                   <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text">A <a href="https://scansworldonchamiersroad.com/multislice-ct-scan" target="_blank">multislice CT scan</a> is an advanced imaging technique that produces multiple
+                      <p class="faq-text">A <a href="https://scansworldonchamiersroad.com/multislice-ct-scan"
+                          target="_blank">multislice CT scan</a> is an advanced imaging technique that produces multiple
                         cross sectional images of the body in a single rotation. It provides clear three-dimensional
                         views of internal organs, bone structure and body tissues in a short scan time.</p>
                     </div>
@@ -114,7 +180,8 @@
                   <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text">The <a href="https://scansworldonchamiersroad.com/multislice-ct-scan" target="_blank">Multislice CT Scan</a> covers the brain, spine, chest, abdomen, pelvis, blood
+                      <p class="faq-text">The <a href="https://scansworldonchamiersroad.com/multislice-ct-scan"
+                          target="_blank">Multislice CT Scan</a> covers the brain, spine, chest, abdomen, pelvis, blood
                         vessels and musculoskeletal system providing comprehensive whole body diagnostic imaging.</p>
                     </div>
                   </div>
@@ -130,7 +197,9 @@
                   <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/multislice-ct-scan" target="_blank">Multislice CT</a> is a new technology that can take several layers of images at
+                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/multislice-ct-scan"
+                          target="_blank">Multislice CT</a> is a new technology that can take several layers of images
+                        at
                         the same time in one rotation, resulting in faster scanning, higher image quality and better 3-D
                         detail than the older single-slice CT machines.</p>
                     </div>
@@ -147,7 +216,8 @@
                   <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/" target="_blank">Scans World</a> offers Multislice CT Scan services in their branches at
+                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/" target="_blank">Scans
+                          World</a> offers Multislice CT Scan services in their branches at
                         Aminjikarai, Nandanam (Chamiers Road) and Nanganallur with experienced radiologists and
                         state-of-the-art equipment.</p>
                     </div>
@@ -181,7 +251,9 @@
                   <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text">The advanced technology of the <a href="https://scansworldonchamiersroad.com/multislice-ct-scan" target="_blank">Multislice CT Scan</a> makes it fast with minimal
+                      <p class="faq-text">The advanced technology of the <a
+                          href="https://scansworldonchamiersroad.com/multislice-ct-scan" target="_blank">Multislice CT
+                          Scan</a> makes it fast with minimal
                         scan duration most scans take between 10 to 20 minutes depending on the area being scanned.</p>
                     </div>
                   </div>
@@ -250,7 +322,9 @@
 
   <div class="scroll-top">
     <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"></path>
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+        style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;">
+      </path>
     </svg>
   </div>
 
