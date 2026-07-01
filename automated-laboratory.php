@@ -7,7 +7,6 @@
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <?php include_once("seo.php"); ?>
-
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicons/favicon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicons/favicon-60x60.png">
@@ -22,7 +21,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
-
+  
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="assets/img/favicons/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
@@ -37,7 +36,7 @@
   <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
   <link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
-
+  
 </head>
 
 <body>
@@ -47,10 +46,10 @@
   <div class="breadcumb-wrapper " data-bg-src="assets/scan-world/breadcrumb.png">
     <div class="container">
       <div class="breadcumb-content">
-        <h1 class="breadcumb-title text-white">Automated Laboratory</h1>
+        <h1 class="breadcumb-title text-white">Blood Test – Fully Automated Laboratory</h1>
         <ul class="breadcumb-menu">
           <li><a href="./" class="text-white">Home</a></li>
-          <li>Automated Laboratory</li>
+          <li>Automated Laboratory – Blood Test Lab</li>
         </ul>
       </div>
     </div>
@@ -61,93 +60,78 @@
       <div class="row flex-row-reverse">
         <div class="col-xxl-8 col-lg-8">
           <div class="page-single single-right mb-30">
-            <h1 class="fw-semibold">Automated Laboratory</h1>
+            
+           <h3 class="fw-semibold">Automated Laboratory</h3>
             <div class="page-content">
               <div class="page-img">
-                <img src="assets/scan-world/laboratory.webp" alt="automated-laboratory"
-                  style="height: 600px; width: 800px; object-fit: cover;">
+                <img src="assets/scan-world/automated_laboratory.png" alt="Service Image">
               </div>
-              <p>The Automated Lab uses state-of-the-art tech to provide swift, precise, and dependable diagnostic
+              <p>The Automated Lab uses state-of-the-art tech to provide swift, precise and dependable diagnostic
                 outcomes. Employing advanced automated analyzers, it optimizes the testing workflow for blood, urine,
                 and other biological samples, thus reducing mistakes and cutting down on processing time. This
-                guarantees effective, top-notch diagnostics that assist in making prompt clinical choices. </p>
+                guarantees effective, top-notch diagnostics that assist in making prompt clinical choices.</p>
               <p>Through ongoing quality assurance and a fully networked data system, the automated lab manages numerous
-                tests encompassing areas like biochemistry, hematology, immunology, and microbiology. The blend of
+                tests encompassing areas like biochemistry, hematology, immunology and microbiology. The blend of
                 accurate equipment and knowledgeable lab staff guarantees trustworthy results for patient treatment,
-                health evaluations, and ongoing illness surveillance.</p>
-              <p>A blood test result is only as good as the laboratory that processes it. At Scans World, our fully
-                <a href="https://scansworldonchamiersroad.com/automated-laboratory" target="_blank">automated
-                  laboratory</a> uses advanced diagnostic analysers to process blood, urine, and other samples with
-                a level of precision that manual testing simply cannot match eliminating human error, reducing
-                processing time, and delivering results you and your doctor can trust completely.
-              </p>
-              <p>Available at all four of our centres Aminjikarai, Nandanam , Nanganallur and Vellore our lab is open 24
-                hours a day, handling everything from a routine CBC to complex immunology and hormone panels. Same-day
-                results for most tests.</p>
-              <div class="col-auto">
-                <div class="header-button">
-                  <a href="<?php echo $url_config; ?>/book-appointment" class="th-btn" target="_blank">Book Now</a>
-                </div>
-              </div><br>
-              <h2 class="fw-semibold">What is an automated laboratory?</h2>
-              <p>An automated laboratory uses computerised analysers rather than manual processes to test blood, urine
-                and other biological samples. Each sample is processed by a precision machine that measures hundreds
-                of parameters simultaneously, cross-checks results internally, and flags any abnormalities for review.
-              </p>
-              <p>This means fewer errors, faster processing, and results that are consistent regardless of when your
-                sample was collected. At Scans World our automated lab is integrated with a digital reporting system
-                results are reviewed by our lab specialists and delivered to you quickly and accurately.</p>
-              <h2 class="fw-semibold">Why Choose Scans World for Your Blood Tests in Chennai?</h2>
-              <ul>
-                <li>Fully automated analysers - Advanced automated systems eliminate manual errors and give consistent
-                  reproducible results.</li>
-                <li>Fast turnaround - CBC, lipid, thyroid, liver Kidney results ready within hours. Same-day for most
-                  panels.</li>
-                <li>Wide test menu - Simple blood glucose to comprehensive hormone panels, cancer markers, and
-                  immunology.</li>
-                <li>Open 24×7 - Walk in for a blood test at any time - day or night, weekday or holiday.</li>
-                <li>Part of a full diagnostic centre - Lab tests + MRI, <a
-                    href="https://scansworldonchamiersroad.com/160-slice-cardiac-ct" target="_blank">CT,</a>
-                  ultrasound, ECG - all in one visit.</li>
-                <li>Digital reports - Delivered via WhatsApp or email - share with your doctor instantly.</li>
-              </ul>
-              <h2 class="fw-semibold">Tests available at Scans World automated laboratory</h2>
-              <h3 class="h5 mt-1">Haematology</h3>
-              <p>CBC, Haemoglobin & RBC indices, WBC differential count, Platelet count, ESR, Peripheral blood smear
-              </p>
-              <h3 class="h5 mt-1">Biochemistry</h3>
-              <p>Blood glucose (fasting & PP), HbA1c, Lipid profile (cholesterol, HDL, LDL, TG), Liver function tests
-                (LFT), Kidney function tests (KFT/RFT), Uric acid, Electrolytes, CRP</p>
-              <h3 class="h5 mt-1">Thyroid & Hormones</h3>
-              <p>TSH, T3, T4, Free T3 & Free T4, Vitamin D (25-OH), Vitamin B12, Testosterone, FSH, LH, Prolactin,
-                Oestradiol, Progesterone</p>
-              <h3 class="h5 mt-1">Immunology & Serology</h3>
-              <p>RA Factor, Anti-CCP, ANA, Anti-dsDNA, Hepatitis B & C (HBsAg, Anti-HCV), HIV screening, Dengue NS1
-                IgM & IgG, Widal, CRP, ASO titre</p>
-              <h3 class="h5 mt-1"> Tumour Markers:</h3>
-              <p>PSA, CA 125, CA 19-9, CEA, AFP, Beta HCG</p>
-              <h3 class="h5 mt-1">Urine & Stool Analysis:</h3>
-              <p>Urine routine & microscopy, Urine culture & sensitivity, 24-hour urine protein, Stool routine &
-                occult blood, Stool culture, Pregnancy test</p>
-              <h3 class="h5 mt-1">Cardiac Markers:</h3>
-              <p>Troponin I & T, CPK-MB, LDH, BNP/NT-proBNP, Homocysteine, hs-CRP</p>
-              <h3 class="h5 mt-1">Coagulation</h3>
-              <p>PT/INR, APTT, D-Dimer, Fibrinogen, Bleeding time / Clotting time</p>
-              <h2 class="fw-semibold">What to expect?</h2>
-              <p>Getting a blood test at <a href="https://scansworldonchamiersroad.com/" target="_blank">Scans
-                  World</a> is fast and straightforward. Register at the front desk, our
-                trained phlebotomist collects your sample, and your sample goes directly to our automated lab. Most
-                routine results are ready within a few hours.</p>
-              <ul>
-                <li>Most tests require fasting for 8–12 hours your doctor will specify if fasting is needed</li>
-                <li>Drink water normally before your test</li>
-                <li>Inform our team about any medications</li>
-                <li>Bring your doctor's prescription if available</li>
-                <li>Walk-ins welcome no appointment needed for most tests</li>
-
-              </ul>
-
+                health evaluations and ongoing illness surveillance.</p>
             </div>
+            <!-- ========= NEW LAB CONTENT ADDED ABOVE EXISTING CONTENT ========= -->
+            
+            <!-- Hero Paragraph -->
+            <p>A blood test result is only as good as the laboratory that processes it. At Scans World, our fully <a href="automated-laboratory">automated laboratory</a> uses advanced diagnostic analysers to process blood, urine and other samples with a level of precision that manual testing simply cannot match — eliminating human error, reducing processing time and delivering results you and your doctor can trust completely.</p>
+            <p>Available at all four of our centres — Aminjikarai, Nandanam, Nanganallur and Vellore — our lab is open 24 hours a day, handling everything from a routine CBC to complex immunology and hormone panels. Same-day results for most tests.</p>
+            <div class="col-auto">
+                <div class="header-button">
+                  <a href="book-appointment" class="th-btn" target="_blank">Book Now</a>
+                </div>
+              </div>
+
+                 <!-- What is an automated laboratory? -->
+            <h3 class="fw-semibold mt-3">What is an automated laboratory?</h3>
+            <p>An automated laboratory uses computerised analysers rather than manual processes to test blood, urine and other biological samples. Each sample is processed by a precision machine that measures hundreds of parameters simultaneously, cross-checks results internally and flags any abnormalities for review.</p>
+            <p>This means fewer errors, faster processing and results that are consistent regardless of when your sample was collected. At Scans World, our automated lab is integrated with a digital reporting system — results are reviewed by our lab specialists and delivered to you quickly and accurately.</p>
+            
+
+            <!-- Why Choose Scans World for Your Blood Tests in Chennai -->
+            <h3 class="fw-semibold mt-3 mb-3">Why Choose Scans World for Your Blood Tests in Chennai</h3>
+            <div class="lab-feature-grid">
+              <div class="lab-feature-card"><div class="lab-feature-icon"><i class="fas fa-robot"></i></div><h4>Fully automated analysers</h4><p>Advanced automated systems eliminate manual errors and give consistent reproducible results.</p></div>
+              <div class="lab-feature-card"><div class="lab-feature-icon"><i class="fas fa-stopwatch"></i></div><h4>Fast turnaround</h4><p>CBC, lipid, thyroid, liver & kidney results ready within hours. Same-day for most panels.</p></div>
+              <div class="lab-feature-card"><div class="lab-feature-icon"><i class="fas fa-list-ul"></i></div><h4>Wide test menu</h4><p>Simple blood glucose to comprehensive hormone panels, cancer markers and immunology.</p></div>
+              <div class="lab-feature-card"><div class="lab-feature-icon"><i class="fas fa-clock"></i></div><h4>Open 24×7</h4><p>Walk in for a blood test at any time - day or night, weekday or holiday.</p></div>
+              <div class="lab-feature-card"><div class="lab-feature-icon"><i class="fas fa-building"></i></div><h4>Full diagnostic centre</h4><p>Lab tests + MRI, CT, ultrasound, ECG - all in one visit.</p></div>
+              <div class="lab-feature-card"><div class="lab-feature-icon"><i class="fas fa-file-pdf"></i></div><h4>Digital reports</h4><p>Delivered via WhatsApp or email - share with your doctor instantly.</p></div>
+            </div>
+            
+         
+            <!-- Tests available at Scans World automated laboratory -->
+            <h3 class="fw-semibold mt-4">Tests available at Scans World automated laboratory</h3>
+            <div class="test-categories">
+              <div class="test-cat-card"><h5><i class="fas fa-tint"></i> HAEMATOLOGY</h5><ul><li>CBC, Haemoglobin & RBC indices</li><li>WBC differential count</li><li>Platelet count, ESR</li><li>Peripheral blood smear</li></ul></div>
+              <div class="test-cat-card"><h5><i class="fas fa-flask"></i> BIOCHEMISTRY</h5><ul><li>Blood glucose (fasting & PP), HbA1c</li><li>Lipid profile (cholesterol, HDL, LDL, TG)</li><li>Liver function tests (LFT)</li><li>Kidney function tests (KFT/RFT)</li><li>Uric acid, Electrolytes, CRP</li></ul></div>
+              <div class="test-cat-card"><h5><i class="fas fa-thyroid"></i> THYROID & HORMONES</h5><ul><li>TSH, T3, T4, Free T3 & Free T4</li><li>Vitamin D (25-OH), Vitamin B12</li><li>Testosterone, FSH, LH, Prolactin</li><li>Oestradiol, Progesterone</li></ul></div>
+              <div class="test-cat-card"><h5><i class="fas fa-shield-virus"></i> IMMUNOLOGY & SEROLOGY</h5><ul><li>RA Factor, Anti-CCP, ANA, Anti-dsDNA</li><li>Hepatitis B & C (HBsAg, Anti-HCV)</li><li>HIV screening, Dengue NS1 IgM & IgG</li><li>Widal, CRP, ASO titre</li></ul></div>
+              <div class="test-cat-card"><h5><i class="fas fa-chart-line"></i> TUMOUR MARKERS</h5><ul><li>PSA, CA 125,</li><li> CA 19-9</li><li>CEA, AFP,</li><li>Beta HCG</li></ul></div>
+              <div class="test-cat-card"><h5><i class="fas fa-toilet"></i> URINE & STOOL ANALYSIS</h5><ul><li>Urine routine & microscopy</li><li>Urine culture & sensitivity</li><li>24-hour urine protein</li><li>Stool routine & occult blood</li><li>Stool culture, Pregnancy test</li></ul></div>
+              <div class="test-cat-card"><h5><i class="fas fa-heartbeat"></i> CARDIAC MARKERS</h5><ul><li>Troponin I & T, CPK-MB</li><li>LDH, BNP/NT-proBNP</li><li>Homocysteine, hs-CRP</li></ul></div>
+              <div class="test-cat-card"><h5><i class="fas fa-clock"></i> COAGULATION</h5><ul><li>PT/INR, APTT</li><li>D-Dimer, Fibrinogen</li><li>Bleeding time / Clotting time</li></ul></div>
+            </div>
+            
+            <!-- What to expect -->
+            <h3 class="fw-semibold mt-4">What to expect</h3>
+            <p>Getting a blood test at <a href="https://scansworldonchamiersroad.com">Scans World</a> is fast and straightforward. Register at the front desk, our trained phlebotomist collects your sample and your sample goes directly to our automated lab. Most routine results are ready within a few hours.</p>
+            <div class="info-box-lab">
+              <strong><i class="fas fa-clipboard-list me-1"></i> BEFORE YOUR TEST:</strong>
+              <ul class="mt-2 mb-0" style="padding-left: 20px;">
+                <li>Most tests require fasting for 8-12 hours — your doctor will specify if fasting is needed</li>
+                <li>Drink water normally before your test</li>
+                <li>Inform our team about any medications you are taking</li>
+                <li>Bring your doctor's prescription if available</li>
+                <li>Walk-ins welcome — no appointment needed for most tests</li>
+              </ul>
+            </div>
+
+           
 
             <div class="mt-40">
               <div class="title-area mb-25">
@@ -164,8 +148,7 @@
                   <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text">An <a href="https://scansworldonchamiersroad.com/automated-laboratory"
-                          target="_blank">Automated Laboratory</a> is a laboratory that employs sophisticated automated
+                      <p class="faq-text">An <a href="https://scansworldonchamiersroad.com/automated-laboratory" target="_blank">Automated Laboratory</a> is a laboratory that employs sophisticated automated
                         analyzers and state-of-the-art technology to process blood, urine and other biological specimens
                         to provide faster, more accurate and highly reliable diagnostic results while minimizing the
                         risk of human error.</p>
@@ -183,9 +166,7 @@
                   <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text">Scans World’s <a
-                          href="https://scansworldonchamiersroad.com/automated-laboratory" target="_blank">Automated
-                          Lab</a> provides a variety of tests such as biochemistry,
+                      <p class="faq-text">Scans World's <a href="https://scansworldonchamiersroad.com/automated-laboratory" target="_blank">Automated Lab</a> provides a variety of tests such as biochemistry,
                         haematology, immunology and microbiology to support routine health check-ups, disease monitoring
                         and clinical diagnosis.</p>
                     </div>
@@ -237,7 +218,7 @@
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
                       <p class="faq-text">Patients undergoing routine health check-ups, chronic disease management
-                        (diabetes, thyroid, kidney disorders), pre-surgical evaluations, and those requiring fast and
+                        (diabetes, thyroid, kidney disorders), pre-surgical evaluations and those requiring fast and
                         accurate diagnostic reports benefit greatly from Scans World's Automated Lab.</p>
                     </div>
                   </div>
@@ -270,9 +251,7 @@
                   <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text">Scans World’s <a
-                          href="https://scansworldonchamiersroad.com/automated-laboratory" target="_blank">Automated
-                          Lab</a> functions under continuous quality assurance
+                      <p class="faq-text">Scans World's <a href="https://scansworldonchamiersroad.com/automated-laboratory" target="_blank">Automated Lab</a> functions under continuous quality assurance
                         protocols with advanced automated equipment and expert lab staff ensuring highly accurate,
                         dependable results that doctors can rely on for confident clinical decisions.</p>
                     </div>
@@ -306,7 +285,7 @@
                   <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text">Preparation varies by test. For most blood sugar, lipid profile, and liver
+                      <p class="faq-text">Preparation varies by test. For most blood sugar, lipid profile and liver
                         function tests, fasting for 8 to 12 hours is required. The Scans World team will provide
                         complete preparation instructions based on the specific tests ordered by your doctor.</p>
                     </div>
@@ -324,16 +303,24 @@
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
                       <p class="faq-text">You can book online through their website, WhatsApp at +91 96269 59999, or
-                        call directly. Walk-ins are also welcome at all three branches <a
-                          href="https://scansworldonchamiersroad.com/aminjikarai" target="_blank">Aminjikarai</a>,
-                        Nandanam (Chamiers
-                        Road), and <a href="https://scansworldonchamiersroad.com/nanganallur"
-                          target="_blank">Nanganallur</a>.</p>
+                        call directly. Walk-ins are also welcome at all three branches <a href="https://scansworldonchamiersroad.com/aminjikarai" target="_blank">Aminjikarai</a>, Nandanam (Chamiers
+                        Road) and <a href="https://scansworldonchamiersroad.com/nanganallur" target="_blank">Nanganallur</a>.</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+
+            
+            <!-- CTA Section -->
+            <div class="lab-cta-box">
+              <h3 style="color: white;">Ready to book your test?</h3>
+              <div class="mt-3">
+                <a href="book-appointment" class="cta-btn-lab"><i class="fas fa-calendar-check"></i> Book Now</a>
+               
+              </div>
+            </div>
+
           </div>
         </div>
         <?php include("services-list.php") ?>

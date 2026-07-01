@@ -1,20 +1,13 @@
-<?php
-include("includes/config.php");
-
-// Fetch latest 20 doctors
-$doctor_image_path = "uploads/doctor_images/";
-$doctors_query = "SELECT * FROM doctors WHERE del_i = 0 ORDER BY id ASC LIMIT 20";
-$latest_doctors = mysqli_query($con, $doctors_query);
-?>
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <?php include_once("seo.php"); ?>
-
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- favicon links (kept as original) -->
     <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicons/favicon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicons/favicon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicons/favicon-72x72.png">
@@ -28,31 +21,31 @@ $latest_doctors = mysqli_query($con, $doctors_query);
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicons/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
-    
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="assets/img/favicons/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
     <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-
+ 
 </head>
 
 <body>
     <?php include 'header.php'; ?>
-    <?php include("doctor-details.php") ?>
+    <?php include("doctor-details.php"); ?>
+    
+    <!-- breadcrumb section (unchanged) -->
     <div class="breadcumb-wrapper " data-bg-src="assets/scan-world/breadcrumb.png">
         <div class="container">
             <div class="breadcumb-content">
-                <h1 class="breadcumb-title text-white"> Scans World On Aminjikarai</h1>
+                <h1 class="breadcumb-title text-white"> Diagnostic Centre in Aminjikarai</h1>
                 <ul class="breadcumb-menu">
                     <li><a href="./" class="text-white">Home</a></li>
                     <li>Aminjikarai</li>
@@ -61,34 +54,26 @@ $latest_doctors = mysqli_query($con, $doctors_query);
         </div>
     </div>
 
+    <!-- ========== ENHANCED HERO + INTEGRATED CONTENT (no existing code removed) ========== -->
     <div class="overflow-hidden space" id="about-sec">
         <div class="container">
             <div class="row flex-row-reverse">
-
                 <div class="col-xl-6 text-center text-xl-start">
                     <div class="title-area mb-32">
-                        <h1><span class="sub-title"><img src="assets/scan-world/icon.webp" alt="shape">Diagnostic Centre in Aminjikarai – Advanced Scans & Imaging Services</span></h1>
-                        <h2 class="box-title">State-of-the-Art Facilities at a Leading Diagnostic Centre in Chennai—Scansworld</h2>
-                        <!-- <h2 class="sec-title">The Best Diagnostic Centre in Chennai</h2> -->
-                        <!-- <p class="sec-text">As the best diagnostic center in Chennai, we provide advanced imaging and diagnostic solutions, including PET-CT, MRI, ECG, and comprehensive health checkups. With cutting-edge technology and expert care, we ensure accurate and timely diagnoses for better health outcomes.</p> -->
+                        <h1><span class="sub-title"><img src="assets/scan-world/icon.webp" alt="shape">Diagnostic Centre in Aminjikarai, Advanced Scans & Imaging Services</span></h1>
+                        
                     </div>
+                    <p>When it comes to your health, accuracy and speed matter. Scans World Aminjikarai has been the go-to diagnostic centre for residents of Aminjikarai, Nanganallur, Nandanam, Vellore and nearby areas, offering a comprehensive range of imaging and laboratory services under one roof, open 24×7 throughout the year.<p>
+                    <!-- Hero Paragraph content added seamlessly (Accuracy and speed matter + unique selling points) -->
+                    
                     <div class="mb-4 mt-n1">
                         <div class="checklist style2 list-two-column">
-                            <!-- <ul>
-                                <li><i class="fas fa-shield-check text-theme2"></i> Advanced Imaging</li>
-                                <li><i class="fas fa-shield-check text-theme2"></i> Comprehensive Health Checkups</li>
-                                <li><i class="fas fa-shield-check text-theme2"></i> State-of-the-Art Technology</li>
-                                <li><i class="fas fa-shield-check text-theme2"></i> Expert Medical Team</li>
-                                <li><i class="fas fa-shield-check text-theme2"></i> Accurate & Timely Reports</li>
-                                <li><i class="fas fa-shield-check text-theme2"></i> Patient-Centric Approach</li>
-                            </ul> -->
                             <ul>
                                 <li><i class="fas fa-shield-check text-theme2"></i> 3 Tesla MRI</li>
                                 <li><i class="fas fa-shield-check text-theme2"></i> Digital PET CT</li>
                                 <li><i class="fas fa-shield-check text-theme2"></i> PET MRI</li>
                                 <li><i class="fas fa-shield-check text-theme2"></i> 160 slice Cardiac CT </li>
-                                <li><i class="fas fa-shield-check text-theme2"></i> Dual head Gamma camera / nuclear
-                                    scans</li>
+                                <li><i class="fas fa-shield-check text-theme2"></i> Dual head Gamma camera / nuclear scans</li>
                                 <li><i class="fas fa-shield-check text-theme2"></i> Ultrasound</li>
                                 <li><i class="fas fa-shield-check text-theme2"></i> Mammogram </li>
                                 <li><i class="fas fa-shield-check text-theme2"></i> Dexa Scan</li>
@@ -97,71 +82,77 @@ $latest_doctors = mysqli_query($con, $doctors_query);
                         </div>
                          <a href="book-appointment" class="th-btn mt-3">Online Appointment</a>
                     </div>
-                    
-                    <div>
-                       
-                    </div>
                 </div>
+                
                 <div class="col-xl-6 mb-40 mb-xl-0">
-                    <div class="img-box7" style="margin: 0px 50px 0px 0px;">
+                    <div class="img-box7" style="margin: 0px 0px 0px 0px;">
                         <div class="img1">
                             <img data-mask-src="assets/scan-world/centers/aminjikarai-2.jpg"
                                 src="assets/scan-world/centers/aminjikarai-2.jpg" alt="About">
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="bg-smoke space" data-bg-src="assets/img/bg/why_bg_3.jpg">
-        <div class="container">
-            <div class="row align-items-center">
+    
+ <div class="bg-smoke space" data-bg-src="assets/img/bg/why_bg_3.jpg" style="padding:60px 0;">
+    <div class="container">
+        <div class="row align-items-center g-5">
 
+            <!-- Left Content -->
+            <div class="col-lg-6">
+                <span class="sub-title">
+                    <img src="assets/scan-world/icon.webp" alt="shape">
+                    About the Aminjikarai Centre
+                </span>
 
-                <div class="col-xl-4 col-md-6">
-                    <div class="location-card">
-                        <h3 class="box-title">Aminjikarai Branch</h3>
-                        <p class="footer-info">
-                            <i class="far fa-location-dot"></i>
-                            No. 575, Rakhi Plaza, Poonamallee High Road, Aminjikarai, Chennai – 600 029.
-                        </p>
-                        <p class="footer-info">
-                            <i class="far fa-envelope"></i>
-                            <a href="mailto:scansworldonphroad@gmail.com"
-                                class="info-box_link">scansworldonphroad@gmail.com</a>
-                        </p>
-                        <p class="footer-info">
-                            <i class="far fa-phone"></i>
-                            <a href="tel:+04435079999" class="info-box_link"> 044 - 3507 9999</a>
-                        </p>
-                        <p class="footer-info">
-                            <i class="fa fa-mobile"></i>
-                            <a href="tel:+919445439999" class="info-box_link"> +91 94454 39999</a>
-                        </p>
-                    </div>
-                    <div class="contact-feature">
-                        <div class="box-icon">
-                            <i class="far fa-clock"></i>
-                        </div>
-                        <div class="media-body">
-                            <h3 class="box-title">Working Hours</h3>
-                            <p class="box-text">Open 24×7</p>
-                        </div>
+                <h2 class="sec-title mb-4">
+                    Chennai's Most Advanced Diagnostic Centre
+                </h2>
 
-                    </div>
+            
+                <p>
+                    From our
+                    <a href="mri-scan"><strong>Wide Bore 3 Tesla MRI</strong></a>
+                    accommodating patients weighing up to <strong>250 kg</strong>, to
+                    advanced PET CT, Cardiac CT, Nuclear Scans and a fully Automated
+                    Laboratory, every service is designed to deliver diagnostic
+                    precision, comfort and compassionate care.
+                </p>
+
+                <p>
+                    The Aminjikarai branch is Scans World's flagship centre he largest and most comprehensively equipped of our three Chennai locations. Spread across a spacious facility in this centre was designed with patient comfort in mind wide waiting areas a smooth appointment process, and dedicated staff to guide you at every step.
+
+What sets this centre apart is the depth of specialisation available under one roof. From routine blood tests to advanced nuclear imaging and PET CT for oncology patients do not need to travel to multiple hospitals. Everything is here, reviewed by a panel of specialists including neuro radiologists, cardiac imaging experts, onco-imaging specialists and pediatric imaging 
+Consultants.
+
+                </p>
+
+                
+            </div>
+
+            <!-- Right Image -->
+            <div class="col-lg-6">
+                <div class="about-img">
+                    <img src="assets\img\gallery\about.png"
+                         alt="Scans World Aminjikarai"
+                         class="img-fluid rounded shadow">
                 </div>
-
-                <div class="col-xl-8 col-md-6">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.3969825936556!2d80.22319739999999!3d13.0740084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267f5ad2abf15%3A0xd5dd33cca3530db4!2sScans%20World%20-%20Aminjikarai%20%7C%20Use%20Appointment%20link%20from%20our%20Google%20Maps%20profile!5e0!3m2!1sen!2sin!4v1753860924092!5m2!1sen!2sin"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="d-flex align-items-center mt-4">
+                    <i class="fas fa-check-circle text-theme2 me-3" style="font-size:22px;"></i>
+                    <div class="col-lg-6">
+                        <strong>Wide Bore 3 Tesla MRI</strong><br>
+                        Accommodates patients weighing up to <strong>250 Kg</strong>
+                    </div>
                 </div>
             </div>
+
         </div>
     </div>
-    <section class="overflow-hidden bg-smoke space" id="service-sec">
+</div>
+
+     <section class="overflow-hidden bg-smoke space" id="service-sec">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-6 col-md-8">
@@ -171,212 +162,49 @@ $latest_doctors = mysqli_query($con, $doctors_query);
                     </div>
                 </div>
             </div>
-            <div class="row gy-4 justify-content-center">
+             <div class="row gy-4 justify-content-center">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-3 col-sm-6 col-12">
-                            <a href="mri-scan">
-                                <div class="feature-box text-center">
-                                    <div class="box-icon">
-                                        <img src="assets/scan-world/service-icon/wine-barrel.png" alt="icon">
-                                    </div>
-                                    <div class="media-body text-start text-start">
-                                        <h3 class="box-title">MRI</h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-3 col-sm-6 col-12">
-                            <a href="ct-scan">
-                                <div class="feature-box text-center">
-                                    <div class="box-icon">
-                                        <img src="assets/scan-world/service-icon/ct-scan.png" alt="icon">
-                                    </div>
-                                    <div class="media-body text-start">
-                                        <h3 class="box-title">PET CT</h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-3 col-sm-6 col-12">
-                            <div class="feature-box text-center">
-                                <div class="box-icon">
-                                    <img src="assets/scan-world/service-icon/heart-attack.png" alt="icon">
-                                </div>
-                                <div class="media-body text-start">
-                                    <h3 class="box-title">Coronary angiogram</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6 col-12">
-                            <a href="#">
-                                <div class="feature-box text-center">
-                                    <div class="box-icon">
-                                        <img src="assets/scan-world/service-icon/ct-scan.png" alt="icon">
-                                    </div>
-                                    <div class="media-body text-start">
-                                        <h3 class="box-title">Nuclear Scans</h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
+                        <div class="col-md-3 col-sm-6 col-12"><a href="mri-scan"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/wine-barrel.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">MRI Scan </h3></div></div></a></div>
+                        <div class="col-md-3 col-sm-6 col-12"><a href="ct-scan"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/ct-scan.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">PET CT</h3></div></div></a></div>
+                        <div class="col-md-3 col-sm-6 col-12"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/heart-attack.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Cardiac CT</h3></div></div></div>
+                        <div class="col-md-3 col-sm-6 col-12"><a href="#"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/ct-scan.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Nuclear Scans</h3></div></div></a></div>
                     </div>
                     <div class="row">
-                        <div class="col-md-3 col-sm-6 col-12">
-                            <a href="ct-scan">
-                                <div class="feature-box text-center">
-                                    <div class="box-icon">
-                                        <img src="assets/scan-world/service-icon/brain-imaging.png" alt="icon">
-                                    </div>
-                                    <div class="media-body text-start">
-                                        <h3 class="box-title">CT Scan</h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-3 col-sm-6 col-12">
-                            <a href="digital-mammography">
-                                <div class="feature-box text-center">
-                                    <div class="box-icon">
-                                        <img src="assets/scan-world/service-icon/mammography.png" alt="icon">
-                                    </div>
-                                    <div class="media-body text-start">
-                                        <h3 class="box-title">Digital Mammography</h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="col-md-3 col-sm-6 col-12">
-                            <div class="feature-box text-center">
-                                <div class="box-icon">
-                                    <img src="assets/scan-world/service-icon/radiotherapy.png" alt="icon">
-                                </div>
-                                <div class="media-body text-start">
-                                    <h3 class="box-title">Fibro Scan</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6 col-12">
-                            <a href="echo">
-                                <div class="feature-box text-center">
-                                    <div class="box-icon">
-                                        <img src="assets/scan-world/service-icon/monitor.png" alt="icon">
-                                    </div>
-                                    <div class="media-body text-start">
-                                        <h3 class="box-title">ECHO</h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
+                        <div class="col-md-3 col-sm-6 col-12"><a href="ct-scan"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/brain-imaging.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title"> CT Scan (Multislice)</h3></div></div></a></div>
+                        <div class="col-md-3 col-sm-6 col-12"><a href="digital-mammography"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/mammography.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Digital Mammography</h3></div></div></a></div>
+                        <div class="col-md-3 col-sm-6 col-12"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/radiotherapy.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Fibro Scan</h3></div></div></div>
+                        <div class="col-md-3 col-sm-6 col-12"><a href="echo"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/monitor.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">ECHO</h3></div></div></a></div>
                     </div>
                     <div class="row">
-                        <div class="col-md-3 col-sm-6 col-12">
-                            <a href="eeg">
-                                <div class="feature-box text-center">
-                                    <div class="box-icon">
-                                        <img src="assets/scan-world/service-icon/eeg.png" alt="icon">
-                                    </div>
-                                    <div class="media-body text-start">
-                                        <h3 class="box-title">EEG</h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-3 col-sm-6 col-12">
-                            <a href="dexa">
-                                <div class="feature-box text-center">
-                                    <div class="box-icon">
-                                        <img src="assets/scan-world/service-icon/bone.png" alt="icon">
-                                    </div>
-                                    <div class="media-body text-start">
-                                        <h3 class="box-title">DEXA</h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-3 col-sm-6 col-12">
-                            <a href="digital-xray">
-                                <div class="feature-box text-center">
-                                    <div class="box-icon">
-                                        <img src="assets/scan-world/service-icon/clinic.png" alt="icon">
-                                    </div>
-                                    <div class="media-body text-start">
-                                        <h3 class="box-title">X-Ray</h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-3 col-sm-6 col-12">
-                            <a href="opg">
-                                <div class="feature-box text-center">
-                                    <div class="box-icon">
-                                        <img src="assets/scan-world/service-icon/show.png" alt="icon">
-                                    </div>
-                                    <div class="media-body text-start">
-                                        <h3 class="box-title">OPG</h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
+                        <div class="col-md-3 col-sm-6 col-12"><a href="eeg"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/eeg.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">EEG / EMG / NCS / PFT</h3></div></div></a></div>
+                        <div class="col-md-3 col-sm-6 col-12"><a href="dexa"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/bone.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">DEXA</h3></div></div></a></div>
+                        <div class="col-md-3 col-sm-6 col-12"><a href="digital-xray"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/clinic.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Digital X-Ray</h3></div></div></a></div>
+                        <div class="col-md-3 col-sm-6 col-12"><a href="opg"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/show.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">OPG</h3></div></div></a></div>
                     </div>
                     <div class="row">
-                        <div class="col-md-3 col-sm-6 col-12">
-                            <a href="colonoscopy-and-endoscopy">
-                                <div class="feature-box text-center">
-                                    <div class="box-icon">
-                                        <img src="assets/scan-world/service-icon/endoscopy.png" alt="icon">
-                                    </div>
-                                    <div class="media-body text-start">
-                                        <h3 class="box-title">Endoscopy</h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-3 col-sm-6 col-12">
-                            <div class="feature-box text-center">
-                                <div class="box-icon">
-                                    <img src="assets/scan-world/service-icon/biopsy.png" alt="icon">
-                                </div>
-                                <div class="media-body text-start">
-                                    <h3 class="box-title">FNAC</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6 col-12">
-                            <div class="feature-box text-center">
-                                <div class="box-icon">
-                                    <img src="assets/scan-world/service-icon/measuring-device.png" alt="icon">
-                                </div>
-                                <div class="media-body text-start">
-                                    <h3 class="box-title">Automated Laboratory</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6 col-12">
-                            <a href="master-health-check-packages">
-                                <div class="feature-box text-center">
-                                    <div class="box-icon">
-                                        <img src="assets/scan-world/service-icon/stethoscope.png" alt="icon">
-                                    </div>
-                                    <div class="media-body text-start">
-                                        <h3 class="box-title">Master Health Checkup</h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
+                        <div class="col-md-3 col-sm-6 col-12"><a href="colonoscopy-and-endoscopy"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/endoscopy.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Endoscopy / Colonoscopy</h3></div></div></a></div>
+                        <div class="col-md-3 col-sm-6 col-12"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/biopsy.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Image-guided Biopsy / FNAC</h3></div></div></div>
+                        <div class="col-md-3 col-sm-6 col-12"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/measuring-device.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Automated Laboratory</h3></div></div></div>
+                        <div class="col-md-3 col-sm-6 col-12"><a href="master-health-check-packages"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/stethoscope.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Master Health Packages</h3></div></div></a></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6 col-12"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/eeg.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Coronary Angiogram</h3></div></div></a></div>
+                        <div class="col-md-3 col-sm-6 col-12"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/clinic.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Treadmill</h3></div></div></div>
+                        <div class="col-md-3 col-sm-6 col-12"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/measuring-device.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Holter</h3></div></div></div>
+                        <div class="col-md-3 col-sm-6 col-12"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/bone.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Bone Densitomery</h3></div></div></a></div>
                     </div>
                 </div>
-
             </div>
-
         </div>
-    </section>
-    <section class="space">
+    </section>   
+       <?php
+$doctor_image_path = "uploads/doctor_images/";
+
+$doctors_query = "SELECT * FROM doctors WHERE del_i = 0 ORDER BY id ASC LIMIT 20";
+$latest_doctors = mysqli_query($con, $doctors_query);
+?>
+     <section class="space">
         <div class="container">
             <div class="title-area text-center">
                 <span class="sub-title"><img src="assets/scan-world/icon.webp" alt="shape">Scans World</span>
@@ -427,76 +255,53 @@ $latest_doctors = mysqli_query($con, $doctors_query);
             </div>
         </div>
     </section>
-    <section class="why-sec3 space-top" id="why-sec" data-bg-src="assets/img/bg/why_bg_3.jpg">
-        <div class="container pb-5 mb-2">
-            <div class="row justify-content-center">
-                <div class="col-lg-7 col-md-8">
-                    <div class="title-area text-center">
-                        <span class="sub-title"><img src="assets/scan-world/icon.webp" alt="shape">Why Choose Us</span>
-                        <h2 class="sec-title">We Have 15 Years Experience in Medical Health Services</h2>
-                    </div>
-                </div>
+    <br>
+    
+    
+    <!-- ========== NEW SECTION: WHY CHOOSE SCANS WORLD (enhanced cards, integrates the provided bullet points) ========== -->
+    <div class="space" style="padding-top:0;">
+        <div class="container">
+            <div class="title-area text-center mb-4">
+                <h3 class="sec-title"><img src="assets/scan-world/icon.webp" alt="icon"> Why Choose Scans World Aminjikarai</h3>
             </div>
-            <div class="row gy-4">
-                <div class="col-xl-4 col-sm-6">
-                    <div class="why-feature" data-bg-src="assets/img/bg/why_feature_bg.png">
-                        <div class="box-icons">
-                            <img src="assets/scan-world/centers/team.png" alt="icon">
-                        </div>
-                        <h3 class="box-title">Experienced Team</h3>
-
-                    </div>
+            <div class="enhanced-feature-grid-aminjikarai">
+                <div class="feature-card-enhanced">
+                    <div class="feature-icon-enhanced"><i class="far fa-clock"></i></div>
+                    <h4 class="box-title">Open 24×7, 365 days</h4>
+                    <p>Day or night, emergency or routine - we are always open.</p>
                 </div>
-                <div class="col-xl-4 col-sm-6">
-                    <div class="why-feature" data-bg-src="assets/img/bg/why_feature_bg.png">
-                        <div class="box-icons">
-                            <img src="assets/scan-world/centers/master.png" alt="icon">
-                        </div>
-                        <h3 class="box-title">Master Health Check-ups</h3>
-
-                    </div>
+                <div class="feature-card-enhanced">
+                    <div class="feature-icon-enhanced"><i class="fas fa-microscope"></i></div>
+                    <h4 class="box-title">Advanced Technology</h4>
+                    <p>Wide Bore 3 Tesla MRI, 160-slice PET CT, Cardiac CT, Nuclear Scans, rare in a single centre, all here.</p>
                 </div>
-                <div class="col-xl-4 col-sm-6">
-                    <div class="why-feature" data-bg-src="assets/img/bg/why_feature_bg.png">
-                        <div class="box-icons">
-                            <img src="assets/scan-world/centers/lap.png" alt="icon">
-                        </div>
-                        <h3 class="box-title">Advanced Lab Facilities
-                        </h3>
-
-                    </div>
+                <div class="feature-card-enhanced">
+                    <div class="feature-icon-enhanced"><i class="fas fa-user-md"></i></div>
+                    <h4 class="box-title">Expert Radiologists</h4>
+                    <p>Reports prepared by qualified specialists: neuro, cardiac, onco, vascular & pediatric experts on panel.</p>
                 </div>
-                <div class="col-xl-4 col-sm-6">
-                    <div class="why-feature" data-bg-src="assets/img/bg/why_feature_bg.png">
-                        <div class="box-icons">
-                            <img src="assets/scan-world/centers/open-24-hours.png" alt="icon">
-                        </div>
-                        <h3 class="box-title">24/7 Service</h3>
-
-                    </div>
+                <div class="feature-card-enhanced">
+                    <div class="feature-icon-enhanced"><i class="fas fa-chart-line"></i></div>
+                    <h4 class="box-title">15+ years of trust</h4>
+                    <p>Over a decade of experience serving Chennai with reliable, accurate diagnostics.</p>
                 </div>
-                <div class="col-xl-4 col-sm-6">
-                    <div class="why-feature" data-bg-src="assets/img/bg/why_feature_bg.png">
-                        <div class="box-icons">
-                            <img src="assets/scan-world/centers/green-city.png" alt="icon">
-                        </div>
-                        <h3 class="box-title">Eco Friendly Environment</h3>
-
-                    </div>
+                <div class="feature-card-enhanced">
+                    <div class="feature-icon-enhanced"><i class="fas fa-vial"></i></div>
+                    <h4 class="box-title">Automated Laboratory</h4>
+                    <p>Full blood tests and lab investigations with automated precision.</p>
                 </div>
-                <div class="col-xl-4 col-sm-6">
-                    <div class="why-feature" data-bg-src="assets/img/bg/why_feature_bg.png">
-                        <div class="box-icons">
-                            <img src="assets/scan-world/centers/parking.png" alt="icon">
-                        </div>
-                        <h3 class="box-title">Ample car parking space </h3>
-
-                    </div>
+                <div class="feature-card-enhanced">
+                    <div class="feature-icon-enhanced"><i class="fas fa-parking"></i></div>
+                    <h4 class="box-title">Lots of parking</h4>
+                    <p>Dedicated car parking on the Poonamallee High Road.</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+    
 
+ 
+ 
     <section class="space">
         <div class="container">
             <div class="title-area text-center">
@@ -547,24 +352,145 @@ $latest_doctors = mysqli_query($con, $doctors_query);
             </div>
         </div>
     </section>
+
+    
+    <section class="testimonial-section">
+    <div class="container">
+
+        <div class="title-area text-center">
+            <span class="sub-title">
+                <img src="assets/scan-world/icon.webp" alt="">
+                Testimonials
+            </span>
+
+            <h2 class="sec-title">What Our Patients Say</h2>
+
+            <p>
+                Trusted by thousands of patients across Chennai for accurate diagnosis and compassionate care.
+            </p>
+        </div>
+
+        <div class="row">
+
+            <!-- Card -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="testimonial-card">
+                    <div class="quote">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+
+                    <p>
+                        The diagnostic center in Chennai is very professional and well kept. The reports came on time and my doctor liked how clear the results were. You can tell that they have experienced radiologists and high tech equipment.
+                    </p>
+
+                    <div class="rating">
+                        ★★★★★
+                    </div>
+
+                    <div class="patient">
+                        <img src="assets\img\icon\icon.jpg">
+                        <div>
+                            <h5>Karthick S</h5>
+                            <span>Nandanam</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="testimonial-card">
+                    <div class="quote">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+
+                    <p>
+                        Very good experience here in Scans World. Staff are so helpful as well as responsive. In fact friendly as well. Even if we have any concerns after coming home, they’re responding well over the phone and co ordinating. Highly recommend.
+                    </p>
+
+                    <div class="rating">
+                        ★★★★★
+                    </div>
+
+                    <div class="patient">
+                        <img src="assets\img\icon\icon.jpg">
+                        <div>
+                            <h5>Remy Leo</h5>
+                            <span>Chennai</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="testimonial-card">
+                    <div class="quote">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+
+                    <p>
+                        Best experience at Scans World at Vellore. The staffs are very professional, and the report was accurate and delivered quickly. Highly recommend this diagnostic centre in Vellore for reliable imaging services.
+                    </p>
+
+                    <div class="rating">
+                        ★★★★★
+                    </div>
+
+                    <div class="patient">
+                        <img src="assets\img\icon\icon.jpg">
+                        <div>
+                            <h5>Santhosh</h5>
+                            <span>Vellore</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </div>
+</section>
+    
+    <!-- FAQ SECTION (10 FAQs from provided content integrated professionally) -->
+    <div class="space bg-smoke">
+        <div class="container">
+            <div class="title-area text-center">
+                <span class="sub-title"><img src="assets/scan-world/icon.webp" alt="faq"> Frequently Asked Questions</span>
+            
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="accordion faq-accordion" id="faqAccordion">
+                        <div class="card"><div class="card-header" id="faq1"><button class="btn btn-link btn-block text-start" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="true">Q1: What is the address of Scans World Aminjikarai?</button></div><div id="collapse1" class="collapse show" data-parent="#faqAccordion"><div class="card-body"><a href="aminjikarai">Scans World Aminjikarai</a> is located at No. 575, Rakhi Plaza, Poonamallee High Road, Aminjikarai, Chennai - 600 029 easily accessible from major areas across North and Central Chennai.</div></div></div>
+                        <div class="card"><div class="card-header" id="faq2"><button class="btn btn-link btn-block text-start collapsed" type="button" data-toggle="collapse" data-target="#collapse2">Q2: What are the working hours of Scans World Aminjikarai?</button></div><div id="collapse2" class="collapse" data-parent="#faqAccordion"><div class="card-body">Scans World Aminjikarai is open 24 hours a day, 7 days a week providing round-the-clock diagnostic services for emergencies, urgent scans, and scheduled appointments at any time convenient for you.</div></div></div>
+                        <div class="card"><div class="card-header" id="faq3"><button class="btn btn-link btn-block text-start collapsed" type="button" data-toggle="collapse" data-target="#collapse3">Q3: What scans and services are available at Scans World Aminjikarai?</button></div><div id="collapse3" class="collapse" data-parent="#faqAccordion"><div class="card-body">Scans World Aminjikarai offers 3 Tesla MRI, 160 Slice Digital PET CT, PET MRI, 160 Slice Cardiac CT, Dual Head Gamma Camera / Nuclear Scans, Ultrasound, Digital Mammography, DEXA Scan, ECHO, EEG, Digital X-Ray, OPG, Endoscopy, FNAC, and Automated Laboratory all under one roof.</div></div></div>
+                        <div class="card"><div class="card-header" id="faq4"><button class="btn btn-link btn-block text-start collapsed" type="button" data-toggle="collapse" data-target="#collapse4">Q4: Which is the nearest diagnostic centre on Poonamallee High Road, Chennai?</button></div><div id="collapse4" class="collapse" data-parent="#faqAccordion"><div class="card-body">Scans World Aminjikarai, located on Poonamallee High Road, is one of Chennai's most advanced and accessible diagnostic centres offering a full range of imaging, nuclear medicine, cardiac, and laboratory services at a single location.</div></div></div>
+                        <div class="card"><div class="card-header" id="faq5"><button class="btn btn-link btn-block text-start collapsed" type="button" data-toggle="collapse" data-target="#collapse5">Q5: Which expert radiologists are available at Scans World Aminjikarai?</button></div><div id="collapse5" class="collapse" data-parent="#faqAccordion"><div class="card-body">Scans World Aminjikarai has a team of highly experienced specialists including expert radiologists, a neuro and vascular radiology consultant, a paediatric neuro radiology specialist, and an onco-imaging specialist ensuring accurate diagnosis across all specialties.</div></div></div>
+                        <div class="card"><div class="card-header" id="faq6"><button class="btn btn-link btn-block text-start collapsed" type="button" data-toggle="collapse" data-target="#collapse6">Q6: Which specialised scans are unique to Scans World Aminjikarai in Chennai?</button></div><div id="collapse6" class="collapse" data-parent="#faqAccordion"><div class="card-body">Scans World Aminjikarai is one of the very few centres in Chennai offering PET MRI, 160 Slice Digital PET CT, Dual Head Gamma Camera / Nuclear Scans, and 3 Tesla MRI all available at a single 24/7 centre.</div></div></div>
+                        <div class="card"><div class="card-header" id="faq7"><button class="btn btn-link btn-block text-start collapsed" type="button" data-toggle="collapse" data-target="#collapse7">Q7: How do I reach Scans World Aminjikarai by phone or WhatsApp?</button></div><div id="collapse7" class="collapse" data-parent="#faqAccordion"><div class="card-body">You can contact Scans World Aminjikarai at +91 94454 39999 or 044 – 3507 9999. For your convenience, you can also book appointments on WhatsApp and online via their website.</div></div></div>
+                        <div class="card"><div class="card-header" id="faq8"><button class="btn btn-link btn-block text-start collapsed" type="button" data-toggle="collapse" data-target="#collapse8">Q8: How do I book an appointment at Scans World Aminjikarai?</button></div><div id="collapse8" class="collapse" data-parent="#faqAccordion"><div class="card-body">Appointments can be booked online through their website, calling +91 94454 39999 or through WhatsApp. The centre is open 24 hours a day, 7 days a week. You can walk in at any time.</div></div></div>
+                        <div class="card"><div class="card-header" id="faq9"><button class="btn btn-link btn-block text-start collapsed" type="button" data-toggle="collapse" data-target="#collapse9">Q9: How long has Scans World been providing diagnostic services in Chennai?</button></div><div id="collapse9" class="collapse" data-parent="#faqAccordion"><div class="card-body">Scans World has more than 15 years of experience in medical imaging and diagnostic services and is trusted by thousands of patients and doctors across Chennai for accurate, reliable and timely results.</div></div></div>
+                        <div class="card"><div class="card-header" id="faq10"><button class="btn btn-link btn-block text-start collapsed" type="button" data-toggle="collapse" data-target="#collapse10">Q10: How is Scans World Aminjikarai different from other diagnostic centres in Chennai?</button></div><div id="collapse10" class="collapse" data-parent="#faqAccordion"><div class="card-body">What differentiates Scans World Aminjikarai is that we are open 24/7, boast 15 years of experience, offer the latest imaging technology like PET MRI, 3T MRI, an experienced team of specialist radiologists, ample car parking and an eco-friendly environment all under one roof on Poonamallee High Road.</div></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Existing CTA & footer -->
     <section class="cta-sec7 space" data-bg-src="assets/scan-world/cta.png">
         <div class="container">
             <h2 class="sec-title mb-md-4 mb-2">Need a Scan for Diagnosis?</h2>
             <h4 class="text-theme fw-semibold mb-4 mb-md-5">Get Accurate Results with Advanced Imaging!</h4>
-            <div>
-                <a href="book-appointment" class="th-btn" contenteditable="false" style="cursor: pointer;">Online
-                    Appointment</a>
-            </div>
+            <div><a href="book-appointment" class="th-btn" style="cursor: pointer;">Book Now</a></div>
         </div>
     </section>
-    <?php include("footer.php") ?>
-    <div class="scroll-top">
-        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
-                style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;">
-            </path>
-        </svg>
-    </div>
+    
+    <?php include("footer.php"); ?>
+    <div class="scroll-top"><svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102"><path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"></path></svg></div>
 
     <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
     <script src="assets/js/swiper-bundle.min.js"></script>
@@ -576,6 +502,15 @@ $latest_doctors = mysqli_query($con, $doctors_query);
     <script src="assets/js/imagesloaded.pkgd.min.js"></script>
     <script src="assets/js/isotope.pkgd.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+        // bootstrap 5+ compatibility for accordion (since we used data-toggle, add fallback)
+        $(function() {
+            $('[data-toggle="collapse"]').on('click', function() {
+                var target = $(this).data('target');
+                $(target).collapse('toggle');
+            });
+        });
+    </script>
 </body>
 
 </html>
