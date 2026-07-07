@@ -382,30 +382,180 @@ Scans World Nandanam delivers expert imaging. Accurate reports. Trusted for 15+ 
 </section>
 
 
+<!-- FAQ Section -->
+<div class="mt-40 faq-wrapper">
+    <div class="title-area mb-25">
+        <h2 class="sec-title fw-semibold">Frequently Asked Questions</h2>
+    </div>
 
-    <!-- FAQ Section (New from provided content) -->
-    <div class="space bg-smoke">
-        <div class="container">
-            <div class="title-area text-center">
-                <span class="sub-title"><img src="assets/scan-world/icon.webp" alt="faq"> Frequently Asked Questions</span>
-                
+    <div class="accordion" id="faqAccordion">
+
+        <!-- FAQ 1 -->
+        <div class="accordion-card">
+            <div class="accordion-header" id="headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    1. Is Scans World Nandanam open 24 hours?
+                </button>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="accordion faq-accordion" id="faqAccordionNandanam">
-                        <div class="card"><div class="card-header"><button class="btn btn-link btn-block text-start" type="button" data-toggle="collapse" data-target="#faqN1">Q: Is Scans World Nandanam open 24 hours?</button></div><div id="faqN1" class="collapse show" data-parent="#faqAccordionNandanam"><div class="card-body">Yes. Our Nandanam centre on Chamiers Road is open 24 hours a day, 7 days a week, including all public holidays. Whether it is an urgent scan late at night or an early-morning appointment we are always available.</div></div></div>
-                        <div class="card"><div class="card-header"><button class="btn btn-link btn-block text-start collapsed" type="button" data-toggle="collapse" data-target="#faqN2">Q: What is the address of Scans World Nandanam?</button></div><div id="faqN2" class="collapse" data-parent="#faqAccordionNandanam"><div class="card-body">We are located at No. 127, Basement, Chamiers Road, Nandanam, Chennai – 600 035. The centre is easily reachable by metro (Nandanam Green Line station), MTC bus, auto, and personal vehicle with dedicated parking on site.</div></div></div>
-                        <div class="card"><div class="card-header"><button class="btn btn-link btn-block text-start collapsed" type="button" data-toggle="collapse" data-target="#faqN3">Q: Is PET CT available at Scans World Nandanam?</button></div><div id="faqN3" class="collapse" data-parent="#faqAccordionNandanam"><div class="card-body">Yes. Whole-body PET CT is available at our Nandanam centre primarily used for cancer diagnosis, staging, and treatment response monitoring. We also offer PET MRI which combines metabolic imaging with high-resolution structural detail for even greater diagnostic precision.</div></div></div>
-                        <div class="card"><div class="card-header"><button class="btn btn-link btn-block text-start collapsed" type="button" data-toggle="collapse" data-target="#faqN4">Q: Is MRI available at Scans World Nandanam?</button></div><div id="faqN4" class="collapse" data-parent="#faqAccordionNandanam"><div class="card-body">Yes. MRI scanning is available at our Nandanam centre, covering brain, spine, musculoskeletal, abdominal and whole-body imaging. All reports are reviewed by our specialist radiologist panel.</div></div></div>
-                        <div class="card"><div class="card-header"><button class="btn btn-link btn-block text-start collapsed" type="button" data-toggle="collapse" data-target="#faqN5">Q: How far is Scans World Nandanam from T. Nagar?</button></div><div id="faqN5" class="collapse" data-parent="#faqAccordionNandanam"><div class="card-body">Our Chamiers Road centre is approximately 2 kilometres from T. Nagar around a 5 to 10 minute drive. It is also reachable by auto or directly from Nandanam Metro Station on the Green Line.</div></div></div>
-                        <div class="card"><div class="card-header"><button class="btn btn-link btn-block text-start collapsed" type="button" data-toggle="collapse" data-target="#faqN6">Q: How far is Scans World Nandanam from Adyar?</button></div><div id="faqN6" class="collapse" data-parent="#faqAccordionNandanam"><div class="card-body">Our Nandanam centre on Chamiers Road is approximately 3 kilometres from Adyar about a 10 minute drive. Chamiers Road connects Nandanam and Adyar directly, making it a very straightforward journey.</div></div></div>
-                        <div class="card"><div class="card-header"><button class="btn btn-link btn-block text-start collapsed" type="button" data-toggle="collapse" data-target="#faqN7">Q: How soon will I receive my scan report?</button></div><div id="faqN7" class="collapse" data-parent="#faqAccordionNandanam"><div class="card-body">Most reports are ready the same day or the following day. For urgent cases, please inform our front desk team at the time of registration and we will prioritise your report accordingly.</div></div></div>
-                        <div class="card"><div class="card-header"><button class="btn btn-link btn-block text-start collapsed" type="button" data-toggle="collapse" data-target="#faqN8">Q: Which is the best diagnostic centre near Mylapore or Alwarpet?</button></div><div id="faqN8" class="collapse" data-parent="#faqAccordionNandanam"><div class="card-body">Scans World Nandanam on Chamiers Road is one of the closest and most comprehensive diagnostic centres for residents of Mylapore, Alwarpet, Teynampet, Gopalapuram, and Saidapet offering MRI, PET CT, CT Scan, ultrasound, lab tests and more open 24/7.</div></div></div>
-                    </div>
+            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    <p class="faq-text">
+                        Yes. Our Nandanam centre on Chamiers Road is open 24 hours a day, 7 days a week,
+                        including all public holidays. Whether it is an urgent scan late at night or an
+                        early-morning appointment, we are always available.
+                    </p>
                 </div>
             </div>
         </div>
+
+        <!-- FAQ 2 -->
+        <div class="accordion-card">
+            <div class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    2. What is the address of Scans World Nandanam?
+                </button>
+            </div>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    <p class="faq-text">
+                        We are located at <strong>No. 127, Basement, Chamiers Road, <a href="nandanam.php">Nandanam</a>,
+                        Chennai – 600 035.</strong> The centre is easily reachable by Nandanam Metro
+                        Station (Green Line), MTC bus, auto, and personal vehicle with dedicated
+                        parking on site.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="accordion-card">
+            <div class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    3. Is PET CT available at Scans World Nandanam?
+                </button>
+            </div>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    <p class="faq-text">
+                        Yes. Whole-body <a href="pet-ct.php">PET CT</a> is available at our Nandanam centre, primarily used
+                        for cancer diagnosis, staging and treatment response monitoring. We also
+                        offer PET MRI, combining metabolic imaging with high-resolution structural
+                        detail for greater diagnostic precision.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="accordion-card">
+            <div class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    4. Is MRI available at Scans World Nandanam?
+                </button>
+            </div>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    <p class="faq-text">
+                        Yes. MRI scanning is available at our Nandanam centre, covering brain,
+                        spine, musculoskeletal, abdominal and whole-body imaging. All reports are
+                        reviewed by our specialist radiologist panel.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="accordion-card">
+            <div class="accordion-header" id="headingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    5. How far is Scans World Nandanam from T. Nagar?
+                </button>
+            </div>
+            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    <p class="faq-text">
+                        Our Chamiers Road centre is approximately <strong>2 kilometres</strong> from
+                        T. Nagar, around a <strong>5 to 10 minute drive</strong>. It is also easily
+                        reachable by auto or directly from Nandanam Metro Station on the Green Line.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="accordion-card">
+            <div class="accordion-header" id="headingSix">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                    6. How far is Scans World Nandanam from Adyar?
+                </button>
+            </div>
+            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    <p class="faq-text">
+                        Our<a href="nandanam.php"> Nandanam centre on Chamiers Road </a>is approximately
+                        <strong>3 kilometres</strong> from Adyar, about a
+                        <strong>10 minute drive</strong>. Chamiers Road directly connects
+                        Nandanam and Adyar, making travel quick and convenient.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ 7 -->
+        <div class="accordion-card">
+            <div class="accordion-header" id="headingSeven">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                    7. How soon will I receive my scan report?
+                </button>
+            </div>
+            <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    <p class="faq-text">
+                        Most reports are ready the same day or the following day. For urgent cases,
+                        please inform our front desk team during registration and we will prioritise
+                        your report accordingly.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ 8 -->
+        <div class="accordion-card">
+            <div class="accordion-header" id="headingEight">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                    8. Which is the best diagnostic centre near Mylapore or Alwarpet?
+                </button>
+            </div>
+            <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    <p class="faq-text">
+                        <a href="https://scansworldonchamiersroad.com">Scans World </a> Nandanam on Chamiers Road is one of the closest and most
+                        comprehensive diagnostic centres for residents of Mylapore, Alwarpet,
+                        Teynampet, Gopalapuram and Saidapet. We offer MRI, PET CT, CT Scan,
+                        Ultrasound, Laboratory Tests and more, with 24/7 service.
+                    </p>
+                </div>
+            </div>
+        </div>
+
     </div>
+</div>
 
     <!-- Final CTA Section (original) -->
     <section class="cta-sec7 space" data-bg-src="assets/scan-world/cta.png">

@@ -22459,3 +22459,8 @@ h1.breadcumb-title.text-white{
     color: #00b67a;
     padding-left: 8px;
 }
+.faq-wrapper {
+    max-width: 1100px;      /* Change as needed */
+    width: 90%;
+    margin: 40px auto;
+}

@@ -363,28 +363,192 @@ $latest_doctors = mysqli_query($con, $doctors_query);
     </div>
 </section>
     <!-- FAQ Section (New from provided content) -->
-    <div class="space bg-smoke">
-        <div class="container">
-            <div class="title-area text-center">
-                <span class="sub-title"><img src="assets/scan-world/icon.webp" alt="faq"> Frequently Asked Questions</span>
-                <h2 class="sec-title">Everything you need to know</h2>
+    <!-- FAQ Section -->
+<div class="mt-40 faq-wrapper">
+    <div class="title-area mb-25">
+        <h2 class="sec-title fw-semibold">Frequently Asked Questions</h2>
+    </div>
+
+    <div class="accordion" id="faqAccordion">
+
+        <!-- FAQ 1 -->
+        <div class="accordion-card">
+            <div class="accordion-header" id="headingOne">
+                <button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                    aria-expanded="false" aria-controls="collapseOne">
+                    1. Is Scans World Nanganallur open 24 hours?
+                </button>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="accordion faq-accordion" id="faqAccordionNanganallur">
-                        <div class="card"><div class="card-header"><button class="btn btn-link btn-block text-start" type="button" data-toggle="collapse" data-target="#faqN1">Q: Is Scans World Nanganallur open 24 hours?</button></div><div id="faqN1" class="collapse show" data-parent="#faqAccordionNanganallur"><div class="card-body">Yes. Our Nanganallur centre on 29th Street is open 24 hours a day, 7 days a week, including Sundays and public holidays. You can come in for an emergency scan or a pre planned check-up at any time.</div></div></div>
-                        <div class="card"><div class="card-header"><button class="btn btn-link btn-block text-start collapsed" type="button" data-toggle="collapse" data-target="#faqN2">Q: What is the address of Scans World Nanganallur?</button></div><div id="faqN2" class="collapse" data-parent="#faqAccordionNanganallur"><div class="card-body">We are located at No. 19, 29th Street, Nanganallur, Chennai – 600 061. The centre is easily reachable by auto, bus and personal vehicle. Parking is available on site.</div></div></div>
-                        <div class="card"><div class="card-header"><button class="btn btn-link btn-block text-start collapsed" type="button" data-toggle="collapse" data-target="#faqN3">Q: Is MRI available at Scans World Nanganallur?</button></div><div id="faqN3" class="collapse" data-parent="#faqAccordionNanganallur"><div class="card-body">Yes. MRI scanning is available at our Nanganallur centre. For patients requiring our 3 Tesla high-field MRI, our <a href="aminjikarai">Aminjikarai </a>flagship centre is equipped with this advanced system and is easily accessible.</div></div></div>
-                        <div class="card"><div class="card-header"><button class="btn btn-link btn-block text-start collapsed" type="button" data-toggle="collapse" data-target="#faqN4">Q: Are blood tests and lab services available at Nanganallur?</button></div><div id="faqN4" class="collapse" data-parent="#faqAccordionNanganallur"><div class="card-body">Yes. Our Nanganallur centre has a fully automated laboratory offering blood tests, CBC, lipid profile, thyroid, liver function, kidney function, and other investigations with fast turnaround and accurate results.</div></div></div>
-                        <div class="card"><div class="card-header"><button class="btn btn-link btn-block text-start collapsed" type="button" data-toggle="collapse" data-target="#faqN5">Q: Do I need an appointment, or can I walk in?</button></div><div id="faqN5" class="collapse" data-parent="#faqAccordionNanganallur"><div class="card-body">Walk-ins are welcome at Scans World Nanganallur. For advanced scans like MRI, CT or cardiac imaging, booking an appointment in advance ensures your preferred time slot. Call +91 72000 48999 to reserve.</div></div></div>
-                        <div class="card"><div class="card-header"><button class="btn btn-link btn-block text-start collapsed" type="button" data-toggle="collapse" data-target="#faqN6">Q: How soon will I receive my scan report?</button></div><div id="faqN6" class="collapse" data-parent="#faqAccordionNanganallur"><div class="card-body">Most scan reports are available the same day or the following day. If you need an urgent report, please inform our front desk team at registration and we will prioritise accordingly.</div></div></div>
-                        <div class="card"><div class="card-header"><button class="btn btn-link btn-block text-start collapsed" type="button" data-toggle="collapse" data-target="#faqN7">Q: Is digital mammography available at Nanganallur?</button></div><div id="faqN7" class="collapse" data-parent="#faqAccordionNanganallur"><div class="card-body">Yes. Digital mammography for breast cancer screening and diagnosis is available at our Nanganallur centre. We recommend all women above 40 to include a mammogram as part of their annual health check-up.</div></div></div>
-                        <div class="card"><div class="card-header"><button class="btn btn-link btn-block text-start collapsed" type="button" data-toggle="collapse" data-target="#faqN8">Q: Which is the best diagnostic centre near Pallavaram or Chromepet?</button></div><div id="faqN8" class="collapse" data-parent="#faqAccordionNanganallur"><div class="card-body"><a href="nanganallur">Scans World Nanganallur</a>, located on 29th Street, is one of the closest and most comprehensive diagnostic centres for residents of Pallavaram, Chromepet, Pammal, Tambaram, Adambakkam, and Madipakkam offering MRI, CT, ultrasound, lab tests and more under one roof, open 24/7.</div></div></div>
-                    </div>
+            <div id="collapseOne" class="accordion-collapse collapse"
+                aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    <p class="faq-text">
+                        Yes. Our Nanganallur centre on 29th Street is open 24 hours a day,
+                        7 days a week, including Sundays and public holidays. You can come
+                        in for an emergency scan or a pre-planned check-up at any time.
+                    </p>
                 </div>
             </div>
         </div>
+
+        <!-- FAQ 2 -->
+        <div class="accordion-card">
+            <div class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                    aria-expanded="false" aria-controls="collapseTwo">
+                    2. What is the address of Scans World Nanganallur?
+                </button>
+            </div>
+            <div id="collapseTwo" class="accordion-collapse collapse"
+                aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    <p class="faq-text">
+                        We are located at <strong>No. 19, 29th Street, Nanganallur,
+                        Chennai – 600 061.</strong> The centre is easily reachable by
+                        auto, bus and personal vehicle. Parking is available on site.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="accordion-card">
+            <div class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                    aria-expanded="false" aria-controls="collapseThree">
+                    3. Is MRI available at Scans World Nanganallur?
+                </button>
+            </div>
+            <div id="collapseThree" class="accordion-collapse collapse"
+                aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    <p class="faq-text">
+                        Yes. MRI scanning is available at our Nanganallur centre.
+                        For patients requiring our 3 Tesla high-field MRI,
+                        our <a href="aminjikarai">Aminjikarai</a> flagship centre
+                        is equipped with this advanced system and is easily accessible.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="accordion-card">
+            <div class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                    aria-expanded="false" aria-controls="collapseFour">
+                    4. Are blood tests and lab services available at Nanganallur?
+                </button>
+            </div>
+            <div id="collapseFour" class="accordion-collapse collapse"
+                aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    <p class="faq-text">
+                        Yes. Our Nanganallur centre has a fully automated laboratory
+                        offering blood tests, CBC, lipid profile, thyroid, liver
+                        function, kidney function and other investigations with
+                        fast turnaround and accurate results.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="accordion-card">
+            <div class="accordion-header" id="headingFive">
+                <button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapseFive"
+                    aria-expanded="false" aria-controls="collapseFive">
+                    5. Do I need an appointment, or can I walk in?
+                </button>
+            </div>
+            <div id="collapseFive" class="accordion-collapse collapse"
+                aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    <p class="faq-text">
+                        Walk-ins are welcome at Scans World Nanganallur.
+                        For advanced scans like MRI, CT or cardiac imaging,
+                        booking an appointment in advance ensures your preferred
+                        time slot. Call <strong>+91 72000 48999</strong> to reserve.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="accordion-card">
+            <div class="accordion-header" id="headingSix">
+                <button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapseSix"
+                    aria-expanded="false" aria-controls="collapseSix">
+                    6. How soon will I receive my scan report?
+                </button>
+            </div>
+            <div id="collapseSix" class="accordion-collapse collapse"
+                aria-labelledby="headingSix" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    <p class="faq-text">
+                        Most scan reports are available the same day or the
+                        following day. If you need an urgent report, please
+                        inform our front desk team at registration and we
+                        will prioritise accordingly.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ 7 -->
+        <div class="accordion-card">
+            <div class="accordion-header" id="headingSeven">
+                <button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapseSeven"
+                    aria-expanded="false" aria-controls="collapseSeven">
+                    7. Is digital mammography available at Nanganallur?
+                </button>
+            </div>
+            <div id="collapseSeven" class="accordion-collapse collapse"
+                aria-labelledby="headingSeven" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    <p class="faq-text">
+                        Yes. Digital mammography for breast cancer screening
+                        and diagnosis is available at our Nanganallur centre.
+                        We recommend all women above 40 include a mammogram
+                        as part of their annual health check-up.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ 8 -->
+        <div class="accordion-card">
+            <div class="accordion-header" id="headingEight">
+                <button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapseEight"
+                    aria-expanded="false" aria-controls="collapseEight">
+                    8. Which is the best diagnostic centre near Pallavaram or Chromepet?
+                </button>
+            </div>
+            <div id="collapseEight" class="accordion-collapse collapse"
+                aria-labelledby="headingEight" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    <p class="faq-text">
+                        <a href="nanganallur">Scans World Nanganallur</a>,
+                        located on 29th Street, is one of the closest and most
+                        comprehensive diagnostic centres for residents of
+                        Pallavaram, Chromepet, Pammal, Tambaram, Adambakkam
+                        and Madipakkam, offering MRI, CT, Ultrasound,
+                        Lab Tests and more under one roof, open 24/7.
+                    </p>
+                </div>
+            </div>
+        </div>
+
     </div>
+</div>
 
     <!-- Final CTA Section (original) -->
     <section class="cta-sec7 space" data-bg-src="assets/scan-world/cta.png">

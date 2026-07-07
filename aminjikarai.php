@@ -455,30 +455,238 @@ $latest_doctors = mysqli_query($con, $doctors_query);
 </section>
     
     <!-- FAQ SECTION (10 FAQs from provided content integrated professionally) -->
-    <div class="space bg-smoke">
-        <div class="container">
-            <div class="title-area text-center">
-                <span class="sub-title"><img src="assets/scan-world/icon.webp" alt="faq"> Frequently Asked Questions</span>
-            
+<!-- FAQ Section -->
+<div class="mt-40 faq-wrapper">
+    <div class="title-area mb-25">
+        <h2 class="sec-title fw-semibold">Frequently Asked Questions</h2>
+    </div>
+
+    <div class="accordion" id="faqAccordion">
+
+        <!-- FAQ 1 -->
+        <div class="accordion-card">
+            <div class="accordion-header" id="headingOne">
+                <button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                    aria-expanded="false" aria-controls="collapseOne">
+                    1. What is the address of Scans World Aminjikarai?
+                </button>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="accordion faq-accordion" id="faqAccordion">
-                        <div class="card"><div class="card-header" id="faq1"><button class="btn btn-link btn-block text-start" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="true">Q1: What is the address of Scans World Aminjikarai?</button></div><div id="collapse1" class="collapse show" data-parent="#faqAccordion"><div class="card-body"><a href="aminjikarai">Scans World Aminjikarai</a> is located at No. 575, Rakhi Plaza, Poonamallee High Road, Aminjikarai, Chennai - 600 029 easily accessible from major areas across North and Central Chennai.</div></div></div>
-                        <div class="card"><div class="card-header" id="faq2"><button class="btn btn-link btn-block text-start collapsed" type="button" data-toggle="collapse" data-target="#collapse2">Q2: What are the working hours of Scans World Aminjikarai?</button></div><div id="collapse2" class="collapse" data-parent="#faqAccordion"><div class="card-body">Scans World Aminjikarai is open 24 hours a day, 7 days a week providing round-the-clock diagnostic services for emergencies, urgent scans, and scheduled appointments at any time convenient for you.</div></div></div>
-                        <div class="card"><div class="card-header" id="faq3"><button class="btn btn-link btn-block text-start collapsed" type="button" data-toggle="collapse" data-target="#collapse3">Q3: What scans and services are available at Scans World Aminjikarai?</button></div><div id="collapse3" class="collapse" data-parent="#faqAccordion"><div class="card-body">Scans World Aminjikarai offers 3 Tesla MRI, 160 Slice Digital PET CT, PET MRI, 160 Slice Cardiac CT, Dual Head Gamma Camera / Nuclear Scans, Ultrasound, Digital Mammography, DEXA Scan, ECHO, EEG, Digital X-Ray, OPG, Endoscopy, FNAC, and Automated Laboratory all under one roof.</div></div></div>
-                        <div class="card"><div class="card-header" id="faq4"><button class="btn btn-link btn-block text-start collapsed" type="button" data-toggle="collapse" data-target="#collapse4">Q4: Which is the nearest diagnostic centre on Poonamallee High Road, Chennai?</button></div><div id="collapse4" class="collapse" data-parent="#faqAccordion"><div class="card-body">Scans World Aminjikarai, located on Poonamallee High Road, is one of Chennai's most advanced and accessible diagnostic centres offering a full range of imaging, nuclear medicine, cardiac, and laboratory services at a single location.</div></div></div>
-                        <div class="card"><div class="card-header" id="faq5"><button class="btn btn-link btn-block text-start collapsed" type="button" data-toggle="collapse" data-target="#collapse5">Q5: Which expert radiologists are available at Scans World Aminjikarai?</button></div><div id="collapse5" class="collapse" data-parent="#faqAccordion"><div class="card-body">Scans World Aminjikarai has a team of highly experienced specialists including expert radiologists, a neuro and vascular radiology consultant, a paediatric neuro radiology specialist, and an onco-imaging specialist ensuring accurate diagnosis across all specialties.</div></div></div>
-                        <div class="card"><div class="card-header" id="faq6"><button class="btn btn-link btn-block text-start collapsed" type="button" data-toggle="collapse" data-target="#collapse6">Q6: Which specialised scans are unique to Scans World Aminjikarai in Chennai?</button></div><div id="collapse6" class="collapse" data-parent="#faqAccordion"><div class="card-body">Scans World Aminjikarai is one of the very few centres in Chennai offering PET MRI, 160 Slice Digital PET CT, Dual Head Gamma Camera / Nuclear Scans, and 3 Tesla MRI all available at a single 24/7 centre.</div></div></div>
-                        <div class="card"><div class="card-header" id="faq7"><button class="btn btn-link btn-block text-start collapsed" type="button" data-toggle="collapse" data-target="#collapse7">Q7: How do I reach Scans World Aminjikarai by phone or WhatsApp?</button></div><div id="collapse7" class="collapse" data-parent="#faqAccordion"><div class="card-body">You can contact Scans World Aminjikarai at +91 94454 39999 or 044 – 3507 9999. For your convenience, you can also book appointments on WhatsApp and online via their website.</div></div></div>
-                        <div class="card"><div class="card-header" id="faq8"><button class="btn btn-link btn-block text-start collapsed" type="button" data-toggle="collapse" data-target="#collapse8">Q8: How do I book an appointment at Scans World Aminjikarai?</button></div><div id="collapse8" class="collapse" data-parent="#faqAccordion"><div class="card-body">Appointments can be booked online through their website, calling +91 94454 39999 or through WhatsApp. The centre is open 24 hours a day, 7 days a week. You can walk in at any time.</div></div></div>
-                        <div class="card"><div class="card-header" id="faq9"><button class="btn btn-link btn-block text-start collapsed" type="button" data-toggle="collapse" data-target="#collapse9">Q9: How long has Scans World been providing diagnostic services in Chennai?</button></div><div id="collapse9" class="collapse" data-parent="#faqAccordion"><div class="card-body">Scans World has more than 15 years of experience in medical imaging and diagnostic services and is trusted by thousands of patients and doctors across Chennai for accurate, reliable and timely results.</div></div></div>
-                        <div class="card"><div class="card-header" id="faq10"><button class="btn btn-link btn-block text-start collapsed" type="button" data-toggle="collapse" data-target="#collapse10">Q10: How is Scans World Aminjikarai different from other diagnostic centres in Chennai?</button></div><div id="collapse10" class="collapse" data-parent="#faqAccordion"><div class="card-body">What differentiates Scans World Aminjikarai is that we are open 24/7, boast 15 years of experience, offer the latest imaging technology like PET MRI, 3T MRI, an experienced team of specialist radiologists, ample car parking and an eco-friendly environment all under one roof on Poonamallee High Road.</div></div></div>
-                    </div>
+            <div id="collapseOne" class="accordion-collapse collapse"
+                aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    <p class="faq-text">
+                        <a href="aminjikarai">Scans World Aminjikarai</a> is located at
+                        <strong>No. 575, Rakhi Plaza, Poonamallee High Road, Aminjikarai,
+                        Chennai - 600 029</strong>, easily accessible from major areas
+                        across North and Central Chennai.
+                    </p>
                 </div>
             </div>
         </div>
+
+        <!-- FAQ 2 -->
+        <div class="accordion-card">
+            <div class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                    aria-expanded="false" aria-controls="collapseTwo">
+                    2. What are the working hours of Scans World Aminjikarai?
+                </button>
+            </div>
+            <div id="collapseTwo" class="accordion-collapse collapse"
+                aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    <p class="faq-text">
+                        Scans World Aminjikarai is open 24 hours a day, 7 days a week,
+                        providing round-the-clock diagnostic services for emergencies,
+                        urgent scans and scheduled appointments at any time convenient
+                        for you.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="accordion-card">
+            <div class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                    aria-expanded="false" aria-controls="collapseThree">
+                    3. What scans and services are available at Scans World Aminjikarai?
+                </button>
+            </div>
+            <div id="collapseThree" class="accordion-collapse collapse"
+                aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    <p class="faq-text">
+                        Scans World Aminjikarai offers 3 Tesla MRI, <a href="pet-ct.php">160 Slice Digital
+                        PET CT</a>, PET MRI, 160 Slice Cardiac CT, Dual Head Gamma Camera /
+                        Nuclear Scans, Ultrasound, Digital Mammography, DEXA Scan,
+                        ECHO, EEG, Digital X-Ray, OPG, Endoscopy, FNAC and a fully
+                        Automated Laboratory under one roof.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="accordion-card">
+            <div class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                    aria-expanded="false" aria-controls="collapseFour">
+                    4. Which is the nearest diagnostic centre on Poonamallee High Road, Chennai?
+                </button>
+            </div>
+            <div id="collapseFour" class="accordion-collapse collapse"
+                aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    <p class="faq-text">
+                        Scans World Aminjikarai, located on Poonamallee High Road,
+                        is one of Chennai's most advanced and accessible diagnostic
+                        centres offering a full range of imaging, nuclear medicine,
+                        cardiac and laboratory services at a single location.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="accordion-card">
+            <div class="accordion-header" id="headingFive">
+                <button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapseFive"
+                    aria-expanded="false" aria-controls="collapseFive">
+                    5. Which expert radiologists are available at Scans World Aminjikarai?
+                </button>
+            </div>
+            <div id="collapseFive" class="accordion-collapse collapse"
+                aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    <p class="faq-text">
+                        Scans World Aminjikarai has a team of highly experienced
+                        specialists including expert radiologists, a neuro and vascular
+                        radiology consultant, a paediatric neuroradiology specialist
+                        and an onco-imaging specialist ensuring accurate diagnosis
+                        across all specialties.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="accordion-card">
+            <div class="accordion-header" id="headingSix">
+                <button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapseSix"
+                    aria-expanded="false" aria-controls="collapseSix">
+                    6. Which specialised scans are unique to Scans World Aminjikarai in Chennai?
+                </button>
+            </div>
+            <div id="collapseSix" class="accordion-collapse collapse"
+                aria-labelledby="headingSix" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    <p class="faq-text">
+                        Scans World Aminjikarai is one of the very few centres in
+                        Chennai offering PET MRI,<a href="pet-ct.php"> 160 Slice Digital PET CT,</a>
+                        Dual Head Gamma Camera/Nuclear Scans and 3 Tesla MRI,
+                        all available at a single 24/7 centre.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ 7 -->
+        <div class="accordion-card">
+            <div class="accordion-header" id="headingSeven">
+                <button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapseSeven"
+                    aria-expanded="false" aria-controls="collapseSeven">
+                    7. How do I reach Scans World Aminjikarai by phone or WhatsApp?
+                </button>
+            </div>
+            <div id="collapseSeven" class="accordion-collapse collapse"
+                aria-labelledby="headingSeven" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    <p class="faq-text">
+                        You can contact Scans World Aminjikarai at
+                        <strong>+91 94454 39999</strong> or
+                        <strong>044 – 3507 9999</strong>.
+                        Appointments can also be booked through WhatsApp or online.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ 8 -->
+        <div class="accordion-card">
+            <div class="accordion-header" id="headingEight">
+                <button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapseEight"
+                    aria-expanded="false" aria-controls="collapseEight">
+                    8. How do I book an appointment at Scans World Aminjikarai?
+                </button>
+            </div>
+            <div id="collapseEight" class="accordion-collapse collapse"
+                aria-labelledby="headingEight" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    <p class="faq-text">
+                        Appointments can be booked online through the website,
+                        by calling <strong>+91 94454 39999</strong>, or through
+                        WhatsApp. The centre is open 24/7 and walk-ins are welcome.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ 9 -->
+        <div class="accordion-card">
+            <div class="accordion-header" id="headingNine">
+                <button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapseNine"
+                    aria-expanded="false" aria-controls="collapseNine">
+                    9. How long has Scans World been providing diagnostic services in Chennai?
+                </button>
+            </div>
+            <div id="collapseNine" class="accordion-collapse collapse"
+                aria-labelledby="headingNine" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    <p class="faq-text">
+                        Scans World has more than <strong>15 years of experience</strong>
+                        in medical imaging and diagnostic services and is trusted by
+                        thousands of patients and doctors across Chennai for accurate,
+                        reliable and timely results.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ 10 -->
+        <div class="accordion-card">
+            <div class="accordion-header" id="headingTen">
+                <button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapseTen"
+                    aria-expanded="false" aria-controls="collapseTen">
+                    10. How is Scans World Aminjikarai different from other diagnostic centres in Chennai?
+                </button>
+            </div>
+            <div id="collapseTen" class="accordion-collapse collapse"
+                aria-labelledby="headingTen" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    <p class="faq-text">
+                        Scans World Aminjikarai stands out with 24/7 service,
+                        over 15 years of experience, advanced technologies like
+                        PET MRI and 3 Tesla MRI, specialist radiologists,
+                        ample parking and an eco-friendly environment, all
+                        under one roof on Poonamallee High Road.
+                    </p>
+                </div>
+            </div>
+        </div>
+
     </div>
+</div>
     
     <!-- Existing CTA & footer -->
     <section class="cta-sec7 space" data-bg-src="assets/scan-world/cta.png">
