@@ -45,14 +45,10 @@ if (isset($_POST['export_to_excel'])) {
             b.enquiry_date,
             b.appointment_date,
             b.appointment_time,
-            t.time_value AS appointment_time_string,
-            b.utm_source,
-            b.utm_medium,
-            b.utm_campaign,
-            b.utm_term,
-            b.utm_content
+            b.referrer_url,
+            b.campaign_id,
+            b.landing_url
         FROM book_appointment b
-        LEFT JOIN appointment_time t ON b.appointment_time = t.id
     ";
 
     if (!empty($whereClauses)) {
@@ -78,48 +74,25 @@ if (isset($_POST['export_to_excel'])) {
         'Enquiry Date',
         'Appointment Date',
         'Appointment Time',
-        'UTM Source',
-        'UTM Medium',
-        'UTM Campaign',
-        'UTM Term',
-        'UTM Content'
+        'Referrer URL',
+        'Campaign ID',
+        'Landing URL'
     ]);
 
     // CSV Data
-    $branch_map = [];
-    $b_res = mysqli_query($con, "SELECT id, branch_name FROM branch");
-    if ($b_res) {
-        while ($b_row = mysqli_fetch_assoc($b_res)) {
-            $branch_map[(string)$b_row['id']] = $b_row['branch_name'];
-        }
-    }
-
-    $service_map = [];
-    $s_res = mysqli_query($con, "SELECT id, service_name FROM service");
-    if ($s_res) {
-        while ($s_row = mysqli_fetch_assoc($s_res)) {
-            $service_map[(string)$s_row['id']] = $s_row['service_name'];
-        }
-    }
-
     while ($row = mysqli_fetch_assoc($result)) {
-        $b_name = $branch_map[$row['branch_name']] ?? $row['branch_name'] ?? '-';
-        $s_name = $service_map[$row['service_name']] ?? $row['service_name'] ?? '-';
-
         fputcsv($output, [
             $row['patient_name'] ?: '-',
             "\t" . $row['phone'], // forces Excel to keep full number
-            $b_name,
-            $s_name,
+            $row['branch_name'] ?: '-',
+            $row['service_name'] ?: '-',
             $row['test_name'] ?: '-',
             !empty($row['enquiry_date']) ? date("d-m-Y", strtotime($row['enquiry_date'])) : '-',
             !empty($row['appointment_date']) ? date("d-m-Y", strtotime($row['appointment_date'])) : '-',
-            (!empty($row['appointment_time_string']) ? $row['appointment_time_string'] : ($row['appointment_time'] ?: '-')),
-            $row['utm_source'] ?: '-',
-            $row['utm_medium'] ?: '-',
-            $row['utm_campaign'] ?: '-',
-            $row['utm_term'] ?: '-',
-            $row['utm_content'] ?: '-'
+            $row['appointment_time'] ?: '-',
+            $row['referrer_url'] ?: '-',
+            $row['campaign_id'] ?: '-',
+            $row['landing_url'] ?: '-'
         ]);
     }
 

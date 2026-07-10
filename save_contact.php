@@ -17,10 +17,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Check for blacklisted words
     global $blacklist_words;
-    $all_inputs = implode(" ", $_POST);
-    if (containsBlacklistedWords($all_inputs, $blacklist_words)) {
+    
+    // Check only visible fields to prevent tracking parameters from triggering the blacklist
+    $visible_fields = ['name', 'phone', 'test_name', 'message', 'subject', 'email'];
+    $inputs_to_check = [];
+    foreach ($visible_fields as $field) {
+        if (isset($_POST[$field])) {
+            $inputs_to_check[] = $_POST[$field];
+        }
+    }
+    $all_inputs = implode(" ", $inputs_to_check);
+    
+    $detected_word = '';
+    foreach ($blacklist_words as $word) {
+        if (preg_match("/\b" . preg_quote($word, '/') . "\b/i", $all_inputs)) {
+            $detected_word = $word;
+            break;
+        }
+    }
+    
+    if ($detected_word !== '') {
         http_response_code(403);
-        echo "<script>alert('Invalid input detected. Please remove restricted words.'); window.history.back();</script>";
+        $escaped_word = addslashes(htmlspecialchars($detected_word, ENT_QUOTES, 'UTF-8'));
+        echo "<script>alert('Invalid input detected. Restricted word used: " . $escaped_word . "'); window.history.back();</script>";
         exit;
     }
 
@@ -85,13 +104,38 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $service_id = htmlspecialchars(trim($_POST['service']));
     $test_name = htmlspecialchars(trim($_POST['test_name'] ?? 'N/A'));
     $appointment_date = htmlspecialchars(trim($_POST['date']));
-    $utm_source = htmlspecialchars(trim($_POST['utm_source'] ?? null));
-    $utm_medium = htmlspecialchars(trim($_POST['utm_medium'] ?? null));
-    $utm_campaign = htmlspecialchars(trim($_POST['utm_campaign'] ?? null));
-    $utm_term = htmlspecialchars(trim($_POST['utm_term'] ?? null));
-    $utm_content = htmlspecialchars(trim($_POST['utm_content'] ?? null));
+    $landing_url = htmlspecialchars(trim($_POST['landing_url'] ?? null));
+    $source = htmlspecialchars(trim($_POST['source'] ?? null));
+    $campaign_id = htmlspecialchars(trim($_POST['campaign_id'] ?? null));
+    $gclid = htmlspecialchars(trim($_POST['gclid'] ?? null));
+    $gbraid = htmlspecialchars(trim($_POST['gbraid'] ?? null));
+    $fbclid = htmlspecialchars(trim($_POST['fbclid'] ?? null));
+    $utm_source = htmlspecialchars(trim($_POST['utm_source'] ?? ''));
+    $utm_medium = htmlspecialchars(trim($_POST['utm_medium'] ?? ''));
+    $utm_campaign = htmlspecialchars(trim($_POST['utm_campaign'] ?? ''));
+    $utm_term = htmlspecialchars(trim($_POST['utm_term'] ?? ''));
+    $utm_content = htmlspecialchars(trim($_POST['utm_content'] ?? ''));
+    $campaign_name = htmlspecialchars(trim($_POST['campaign_name'] ?? ''));
+    $referrer_url = htmlspecialchars(trim($_POST['referrer_url'] ?? ''));
+    $landing_page = htmlspecialchars(trim($_POST['landing_page'] ?? ''));
     $enquiry_date = date('Y-m-d');
     $ip_address = getUserIP();
+
+    // Determine Traffic Source
+    $traffic_source = htmlspecialchars(trim($_POST['traffic_source'] ?? ''));
+    if (empty($traffic_source)) {
+        $traffic_source = "Direct";
+        if (!empty($gclid) || !empty($gbraid) || stripos($utm_source, 'google') !== false || stripos($utm_source, 'ads') !== false) {
+            $traffic_source = "Google Ads";
+        } elseif (!empty($fbclid) || stripos($utm_source, 'facebook') !== false || stripos($utm_source, 'fb') !== false || stripos($utm_source, 'meta') !== false || stripos($utm_source, 'ig') !== false || stripos($utm_source, 'instagram') !== false) {
+            $traffic_source = "Meta Ads";
+        } elseif (stripos($utm_medium, 'organic') !== false || (!empty($referrer_url) && (stripos($referrer_url, 'google.com') !== false || stripos($referrer_url, 'bing.com') !== false || stripos($referrer_url, 'yahoo.com') !== false))) {
+            $traffic_source = "Organic";
+        } elseif (!empty($referrer_url)) {
+            $traffic_source = "Referral";
+        }
+    }
+
     /* -----------------------------------------
        Convert IDs to names dynamically from DB
     ------------------------------------------*/
@@ -116,12 +160,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
     $sql = "INSERT INTO book_appointment 
-    (patient_name, phone, appointment_date, branch, appointment_time, service, test_name, enquiry_date, utm_source, utm_medium, utm_campaign, utm_term, utm_content,appointment_status,ip_address) 
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0,?)";
+    (patient_name, phone, appointment_date, branch, appointment_time, service, test_name, enquiry_date, utm_source, utm_medium, utm_campaign, utm_term, utm_content, appointment_status, ip_address, landing_url, source, campaign_id, gclid, gbraid, fbclid, campaign_name, referrer_url, landing_page, traffic_source) 
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
     $stmt = $con->prepare($sql);
     $stmt->bind_param(
-        "ssssssssssssss",
+        "ssssssssssssssssssssssss",
         $patient_name,
         $phone,
         $appointment_date,
@@ -135,7 +179,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $utm_campaign,
         $utm_term,
         $utm_content,
-        $ip_address
+        $ip_address,
+        $landing_url,
+        $source,
+        $campaign_id,
+        $gclid,
+        $gbraid,
+        $fbclid,
+        $campaign_name,
+        $referrer_url,
+        $landing_page,
+        $traffic_source
     );
 
 
