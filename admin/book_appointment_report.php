@@ -29,24 +29,6 @@ if ($user_name && $user_name !== 'admin') {
     }
 }
 
-// ✅ Dynamic Mappings from Database
-$branch_map = [];
-$b_res = mysqli_query($con, "SELECT id, branch_name FROM branch");
-if ($b_res) {
-    while ($b_row = mysqli_fetch_assoc($b_res)) {
-        $branch_map[(string)$b_row['id']] = $b_row['branch_name'];
-    }
-}
-
-
-$service_map = [];
-$s_res = mysqli_query($con, "SELECT id, service_name FROM service");
-if ($s_res) {
-    while ($s_row = mysqli_fetch_assoc($s_res)) {
-        $service_map[(string)$s_row['id']] = $s_row['service_name'];
-    }
-}
-
 if (isset($_POST['loaddetails'])) {
     $selectedDataType = $_POST['location2'] ?? 'enquiry';
     $enquiry_date = $_POST['enquiry_date'] ?? '';
@@ -73,7 +55,7 @@ if (isset($_POST['loaddetails'])) {
 
     // ✅ Base Query
     $sql = "
-    SELECT
+    SELECT 
       b.id,
       b.patient_name,
       b.phone,
@@ -83,17 +65,10 @@ if (isset($_POST['loaddetails'])) {
       b.enquiry_date,
       b.appointment_date,
       b.appointment_time,
-      t.time_value AS appointment_time_string,
-      b.utm_source,
-      b.utm_medium,
-      b.utm_campaign,
-      b.utm_term,
-      b.utm_content,
-      b.appointment_status,
-      b.follow_up_date,
-      b.reason
+      b.referrer_url,
+      b.campaign_id,
+      b.landing_url
     FROM book_appointment b
-    LEFT JOIN appointment_time t ON b.appointment_time = t.id
     WHERE 1=1
     ";
 
@@ -103,20 +78,39 @@ if (isset($_POST['loaddetails'])) {
                   AND '" . $con->real_escape_string($converteddate1) . "'";
     }
 
+    // ✅ Static Mappings (used for filtering)
+    $branch_map = [
+        "1" => "Nandanam",
+        "2" => "Nanganallur",
+        "3" => "Aminjikarai",
+        "4" => "vellore",
+    ];
+
+    $service_map = [
+        "1" => "MRI",
+        "2" => "CT",
+        "3" => "X-Ray",
+        "4" => "ECG"
+    ];
 
     // ✅ Branch Filter
     if ($selected_branch !== 'centres' && isset($branch_map[$selected_branch])) {
-        $sql .= " AND b.branch = '" . $con->real_escape_string($selected_branch) . "'";
+        $branch_name = $branch_map[$selected_branch];
+        $sql .= " AND b.branch = '" . $con->real_escape_string($branch_name) . "'";
     }
 
     // ✅ Service Filter
     if ($selected_service !== 'service' && isset($service_map[$selected_service])) {
-        $sql .= " AND b.service = '" . $con->real_escape_string($selected_service) . "'";
+        $service_name = $service_map[$selected_service];
+        $sql .= " AND b.service = '" . $con->real_escape_string($service_name) . "'";
     }
 
     // ✅ Restrict to Non-admin user's branch
     if ($user_name !== 'admin' && $branch_id !== '') {
-        $sql .= " AND b.branch = '" . $con->real_escape_string($branch_id) . "'";
+        if (isset($branch_map[$branch_id])) {
+            $branch_name = $branch_map[$branch_id];
+            $sql .= " AND b.branch = '" . $con->real_escape_string($branch_name) . "'";
+        }
     }
 
     // ✅ Sort order
@@ -207,9 +201,10 @@ if (isset($_POST['loaddetails'])) {
                         <label>Select Centre</label>
                         <select class="form-control" id="location" name="location">
                             <option value="centres" <?php echo (!isset($_POST['location']) || $_POST['location'] === 'centres') ? 'selected' : ''; ?>>All</option>
-                            <?php foreach ($branch_map as $val => $name): ?>
-                                <option value="<?php echo $val; ?>" <?php echo (isset($_POST['location']) && $_POST['location'] === (string)$val) ? 'selected' : ''; ?>><?php echo htmlspecialchars($name); ?></option>
-                            <?php endforeach; ?>
+                            <option value="1" <?php echo (isset($_POST['location']) && $_POST['location'] === '1') ? 'selected' : ''; ?>>Nandanam</option>
+                            <option value="2" <?php echo (isset($_POST['location']) && $_POST['location'] === '2') ? 'selected' : ''; ?>>Nanganallur</option>
+                            <option value="3" <?php echo (isset($_POST['location']) && $_POST['location'] === '3') ? 'selected' : ''; ?>>Aminjikarai</option>
+                            <option value="4" <?php echo (isset($_POST['location']) && $_POST['location'] === '4') ? 'selected' : ''; ?>>Vellore</option>
                         </select>
                     </div>
 
@@ -217,14 +212,14 @@ if (isset($_POST['loaddetails'])) {
                         <label>Select Service</label>
                         <select class="form-control" id="department" name="department">
                             <option value="service" <?php echo (!isset($_POST['department']) || $_POST['department'] === 'service') ? 'selected' : ''; ?>>All</option>
-                            <?php foreach ($service_map as $val => $name): ?>
-                                <option value="<?php echo $val; ?>" <?php echo (isset($_POST['department']) && $_POST['department'] === $val) ? 'selected' : ''; ?>><?php echo $name; ?></option>
-                            <?php endforeach; ?>
+                            <option value="1" <?php echo (isset($_POST['department']) && $_POST['department'] === '1') ? 'selected' : ''; ?>>MRI</option>
+                            <option value="2" <?php echo (isset($_POST['department']) && $_POST['department'] === '2') ? 'selected' : ''; ?>>CT</option>
+                            <option value="3" <?php echo (isset($_POST['department']) && $_POST['department'] === '3') ? 'selected' : ''; ?>>X-Ray</option>
+                            <option value="4" <?php echo (isset($_POST['department']) && $_POST['department'] === '4') ? 'selected' : ''; ?>>ECG</option>
                         </select>
                     </div>
 
                     <div class="col-md-1 text-right mt-4">
-                        <input type="hidden" name="loaddetails" value="Search">
                         <input type="submit" value="Search" name="loaddetails" class="btn btn-primary btn-lg">
                     </div>
                     <!-- <div class="col-md-1 text-right mt-4">
@@ -277,61 +272,40 @@ if (isset($_POST['loaddetails'])) {
                                             <th>Branch</th>
                                             <th>Service</th>
                                             <th>Enquiry Date</th>
-                                            <th>Appt. Date</th>
-                                            <th>Appt. Time</th>
+                                            <th>Appointment Date</th>
+                                            <th>Appointment Time</th>
                                             <th>Source</th>
-                                            <th>Status</th>
-                                            <th>Action</th>
+                                            <th>Campaign Id</th>
+                                            <th>Landing Url</th>
+
                                         </tr>
                                     </thead>
 
                                     <tbody>
                                         <?php if ($result && $rowcount > 0): ?>
-                                            <?php
-                                            $status_labels = [0 => 'Open', 1 => 'Closed', 2 => 'Not Turned Up', 3 => 'Follow-up'];
-                                            $status_badges = [0 => 'secondary', 1 => 'success', 2 => 'danger', 3 => 'warning'];
-                                            while ($row = $result->fetch_assoc()):
-                                                $st = (int) ($row['appointment_status'] ?? 0);
-                                                ?>
+                                            <?php while ($row = $result->fetch_assoc()): ?>
                                                 <tr>
                                                     <td><?php echo htmlspecialchars($row['id']); ?></td>
                                                     <td><?php echo htmlspecialchars($row['patient_name']); ?></td>
                                                     <td><?php echo htmlspecialchars($row['phone']); ?></td>
-                                                    <td><?php echo htmlspecialchars($branch_map[$row['branch_display']] ?? $row['branch_display'] ?? '-'); ?></td>
-                                                    <td><?php echo htmlspecialchars($service_map[$row['service_display']] ?? $row['service_display'] ?? '-'); ?></td>
-                                                    <td><?php echo !empty($row['enquiry_date']) ? date('d-m-Y', strtotime($row['enquiry_date'])) : '-'; ?>
+                                                    <td><?php echo htmlspecialchars($row['branch_display'] ?? '-'); ?></td>
+                                                    <td><?php echo htmlspecialchars($row['service_display'] ?? '-'); ?></td>
+
+                                                    <td><?php echo !empty($row['enquiry_date']) ? date("d-m-Y", strtotime($row['enquiry_date'])) : "-"; ?>
                                                     </td>
-                                                    <td><?php echo !empty($row['appointment_date']) ? date('d-m-Y', strtotime($row['appointment_date'])) : '-'; ?>
+                                                    <td><?php echo !empty($row['appointment_date']) ? date("d-m-Y", strtotime($row['appointment_date'])) : "-"; ?>
                                                     </td>
-                                                    <td><?php $time_display = !empty($row['appointment_time_string']) ? $row['appointment_time_string'] : ($row['appointment_time'] ?? '');
-                                                         $t_val = $time_display;
-                                                         $t_stamp = !empty($t_val) ? strtotime($t_val) : false;
-                                                         echo ($t_stamp !== false) ? date('h:i A', $t_stamp) : (!empty($t_val) ? htmlspecialchars($t_val) : '-'); ?>
+                                                    <td><?php echo !empty($row['appointment_time']) ? date("h:i A", strtotime($row['appointment_time'])) : "-"; ?>
                                                     </td>
-                                                    <td><?php echo htmlspecialchars($row['utm_source'] ?? 'Direct'); ?></td>
-                                                    <td>
-                                                        
-                                                            <?php echo $status_labels[$st]; ?>
-                                                        
-                                                    </td>
-                                                    <td>
-                                                        <?php if ($st === 1): // Closed ?>
-                                                            <button type="button" class="btn btn-sm btn-secondary" disabled>Closed</button>
-                                                        <?php else: ?>
-                                                            <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal"
-                                                                data-bs-target="#viewModal" data-id="<?php echo $row['id']; ?>"
-                                                                data-status="<?php echo $st; ?>"
-                                                                data-followup="<?php echo htmlspecialchars($row['follow_up_date'] ?? ''); ?>"
-                                                                data-reason="<?php echo htmlspecialchars($row['reason'] ?? ''); ?>">
-                                                                Update
-                                                            </button>
-                                                        <?php endif; ?>
-                                                    </td>
+                                                    <td><?php echo htmlspecialchars($row['referrer_url'] ?? '-'); ?></td>
+                                                    <td><?php echo htmlspecialchars($row['campaign_id'] ?? '-'); ?></td>
+                                                    <td><?php echo htmlspecialchars($row['landing_url'] ?? '-'); ?></td>
+
                                                 </tr>
                                             <?php endwhile; ?>
                                         <?php else: ?>
                                             <tr>
-                                                <td colspan="11" class="text-center">No records found.</td>
+                                                <td colspan="8" class="text-center">No records found.</td>
                                             </tr>
                                         <?php endif; ?>
                                     </tbody>
@@ -348,8 +322,7 @@ if (isset($_POST['loaddetails'])) {
     <script>
         const dataTable = new simpleDatatables.DataTable('#pc-dt-simple', {
             sortable: false,
-            perPage: 20,
-            perPageSelect: [20, 30, 40, 50, 100]
+            perPage: 50
         });
     </script>
     <div class="modal fade" id="viewModal" tabindex="-1" aria-labelledby="viewModalLabel" aria-hidden="true">
@@ -368,10 +341,9 @@ if (isset($_POST['loaddetails'])) {
                                         <label for="newStatus" class="control-label">Change Status</label>
                                         <select name="status" id="newStatus" class="form-control" required>
                                             <option value="" disabled>Select Status</option>
-                                            <option value="0">Open</option>
-                                            <option value="1">Closed</option>
-                                            <option value="2">Not Turned Up</option>
-                                            <option value="3">Follow-up</option>
+                                            <option value="0">Not Turned</option>
+                                            <option value="1">Turned</option>
+                                            <option value="2">Follow Up</option>
                                         </select>
                                     </div>
                                 </div>
@@ -413,121 +385,113 @@ if (isset($_POST['loaddetails'])) {
         </div>
     </div>
     <script>
-        // Global functions for modal interactions
-        function updateFieldVisibility() {
+        document.addEventListener('DOMContentLoaded', function () {
             const statusSelect = document.getElementById('newStatus');
-            const followUpField = document.getElementById('followUpField');
-            const reasonField = document.getElementById('reasonField');
             const additionalFeesField = document.getElementById('additionalFeesField');
             const mridField = document.getElementById('mridField');
-            
+            const followUpField = document.getElementById('followUpField');
+            const reasonField = document.getElementById('reasonField');
+            const feesInput = document.getElementById('fees');
+            const mrid_noInput = document.getElementById('mrid_no');
             const followUpDateInput = document.getElementById('followUpDate');
             const reasonTextarea = document.getElementById('reason');
 
-            if (!statusSelect) return;
+            function updateFieldVisibility() {
+                const selectedValue = statusSelect.value;
 
-            const selectedValue = statusSelect.value;
+                // Hide all fields by default
+                additionalFeesField.style.display = 'none';
+                mridField.style.display = 'none';
+                followUpField.style.display = 'none';
+                reasonField.style.display = 'none';
 
-            // Hide all fields by default
-            if (followUpField) followUpField.style.display = 'none';
-            if (reasonField) reasonField.style.display = 'none';
-            if (additionalFeesField) additionalFeesField.style.display = 'none';
-            if (mridField) mridField.style.display = 'none';
+                // Remove required attributes
+                feesInput.removeAttribute('required');
+                mrid_noInput.removeAttribute('required');
+                followUpDateInput.removeAttribute('required');
+                reasonTextarea.removeAttribute('required');
 
-            // Remove required attributes
-            if (followUpDateInput) followUpDateInput.removeAttribute('required');
-            if (reasonTextarea) reasonTextarea.removeAttribute('required');
-
-            // Show and set required attributes based on selection
-            if (selectedValue === '2') {  // Not Turned Up
-                if (reasonField) reasonField.style.display = 'block';
-                if (reasonTextarea) reasonTextarea.setAttribute('required', 'required');
-            } else if (selectedValue === '3') {  // Follow-up
-                if (followUpField) followUpField.style.display = 'block';
-                if (followUpDateInput) followUpDateInput.setAttribute('required', 'required');
-            }
-        }
-
-        function resetUpdateForm() {
-            const form = document.getElementById('updateForm');
-            if (form) {
-                form.reset();
-                const statusSelect = document.getElementById('newStatus');
-                if (statusSelect) {
-                    Array.from(statusSelect.options).forEach(opt => opt.disabled = false);
-                    statusSelect.options[0].disabled = true; // "Select Status" remains disabled
+                // Show and set required attributes based on selection
+                if (selectedValue === '0' || selectedValue === '2') {
+                    reasonField.style.display = 'block';
+                    reasonTextarea.setAttribute('required', 'required');
                 }
+                if (selectedValue === '1') {
+                    additionalFeesField.style.display = 'block';
+                    feesInput.setAttribute('required', 'required');
+                    mridField.style.display = 'block';
+                    mrid_noInput.setAttribute('required', 'required');
+                }
+                if (selectedValue === '2') {
+                    followUpField.style.display = 'block';
+                    followUpDateInput.setAttribute('required', 'required');
+                }
+            }
+
+            function resetUpdateForm() {
+                document.getElementById('updateForm').reset();
                 updateFieldVisibility();
             }
-        }
 
-        // Attach event listeners
-        document.addEventListener('DOMContentLoaded', function() {
-            const statusSelect = document.getElementById('newStatus');
-            if (statusSelect) {
-                statusSelect.addEventListener('change', updateFieldVisibility);
-            }
-            
-            const viewModal = document.getElementById('viewModal');
-            if (viewModal) {
-                viewModal.addEventListener('show.bs.modal', function (event) {
-                    const button = event.relatedTarget;
-                    const appointmentId = button.getAttribute('data-id');
-                    const currentStatus = button.getAttribute('data-status');
-                    const followupDate = button.getAttribute('data-followup');
-                    const reason = button.getAttribute('data-reason');
-
-                    document.getElementById('appointmentId').value = appointmentId;
-                    document.getElementById('newStatus').value = currentStatus;
-                    document.getElementById('followUpDate').value = followupDate || '';
-                    document.getElementById('reason').value = reason || '';
-
-                    // Restrictions based on current status
-                    const openOption = statusSelect.querySelector('option[value="0"]');
-                    if (currentStatus === '3') { 
-                        if (openOption) openOption.disabled = true;
-                    } else {
-                        if (openOption) openOption.disabled = false;
-                    }
-
-                    updateFieldVisibility();
-                });
-
-                viewModal.addEventListener('hidden.bs.modal', resetUpdateForm);
+            function loadAppointmentDetails(button) {
+                const appointmentId = button.getAttribute('data-id');
+                document.getElementById('appointmentId').value = appointmentId;
+                fetchDetailsAndSetStatus(appointmentId);
             }
 
-            const saveChangesBtn = document.getElementById('saveChanges');
-            if (saveChangesBtn) {
-                saveChangesBtn.addEventListener('click', function () {
-                    const form = document.getElementById('updateForm');
-                    if (!form.checkValidity()) {
-                        form.reportValidity();
-                        return;
-                    }
+            function fetchDetailsAndSetStatus(appointmentId) {
+                // Simulating fetching of appointment details
+                resetUpdateForm();
+            }
 
-                    const formData = new FormData(form);
-                    fetch('status_update.php', {
-                        method: 'POST',
-                        body: formData,
-                    })
+            statusSelect.addEventListener('change', updateFieldVisibility);
+            updateFieldVisibility();
+
+            $('#viewModal').on('hidden.bs.modal', function () {
+                resetUpdateForm();
+            });
+
+            document.getElementById('saveChanges').addEventListener('click', function () {
+                const form = document.getElementById('updateForm');
+
+                // Validate required fields before submitting
+                if (!form.checkValidity()) {
+                    form.reportValidity(); // Show validation messages
+                    return;
+                }
+
+                const formData = new FormData(form);
+                fetch('status_update.php', {
+                    method: 'POST',
+                    body: formData,
+                })
                     .then(response => response.json())
                     .then(data => {
                         if (data.success) {
-                            const modal = bootstrap.Modal.getInstance(viewModal) || new bootstrap.Modal(viewModal);
+                            const modal = bootstrap.Modal.getOrCreateInstance(document.getElementById('viewModal'));
                             modal.hide();
+                            document.querySelector('.modal-backdrop')?.remove();
                             alert('Data updated successfully!');
-                            document.getElementById('filterForm').submit();
+                            resetUpdateForm();
                         } else {
                             alert('Error: ' + data.error);
                         }
-                    })
-                    .catch(error => {
-                        console.error('Error:', error);
-                        alert('An error occurred while updating the status.');
                     });
-                });
-            }
+            });
         });
+
+        function loadAppointmentDetails(button) {
+            const appointmentId = button.getAttribute('data-id');
+            document.getElementById('appointmentId').value = appointmentId;
+            // Fetch appointment details or status again if necessary here
+            // Example: fetchStatus(appointmentId);
+            resetUpdateForm(); // Call reset to ensure form is clean before setting new values
+        }
+
+        function resetUpdateForm() {
+            document.getElementById('updateForm').reset();
+            updateFieldVisibility(); // Refresh visibility and requirement states immediately after reset
+        }
     </script>
 
 
