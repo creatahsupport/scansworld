@@ -46,7 +46,7 @@
   <div class="breadcumb-wrapper " data-bg-src="assets/scan-world/breadcrumb.png">
     <div class="container">
       <div class="breadcumb-content">
-        <h1 class="breadcumb-title text-white">Blood Test – Fully Automated Laboratory</h1>
+        <h3 class="breadcumb-title text-white">Blood Test – Fully Automated Laboratory</h3>
         <ul class="breadcumb-menu">
           <li><a href="./" class="text-white">Home</a></li>
           <li>Automated Laboratory – Blood Test Lab</li>
@@ -61,7 +61,7 @@
         <div class="col-xxl-8 col-lg-8">
           <div class="page-single single-right mb-30">
             
-           <h3 class="fw-semibold">Automated Laboratory</h3>
+           <h1 class="fw-semibold">Automated Laboratory</h1>
             <div class="page-content">
               <div class="page-img">
                 <img src="assets/scan-world/automated_laboratory.png" alt="Service Image">
@@ -109,7 +109,7 @@
             <div class="test-categories">
               <div class="test-cat-card"><h5><i class="fas fa-tint"></i> HAEMATOLOGY</h5><ul><li>CBC, Haemoglobin & RBC indices</li><li>WBC differential count</li><li>Platelet count, ESR</li><li>Peripheral blood smear</li></ul></div>
               <div class="test-cat-card"><h5><i class="fas fa-flask"></i> BIOCHEMISTRY</h5><ul><li>Blood glucose (fasting & PP), HbA1c</li><li>Lipid profile (cholesterol, HDL, LDL, TG)</li><li>Liver function tests (LFT)</li><li>Kidney function tests (KFT/RFT)</li><li>Uric acid, Electrolytes, CRP</li></ul></div>
-              <div class="test-cat-card"><h5><i class="fas fa-thyroid"></i> THYROID & HORMONES</h5><ul><li>TSH, T3, T4, Free T3 & Free T4</li><li>Vitamin D (25-OH), Vitamin B12</li><li>Testosterone, FSH, LH, Prolactin</li><li>Oestradiol, Progesterone</li></ul></div>
+              <div class="test-cat-card"><h5><i class="fas fa-heartbeat"></i> THYROID & HORMONES</h5><ul><li>TSH, T3, T4, Free T3 & Free T4</li><li>Vitamin D (25-OH), Vitamin B12</li><li>Testosterone, FSH, LH, Prolactin</li><li>Oestradiol, Progesterone</li></ul></div>
               <div class="test-cat-card"><h5><i class="fas fa-shield-virus"></i> IMMUNOLOGY & SEROLOGY</h5><ul><li>RA Factor, Anti-CCP, ANA, Anti-dsDNA</li><li>Hepatitis B & C (HBsAg, Anti-HCV)</li><li>HIV screening, Dengue NS1 IgM & IgG</li><li>Widal, CRP, ASO titre</li></ul></div>
               <div class="test-cat-card"><h5><i class="fas fa-chart-line"></i> TUMOUR MARKERS</h5><ul><li>PSA, CA 125,</li><li> CA 19-9</li><li>CEA, AFP,</li><li>Beta HCG</li></ul></div>
               <div class="test-cat-card"><h5><i class="fas fa-toilet"></i> URINE & STOOL ANALYSIS</h5><ul><li>Urine routine & microscopy</li><li>Urine culture & sensitivity</li><li>24-hour urine protein</li><li>Stool routine & occult blood</li><li>Stool culture, Pregnancy test</li></ul></div>
@@ -338,16 +338,16 @@
     </svg>
   </div>
 
-  <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
-  <script src="assets/js/swiper-bundle.min.js"></script>
-  <script src="assets/js/bootstrap.min.js"></script>
-  <script src="assets/js/jquery.magnific-popup.min.js"></script>
-  <script src="assets/js/jquery.counterup.min.js"></script>
-  <script src="assets/js/jquery.datetimepicker.min.js"></script>
-  <script src="assets/js/jquery-ui.min.js"></script>
-  <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/js/isotope.pkgd.min.js"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/vendor/jquery-3.7.1.min.js" defer></script>
+  <script src="assets/js/swiper-bundle.min.js" defer></script>
+  <script src="assets/js/bootstrap.min.js" defer></script>
+  <script src="assets/js/jquery.magnific-popup.min.js" defer></script>
+  <script src="assets/js/jquery.counterup.min.js" defer></script>
+  <script src="assets/js/jquery.datetimepicker.min.js" defer></script>
+  <script src="assets/js/jquery-ui.min.js" defer></script>
+  <script src="assets/js/imagesloaded.pkgd.min.js" defer></script>
+  <script src="assets/js/isotope.pkgd.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
 </body>
 
 </html>

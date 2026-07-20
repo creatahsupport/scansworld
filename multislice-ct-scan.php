@@ -27,12 +27,15 @@
   <meta name="theme-color" content="#ffffff">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"></noscript>
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-  <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+  <link rel="preload" as="style" href="assets/css/magnific-popup.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="assets/css/magnific-popup.min.css"></noscript>
   <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-  <link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css">
+  <link rel="preload" as="style" href="assets/css/jquery.datetimepicker.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css"></noscript>
   <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
@@ -44,7 +47,7 @@
   <div class="breadcumb-wrapper " data-bg-src="assets/scan-world/breadcrumb.png">
     <div class="container">
       <div class="breadcumb-content">
-        <h1 class="breadcumb-title text-white">Multislice CT Scan</h1>
+        <h3 class="breadcumb-title text-white">Multislice CT Scan</h3>
         <ul class="breadcumb-menu">
           <li><a href="./" class="text-white">Home</a></li>
           <li>Multislice CT Scan</li>
@@ -58,7 +61,7 @@
       <div class="row flex-row-reverse">
         <div class="col-xxl-8 col-lg-8">
           <div class="page-single single-right mb-30">
-            <h3 class="fw-semibold">Multislice CT Scan</h3>
+            <h1 class="fw-semibold">Multislice CT Scan</h1>
             <div class="page-img">
               <img src="assets/scan-world/multislice-ct-scan.png" alt="Service Image">
             </div>
@@ -109,8 +112,8 @@
               </div>
               <div class="cta-feature-card">
                 <div class="cta-feature-icon"><i class="fas fa-map-marker-alt"></i></div>
-                <h4>3 branches in Chennai</h4>
-                <p><a href="aminjikarai">Aminjikarai,</a> Nandanam & Nanganallur.</p>
+                <h4>4 locations across Chennai & Vellore</h4>
+                <p><a href="aminjikarai">Aminjikarai,</a> Nandanam, Nanganallur and Vellore.</p>
               </div>
             </div>
             
@@ -155,7 +158,7 @@
                   <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text">A <a href="https://scansworldonchamiersroad.com/multislice-ct-scan" target="_blank">multislice CT scan</a> is an advanced imaging technique that produces multiple
+                      <p class="faq-text">A <a href="multislice-ct-scan" target="_blank">multislice CT scan</a> is an advanced imaging technique that produces multiple
                         cross sectional images of the body in a single rotation. It provides clear three-dimensional
                         views of internal organs, bone structure and body tissues in a short scan time.</p>
                     </div>
@@ -189,7 +192,7 @@
                   <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text">The <a href="https://scansworldonchamiersroad.com/multislice-ct-scan" target="_blank">Multislice CT Scan</a> covers the brain, spine, chest, abdomen, pelvis, blood
+                      <p class="faq-text">The <a href="multislice-ct-scan" target="_blank">Multislice CT Scan</a> covers the brain, spine, chest, abdomen, pelvis, blood
                         vessels and musculoskeletal system providing comprehensive whole body diagnostic imaging.</p>
                     </div>
                   </div>
@@ -205,7 +208,7 @@
                   <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/multislice-ct-scan" target="_blank">Multislice CT</a> is a new technology that can take several layers of images at
+                      <p class="faq-text"><a href="multislice-ct-scan" target="_blank">Multislice CT</a> is a new technology that can take several layers of images at
                         the same time in one rotation, resulting in faster scanning, higher image quality and better 3-D
                         detail than the older single-slice CT machines.</p>
                     </div>
@@ -222,7 +225,7 @@
                   <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/" target="_blank">Scans World</a> offers Multislice CT Scan services in their branches at
+                      <p class="faq-text"><a href="./" target="_blank">Scans World</a> offers Multislice CT Scan services in their branches at
                         Aminjikarai, Nandanam (Chamiers Road) and Nanganallur with experienced radiologists and
                         state-of-the-art equipment.</p>
                     </div>
@@ -256,7 +259,7 @@
                   <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text">The advanced technology of the <a href="https://scansworldonchamiersroad.com/multislice-ct-scan" target="_blank">Multislice CT Scan</a> makes it fast with minimal
+                      <p class="faq-text">The advanced technology of the <a href="multislice-ct-scan" target="_blank">Multislice CT Scan</a> makes it fast with minimal
                         scan duration most scans take between 10 to 20 minutes depending on the area being scanned.</p>
                     </div>
                   </div>
@@ -321,7 +324,7 @@
               <p class="mb-2" style="color: white;">Fast, accurate and safe imaging at Scans World. Book your appointment today.</p>
               
               <div class="cta-button-group">
-                <a href="book-appointment" class="cta-primary-btn">Book Now</a>
+                <a href="book-appointment" class="cta-primary-btn"> <i class="fas fa-calendar-check"></i> Book Now</a>
               </div>
             </div>
             
@@ -340,16 +343,10 @@
     </svg>
   </div>
 
-  <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
-  <script src="assets/js/swiper-bundle.min.js"></script>
-  <script src="assets/js/bootstrap.min.js"></script>
-  <script src="assets/js/jquery.magnific-popup.min.js"></script>
-  <script src="assets/js/jquery.counterup.min.js"></script>
-  <script src="assets/js/jquery.datetimepicker.min.js"></script>
-  <script src="assets/js/jquery-ui.min.js"></script>
-  <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/js/isotope.pkgd.min.js"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/vendor/jquery-3.7.1.min.js" defer></script>
+  <script src="assets/js/bootstrap.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  
 </body>
 
 </html>

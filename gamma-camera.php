@@ -33,9 +33,6 @@
     rel="stylesheet">
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-  <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
-  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-  <link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
@@ -47,7 +44,7 @@
   <div class="breadcumb-wrapper " data-bg-src="assets/scan-world/breadcrumb.png">
     <div class="container">
       <div class="breadcumb-content">
-        <h1 class="breadcumb-title text-white">Nuclear Scans / Gamma camera</h1>
+        <h3 class="breadcumb-title text-white">Nuclear Scans / Gamma camera</h3>
         <ul class="breadcumb-menu">
           <li><a href="./" class="text-white">Home</a></li>
           <li>Nuclear Scans / Gamma camera</li>
@@ -62,10 +59,10 @@
         <div class="col-xxl-8 col-lg-8">
           <div class="page-single single-right mb-30">
           
-            <h3 class="fw-semibold">Nuclear Scans / Gamma camera</h3>
+            <h1 class="fw-semibold">Nuclear Scans / Gamma camera</h1>
             <div class="page-img">
-              <img src="assets/scan-world/gamma_camera.jpg" alt="Service Image"
-                style="height: 600px; width: 800px; object-fit: cover;">
+              <img src="assets/scan-world/gamma-camera.webp" alt="Service Image"
+                style="height: 400px; width: 800px; object-fit: cover;">
             </div>
             <div class="page-content">
               <p>Our Gamma Camera / SPECT CT combines cutting-edge technology to deliver superior, high-resolution
@@ -90,7 +87,7 @@
                   <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text">A <a href="https://scansworldonchamiersroad.com/gamma-camera" target="_blank">gamma camera scan</a> is an advanced nuclear imaging test that uses a small
+                      <p class="faq-text">A <a href="gamma-camera" target="_blank">gamma camera scan</a> is an advanced nuclear imaging test that uses a small
                         amount of radioactive tracer to produce detailed images of the function and metabolic activity of
                         the body’s organs, aiding in the accurate diagnosis of cancer, heart disease and neurological
                         disorders.</p>
@@ -126,7 +123,7 @@
                   <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/gamma-camera" target="_blank">Nuclear scans</a> can help detect cancer spread, bone metastasis, thyroid
+                      <p class="faq-text"><a href="gamma-camera" target="_blank">Nuclear scans</a> can help detect cancer spread, bone metastasis, thyroid
                         disorders, heart disease, kidney function abnormalities, lung conditions, brain disorders and
                         infections providing unique functional insights that CT or MRI alone cannot provide.</p>
                     </div>
@@ -143,7 +140,7 @@
                   <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/" target="_blank">Scans World</a> offers a wide range of nuclear medicine scans including bone
+                      <p class="faq-text"><a href="./" target="_blank">Scans World</a> offers a wide range of nuclear medicine scans including bone
                         scans, thyroid scans, renal scans, cardiac perfusion scans, brain scans, lung scans, and
                         whole-body scans all performed using their advanced Gamma Camera / SPECT CT system.</p>
                     </div>
@@ -160,7 +157,7 @@
                   <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/" target="_blank">Scans World's</a> SPECT CT delivers superior high-resolution images with faster
+                      <p class="faq-text"><a href="./" target="_blank">Scans World's</a> SPECT CT delivers superior high-resolution images with faster
                         results combining cutting-edge nuclear imaging technology with CT precision to provide
                         unparalleled diagnostic clarity for cancer, heart disease and neurological conditions.</p>
                     </div>
@@ -195,7 +192,7 @@
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
                       <p class="faq-text">A small, safe radioactive tracer is injected into the body and allowed time to
-                        reach the target organ. The <a href="https://scansworldonchamiersroad.com/gamma-camera" target="_blank">Gamma Camera</a> then detects the emitted energy to create detailed
+                        reach the target organ. The <a href="gamma-camera" target="_blank">Gamma Camera</a> then detects the emitted energy to create detailed
                         images of organ function. The procedure is non-invasive, painless and creates very little
                         discomfort.</p>
                     </div>
@@ -212,7 +209,7 @@
                   <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/gamma-camera" target="_blank">Nuclear scans</a> use a tiny amount of radioactive tracer that will naturally pass
+                      <p class="faq-text"><a href="gamma-camera" target="_blank">Nuclear scans</a> use a tiny amount of radioactive tracer that will naturally pass
                         through your body within hours. The radiation dose is carefully controlled and kept at safe
                         levels the procedure is well-established globally and routinely performed for patients of all
                         ages.</p>
@@ -249,7 +246,7 @@
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
                       <p class="faq-text">You can book online through their website, WhatsApp at +91 96269 59999, or
-                        call directly. Walk-ins are also welcome at all three branches <a href="https://scansworldonchamiersroad.com/aminjikarai" target="_blank">Aminjikarai</a>, Nandanam (Chamiers
+                        call directly. Walk-ins are also welcome at all three branches <a href="aminjikarai" target="_blank">Aminjikarai</a>, Nandanam (Chamiers
                         Road), and Nanganallur.</p>
                     </div>
                   </div>
@@ -273,16 +270,10 @@
     </svg>
   </div>
 
-  <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
-  <script src="assets/js/swiper-bundle.min.js"></script>
-  <script src="assets/js/bootstrap.min.js"></script>
-  <script src="assets/js/jquery.magnific-popup.min.js"></script>
-  <script src="assets/js/jquery.counterup.min.js"></script>
-  <script src="assets/js/jquery.datetimepicker.min.js"></script>
-  <script src="assets/js/jquery-ui.min.js"></script>
-  <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/js/isotope.pkgd.min.js"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/vendor/jquery-3.7.1.min.js" defer></script>
+  <script src="assets/js/bootstrap.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  
 </body>
 
 </html>

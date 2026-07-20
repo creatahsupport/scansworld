@@ -44,12 +44,15 @@ $latest_doctors = mysqli_query($con, $doctors_query);
   <meta name="theme-color" content="#ffffff">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"></noscript>
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-  <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+  <link rel="preload" as="style" href="assets/css/magnific-popup.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="assets/css/magnific-popup.min.css"></noscript>
   <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-  <link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css">
+  <link rel="preload" as="style" href="assets/css/jquery.datetimepicker.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css"></noscript>
   <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
@@ -60,21 +63,21 @@ $latest_doctors = mysqli_query($con, $doctors_query);
   <?php include("banner.php") ?>
   <?php include("doctor-details.php") ?>
   <div class="space" id="about-sec">
-    <div class="shape-mockup" data-top="0" data-right="0"><img src="assets/img/shape/pattern_shape_1.png" alt="shape"></div>
+    <div class="shape-mockup" data-top="0" data-right="0"><img src="assets/img/shape/pattern_shape_1.png" loading="lazy" decoding="async" alt="shape"></div>
 
     <div class="container">
       <div class="row align-items-center">
         <div class="col-xl-6 mb-30 mb-xl-0">
           <div class="img-box6">
             <div class="img1">
-              <img src="assets/scan-world/services/mri.jpg" alt="About">
+              <img src="assets/scan-world/services/mri.jpg" loading="lazy" decoding="async"alt="About">
             </div>
           </div>
         </div>
         <div class="col-xl-6">
           <div class="ps-xxl-4 ms-xl-2 text-center text-xl-start">
             <div class="title-area mb-32">
-              <h1><span class="sub-title"><img src="assets/scan-world/icon.webp" alt="shape">Best Diagnostic Centre in Chennai for Advanced Scans & Accurate Reports</span></h1>
+              <h1><span class="sub-title"><img src="assets/scan-world/icon.webp" loading="lazy" decoding="async" alt="shape">Best Diagnostic Centre in Chennai for Advanced Scans & Accurate Reports</span></h1>
               <!-- <h2 class="sec-title">About Scans World</h2> -->
               <p class="sec-text">Delivering fast, accurate, and affordable medical imaging, Scans World is the preferred choice for patients and clinicians alike.</p>
             </div>
@@ -96,7 +99,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
   <section class="space pt-0" id="testi-sec">
     <div class="container">
       <div class="title-area text-center">
-        <span class="sub-title"><img src="assets/scan-world/icon.webp" alt="shape">Our Centers</span>
+        <span class="sub-title"><img src="assets/scan-world/icon.webp" loading="lazy" decoding="async"alt="shape">Our Centers</span>
         <h2 class="sec-title">Find Scans World near you</h2>
       </div>
       <div class="swiper th-slider" id="testiSlide1" data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"1"},"768":{"slidesPerView":"1"},"992":{"slidesPerView":"2"},"1200":{"slidesPerView":"3"}}}'>
@@ -104,7 +107,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
         <div class="swiper-slide">
             <div class="pe-xxl-5">
               <div class="faq-img2">
-                <img src="assets/scan-world/centers/aminjikarai-3.webp" alt="centers">
+                <img src="assets/scan-world/centers/aminjikarai-3.webp" loading="lazy" decoding="async" alt="centers">
                 <div class="box-content">
                   <h3 class="box-title">Aminjikarai</h3>
                   <div>
@@ -140,7 +143,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
           <div class="swiper-slide">
             <div class="pe-xxl-5">
               <div class="faq-img2">
-                <img src="assets/scan-world/centers/img-1.png" alt="centers">
+                <img src="assets/scan-world/centers/nandanam.webp" loading="lazy" decoding="async" alt="centers">
                 <div class="box-content">
                   <h3 class="box-title">Nandanam</h3>
                   <div>
@@ -175,7 +178,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
           <div class="swiper-slide">
             <div class="pe-xxl-5">
               <div class="faq-img2">
-                <img src="assets/scan-world/centers/nanganallur.webp" alt="centers">
+                <img src="assets/scan-world/centers/nanganallur.webp" loading="lazy" decoding="async" alt="centers">
                 <div class="box-content">
                   <h3 class="box-title">Nanganallur</h3>
                   <div>
@@ -211,7 +214,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
           <div class="swiper-slide">
             <div class="pe-xxl-5">
               <div class="faq-img2">
-                <img src="assets/scan-world/centers/vellore.webp" alt="centers">
+                <img src="assets/scan-world/centers/vellore.webp" loading="lazy" decoding="async"alt="centers">
                 <div class="box-content">
                   <h3 class="box-title">Vellore</h3>
                   <div>
@@ -266,7 +269,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
       <div class="row justify-content-center">
         <div class="col-lg-6 col-md-8">
           <div class="title-area text-center">
-            <span class="sub-title"><img src="assets/scan-world/icon.webp" alt="Icon">Our Services</span>
+            <span class="sub-title"><img src="assets/scan-world/icon.webp" loading="lazy" decoding="async" alt="Icon">Our Services</span>
             <h2 class="sec-title">Scans & Blood Tests</h2>
           </div>
         </div>
@@ -278,7 +281,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
               <a href="mri-scan">
                 <div class="feature-box text-center">
                   <div class="box-icon">
-                    <img src="assets/scan-world/service-icon/wine-barrel.png" alt="icon">
+                    <img src="assets/scan-world/service-icon/wine-barrel.png" loading="lazy" decoding="async" alt="icon">
                   </div>
                   <div class="media-body text-start text-start">
                     <h3 class="box-title">MRI</h3>
@@ -290,7 +293,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
               <a href="pet-ct">
                 <div class="feature-box text-center">
                   <div class="box-icon">
-                    <img src="assets/scan-world/service-icon/ct-scan.png" alt="icon">
+                    <img src="assets/scan-world/service-icon/ct-scan.png" loading="lazy" decoding="async" alt="icon">
                   </div>
                   <div class="media-body text-start">
                     <h3 class="box-title">PET CT</h3>
@@ -302,7 +305,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
               <a href="160-slice-cardiac-ct">
               <div class="feature-box text-center">
                 <div class="box-icon">
-                  <img src="assets/scan-world/service-icon/heart-attack.png" alt="icon">
+                  <img src="assets/scan-world/service-icon/heart-attack.png" loading="lazy" decoding="async"alt="icon">
                 </div>
                 <div class="media-body text-start">
                   <h3 class="box-title">160 Slice Cardiac CT</h3>
@@ -314,7 +317,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
               <a href="gamma-camera">
                 <div class="feature-box text-center">
                   <div class="box-icon">
-                    <img src="assets/scan-world/service-icon/ct-scan.png" alt="icon">
+                    <img src="assets/scan-world/service-icon/ct-scan.png" loading="lazy" decoding="async"alt="icon">
                   </div>
                   <div class="media-body text-start">
                     <h3 class="box-title">Nuclear Scans</h3>
@@ -329,7 +332,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
               <a href="multislice-ct-scan">
                 <div class="feature-box text-center">
                   <div class="box-icon">
-                    <img src="assets/scan-world/service-icon/brain-imaging.png" alt="icon">
+                    <img src="assets/scan-world/service-icon/brain-imaging.png" loading="lazy" decoding="async" alt="icon">
                   </div>
                   <div class="media-body text-start">
                     <h3 class="box-title">Multislice CT Scan</h3>
@@ -342,7 +345,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
               <a href="digital-mammography">
                 <div class="feature-box text-center">
                   <div class="box-icon">
-                    <img src="assets/scan-world/service-icon/ultrasound.png" alt="icon">
+                    <img src="assets/scan-world/service-icon/ultrasound.png" loading="lazy" decoding="async" alt="icon">
                   </div>
                   <div class="media-body text-start">
                     <h3 class="box-title">Digital Mammography</h3>
@@ -354,7 +357,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
               <a href="color-doppler">
                 <div class="feature-box text-center">
                   <div class="box-icon">
-                    <img src="assets/scan-world/service-icon/meters.png" alt="icon">
+                    <img src="assets/scan-world/service-icon/meters.png" loading="lazy" decoding="async" alt="icon">
                   </div>
                   <div class="media-body text-start">
                     <h3 class="box-title">Color Doppler</h3>
@@ -366,7 +369,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
               <a href="echo">
                 <div class="feature-box text-center">
                   <div class="box-icon">
-                    <img src="assets/scan-world/service-icon/radiotherapy.png" alt="icon">
+                    <img src="assets/scan-world/service-icon/radiotherapy.png" loading="lazy" decoding="async" alt="icon">
                   </div>
                   <div class="media-body text-start">
                     <h3 class="box-title">ECHO</h3>
@@ -379,7 +382,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
               <a href="eeg">
                 <div class="feature-box text-center">
                   <div class="box-icon">
-                    <img src="assets/scan-world/service-icon/monitor.png" alt="icon">
+                    <img src="assets/scan-world/service-icon/monitor.png" loading="lazy" decoding="async" alt="icon">
                   </div>
                   <div class="media-body text-start">
                     <h3 class="box-title">EEG</h3>
@@ -391,7 +394,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
               <a href="eeg">
                 <div class="feature-box text-center">
                   <div class="box-icon">
-                    <img src="assets/scan-world/service-icon/eeg.png" alt="icon">
+                    <img src="assets/scan-world/service-icon/eeg.png" loading="lazy" decoding="async" alt="icon">
                   </div>
                   <div class="media-body text-start">
                     <h3 class="box-title">EEG & TMT</h3>
@@ -403,7 +406,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
               <a href="dexa">
                 <div class="feature-box text-center">
                   <div class="box-icon">
-                    <img src="assets/scan-world/service-icon/bone.png" alt="icon">
+                    <img src="assets/scan-world/service-icon/bone.png" loading="lazy" decoding="async" alt="icon">
                   </div>
                   <div class="media-body text-start">
                     <h3 class="box-title">DEXA</h3>
@@ -415,7 +418,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
               <a href="digital-xray">
                 <div class="feature-box text-center">
                   <div class="box-icon">
-                    <img src="assets/scan-world/service-icon/clinic.png" alt="icon">
+                    <img src="assets/scan-world/service-icon/clinic.png" loading="lazy" decoding="async" alt="icon">
                   </div>
                   <div class="media-body text-start">
                     <h3 class="box-title">Digital X-Ray</h3>
@@ -428,7 +431,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
               <a href="opg">
                 <div class="feature-box text-center">
                   <div class="box-icon">
-                    <img src="assets/scan-world/service-icon/mammography.png" alt="icon">
+                    <img src="assets/scan-world/service-icon/mammography.png" loading="lazy" decoding="async" alt="icon">
                   </div>
                   <div class="media-body text-start">
                     <h3 class="box-title">OPG</h3>
@@ -441,7 +444,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
             <a href="colonoscopy-and-endoscopy">
               <div class="feature-box text-center">
                 <div class="box-icon">
-                  <img src="assets/scan-world/service-icon/show.png" alt="icon">
+                  <img src="assets/scan-world/service-icon/show.png" loading="lazy" decoding="async" alt="icon">
                 </div>
                 <div class="media-body text-start">
                   <h3 class="box-title">Endoscopy / Colonoscopy</h3>
@@ -454,7 +457,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
               <a href="fnac">
                 <div class="feature-box text-center">
                   <div class="box-icon">
-                    <img src="assets/scan-world/service-icon/endoscopy.png" alt="icon">
+                    <img src="assets/scan-world/service-icon/endoscopy.png" loading="lazy" decoding="async" alt="icon">
                   </div>
                   <div class="media-body text-start">
                     <h3 class="box-title">FNAC</h3>
@@ -467,7 +470,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
               <a href="automated-laboratory">
               <div class="feature-box text-center">
                 <div class="box-icon">
-                  <img src="assets/scan-world/service-icon/measuring-device.png" alt="icon">
+                  <img src="assets/scan-world/service-icon/measuring-device.png" loading="lazy" decoding="async" alt="icon">
                 </div>
                 <div class="media-body text-start">
                   <h3 class="box-title">Automated Laboratory</h3>
@@ -490,12 +493,12 @@ $latest_doctors = mysqli_query($con, $doctors_query);
       <div class="row align-items-center">
         <div class="col-xl-6">
           <div class="img-box8">
-            <img src="assets/scan-world/home/why-us.webp" alt="About">
+            <img src="assets/scan-world/home/why-us.webp" loading="lazy" decoding="async"alt="About">
           </div>
         </div>
         <div class="col-xl-6 mt-30 mt-xl-0 text-center text-xl-start">
           <div class="title-area mb-32">
-           <h2> <span class="sub-title"><img src="assets/scan-world/icon.webp" alt="shape">Why Scans World Is a Leading Diagnostic Centre in Chennai</span></h2>
+           <h2> <span class="sub-title"><img src="assets/scan-world/icon.webp" loading="lazy" decoding="async" alt="shape">Why Scans World Is a Leading Diagnostic Centre in Chennai</span></h2>
             <h2 class="sec-title">Trusted Diagnostics at Scans World</h2>
             <p class="sec-text">At Scans World, we prioritize accuracy, convenience, and patient care to ensure the best diagnostic experience for you. Here’s why you should choose us:</p>
           </div>
@@ -524,28 +527,28 @@ $latest_doctors = mysqli_query($con, $doctors_query);
       <div class="counter-card-wrap text-center">
         <div class="counter-card">
           <h2 class="box-number">
-            <img src="assets/scan-world/home/trust.png" alt="">
+            <img src="assets/scan-world/home/trust.png" loading="lazy" decoding="async" alt="">
           </h2>
           <p class="box-text text-white"> <b>15+ Years of Trust</b></p>
         </div>
         <div class="divider"></div>
         <div class="counter-card">
           <h2 class="box-number">
-            <img src="assets/scan-world/home/doctor.png" alt="">
+            <img src="assets/scan-world/home/doctor.png" loading="lazy" decoding="async" alt="">
           </h2>
           <p class="box-text text-white"><b>Trusted by Doctors & Hospitals</b></p>
         </div>
         <div class="divider"></div>
         <div class="counter-card">
           <h2 class="box-number">
-            <img src="assets/scan-world/home/customer.png" alt="">
+            <img src="assets/scan-world/home/customer.png" loading="lazy" decoding="async" alt="">
           </h2>
           <p class="box-text text-white"><b>Over 1 Crore Patients Served</b></p>
         </div>
  <div class="divider"></div>
         <div class="counter-card">
           <h2 class="box-number">
-            <img src="assets/scan-world/analytics.png" alt="">
+            <img src="assets/scan-world/analytics.png" loading="lazy" decoding="async" alt="">
           </h2>
           <p class="box-text text-white"><b>Advanced Reporting Systems</b></p>
         </div>
@@ -558,7 +561,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
       <div class="col-lg-6 col-md-8">
         <div class="title-area text-center pt-5">
           <span class="sub-title">
-            <img src="assets/scan-world/icon.webp" alt="Icon">Our Experts
+            <img src="assets/scan-world/icon.webp" loading="lazy" decoding="async" alt="Icon">Our Experts
           </span>
           <h2 class="sec-title">Meet Our Expert Doctors</h2>
         </div>
@@ -574,6 +577,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
                 <div class="th-team team-grid">
                   <div class="box-img">
                     <img src="<?= htmlspecialchars($url_config . '/' . $doctor_image_path . $row['doctor_image']); ?>"
+                         loading="lazy" decoding="async"
                          alt="<?= htmlspecialchars($row['image_alttag']); ?>"
                          title="<?= htmlspecialchars($row['image_title']); ?>">
                   </div>
@@ -620,7 +624,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
         <div class="row justify-content-lg-between justify-content-center align-items-center">
           <div class="col-lg">
             <div class="title-area text-center text-lg-start">
-              <span class="sub-title"><img src="assets/scan-world/icon.webp" alt="shape">Our Blogs</span>
+              <span class="sub-title"><img src="assets/scan-world/icon.webp" loading="lazy" decoding="async" alt="shape">Our Blogs</span>
               <h2 class="sec-title">Latest Blogs</h2>
             </div>
           </div>
@@ -640,16 +644,17 @@ $latest_doctors = mysqli_query($con, $doctors_query);
     $image = htmlspecialchars($row['image']);
     $alt   = htmlspecialchars($row['image_alt_tag']);
     $imgTitle = htmlspecialchars($row['image_title']);
+    $created_date = $row['created_date'];
 ?>
               <div class="swiper-slide">
                 <div class="blog-card">
                   <div class="blog-img">
-                    <img src="<?php echo $url_config . '/' . $blog_image_path . $image; ?>" alt="<?php echo $alt; ?>" title="<?php echo $imgTitle; ?>">
+                    <img src="<?php echo $url_config . '/' . $blog_image_path . $image; ?>" loading="lazy" decoding="async" alt="<?php echo $alt; ?>" title="<?php echo $imgTitle; ?>">
                   </div>
                   <div class="blog-content">
                     <div class="blog-meta">
                       <a href="<?php echo $url_config; ?>/blog-details/<?php echo urlencode($slug); ?>">
-                        <i class="fal fa-calendar"></i> 15 March, 2024
+                        <i class="fal fa-calendar"></i><?php echo date('d F, Y', strtotime($created_date)); ?>
                       </a>
                     </div>
                     <h3 class="box-title">
@@ -673,7 +678,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
     <section class="space" id="testi-sec">
       <div class="container">
         <div class="title-area text-center">
-          <span class="sub-title"><img src="assets/scan-world/icon.webp" alt="shape">Testimonials</span>
+          <span class="sub-title"><img src="assets/scan-world/icon.webp" loading="lazy" decoding="async" alt="shape">Testimonials</span>
           <h2 class="sec-title">What Our Patients Say?</h2>
         </div>
         <div class="swiper th-slider" id="testiSlide1" data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"1"},"768":{"slidesPerView":"1"},"992":{"slidesPerView":"2"},"1200":{"slidesPerView":"2"}}}'>
@@ -686,7 +691,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
                   <i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i>
                 </div>
                 <div class="box-quote">
-                  <img src="assets/img/icon/quote_1.svg" alt="Icon">
+                  <img src="assets/img/icon/quote_1.svg" loading="lazy" decoding="async" alt="Icon">
                 </div>
                 <p class="box-text"><?php 
         $content = htmlspecialchars($testimonial['content']);
@@ -694,7 +699,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
         echo $shortened_content . (strlen($content) > 200 ? '...' : ''); ?></p>
                 <div class="box-profile">
                   <div class="box-img">
-                    <img src="assets/scan-world/testimonial.png" alt="Avater">
+                    <img src="assets/scan-world/testimonial.png" loading="lazy" decoding="async" alt="Avater">
                   </div>
                   <div class="box-content">
                     <h3 class="box-title"><?php echo htmlspecialchars($testimonial["title"]); ?></h3>
@@ -720,16 +725,16 @@ $latest_doctors = mysqli_query($con, $doctors_query);
       </svg>
     </div>
 
-    <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
-    <script src="assets/js/swiper-bundle.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
-    <script src="assets/js/jquery.counterup.min.js"></script>
-    <script src="assets/js/jquery.datetimepicker.min.js"></script>
-    <script src="assets/js/jquery-ui.min.js"></script>
-    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/js/isotope.pkgd.min.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/vendor/jquery-3.7.1.min.js" defer></script>
+    <script src="assets/js/swiper-bundle.min.js" defer></script>
+    <script src="assets/js/bootstrap.min.js" defer></script>
+    <script src="assets/js/jquery.magnific-popup.min.js" defer></script>
+    <script src="assets/js/jquery.counterup.min.js" defer></script>
+    <script src="assets/js/jquery.datetimepicker.min.js" defer></script>
+    <script src="assets/js/jquery-ui.min.js" defer></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js" defer></script>
+    <script src="assets/js/isotope.pkgd.min.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
 </body>
 
 </html>

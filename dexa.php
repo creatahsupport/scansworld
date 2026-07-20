@@ -30,9 +30,6 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-  <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
-  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-  <link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -43,7 +40,7 @@
   <div class="breadcumb-wrapper " data-bg-src="assets/scan-world/breadcrumb.png">
     <div class="container">
       <div class="breadcumb-content">
-        <h1 class="breadcumb-title text-white">DEXA Scan – Bone Density Test</h1>
+        <h3 class="breadcumb-title text-white">DEXA Scan – Bone Density Test</h3>
         <ul class="breadcumb-menu">
           <li><a href="./" class="text-white">Home</a></li>
           <li>DEXA Scan – Bone Density Test</li>
@@ -60,7 +57,7 @@
             
             <!-- ========= NEW DEXA CONTENT ADDED ABOVE EXISTING CONTENT ========= -->
                <div class="page-content">
-              <h3 class="h5 mt-1">Assess Your Bone Health with a DEXA Scan</h3>
+              <h1 class="h5 mt-1">Assess Your Bone Health with a DEXA Scan</h1>
               <p>The DEXA Scan is the gold standard in diagnosing osteoporosis and evaluating fracture risk by measuring bone mineral density.</p>
               <p>This quick, painless and non-invasive test uses low-dose X-rays to accurately assess bone health, especially in the hip and spine.</p>
               <p>It's the most reliable method for detecting early signs of osteoporosis and helping prevent future fractures.</p>
@@ -92,7 +89,7 @@
             <!-- Why Choose Scans World for Your DEXA Scan in Chennai -->
             <h3 class="fw-semibold mt-3 mb-3">Why Choose Scans World for Your DEXA Scan in Chennai</h3>
             <div class="dexa-feature-grid">
-              <div class="dexa-feature-card"><div class="dexa-feature-icon"><i class="fas fa-trophy"></i></div><h4>Gold standard equipment</h4><p>Clinically validated DEXA systems - the same standard recommended by WHO and international bone health guidelines.</p></div>
+              <div class="dexa-feature-card"><div class="dexa-feature-icon"><i class="fas fa-bone"></i></div><h4>Gold standard equipment</h4><p>Clinically validated DEXA systems - the same standard recommended by WHO and international bone health guidelines.</p></div>
               <div class="dexa-feature-card"><div class="dexa-feature-icon"><i class="fas fa-shield-alt"></i></div><h4>Ultra low radiation</h4><p>Far less than a standard X-ray - safe even for routine annual monitoring.</p></div>
               <div class="dexa-feature-card"><div class="dexa-feature-icon"><i class="fas fa-file-alt"></i></div><h4>Same-day reports</h4><p>T-score, Z-score and fracture risk assessment - ready the same day.</p></div>
               <div class="dexa-feature-card"><div class="dexa-feature-icon"><i class="fas fa-smile"></i></div><h4>Completely painless</h4><p>No injections, no needles, no discomfort. Simply lie still for a few minutes.</p></div>
@@ -157,7 +154,7 @@
                   <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text">A <a href="https://scansworldonchamiersroad.com/dexa" target="_blank">DEXA Scan</a> (Dual-Energy X-ray Absorptiometry) is the gold standard test to
+                      <p class="faq-text">A <a href="dexa" target="_blank">DEXA Scan</a> (Dual-Energy X-ray Absorptiometry) is the gold standard test to
                         assess bone mineral density. It uses low dose x-rays to accurately assess bone strength and
                         detect early signs of osteoporosis and fracture risk.</p>
                     </div>
@@ -174,7 +171,7 @@
                   <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/dexa" target="_blank">Bone Mineral Densitometry</a> measures the amount of calcium and other minerals in
+                      <p class="faq-text"><a href="dexa" target="_blank">Bone Mineral Densitometry</a> measures the amount of calcium and other minerals in
                         a certain area of bone, typically the hip and spine. They help doctors know how strong or weak
                         your bones are and if you are at risk of fractures.</p>
                     </div>
@@ -191,7 +188,7 @@
                   <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/dexa" target="_blank">DEXA Scan</a> can identify osteoporosis (thinning of the bones), osteopenia (low bone density before osteoporosis develops) and fracture risk. It also keeps an eye on how well bone-health treatments are working over time.</p>
+                      <p class="faq-text"><a href="dexa" target="_blank">DEXA Scan</a> can identify osteoporosis (thinning of the bones), osteopenia (low bone density before osteoporosis develops) and fracture risk. It also keeps an eye on how well bone-health treatments are working over time.</p>
                     </div>
                   </div>
                 </div>
@@ -206,7 +203,7 @@
                   <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text">A <a href="https://scansworldonchamiersroad.com/dexa" target="_blank">DEXA Scan</a> should be considered for women over 45 years of age (particularly post-menopausal), men over 60 years of age, people with a history of fractures, people who are on long-term steroid medications, people with low body weight and anyone with a family history of osteoporosis.</p>
+                      <p class="faq-text">A <a href="dexa" target="_blank">DEXA Scan</a> should be considered for women over 45 years of age (particularly post-menopausal), men over 60 years of age, people with a history of fractures, people who are on long-term steroid medications, people with low body weight and anyone with a family history of osteoporosis.</p>
                     </div>
                   </div>
                 </div>
@@ -251,7 +248,7 @@
                   <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text">A <a href="https://scansworldonchamiersroad.com/dexa" target="_blank">DEXA Scan</a> uses an extremely low dose of radiation — much lower than a standard X-ray and far less than a CT scan — making it safe even for routine monitoring and repeat testing.</p>
+                      <p class="faq-text">A <a href="dexa" target="_blank">DEXA Scan</a> uses an extremely low dose of radiation — much lower than a standard X-ray and far less than a CT scan — making it safe even for routine monitoring and repeat testing.</p>
                     </div>
                   </div>
                 </div>
@@ -266,7 +263,7 @@
                   <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text">For most people at risk, a <a href="https://scansworldonchamiersroad.com/dexa" target="_blank">DEXA Scan</a> every 1–2 years is recommended to monitor changes in bone density. Your doctor will advise the right frequency based on your age, risk factors and current bone health status.</p>
+                      <p class="faq-text">For most people at risk, a <a href="dexa" target="_blank">DEXA Scan</a> every 1–2 years is recommended to monitor changes in bone density. Your doctor will advise the right frequency based on your age, risk factors and current bone health status.</p>
                     </div>
                   </div>
                 </div>
@@ -281,7 +278,7 @@
                   <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text">Reports of <a href="https://scansworldonchamiersroad.com/dexa" target="_blank">DEXA Scan</a> are usually available on the same day or within 24 hours at Scans World. Our expert radiologists provide accurate readings of T-score and Z-score for the formulation of your treatment plan.</p>
+                      <p class="faq-text">Reports of <a href="dexa" target="_blank">DEXA Scan</a> are usually available on the same day or within 24 hours at Scans World. Our expert radiologists provide accurate readings of T-score and Z-score for the formulation of your treatment plan.</p>
                     </div>
                   </div>
                 </div>
@@ -296,7 +293,7 @@
                   <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text">For Bone Mineral Densitometry / <a href="https://scansworldonchamiersroad.com/" target="_blank">DEXA Scan in Chennai</a>, Scans World provides bone health diagnostics with advanced equipment, expert radiologists and quick reports. We have branches at <a href="https://scansworldonchamiersroad.com/aminjikarai" target="_blank">Aminjikarai</a>, Nandanam (Chamiers Road) and Nanganallur.</p>
+                      <p class="faq-text">For Bone Mineral Densitometry / <a href="./" target="_blank">DEXA Scan in Chennai</a>, Scans World provides bone health diagnostics with advanced equipment, expert radiologists and quick reports. We have branches at <a href="https://scansworldonchamiersroad.com/aminjikarai" target="_blank">Aminjikarai</a>, Nandanam (Chamiers Road) and Nanganallur.</p>
                     </div>
                   </div>
                 </div>
@@ -327,16 +324,9 @@
     </svg>
   </div>
 
-  <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
-  <script src="assets/js/swiper-bundle.min.js"></script>
-  <script src="assets/js/bootstrap.min.js"></script>
-  <script src="assets/js/jquery.magnific-popup.min.js"></script>
-  <script src="assets/js/jquery.counterup.min.js"></script>
-  <script src="assets/js/jquery.datetimepicker.min.js"></script>
-  <script src="assets/js/jquery-ui.min.js"></script>
-  <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/js/isotope.pkgd.min.js"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/vendor/jquery-3.7.1.min.js" defer></script>
+  <script src="assets/js/bootstrap.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
 </body>
 
 </html>

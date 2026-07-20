@@ -31,9 +31,6 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-  <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
-  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-  <link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
@@ -45,7 +42,7 @@
   <div class="breadcumb-wrapper " data-bg-src="assets/scan-world/breadcrumb.png">
     <div class="container">
       <div class="breadcumb-content">
-        <h1 class="breadcumb-title text-white">Color Doppler </h1>
+        <h3 class="breadcumb-title text-white">Color Doppler </h3>
         <ul class="breadcumb-menu">
           <li><a href="./" class="text-white">Home</a></li>
           <li>Color Doppler</li>
@@ -60,11 +57,11 @@
         <div class="col-xxl-8 col-lg-8">
           <div class="page-single single-right mb-30">
           <div class="page-img">
-              <img src="assets/scan-world/colour_doppler.jpg" alt="Service Image"
+              <img src="assets/scan-world/colour-doppler.webp" alt="Service Image"
                 style="height: 600px; width: 800px; object-fit: cover;">
             </div>
             <div class="page-content">
-              <h3 class="h5 mt-1">What is Color Doppler Ultrasound? </h3>
+              <h1 class="h5 mt-1">What is Color Doppler Ultrasound? </h1>
               <p>Color Doppler is a non-invasive diagnostic tool that allows us to assess blood flow, tissue movement, and vascular health in real time. This is crucial for detecting conditions such as:</p>
               <div class="mb-30 mt-n1">
                 <div class="checklist style2 list-two-column">
@@ -104,7 +101,7 @@
                   <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text">A <a href="https://scansworldonchamiersroad.com/color-doppler" target="_blank">Color Doppler</a> Ultrasound is a non-invasive diagnostic scan that assesses
+                      <p class="faq-text">A <a href="color-doppler" target="_blank">Color Doppler</a> Ultrasound is a non-invasive diagnostic scan that assesses
                         blood flow, tissue movement, and vascular health in real time helping doctors detect heart
                         disease, blood clots and vascular conditions accurately and quickly.</p>
                     </div>
@@ -121,7 +118,7 @@
                   <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/color-doppler" target="_blank">Color Doppler</a> helps detect heart disease, blood clots, vascular diseases
+                      <p class="faq-text"><a href="color-doppler" target="_blank">Color Doppler</a> helps detect heart disease, blood clots, vascular diseases
                         throughout the body, obstructions in blood flow and monitors pregnancy-related vascular health
                         all in a single, safe scan.</p>
                     </div>
@@ -139,7 +136,7 @@
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
                       <p class="faq-text">A 2D Ultrasound shows flat images of internal organs. A 4D Ultrasound provides
-                        live, moving three-dimensional images commonly used in pregnancy. A <a href="https://scansworldonchamiersroad.com/color-doppler" target="_blank">Color Doppler</a> specifically
+                        live, moving three-dimensional images commonly used in pregnancy. A <a href="color-doppler" target="_blank">Color Doppler</a> specifically
                         visualises blood flow direction and speed using colour mapping for vascular diagnosis.</p>
                     </div>
                   </div>
@@ -172,7 +169,7 @@
                   <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/color-doppler" target="_blank">Color Doppler</a> is safe for all patients including pregnant women, as it
+                      <p class="faq-text"><a href="color-doppler" target="_blank">Color Doppler</a> is safe for all patients including pregnant women, as it
                         involves no radiation exposure. It is recommended for those with suspected heart conditions,
                         vascular issues, swelling in limbs or requiring pregnancy monitoring.</p>
                     </div>
@@ -189,8 +186,8 @@
                   <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/" target="_blank">Scans World</a> offers Color Doppler scanning using the advanced Resona I9
-                        Ultrasound at their branches in Aminjikarai, <a href="https://scansworldonchamiersroad.com/nandanam" target="_blank">Nandanam</a> (Chamiers Road) and Nanganallur Chennai's
+                      <p class="faq-text"><a href="./" target="_blank">Scans World</a> offers Color Doppler scanning using the advanced Resona I9
+                        Ultrasound at their branches in Aminjikarai, <a href="nandanam" target="_blank">Nandanam</a> (Chamiers Road) and Nanganallur Chennai's
                         trusted diagnostic imaging centre.</p>
                     </div>
                   </div>
@@ -223,7 +220,7 @@
                   <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text">Most <a href="https://scansworldonchamiersroad.com/color-doppler" target="_blank">Color Doppler scans</a> are completed within 20 to 30 minutes depending on
+                      <p class="faq-text">Most <a href="color-doppler" target="_blank">Color Doppler scans</a> are completed within 20 to 30 minutes depending on
                         the area being examined. Real-time imaging provides faster and more accurate results with very
                         less waiting time.</p>
                     </div>
@@ -240,7 +237,7 @@
                   <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/color-doppler" target="_blank">Color Doppler</a> is completely harmless as it uses sound waves not radiation
+                      <p class="faq-text"><a href="color-doppler" target="_blank">Color Doppler</a> is completely harmless as it uses sound waves not radiation
                         making it suitable for all age groups including pregnant women and newborn babies. This is a
                         proven international diagnostic method.</p>
                     </div>
@@ -280,16 +277,9 @@
     </svg>
   </div>
 
-  <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
-  <script src="assets/js/swiper-bundle.min.js"></script>
-  <script src="assets/js/bootstrap.min.js"></script>
-  <script src="assets/js/jquery.magnific-popup.min.js"></script>
-  <script src="assets/js/jquery.counterup.min.js"></script>
-  <script src="assets/js/jquery.datetimepicker.min.js"></script>
-  <script src="assets/js/jquery-ui.min.js"></script>
-  <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/js/isotope.pkgd.min.js"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/vendor/jquery-3.7.1.min.js" defer></script>
+  <script src="assets/js/bootstrap.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
 </body>
 
 </html>

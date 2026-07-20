@@ -28,14 +28,17 @@
   <meta name="theme-color" content="#ffffff">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
+  <link rel="preload" as="style"
     href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
+    onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"></noscript>
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-  <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+  <link rel="preload" as="style" href="assets/css/magnific-popup.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="assets/css/magnific-popup.min.css"></noscript>
   <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-  <link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css">
+  <link rel="preload" as="style" href="assets/css/jquery.datetimepicker.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css"></noscript>
   <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
@@ -47,7 +50,7 @@
   <div class="breadcumb-wrapper " data-bg-src="assets/scan-world/breadcrumb.png">
     <div class="container">
       <div class="breadcumb-content">
-        <h1 class="breadcumb-title text-white">160 Slice Cardiac CT / Coronary angiogram</h1>
+        <h3 class="breadcumb-title text-white">160 Slice Cardiac CT / Coronary Angiogram</h3>
         <ul class="breadcumb-menu">
           <li><a href="./" class="text-white">Home</a></li>
           <li>160 Slice Cardiac CT / Coronary angiogram</li>
@@ -63,7 +66,7 @@
           <div class="page-single single-right mb-30"> 
             <h1 class="fw-semibold">160 Slice Cardiac CT Scan in Chennai – Advanced Heart Imaging</h1>
             <div class="page-img">
-              <img src="assets/scan-world/160-slice-cardiac-ct.jpg" alt="Service Image"
+              <img src="assets/scan-world/160-slice-cardiac-ct.jpg" alt="Service Image" fetchpriority="high" decoding="async"
                 style="height: 600px; width: 800px; object-fit: cover;">
             </div>
             <div class="page-content">
@@ -80,7 +83,7 @@
             </div>
             
             <div class="page-img">
-              <img src="assets/scan-world/160-slice.jpg" alt="Service Image"
+              <img src="assets/scan-world/160-slice.webp" loading="lazy" decoding="async" alt="Service Image"
                 style="height: auto; width: 800px; object-fit: cover;">
             </div>
 
@@ -99,7 +102,7 @@
                   <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text">A <a href="https://scansworldonchamiersroad.com/160-slice-cardiac-ct" target="_blank">160 Slice Cardiac CT</a> is an advanced, non-invasive imaging test that captures
+                      <p class="faq-text">A <a href="160-slice-cardiac-ct" target="_blank">160 Slice Cardiac CT</a> is an advanced, non-invasive imaging test that captures
                         highly detailed, high-resolution images of your heart and coronary arteries helping doctors
                         detect even the smallest blockages with great accuracy.</p>
                     </div>
@@ -149,8 +152,8 @@
                   <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/" target="_blank">Scans World</a> offers 160 Slice Cardiac CT scanning at their branches in
-                        Aminjikarai, Nandanam (Chamiers Road) and <a href="https://scansworldonchamiersroad.com/nanganallur" target="_blank">Nanganallur</a> one of the most advanced cardiac imaging
+                      <p class="faq-text"><a href="./" target="_blank">Scans World</a> offers 160 Slice Cardiac CT scanning at their branches in
+                        Aminjikarai, Nandanam (Chamiers Road) and <a href="nanganallur" target="_blank">Nanganallur</a> one of the most advanced cardiac imaging
                         setups in Chennai.</p>
                     </div>
                   </div>
@@ -199,7 +202,7 @@
                   <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text">A <a href="https://scansworldonchamiersroad.com/160-slice-cardiac-ct" target="_blank">160-slice CT</a> captures far more image layers per rotation, providing sharper,
+                      <p class="faq-text">A <a href="160-slice-cardiac-ct" target="_blank">160-slice CT</a> captures far more image layers per rotation, providing sharper,
                         more detailed views of the coronary arteries compared to lower-slice CT machines, resulting in
                         faster, more accurate diagnoses.</p>
                     </div>
@@ -217,7 +220,7 @@
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
                       <p class="faq-text">You may be advised to avoid caffeine before the scan, and your heart rate may
-                        be monitored. The team at <a href="https://scansworldonchamiersroad.com/" target="_blank">Scans World</a> will guide you with full preparation instructions at the
+                        be monitored. The team at <a href="./" target="_blank">Scans World</a> will guide you with full preparation instructions at the
                         time of booking.</p>
                     </div>
                   </div>
@@ -274,16 +277,10 @@
     </svg>
   </div>
 
-  <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
-  <script src="assets/js/swiper-bundle.min.js"></script>
-  <script src="assets/js/bootstrap.min.js"></script>
-  <script src="assets/js/jquery.magnific-popup.min.js"></script>
-  <script src="assets/js/jquery.counterup.min.js"></script>
-  <script src="assets/js/jquery.datetimepicker.min.js"></script>
-  <script src="assets/js/jquery-ui.min.js"></script>
-  <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/js/isotope.pkgd.min.js"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/vendor/jquery-3.7.1.min.js" defer></script>
+  <script src="assets/js/bootstrap.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  
 </body>
 
 </html>

@@ -110,14 +110,17 @@ if (isset($_POST['submit_flag'])) {
   <meta name="theme-color" content="#ffffff">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
+  <link rel="preload" as="style"
     href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
+    onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"></noscript>
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-  <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+  <link rel="preload" as="style" href="assets/css/magnific-popup.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="assets/css/magnific-popup.min.css"></noscript>
   <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-  <link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css">
+  <link rel="preload" as="style" href="assets/css/jquery.datetimepicker.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css"></noscript>
   <link rel="stylesheet" href="assets/css/style.css">
   <!-- Cloudflare Turnstile -->
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
@@ -443,7 +446,7 @@ if (isset($_POST['submit_flag'])) {
   <div class="breadcumb-wrapper " data-bg-src="assets/scan-world/packages-breadcrumb.png">
     <div class="container">
       <div class="breadcumb-content">
-        <h1 class="breadcumb-title text-white">Master Health Checkup Packages</h1>
+        <h3 class="breadcumb-title text-white">Master Health Checkup Packages</h3>
         <ul class="breadcumb-menu">
           <li><a href="./" class="text-white">Home</a></li>
           <li>Master Health Checkup</li>
@@ -1681,7 +1684,7 @@ if (isset($_POST['submit_flag'])) {
       <div class="row gx-60">
         <div class="col-lg-6">
           <div class="product-big-img">
-            <div class="img"><img src="assets/scan-world/package.png" alt="Product Image"></div>
+            <div class="img"><img src="assets/scan-world/package.png" loading="lazy" decoding="async" alt="Product Image"></div>
           </div>
         </div>
         <div class="col-lg-6">
@@ -1817,16 +1820,16 @@ if (isset($_POST['submit_flag'])) {
     </svg>
   </div>
 
-  <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
-  <script src="assets/js/swiper-bundle.min.js"></script>
-  <script src="assets/js/bootstrap.min.js"></script>
-  <script src="assets/js/jquery.magnific-popup.min.js"></script>
-  <script src="assets/js/jquery.counterup.min.js"></script>
-  <script src="assets/js/jquery.datetimepicker.min.js"></script>
-  <script src="assets/js/jquery-ui.min.js"></script>
-  <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/js/isotope.pkgd.min.js"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/vendor/jquery-3.7.1.min.js" defer></script>
+  <script src="assets/js/swiper-bundle.min.js" defer></script>
+  <script src="assets/js/bootstrap.min.js" defer></script>
+  <script src="assets/js/jquery.magnific-popup.min.js" defer></script>
+  <script src="assets/js/jquery.counterup.min.js" defer></script>
+  <script src="assets/js/jquery.datetimepicker.min.js" defer></script>
+  <script src="assets/js/jquery-ui.min.js" defer></script>
+  <script src="assets/js/imagesloaded.pkgd.min.js" defer></script>
+  <script src="assets/js/isotope.pkgd.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
 </body>
 
 </html>

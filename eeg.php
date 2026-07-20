@@ -30,9 +30,6 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-  <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
-  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-  <link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
@@ -44,7 +41,7 @@
   <div class="breadcumb-wrapper " data-bg-src="assets/scan-world/breadcrumb.png">
     <div class="container">
       <div class="breadcumb-content">
-        <h1 class="breadcumb-title text-white">EEG, EMG, and NCS</h1>
+        <h3 class="breadcumb-title text-white">EEG, EMG, and NCS</h3>
         <ul class="breadcumb-menu">
           <li><a href="./" class="text-white">Home</a></li>
           <li>EEG, EMG, and NCS for Accurate Neurological Diagnosis</li>
@@ -57,9 +54,9 @@
       <div class="row flex-row-reverse">
         <div class="col-xxl-8 col-lg-8">
           <div class="page-single single-right mb-30">
-            <h3 class="fw-semibold">EEG, EMG, and NCS</h3>
+            <h1 class="fw-semibold">EEG, EMG, and NCS</h1>
             <div class="page-img">
-              <img src="assets/scan-world/ncs_service.jpg" alt="Service Image"
+              <img src="assets/scan-world/ncs-service.webp" alt="Service Image"
                 style="height: 600px; width: 800px; object-fit: cover;">
             </div>
             <div class="page-content">
@@ -92,7 +89,7 @@
                   <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text">An <a href="https://scansworldonchamiersroad.com/eeg" target="_blank">EEG</a> (electroencephalogram) is a test that looks at electrical activity in
+                      <p class="faq-text">An <a href="eeg" target="_blank">EEG</a> (electroencephalogram) is a test that looks at electrical activity in
                         your brain. It is used to diagnose conditions like epilepsy, seizure disorders, sleep disorders,
                         brain injuries etc and helps doctors plan accurate and effective treatment.</p>
                     </div>
@@ -109,7 +106,7 @@
                   <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text">EEG uses the electrical activity in the brain. <a href="https://scansworldonchamiersroad.com/eeg" target="_blank">EMG</a> (electromyography) measures
+                      <p class="faq-text">EEG uses the electrical activity in the brain. <a href="eeg" target="_blank">EMG</a> (electromyography) measures
                         the electrical activity of muscles and nerves. NCS (Nerve Conduction Studies) measures how well
                         electrical impulses travel through nerves all three together provide a complete picture of your
                         neurological and muscular health.</p>
@@ -161,7 +158,7 @@
                   <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text">Neurologists will advise an <a href="https://scansworldonchamiersroad.com/eeg" target="_blank">EEG</a> for patients who have epilepsy, frequent
+                      <p class="faq-text">Neurologists will advise an <a href="eeg" target="_blank">EEG</a> for patients who have epilepsy, frequent
                         seizures, blackouts with no known cause, sleep disorders, brain injuries and abnormal brain
                         function in order to reach a clear diagnosis and guide treatment.</p>
                     </div>
@@ -212,7 +209,7 @@
                   <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text">An <a href="https://scansworldonchamiersroad.com/eeg" target="_blank">EEG</a> typically takes 30 to 60 minutes. EMG and NCS tests usually take 30 to
+                      <p class="faq-text">An <a href="eeg" target="_blank">EEG</a> typically takes 30 to 60 minutes. EMG and NCS tests usually take 30 to
                         45 minutes depending on the number of nerves and muscles being evaluated. The Scans World team
                         makes sure that the experience is comfortable and efficient throughout.</p>
                     </div>
@@ -230,7 +227,7 @@
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
                       <p class="faq-text">Wash your hair the night before and do not use oils or gels. For some types of
-                        <a href="https://scansworldonchamiersroad.com/eeg" target="_blank">EEG</a> your doctor may ask you to reduce your sleep the night before. Please do not take any
+                        <a href="eeg" target="_blank">EEG</a> your doctor may ask you to reduce your sleep the night before. Please do not take any
                         caffeine on the day of the test and follow any instructions given to you at the time of booking.
                       </p>
                     </div>
@@ -248,8 +245,8 @@
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
                       <p class="faq-text">You can book online through their website WhatsApp at +91 96269 59999 or call
-                        directly. Walk-ins are also welcome at all three branches <a href="https://scansworldonchamiersroad.com/aminjikarai" target="_blank">Aminjikarai</a>, Nandanam (Chamiers
-                        Road), and <a href="https://scansworldonchamiersroad.com/nanganallur" target="_blank">Nanganallur</a>.</p>
+                        directly. Walk-ins are also welcome at all three branches <a href="aminjikarai" target="_blank">Aminjikarai</a>, Nandanam (Chamiers
+                        Road), and <a href="nanganallur" target="_blank">Nanganallur</a>.</p>
                     </div>
                   </div>
                 </div>
@@ -270,16 +267,9 @@
     </svg>
   </div>
 
-  <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
-  <script src="assets/js/swiper-bundle.min.js"></script>
-  <script src="assets/js/bootstrap.min.js"></script>
-  <script src="assets/js/jquery.magnific-popup.min.js"></script>
-  <script src="assets/js/jquery.counterup.min.js"></script>
-  <script src="assets/js/jquery.datetimepicker.min.js"></script>
-  <script src="assets/js/jquery-ui.min.js"></script>
-  <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/js/isotope.pkgd.min.js"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/vendor/jquery-3.7.1.min.js" defer></script>
+  <script src="assets/js/bootstrap.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
 </body>
 
 </html>

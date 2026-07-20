@@ -27,16 +27,19 @@
   <meta name="theme-color" content="#ffffff">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
+  <link rel="preload" as="style"
     href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
+    onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"></noscript>
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-  <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+  <link rel="preload" as="style" href="assets/css/magnific-popup.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="assets/css/magnific-popup.min.css"></noscript>
   <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-  <link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css">
+  <link rel="preload" as="style" href="assets/css/jquery.datetimepicker.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css"></noscript>
   <link rel="stylesheet" href="assets/css/style.css">
-  
+
 </head>
 
 <body>
@@ -46,7 +49,7 @@
   <div class="breadcumb-wrapper " data-bg-src="assets/scan-world/breadcrumb.png">
     <div class="container">
       <div class="breadcumb-content">
-        <h1 class="breadcumb-title text-white">FNAC Test & Image-Guided Biopsy</h1>
+        <h3 class="breadcumb-title text-white">FNAC Test & Image-Guided Biopsy</h3>
         <ul class="breadcumb-menu">
           <li><a href="./" class="text-white">Home</a></li>
           <li>FNAC & Image-Guided Biopsy</li>
@@ -60,7 +63,7 @@
       <div class="row flex-row-reverse">
         <div class="col-xxl-8 col-lg-8">
           <div class="page-single single-right mb-30">
-            <h3 class="fw-semibold">FNAC / Drainage procedures</h3>
+            <h1 class="fw-semibold">FNAC / Drainage procedures</h1>
             <div class="page-content">
               <p>Procedures guided by imaging, like biopsies, FNAC (Fine Needle Aspiration Cytology) and draining
                 fluids, are minimally invasive methods employed to accurately diagnose and manage various health issues.
@@ -147,7 +150,7 @@
                   <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/fnac" target="_blank">FNAC</a> means Fine Needle Aspiration Cytology. It is a minimally invasive
+                      <p class="faq-text"><a href="fnac" target="_blank">FNAC</a> means Fine Needle Aspiration Cytology. It is a minimally invasive
                         diagnostic procedure where a thin needle is used to get a small sample of cells from a lump or
                         abnormal tissue. The sample is then examined under a microscope for signs of infections, cysts or
                         cancerous cells.</p>
@@ -165,7 +168,7 @@
                   <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/fnac" target="_blank">Image Guided Biopsy</a> is a procedure that uses real-time imaging (ultrasound or
+                      <p class="faq-text"><a href="fnac" target="_blank">Image Guided Biopsy</a> is a procedure that uses real-time imaging (ultrasound or
                         CT scan) to direct a needle to the precise location of an abnormal tissue or lump in order to
                         obtain a sample for laboratory analysis. It's more accurate and less uncomfortable than the
                         traditional surgical biopsy.</p>
@@ -183,7 +186,7 @@
                   <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/fnac" target="_blank">FNAC</a> can diagnose benign (non-cancerous) cysts, abscesses, lymph node
+                      <p class="faq-text"><a href="fnac" target="_blank">FNAC</a> can diagnose benign (non-cancerous) cysts, abscesses, lymph node
                         enlargements, thyroid nodules, breast lumps, salivary gland swellings and early stage cancerous
                         cells. It is one of the most accurate initial tests for investigating unexplained lumps in the
                         body.</p>
@@ -219,7 +222,7 @@
                   <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/fnac" target="_blank">Image guided</a> drainage procedure: This procedure uses real-time imaging with
+                      <p class="faq-text"><a href="fnac" target="_blank">Image guided</a> drainage procedure: This procedure uses real-time imaging with
                         ultrasound or CT to safely and accurately insert a needle or small catheter into a fluid
                         collection such as an abscess, cyst or effusion to drain the fluid. This avoids open surgery and
                         allows faster recovery.</p>
@@ -255,7 +258,7 @@
                   <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text">Scans World performs <a href="https://scansworldonchamiersroad.com/fnac" target="_blank">FNAC</a> and biopsy procedures under real time ultrasound or
+                      <p class="faq-text">Scans World performs <a href="fnac" target="_blank">FNAC</a> and biopsy procedures under real time ultrasound or
                         CT scanning depending on the location and depth of the lesion. This allows the needle to be
                         accurately and safely delivered to the target location.</p>
                     </div>
@@ -289,7 +292,7 @@
                   <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/fnac" target="_blank">Scans World FNAC</a> reports normally take 24-48 hours depending on the complexity
+                      <p class="faq-text"><a href="fnac" target="_blank">Scans World FNAC</a> reports normally take 24-48 hours depending on the complexity
                         of the analysis. Our pathologists and radiologists work together to ensure your results are
                         accurate and on time.</p>
                     </div>
@@ -306,7 +309,7 @@
                   <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/" target="_blank">Scans World is a trusted diagnostic center in Chennai</a> offering image guided
+                      <p class="faq-text"><a href="./" target="_blank">Scans World is a trusted diagnostic center in Chennai</a> offering image guided
                         FNAC, Biopsy and Drainage procedures with advanced ultrasound and CT guidance, experienced
                         Radiologists and a fully sterile safe environment. Branches at Aminjikarai, Nandanam (Chamiers
                         Road) and Nanganallur.</p>
@@ -341,16 +344,10 @@
     </svg>
   </div>
 
-  <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
-  <script src="assets/js/swiper-bundle.min.js"></script>
-  <script src="assets/js/bootstrap.min.js"></script>
-  <script src="assets/js/jquery.magnific-popup.min.js"></script>
-  <script src="assets/js/jquery.counterup.min.js"></script>
-  <script src="assets/js/jquery.datetimepicker.min.js"></script>
-  <script src="assets/js/jquery-ui.min.js"></script>
-  <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/js/isotope.pkgd.min.js"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/vendor/jquery-3.7.1.min.js" defer></script>
+  <script src="assets/js/bootstrap.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+
 </body>
 
 </html>

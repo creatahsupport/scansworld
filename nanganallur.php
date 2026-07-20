@@ -49,7 +49,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
     <div class="breadcumb-wrapper " data-bg-src="assets/scan-world/breadcrumb.png">
         <div class="container">
             <div class="breadcumb-content">
-                <h1 class="breadcumb-title text-white"> Scans World on Nanganallur</h1>
+                <h3 class="breadcumb-title text-white"> Diagnostic Centre in Nanganallur</h3>
                 <ul class="breadcumb-menu">
                     <li><a href="./" class="text-white">Home</a></li>
                     <li>Nanganallur</li>
@@ -566,16 +566,16 @@ $latest_doctors = mysqli_query($con, $doctors_query);
         </svg>
     </div>
 
-    <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
-    <script src="assets/js/swiper-bundle.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
-    <script src="assets/js/jquery.counterup.min.js"></script>
-    <script src="assets/js/jquery.datetimepicker.min.js"></script>
-    <script src="assets/js/jquery-ui.min.js"></script>
-    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/js/isotope.pkgd.min.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/vendor/jquery-3.7.1.min.js" defer></script>
+    <script src="assets/js/swiper-bundle.min.js" defer></script>
+    <script src="assets/js/bootstrap.min.js" defer></script>
+    <script src="assets/js/jquery.magnific-popup.min.js" defer></script>
+    <script src="assets/js/jquery.counterup.min.js" defer></script>
+    <script src="assets/js/jquery.datetimepicker.min.js" defer></script>
+    <script src="assets/js/jquery-ui.min.js" defer></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js" defer></script>
+    <script src="assets/js/isotope.pkgd.min.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
     <script>
         $(function() { $('[data-toggle="collapse"]').on('click', function() { var target = $(this).data('target'); $(target).collapse('toggle'); }); });
     </script>

@@ -28,14 +28,14 @@
   <meta name="theme-color" content="#ffffff">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
+  <link rel="preload" as="style"
     href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
+    onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"></noscript>
+  <link rel="preload" as="image" href="assets/scan-world/services/mri.jpg" fetchpriority="high">
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-  <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
-  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-  <link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css">
+  <link rel="preload" as="style" href="assets/css/fontawesome.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="assets/css/fontawesome.min.css"></noscript>
   <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
@@ -47,7 +47,7 @@
   <div class="breadcumb-wrapper " data-bg-src="assets/scan-world/breadcrumb.png">
     <div class="container">
       <div class="breadcumb-content">
-        <h1 class="breadcumb-title text-white">3 Tesla MRI</h1>
+        <h3 class="breadcumb-title text-white">3 Tesla MRI</h3>
         <ul class="breadcumb-menu">
           <li><a href="./" class="text-white">Home</a></li>
           <li>3 Tesla MRI</li>
@@ -63,7 +63,7 @@
           <div class="page-single single-right mb-30">
             <h1 class="fw-semibold">MRI Scan in Chennai – Advanced Imaging at Scans World</h1>
             <div class="page-img">
-              <img src="assets/scan-world/services/mri.jpg" alt="Service Image">
+              <img src="assets/scan-world/services/mri.jpg" alt="Service Image" fetchpriority="high" decoding="async">
             </div>
             <div class="page-content">
 
@@ -107,12 +107,12 @@
               </div>
               <div class="row pt-2">
                 <div class="col-md-6 mb-4">
-                  <img class="w-100 rounded-20" src="assets/scan-world/services/mri-1.webp" alt="Blog Image">
+                  <img class="w-100 rounded-20" src="assets/scan-world/services/mri-1.webp" loading="lazy" decoding="async" alt="Blog Image">
                   <h6>T1 Weighted Dynamic Enhancement</h6>
                 </div>
 
                 <div class="col-md-6 mb-4">
-                  <img class="w-100 rounded-20" src="assets/scan-world/services/mri-2.webp" alt="Blog Image">
+                  <img class="w-100 rounded-20" src="assets/scan-world/services/mri-2.webp" loading="lazy" decoding="async" alt="Blog Image">
                   <h6>Dynamic Parameter Map</h6>
                 </div>
 
@@ -121,13 +121,13 @@
                 <!-- Column 1: First and Second Images -->
                 <div class="col-md-6 mb-4">
                   <div class="mb-4">
-                    <img class="w-100 rounded-20" src="assets/scan-world/services/mri-3.webp" alt="Blog Image">
+                    <img class="w-100 rounded-20" src="assets/scan-world/services/mri-3.webp" loading="lazy" decoding="async" alt="Blog Image">
                     <h6>Angiography</h6>
                   </div>
                 </div>
                 <div class="col-md-6 mb-4">
                   <div class="mb-4">
-                    <img class="w-100 rounded-20" src="assets/scan-world/services/mri-4.webp" alt="Blog Image">
+                    <img class="w-100 rounded-20" src="assets/scan-world/services/mri-4.webp" loading="lazy" decoding="async" alt="Blog Image">
                     <h6>TOF</h6>
                   </div>
                 </div>
@@ -150,7 +150,7 @@
                       <div class="accordion-body">
                         <p class="faq-text">Scans World uses a brand-new 3 Tesla (3T) High-Field MRI machine with
                           48-channel coil technology one of the most <a
-                            href="https://scansworldonchamiersroad.com/mri-scan" target="_blank">advanced MRI machines
+                            href="mri-scan" target="_blank">advanced MRI machines
                             in Chennai.</a></p>
                       </div>
                     </div>
@@ -166,7 +166,7 @@
                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                       data-bs-parent="#faqAccordion">
                       <div class="accordion-body">
-                        <p class="faq-text">A <a href="https://scansworldonchamiersroad.com/mri-scan" target="_blank">3
+                        <p class="faq-text">A <a href="mri-scan" target="_blank">3
                             Tesla MRI</a>
                           is a high-powered magnetic resonance imaging scan that
                           produces clearer, sharper images compared to a regular 1.5T MRI, faster results more
@@ -186,7 +186,7 @@
                     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                       data-bs-parent="#faqAccordion">
                       <div class="accordion-body">
-                        <p class="faq-text"><a href="https://scansworldonchamiersroad.com/" target="_blank">Scans World</a> offers AI-powered imaging, wide bore comfort, in-bore TV &
+                        <p class="faq-text"><a href="./" target="_blank">Scans World</a> offers AI-powered imaging, wide bore comfort, in-bore TV &
                           music, 48-channel coil technology and supports up to 250 kg weight capacity.</p>
                       </div>
                     </div>
@@ -218,7 +218,7 @@
                     <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
                       data-bs-parent="#faqAccordion">
                       <div class="accordion-body">
-                        <p class="faq-text">Scans World's <a href="https://scansworldonchamiersroad.com/mri-scan" target="_blank">MRI</a> machine supports up to a 250 kg weight capacity, ensuring
+                        <p class="faq-text">Scans World's <a href="mri-scan" target="_blank">MRI</a> machine supports up to a 250 kg weight capacity, ensuring
                           all body-size patients can scan comfortably without any worry.</p>
                       </div>
                     </div>
@@ -234,7 +234,7 @@
                     <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
                       data-bs-parent="#faqAccordion">
                       <div class="accordion-body">
-                        <p class="faq-text">Three branches are available: <a href="https://scansworldonchamiersroad.com/aminjikarai" target="_blank">Aminjikarai</a> (Poonamallee High Road), Nandanam
+                        <p class="faq-text">Three branches are available: <a href="aminjikarai" target="_blank">Aminjikarai</a> (Poonamallee High Road), Nandanam
                           (Chamiers Road), and Nanganallur (29th Street).</p>
                       </div>
                     </div>
@@ -323,16 +323,9 @@
     </svg>
   </div>
 
-  <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
-  <script src="assets/js/swiper-bundle.min.js"></script>
-  <script src="assets/js/bootstrap.min.js"></script>
-  <script src="assets/js/jquery.magnific-popup.min.js"></script>
-  <script src="assets/js/jquery.counterup.min.js"></script>
-  <script src="assets/js/jquery.datetimepicker.min.js"></script>
-  <script src="assets/js/jquery-ui.min.js"></script>
-  <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/js/isotope.pkgd.min.js"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/vendor/jquery-3.7.1.min.js" defer></script>
+  <script src="assets/js/bootstrap.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
 </body>
 
 </html>

@@ -27,14 +27,17 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"></noscript>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+    <link rel="preload" as="style" href="assets/css/magnific-popup.min.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="assets/css/magnific-popup.min.css"></noscript>
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css">
+    <link rel="preload" as="style" href="assets/css/jquery.datetimepicker.min.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css"></noscript>
     <link rel="stylesheet" href="assets/css/style.css">
- 
+
 </head>
 
 <body>
@@ -45,7 +48,7 @@
     <div class="breadcumb-wrapper " data-bg-src="assets/scan-world/breadcrumb.png">
         <div class="container">
             <div class="breadcumb-content">
-                <h1 class="breadcumb-title text-white"> Diagnostic Centre in Aminjikarai</h1>
+                <h3 class="breadcumb-title text-white"> Diagnostic Centre in Aminjikarai</h3>
                 <ul class="breadcumb-menu">
                     <li><a href="./" class="text-white">Home</a></li>
                     <li>Aminjikarai</li>
@@ -103,7 +106,7 @@
             <!-- Left Content -->
             <div class="col-lg-6">
                 <span class="sub-title">
-                    <img src="assets/scan-world/icon.webp" alt="shape">
+                    <img src="assets/scan-world/icon.webp" loading="lazy" decoding="async" alt="shape">
                     About the Aminjikarai Centre
                 </span>
 
@@ -136,6 +139,7 @@ Consultants.
             <div class="col-lg-6">
                 <div class="about-img">
                     <img src="assets\img\gallery\about.png"
+                         loading="lazy" decoding="async"
                          alt="Scans World Aminjikarai"
                          class="img-fluid rounded shadow">
                 </div>
@@ -157,7 +161,7 @@ Consultants.
             <div class="row justify-content-center">
                 <div class="col-lg-6 col-md-8">
                     <div class="title-area text-center">
-                        <span class="sub-title"><img src="assets/scan-world/icon.webp" alt="Icon">Our Services</span>
+                        <span class="sub-title"><img src="assets/scan-world/icon.webp" loading="lazy" decoding="async" alt="Icon">Our Services</span>
                         <h2 class="sec-title">Scans & Blood Tests</h2>
                     </div>
                 </div>
@@ -165,34 +169,34 @@ Consultants.
              <div class="row gy-4 justify-content-center">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-3 col-sm-6 col-12"><a href="mri-scan"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/wine-barrel.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">MRI Scan </h3></div></div></a></div>
-                        <div class="col-md-3 col-sm-6 col-12"><a href="ct-scan"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/ct-scan.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">PET CT</h3></div></div></a></div>
-                        <div class="col-md-3 col-sm-6 col-12"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/heart-attack.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Cardiac CT</h3></div></div></div>
-                        <div class="col-md-3 col-sm-6 col-12"><a href="#"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/ct-scan.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Nuclear Scans</h3></div></div></a></div>
+                        <div class="col-md-3 col-sm-6 col-12"><a href="mri-scan"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/wine-barrel.png" loading="lazy" decoding="async" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">MRI Scan </h3></div></div></a></div>
+                        <div class="col-md-3 col-sm-6 col-12"><a href="ct-scan"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/ct-scan.png" loading="lazy" decoding="async" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">PET CT</h3></div></div></a></div>
+                        <div class="col-md-3 col-sm-6 col-12"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/heart-attack.png" loading="lazy" decoding="async" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Cardiac CT</h3></div></div></div>
+                        <div class="col-md-3 col-sm-6 col-12"><a href="#"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/ct-scan.png" loading="lazy" decoding="async" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Nuclear Scans</h3></div></div></a></div>
                     </div>
                     <div class="row">
-                        <div class="col-md-3 col-sm-6 col-12"><a href="ct-scan"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/brain-imaging.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title"> CT Scan (Multislice)</h3></div></div></a></div>
-                        <div class="col-md-3 col-sm-6 col-12"><a href="digital-mammography"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/mammography.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Digital Mammography</h3></div></div></a></div>
-                        <div class="col-md-3 col-sm-6 col-12"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/radiotherapy.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Fibro Scan</h3></div></div></div>
-                        <div class="col-md-3 col-sm-6 col-12"><a href="echo"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/monitor.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">ECHO</h3></div></div></a></div>
+                        <div class="col-md-3 col-sm-6 col-12"><a href="ct-scan"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/brain-imaging.png" loading="lazy" decoding="async" alt="icon"></div><div class="media-body text-start"><h3 class="box-title"> CT Scan (Multislice)</h3></div></div></a></div>
+                        <div class="col-md-3 col-sm-6 col-12"><a href="digital-mammography"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/mammography.png" loading="lazy" decoding="async" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Digital Mammography</h3></div></div></a></div>
+                        <div class="col-md-3 col-sm-6 col-12"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/radiotherapy.png" loading="lazy" decoding="async" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Fibro Scan</h3></div></div></div>
+                        <div class="col-md-3 col-sm-6 col-12"><a href="echo"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/monitor.png" loading="lazy" decoding="async" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">ECHO</h3></div></div></a></div>
                     </div>
                     <div class="row">
-                        <div class="col-md-3 col-sm-6 col-12"><a href="eeg"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/eeg.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">EEG / EMG / NCS / PFT</h3></div></div></a></div>
-                        <div class="col-md-3 col-sm-6 col-12"><a href="dexa"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/bone.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">DEXA</h3></div></div></a></div>
-                        <div class="col-md-3 col-sm-6 col-12"><a href="digital-xray"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/clinic.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Digital X-Ray</h3></div></div></a></div>
-                        <div class="col-md-3 col-sm-6 col-12"><a href="opg"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/show.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">OPG</h3></div></div></a></div>
+                        <div class="col-md-3 col-sm-6 col-12"><a href="eeg"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/eeg.png" loading="lazy" decoding="async" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">EEG / EMG / NCS / PFT</h3></div></div></a></div>
+                        <div class="col-md-3 col-sm-6 col-12"><a href="dexa"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/bone.png" loading="lazy" decoding="async" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">DEXA</h3></div></div></a></div>
+                        <div class="col-md-3 col-sm-6 col-12"><a href="digital-xray"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/clinic.png" loading="lazy" decoding="async" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Digital X-Ray</h3></div></div></a></div>
+                        <div class="col-md-3 col-sm-6 col-12"><a href="opg"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/show.png" loading="lazy" decoding="async" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">OPG</h3></div></div></a></div>
                     </div>
                     <div class="row">
-                        <div class="col-md-3 col-sm-6 col-12"><a href="colonoscopy-and-endoscopy"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/endoscopy.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Endoscopy / Colonoscopy</h3></div></div></a></div>
-                        <div class="col-md-3 col-sm-6 col-12"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/biopsy.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Image-guided Biopsy / FNAC</h3></div></div></div>
-                        <div class="col-md-3 col-sm-6 col-12"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/measuring-device.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Automated Laboratory</h3></div></div></div>
-                        <div class="col-md-3 col-sm-6 col-12"><a href="master-health-check-packages"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/stethoscope.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Master Health Packages</h3></div></div></a></div>
+                        <div class="col-md-3 col-sm-6 col-12"><a href="colonoscopy-and-endoscopy"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/endoscopy.png" loading="lazy" decoding="async" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Endoscopy / Colonoscopy</h3></div></div></a></div>
+                        <div class="col-md-3 col-sm-6 col-12"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/biopsy.png" loading="lazy" decoding="async" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Image-guided Biopsy / FNAC</h3></div></div></div>
+                        <div class="col-md-3 col-sm-6 col-12"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/measuring-device.png" loading="lazy" decoding="async" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Automated Laboratory</h3></div></div></div>
+                        <div class="col-md-3 col-sm-6 col-12"><a href="master-health-check-packages"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/stethoscope.png" loading="lazy" decoding="async" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Master Health Packages</h3></div></div></a></div>
                     </div>
                     <div class="row">
-                        <div class="col-md-3 col-sm-6 col-12"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/eeg.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Coronary Angiogram</h3></div></div></a></div>
-                        <div class="col-md-3 col-sm-6 col-12"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/clinic.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Treadmill</h3></div></div></div>
-                        <div class="col-md-3 col-sm-6 col-12"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/measuring-device.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Holter</h3></div></div></div>
-                        <div class="col-md-3 col-sm-6 col-12"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/bone.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Bone Densitomery</h3></div></div></a></div>
+                        <div class="col-md-3 col-sm-6 col-12"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/eeg.png" loading="lazy" decoding="async" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Coronary Angiogram</h3></div></div></a></div>
+                        <div class="col-md-3 col-sm-6 col-12"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/clinic.png" loading="lazy" decoding="async" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Treadmill</h3></div></div></div>
+                        <div class="col-md-3 col-sm-6 col-12"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/measuring-device.png" loading="lazy" decoding="async" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Holter</h3></div></div></div>
+                        <div class="col-md-3 col-sm-6 col-12"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/bone.png" loading="lazy" decoding="async" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Bone Densitomery</h3></div></div></a></div>
                     </div>
                 </div>
             </div>
@@ -207,7 +211,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
      <section class="space">
         <div class="container">
             <div class="title-area text-center">
-                <span class="sub-title"><img src="assets/scan-world/icon.webp" alt="shape">Scans World</span>
+                <span class="sub-title"><img src="assets/scan-world/icon.webp" loading="lazy" decoding="async" alt="shape">Scans World</span>
                 <h2 class="sec-title">Meet Our Experts</h2>
             </div>
             <div class="slider-area">
@@ -221,6 +225,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
                                     <div class="th-team team-grid">
                                         <div class="box-img">
                                             <img src="<?php echo htmlspecialchars($url_config . '/' . $doctor_image_path . $row['doctor_image']); ?>"
+                                                loading="lazy" decoding="async"
                                                 alt="<?= htmlspecialchars($row['image_alttag']); ?>"
                                                 title="<?= htmlspecialchars($row['image_title']); ?>">
 
@@ -262,7 +267,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
     <div class="space" style="padding-top:0;">
         <div class="container">
             <div class="title-area text-center mb-4">
-                <h3 class="sec-title"><img src="assets/scan-world/icon.webp" alt="icon"> Why Choose Scans World Aminjikarai</h3>
+                <h3 class="sec-title"><img src="assets/scan-world/icon.webp" loading="lazy" decoding="async" alt="icon"> Why Choose Scans World Aminjikarai</h3>
             </div>
             <div class="enhanced-feature-grid-aminjikarai">
                 <div class="feature-card-enhanced">
@@ -305,14 +310,14 @@ $latest_doctors = mysqli_query($con, $doctors_query);
     <section class="space">
         <div class="container">
             <div class="title-area text-center">
-                <span class="sub-title"><img src="assets/scan-world/icon.webp" alt="Icon">Work Process</span>
+                <span class="sub-title"><img src="assets/scan-world/icon.webp" loading="lazy" decoding="async" alt="Icon">Work Process</span>
                 <h2 class="sec-title">Seamless Scan Process for <br>Accurate Diagnosis</h2>
             </div>
             <div class="process-card-wrap">
                 <div class="process-card">
                     <div class="box-img">
                         <div class="img">
-                            <img src="assets/scan-world/centers/step-1.webp" alt="icon">
+                            <img src="assets/scan-world/centers/step-1.webp" loading="lazy" decoding="async" alt="icon">
                         </div>
                         <p class="box-number">01</p>
                     </div>
@@ -322,7 +327,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
                 <div class="process-card">
                     <div class="box-img">
                         <div class="img">
-                            <img src="assets/scan-world/centers/step-2.webp" alt="icon">
+                            <img src="assets/scan-world/centers/step-2.webp" loading="lazy" decoding="async" alt="icon">
                         </div>
                         <p class="box-number">02</p>
                     </div>
@@ -332,7 +337,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
                 <div class="process-card">
                     <div class="box-img">
                         <div class="img">
-                            <img src="assets/scan-world/centers/step-3.webp" alt="icon">
+                            <img src="assets/scan-world/centers/step-3.webp" loading="lazy" decoding="async" alt="icon">
                         </div>
                         <p class="box-number">03</p>
                     </div>
@@ -342,7 +347,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
                 <div class="process-card">
                     <div class="box-img">
                         <div class="img">
-                            <img src="assets/scan-world/centers/step-4.webp" alt="icon">
+                            <img src="assets/scan-world/centers/step-4.webp" loading="lazy" decoding="async" alt="icon">
                         </div>
                         <p class="box-number">04</p>
                     </div>
@@ -359,7 +364,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
 
         <div class="title-area text-center">
             <span class="sub-title">
-                <img src="assets/scan-world/icon.webp" alt="">
+                <img src="assets/scan-world/icon.webp" loading="lazy" decoding="async" alt="">
                 Testimonials
             </span>
 
@@ -388,7 +393,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
                     </div>
 
                     <div class="patient">
-                        <img src="assets\img\icon\icon.jpg">
+                        <img src="assets\img\icon\icon.jpg" loading="lazy" decoding="async">
                         <div>
                             <h5>Karthick S</h5>
                             <span>Nandanam</span>
@@ -413,7 +418,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
                     </div>
 
                     <div class="patient">
-                        <img src="assets\img\icon\icon.jpg">
+                        <img src="assets\img\icon\icon.jpg" loading="lazy" decoding="async">
                         <div>
                             <h5>Remy Leo</h5>
                             <span>Chennai</span>
@@ -438,7 +443,7 @@ $latest_doctors = mysqli_query($con, $doctors_query);
                     </div>
 
                     <div class="patient">
-                        <img src="assets\img\icon\icon.jpg">
+                        <img src="assets\img\icon\icon.jpg" loading="lazy" decoding="async">
                         <div>
                             <h5>Santhosh</h5>
                             <span>Vellore</span>
@@ -700,16 +705,16 @@ $latest_doctors = mysqli_query($con, $doctors_query);
     <?php include("footer.php"); ?>
     <div class="scroll-top"><svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102"><path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"></path></svg></div>
 
-    <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
-    <script src="assets/js/swiper-bundle.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
-    <script src="assets/js/jquery.counterup.min.js"></script>
-    <script src="assets/js/jquery.datetimepicker.min.js"></script>
-    <script src="assets/js/jquery-ui.min.js"></script>
-    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/js/isotope.pkgd.min.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/vendor/jquery-3.7.1.min.js" defer></script>
+    <script src="assets/js/swiper-bundle.min.js" defer></script>
+    <script src="assets/js/bootstrap.min.js" defer></script>
+    <script src="assets/js/jquery.magnific-popup.min.js" defer></script>
+    <script src="assets/js/jquery.counterup.min.js" defer></script>
+    <script src="assets/js/jquery.datetimepicker.min.js" defer></script>
+    <script src="assets/js/jquery-ui.min.js" defer></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js" defer></script>
+    <script src="assets/js/isotope.pkgd.min.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
     <script>
         // bootstrap 5+ compatibility for accordion (since we used data-toggle, add fallback)
         $(function() {

@@ -30,9 +30,6 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-  <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
-  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-  <link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
   
 </head>
@@ -44,7 +41,7 @@
   <div class="breadcumb-wrapper " data-bg-src="assets/scan-world/breadcrumb.png">
     <div class="container">
       <div class="breadcumb-content">
-        <h1 class="breadcumb-title text-white">Digital X-Ray </h1>
+        <h3 class="breadcumb-title text-white">Digital X-Ray </h3>
         <ul class="breadcumb-menu">
           <li><a href="./" class="text-white">Home</a></li>
           <li>Digital X-Ray</li>
@@ -58,7 +55,7 @@
       <div class="row flex-row-reverse">
         <div class="col-xxl-8 col-lg-8">
           <div class="page-single single-right mb-30">
-            <h3 class="fw-semibold">Digital X-ray</h3>
+            <h1 class="fw-semibold">Digital X-ray</h1>
             <div class="page-img">
     <img src="assets/scan-world/xray_service.jpg"
          alt="Service Image"
@@ -177,11 +174,6 @@
             <div class="alert-pregnancy">
               <i class="fas fa-female me-2" style="color:#1a5f7a;"></i> <strong>Pregnant patients:</strong> Please inform our staff before your X-ray. We take extra precautions and may recommend an alternative imaging method where necessary.
             </div>
-            
-            <!-- ========= END OF NEW CONTENT ========= -->
-            
-            <!-- ========= EXISTING CONTENT (Preserved as is) ========= -->
-
 
             <div class="mt-40">
               <div class="title-area mb-25">
@@ -198,7 +190,7 @@
                   <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text">A <a href="https://scansworldonchamiersroad.com/digital-xray" target="_blank">Digital X-Ray</a> uses advanced electronic sensors instead of traditional film
+                      <p class="faq-text">A <a href="digital-xray" target="_blank">Digital X-Ray</a> uses advanced electronic sensors instead of traditional film
                         to capture images delivering faster results higher image clarity and lower radiation exposure
                         compared to conventional X-rays.</p>
                     </div>
@@ -215,7 +207,7 @@
                   <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/digital-xray" target="_blank">Digital X-Ray</a> helps detect bone fractures, joint problems, lung diseases,
+                      <p class="faq-text"><a href="digital-xray" target="_blank">Digital X-Ray</a> helps detect bone fractures, joint problems, lung diseases,
                         chest infections, heart conditions, digestive blockages, abdominal issues and oral health
                         problems covering a wide range of diagnostic needs.</p>
                     </div>
@@ -232,7 +224,7 @@
                   <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text">Scans World offers full limb <a href="https://scansworldonchamiersroad.com/digital-xray" target="_blank">X-rays</a>, full spine X-rays, chest X-rays, abdominal
+                      <p class="faq-text">Scans World offers full limb <a href="digital-xray" target="_blank">X-rays</a>, full spine X-rays, chest X-rays, abdominal
                         X-rays, dental X-rays, joint X-rays and X-ray-guided procedures all using state-of-the-art
                         digital equipment.</p>
                     </div>
@@ -249,7 +241,7 @@
                   <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text">A <a href="https://scansworldonchamiersroad.com/digital-xray" target="_blank">Chest X-Ray</a> is used to evaluate the lungs, heart and surrounding structures.
+                      <p class="faq-text">A <a href="digital-xray" target="_blank">Chest X-Ray</a> is used to evaluate the lungs, heart and surrounding structures.
                         It helps detect pneumonia, tuberculosis, lung infections, heart enlargement and other chest
                         related conditions accurately and quickly.</p>
                     </div>
@@ -267,7 +259,7 @@
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
                       <p class="faq-text">General physicians, orthopaedic surgeons, pulmonologists, dentists,
-                        gastroenterologists and emergency care doctors often refer patients for <a href="https://scansworldonchamiersroad.com/digital-xray" target="_blank">Digital X-Ray</a> to
+                        gastroenterologists and emergency care doctors often refer patients for <a href="digital-xray" target="_blank">Digital X-Ray</a> to
                         evaluate injuries, infections and chronic conditions.</p>
                     </div>
                   </div>
@@ -283,7 +275,7 @@
                   <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/" target="_blank">Scans World</a> provides high quality Digital X-Ray services at three convenient
+                      <p class="faq-text"><a href="./" target="_blank">Scans World</a> provides high quality Digital X-Ray services at three convenient
                         locations Aminjikarai, Nandanam (Chamiers Road) and Nanganallur with experienced radiologists
                         and state-of-the-art equipments.</p>
                     </div>
@@ -317,7 +309,7 @@
                   <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/digital-xray" target="_blank">Digital X-Ray</a> uses less radiation than traditional film X-rays and is
+                      <p class="faq-text"><a href="digital-xray" target="_blank">Digital X-Ray</a> uses less radiation than traditional film X-rays and is
                         therefore a safer option. It’s a common diagnostic test performed daily on patients of all ages
                         and it’s a trusted procedure around the world.</p>
                     </div>
@@ -334,7 +326,7 @@
                   <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text">Most <a href="https://scansworldonchamiersroad.com/digital-xray" target="_blank">X-Rays</a> require no special preparation. You may be asked to remove
+                      <p class="faq-text">Most <a href="digital-xray" target="_blank">X-Rays</a> require no special preparation. You may be asked to remove
                         jewellery or metal objects from the area being scanned. For abdominal X-Rays, your doctor may
                         advise fasting. The Scans World team will guide you with any specific instructions at the time
                         of booking.</p>
@@ -353,8 +345,8 @@
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
                       <p class="faq-text">You can book online through their website, WhatsApp at +91 96269 59999, or
-                        call directly. Walk-ins are also welcome at all three branches <a href="https://scansworldonchamiersroad.com/aminjikarai" target="_blank">Aminjikarai</a>, Nandanam and
-                        <a href="https://scansworldonchamiersroad.com/nanganallur" target="_blank">Nanganallur</a>.</p>
+                        call directly. Walk-ins are also welcome at all three branches <a href="aminjikarai" target="_blank">Aminjikarai</a>, Nandanam and
+                        <a href="nanganallur" target="_blank">Nanganallur</a>.</p>
                     </div>
                   </div>
                 </div>
@@ -366,7 +358,7 @@
               <p style="color: white;">Fast, accurate and safe imaging at Scans World. Walk in or book your appointment.</p>
               
               <div class="cta-buttons-group">
-                <a href="book-appointment" class="xray-cta-btn"><i class="fas fa-phone"></i> Book Now</a>
+                <a href="book-appointment" class="xray-cta-btn"><i class="fas fa-calendar-check"></i> Book Now</a>
                
               </div>
             </div>
@@ -385,16 +377,9 @@
     </svg>
   </div>
 
-  <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
-  <script src="assets/js/swiper-bundle.min.js"></script>
-  <script src="assets/js/bootstrap.min.js"></script>
-  <script src="assets/js/jquery.magnific-popup.min.js"></script>
-  <script src="assets/js/jquery.counterup.min.js"></script>
-  <script src="assets/js/jquery.datetimepicker.min.js"></script>
-  <script src="assets/js/jquery-ui.min.js"></script>
-  <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/js/isotope.pkgd.min.js"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/vendor/jquery-3.7.1.min.js" defer></script>
+  <script src="assets/js/bootstrap.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
 </body>
 
 </html>

@@ -33,9 +33,6 @@
     rel="stylesheet">
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-  <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
-  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-  <link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
@@ -47,7 +44,7 @@
   <div class="breadcumb-wrapper " data-bg-src="assets/scan-world/breadcrumb.png">
     <div class="container">
       <div class="breadcumb-content">
-        <h1 class="breadcumb-title text-white">Digital Mammography</h1>
+        <h3 class="breadcumb-title text-white">Digital Mammography</h3>
         <ul class="breadcumb-menu">
           <li><a href="./" class="text-white">Home</a></li>
           <li>Digital Mammography</li>
@@ -62,10 +59,10 @@
         <div class="col-xxl-8 col-lg-8">
        
           <div class="page-single single-right mb-30">
-            <h3 class="fw-semibold">Digital Mammography</h3>
+            <h1 class="fw-semibold">Digital Mammography</h1>
             <div class="page-img">
-              <img src="assets/scan-world/digital_mammography.jpg" alt="Service Image"
-                style="height: 600px; width: 800px; object-fit: cover;">
+              <img src="assets/scan-world/digital-mammography.webp" alt="Service Image"
+                style="height: 500px; width: 800px; object-fit: cover;">
             </div>
             <div class="page-content">
               <p>At Scans world we offer Digital Mammography — the latest in breast cancer screening / diagnostic
@@ -121,7 +118,7 @@
                   <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/digital-mammography" target="_blank">Digital Mammography</a> is an advanced breast imaging technique that uses low-dose
+                      <p class="faq-text"><a href="digital-mammography" target="_blank">Digital Mammography</a> is an advanced breast imaging technique that uses low-dose
                         X-rays to detect early signs of abnormalities in breast tissue, providing high-resolution images
                         for accurate diagnosis.</p>
                     </div>
@@ -204,7 +201,7 @@
                   <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/digital-mammography" target="_blank">Digital Mammography</a> uses a very low dose of radiation much less than
+                      <p class="faq-text"><a href="digital-mammography" target="_blank">Digital Mammography</a> uses a very low dose of radiation much less than
                         traditional mammograms making it a safe screening option for all women.</p>
                     </div>
                   </div>
@@ -255,7 +252,7 @@
                     <div class="accordion-body">
                       <p class="faq-text">Scans World is a leading diagnostic center in Chennai offering Digital
                         Mammography with state-of-the-art equipment and skilled care. We have branches in Aminjikarai,
-                        <a href="https://scansworldonchamiersroad.com/nandanam" target="_blank">Nandanam</a> and <a href="https://scansworldonchamiersroad.com/nanganallur" target="_blank">Nanganallur</a>.</p>
+                        <a href="nandanam" target="_blank">Nandanam</a> and <a href="nanganallur" target="_blank">Nanganallur</a>.</p>
                     </div>
                   </div>
                 </div>
@@ -271,7 +268,7 @@
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
                       <p class="faq-text">If something is found, our radiologist will recommend other tests such as
-                        <a href="https://scansworldonchamiersroad.com/digital-mammography" target="_blank">ultrasound or biopsy</a>. Our team will walk with you through each step with clarity and
+                        <a href="digital-mammography" target="_blank">ultrasound or biopsy</a>. Our team will walk with you through each step with clarity and
                         compassionate care.</p>
                     </div>
                   </div>
@@ -295,16 +292,9 @@
     </svg>
   </div>
 
-  <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
-  <script src="assets/js/swiper-bundle.min.js"></script>
-  <script src="assets/js/bootstrap.min.js"></script>
-  <script src="assets/js/jquery.magnific-popup.min.js"></script>
-  <script src="assets/js/jquery.counterup.min.js"></script>
-  <script src="assets/js/jquery.datetimepicker.min.js"></script>
-  <script src="assets/js/jquery-ui.min.js"></script>
-  <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/js/isotope.pkgd.min.js"></script>
-  <script src="assets/js/main.js"></script>
+ <script src="assets/js/vendor/jquery-3.7.1.min.js" defer></script>
+  <script src="assets/js/bootstrap.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
 </body>
 
 </html>

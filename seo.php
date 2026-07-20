@@ -43,7 +43,7 @@ foreach ($result as $row) {
     $twitter_site = $row["twitter_site"] ?? '';
 }
 ?>
-<title>Scansworldonchamiersroad | <?= !empty($meta_title) ? htmlspecialchars($meta_title) : '' ?></title>
+<title>Best Diagnostic Centre Chennai | MRI,CT,PET <?= !empty($meta_title) ? htmlspecialchars($meta_title) : '' ?></title>
 <?php if (!empty($meta_description)): ?>
 <meta name="description" content="<?= htmlspecialchars($meta_description) ?>">
 <?php endif; ?>

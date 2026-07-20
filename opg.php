@@ -27,12 +27,15 @@
   <meta name="theme-color" content="#ffffff">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"></noscript>
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-  <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+  <link rel="preload" as="style" href="assets/css/magnific-popup.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="assets/css/magnific-popup.min.css"></noscript>
   <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-  <link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css">
+  <link rel="preload" as="style" href="assets/css/jquery.datetimepicker.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css"></noscript>
   <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
@@ -44,7 +47,7 @@
   <div class="breadcumb-wrapper " data-bg-src="assets/scan-world/breadcrumb.png">
     <div class="container">
       <div class="breadcumb-content">
-        <h1 class="breadcumb-title text-white">OPG (Orthopantomogram)</h1>
+        <h3 class="breadcumb-title text-white">OPG (Orthopantomogram)</h3>
         <ul class="breadcumb-menu">
           <li><a href="./" class="text-white">Home</a></li>
           <li>OPG</li>
@@ -57,7 +60,7 @@
       <div class="row flex-row-reverse">
         <div class="col-xxl-8 col-lg-8">
           <div class="page-single single-right mb-30">
-            <h3 class="fw-semibold">OPG (Orthopantomogram)</h3>
+            <h1 class="fw-semibold">OPG (Orthopantomogram)</h1>
             <!-- <div class="page-img">
               <img src="assets/scan-world/services/opg.webp" alt="Service Image">
             </div> -->
@@ -95,7 +98,7 @@
                   <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text">An <a href="https://scansworldonchamiersroad.com/opg" target="_blank">OPG</a> is a panoramic dental x-ray that takes one wide image that shows all
+                      <p class="faq-text">An <a href="opg" target="_blank">OPG</a> is a panoramic dental x-ray that takes one wide image that shows all
                         your teeth, upper and lower jaws and the surrounding bone. It provides dentists and specialists
                         with a complete picture of your oral and jaw health in one scan.</p>
                     </div>
@@ -112,7 +115,7 @@
                   <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/opg" target="_blank">OPG</a> is short for Orthopantomogram. It is also called a panoramic x-ray or a
+                      <p class="faq-text"><a href="opg" target="_blank">OPG</a> is short for Orthopantomogram. It is also called a panoramic x-ray or a
                         dental panoramic radiograph. It is the most commonly used full mouth imaging modality in dental
                         and maxillofacial diagnosis.</p>
                     </div>
@@ -129,7 +132,7 @@
                   <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text">What An <a href="https://scansworldonchamiersroad.com/opg" target="_blank">OPG Scan</a> Can Show? Tooth decay, impacted teeth (notably wisdom teeth),
+                      <p class="faq-text">What An <a href="opg" target="_blank">OPG Scan</a> Can Show? Tooth decay, impacted teeth (notably wisdom teeth),
                         jaw bone abnormalities, dental infections, cysts or tumors in the jaw, gum disease, bone loss,
                         temporomandibular joint (TMJ) disorders.</p>
                     </div>
@@ -164,7 +167,7 @@
                   <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text">You will be asked to stand or sit in front of the <a href="https://scansworldonchamiersroad.com/opg" target="_blank">OPG machine</a> and gently bite
+                      <p class="faq-text">You will be asked to stand or sit in front of the <a href="opg" target="_blank">OPG machine</a> and gently bite
                         on a small mouth rest. Then the scanner rotates around your head for 15 to 20 seconds to build a
                         full panoramic image. The procedure is completely painless and takes only a few minutes
                         altogether.</p>
@@ -199,7 +202,7 @@
                   <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text">An <a href="https://scansworldonchamiersroad.com/opg" target="_blank">OPG Scan</a> uses a very low dose of radiation significantly less than a
+                      <p class="faq-text">An <a href="opg" target="_blank">OPG Scan</a> uses a very low dose of radiation significantly less than a
                         standard medical X-ray. It is safe for most patients including children and elderly people so is
                         ideal for routine dental assessments.</p>
                     </div>
@@ -216,7 +219,7 @@
                   <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text">A normal dental X-ray only shows 1-2 teeth at a time, but an <a href="https://scansworldonchamiersroad.com/opg" target="_blank">OPG Scan</a> gives you
+                      <p class="faq-text">A normal dental X-ray only shows 1-2 teeth at a time, but an <a href="opg" target="_blank">OPG Scan</a> gives you
                         one panoramic image showing all the teeth, both jaws and surrounding bone in one go. OPG is more
                         comprehensive and time-saving for overall dental diagnosis.</p>
                     </div>
@@ -233,7 +236,7 @@
                   <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/opg" target="_blank">OPG Scan reports</a> are produced quickly at Scans World, usually on the same day.
+                      <p class="faq-text"><a href="opg" target="_blank">OPG Scan reports</a> are produced quickly at Scans World, usually on the same day.
                         Our expert radiologists provide accurate and detailed reporting to help your dentist plan your
                         treatment.</p>
                     </div>
@@ -250,7 +253,7 @@
                   <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/" target="_blank">Scans World is a trusted dental imaging centre in Chennai</a> that provides
+                      <p class="faq-text"><a href="./" target="_blank">Scans World</a> is a trusted dental imaging centre in Chennai that provides
                         advanced OPG Scans with digital technology, low radiation and quick report delivery. Our
                         branches are at Aminjikarai, Nandanam (Chamiers Road) and Nanganallur.</p>
                     </div>
@@ -273,16 +276,9 @@
     </svg>
   </div>
 
-  <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
-  <script src="assets/js/swiper-bundle.min.js"></script>
-  <script src="assets/js/bootstrap.min.js"></script>
-  <script src="assets/js/jquery.magnific-popup.min.js"></script>
-  <script src="assets/js/jquery.counterup.min.js"></script>
-  <script src="assets/js/jquery.datetimepicker.min.js"></script>
-  <script src="assets/js/jquery-ui.min.js"></script>
-  <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/js/isotope.pkgd.min.js"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/vendor/jquery-3.7.1.min.js" defer></script>
+  <script src="assets/js/bootstrap.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
 </body>
 
 </html>

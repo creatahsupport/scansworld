@@ -30,9 +30,6 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-  <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
-  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-  <link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
     
 </head>
@@ -44,7 +41,7 @@
   <div class="breadcumb-wrapper " data-bg-src="assets/scan-world/breadcrumb.png">
     <div class="container">
       <div class="breadcumb-content">
-        <h1 class="breadcumb-title text-white">Colonoscopy & Endoscopy</h1>
+        <h3 class="breadcumb-title text-white">Colonoscopy & Endoscopy </h3>
         <ul class="breadcumb-menu">
           <li><a href="./" class="text-white">Home</a></li>
           <li>Colonoscopy & Endoscopy</li>
@@ -61,10 +58,10 @@
             
             <!-- ========= NEW CONTENT ADDED ABOVE EXISTING CONTENT (Starts Here) ========= -->
                <div class="page-content">
-              <h3 class="h5 mt-1">Protect Your Digestive Health with Colonoscopy & Endoscopy</h3>
+              <h1 class="h5 mt-1">Protect Your Digestive Health with Colonoscopy & Endoscopy</h1>
               <p>At Scans world, we provide Colonoscopy and Endoscopy procedures to assess and diagnose gastrointestinal conditions.</p>
-              <p>Early detection through these tests can help identify conditions like stomach ulcers, Colon cancer and other digestive issues.</p>
-              <p>Our expert team ensures precise, minimally invasive procedures with quick recovery times. Contact us today to schedule your appointment.</p>
+              <p>Early detection through these tests can help identify conditions like stomach ulcers, Colon cancer and other digestive issues.
+              Our expert team ensures precise, minimally invasive procedures with quick recovery times. Contact us today to schedule your appointment.</p>
             </div>
             <div class="page-img">
               <img src="assets/scan-world/colonoscopy-and-endoscopy.png" alt="Service Image">
@@ -81,7 +78,7 @@
             <h3 class="fw-semibold mt-3">Endoscopy vs Colonoscopy - What's the difference?</h3>
             <div class="comparison-two-col">
               <div class="comparison-card">
-                <h4><i class="fas fa-microphone-alt me-2"></i> ENDOSCOPY (UPPER G.I.)</h4>
+                <h4><i class="fas fa-microphone-alt me-2"></i> ENDOSCOPY (Upper GI)</h4>
                 <p>A thin, flexible tube is passed through the mouth to look at the oesophagus (food pipe), stomach and the upper part of the small intestine (duodenum).To diagnose and sometimes treat problems with the upper part of the digestive system.
 Procedure time 15-30 minutes.</p>
                 <p><span class="badge bg-info bg-opacity-10 text-dark p-2 mt-2"><i class="far fa-clock"></i> Procedure time 15-30 minutes</span></p>
@@ -104,7 +101,7 @@ Procedure time 15-30 minutes.</p>
                 <p>Procedures performed by trained GI specialists, not by general technicians.</p>
               </div>
               <div class="gi-feature-card">
-                <div class="gi-feature-icon"><i class="fas fa-camera"></i></div>
+                <div class="gi-feature-icon"><i class="fas fa-stethoscope"></i></div>
                 <h4>Modern flexible endoscopes</h4>
                 <p>High definition camera systems for visualisation of the GI tract in clear detail.</p>
               </div>
@@ -207,7 +204,7 @@ Procedure time 15-30 minutes.</p>
                   <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text">An <a href="https://scansworldonchamiersroad.com/colonoscopy-and-endoscopy" target="_blank">Endoscopy</a> is a minimally invasive procedure that uses a thin, flexible
+                      <p class="faq-text">An <a href="colonoscopy-and-endoscopy" target="_blank">Endoscopy</a> is a minimally invasive procedure that uses a thin, flexible
                         camera to check the upper part of the digestive system including the food pipe, stomach and
                         small intestine. It is used to find conditions such as stomach ulcers, acid reflux, bleeding and
                         inflammation.</p>
@@ -225,7 +222,7 @@ Procedure time 15-30 minutes.</p>
                   <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text">A <a href="https://scansworldonchamiersroad.com/colonoscopy-and-endoscopy" target="_blank">Colonoscopy</a> is a test that uses a long, flexible tube with a camera on the
+                      <p class="faq-text">A <a href="colonoscopy-and-endoscopy" target="_blank">Colonoscopy</a> is a test that uses a long, flexible tube with a camera on the
                         end to view the inside of the large intestine (colon). It may help to find colon cancer, polyps,
                         inflammatory bowel disease, unexplained bleeding and other digestive problems early.</p>
                     </div>
@@ -242,7 +239,7 @@ Procedure time 15-30 minutes.</p>
                   <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/colonoscopy-and-endoscopy" target="_blank">Endoscopy</a> looks at the upper digestive tract (food pipe, stomach, small intestine). Colonoscopy looks at the lower digestive tract (large intestine and rectum). Both are minimally invasive procedures conducted by expert gastroenterologists.</p>
+                      <p class="faq-text"><a href="colonoscopy-and-endoscopy" target="_blank">Endoscopy</a> looks at the upper digestive tract (food pipe, stomach, small intestine). Colonoscopy looks at the lower digestive tract (large intestine and rectum). Both are minimally invasive procedures conducted by expert gastroenterologists.</p>
                     </div>
                   </div>
                 </div>
@@ -287,7 +284,7 @@ Procedure time 15-30 minutes.</p>
                   <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text">Scans World provides <a href="https://scansworldonchamiersroad.com/colonoscopy-and-endoscopy" target="_blank">Colonoscopy and Endoscopy</a> services in Aminjikarai,
+                      <p class="faq-text">Scans World provides <a href="colonoscopy-and-endoscopy" target="_blank">Colonoscopy and Endoscopy</a> services in Aminjikarai,
                         Nandanam (Chamiers Road) and Nanganallur branches with minimally invasive techniques and rapid
                         recovery times with expert care.</p>
                     </div>
@@ -319,7 +316,7 @@ Procedure time 15-30 minutes.</p>
                   <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text">For <a href="https://scansworldonchamiersroad.com/colonoscopy-and-endoscopy" target="_blank">Endoscopy</a>, fasting for minimum 6-8 hours prior to procedure is required.
+                      <p class="faq-text">For <a href="colonoscopy-and-endoscopy" target="_blank">Endoscopy</a>, fasting for minimum 6-8 hours prior to procedure is required.
                         For Colonoscopy, bowel preparation (clearing out the colon) is needed the day before. Scans
                         World will give detailed preparation instructions at the time of booking.</p>
                     </div>
@@ -336,7 +333,7 @@ Procedure time 15-30 minutes.</p>
                   <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text">An <a href="https://scansworldonchamiersroad.com/colonoscopy-and-endoscopy" target="_blank">Endoscopy</a> usually takes 15 to 30 minutes and a Colonoscopy takes 30 to 60 minutes depending on the extent of the examination. Most patients can return to normal activities the same day and recover quickly.</p>
+                      <p class="faq-text">An <a href="colonoscopy-and-endoscopy" target="_blank">Endoscopy</a> usually takes 15 to 30 minutes and a Colonoscopy takes 30 to 60 minutes depending on the extent of the examination. Most patients can return to normal activities the same day and recover quickly.</p>
                     </div>
                   </div>
                 </div>
@@ -351,7 +348,7 @@ Procedure time 15-30 minutes.</p>
                   <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text">You can book online through their website, WhatsApp at +91 96269 59999 or call directly. Walk-ins are also welcome at all three branches Aminjikarai, <a href="https://scansworldonchamiersroad.com/nandanam" target="_blank">Nandanam</a> and Nanganallur.</p>
+                      <p class="faq-text">You can book online through their website, WhatsApp at +91 96269 59999 or call directly. Walk-ins are also welcome at all three branches Aminjikarai, <a href="nandanam" target="_blank">Nandanam</a> and Nanganallur.</p>
                     </div>
                   </div>
                 </div>
@@ -382,16 +379,9 @@ Procedure time 15-30 minutes.</p>
     </svg>
   </div>
 
-  <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
-  <script src="assets/js/swiper-bundle.min.js"></script>
-  <script src="assets/js/bootstrap.min.js"></script>
-  <script src="assets/js/jquery.magnific-popup.min.js"></script>
-  <script src="assets/js/jquery.counterup.min.js"></script>
-  <script src="assets/js/jquery.datetimepicker.min.js"></script>
-  <script src="assets/js/jquery-ui.min.js"></script>
-  <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/js/isotope.pkgd.min.js"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/vendor/jquery-3.7.1.min.js" defer></script>
+  <script src="assets/js/bootstrap.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
 </body>
 
 </html>

@@ -31,9 +31,6 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-  <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
-  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-  <link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
@@ -45,7 +42,7 @@
   <div class="breadcumb-wrapper " data-bg-src="assets/scan-world/breadcrumb.png">
     <div class="container">
       <div class="breadcumb-content">
-        <h1 class="breadcumb-title text-white">ECHO, ECG & Treadmill</h1>
+        <h3 class="breadcumb-title text-white">ECHO, ECG & Treadmill</h3>
         <ul class="breadcumb-menu">
           <li><a href="./" class="text-white">Home</a></li>
           <li>ECHO, ECG & Treadmill</li>
@@ -60,11 +57,11 @@
         <div class="col-xxl-8 col-lg-8">
           <div class="page-single single-right mb-30">
           <div class="page-img">
-              <img src="assets/scan-world/echo.jpg" alt="Service Image"
+              <img src="assets/scan-world/echo.webp" alt="Service Image"
                 style="height: 600px; width: 800px; object-fit: cover;">
             </div>
             <div class="page-content">
-              <h3 class="h5 mt-1">Prioritize Your Heart Health with an Echocardiogram at Scans world </h3>
+              <h1 class="h5 mt-1">Prioritize Your Heart Health with an Echocardiogram at Scans world </h1>
               <p>Your heart deserves the best care.  Echocardiogram, an advanced, non-invasive diagnostic test that provides detailed images of your heart, allowing us to detect potential issues early and guide your treatment plan effectively.</p>
               <h3 class="h5 mt-1">What is an Echocardiogram? </h3>
               <p>An Echocardiogram (or echo) uses high-frequency sound waves to produce real-time images of the heart’s structure and function. This valuable test helps us assess your heart’s health and diagnose a wide range of cardiovascular conditions, including:</p>
@@ -108,7 +105,7 @@
                   <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text">An <a href="https://scansworldonchamiersroad.com/echo" target="_blank">Echocardiogram</a> is a non-invasive heart scan that uses high-frequency sound
+                      <p class="faq-text">An <a href="echo" target="_blank">Echocardiogram</a> is a non-invasive heart scan that uses high-frequency sound
                         waves to produce real-time images of the heart's structure and function. It helps doctors assess
                         heart health and detect cardiovascular conditions accurately.</p>
                     </div>
@@ -125,7 +122,7 @@
                   <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text">An <a href="https://scansworldonchamiersroad.com/echo" target="_blank">Echo Test</a> can help diagnose problems with heart valves (such as mitral
+                      <p class="faq-text">An <a href="echo" target="_blank">Echo Test</a> can help diagnose problems with heart valves (such as mitral
                         valve regurgitation or stenosis), heart failure, birth defects of the heart, cardiomyopathy,
                         pericardial effusion (fluid around the heart) and abnormal blood flow within the heart.</p>
                     </div>
@@ -142,7 +139,7 @@
                   <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text">An <a href="https://scansworldonchamiersroad.com/echo" target="_blank">ECG (Electrocardiogram)</a> is a test that records the electrical activity of
+                      <p class="faq-text">An <a href="echo" target="_blank">ECG (Electrocardiogram)</a> is a test that records the electrical activity of
                         the heart. An Echocardiogram is an imaging test that shows detailed pictures of the heart's
                         structure and motion. The two tests combined give a better picture of heart health.</p>
                     </div>
@@ -159,7 +156,7 @@
                   <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text">A <a href="https://scansworldonchamiersroad.com/echo" target="_blank">Treadmill Test (TMT)</a> monitors your heart's response to physical stress you
+                      <p class="faq-text">A <a href="echo" target="_blank">Treadmill Test (TMT)</a> monitors your heart's response to physical stress you
                         walk on a treadmill while your heart rate and ECG are recorded. A resting Echo is done while you
                         are still. Together they help detect exercise-induced heart problems..</p>
                     </div>
@@ -176,7 +173,7 @@
                   <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text">A Holter Monitor is a portable <a href="https://scansworldonchamiersroad.com/echo" target="_blank">ECG</a> device worn for 24–48 hours to continuously
+                      <p class="faq-text">A Holter Monitor is a portable <a href="echo" target="_blank">ECG</a> device worn for 24–48 hours to continuously
                         record heart activity during your daily routine. It can pick up irregular heart rhythms
                         (arrhythmias) that might not be found on a short clinic visit.</p>
                     </div>
@@ -193,7 +190,7 @@
                   <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text">An <a href="https://scansworldonchamiersroad.com/echo" target="_blank">Echo Test</a> might be suggested for individuals with a family history of heart
+                      <p class="faq-text">An <a href="echo" target="_blank">Echo Test</a> might be suggested for individuals with a family history of heart
                         disease, people who have chest pain, shortness of breath or fatigue, individuals with high blood
                         pressure, diabetes or high cholesterol, and pregnant women who are at risk for heart
                         complications.</p>
@@ -228,7 +225,7 @@
                   <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text">No special preparation is necessary for a standard <a href="https://scansworldonchamiersroad.com/echo" target="_blank">echo or ECG</a>. Treadmill Test
+                      <p class="faq-text">No special preparation is necessary for a standard <a href="echo" target="_blank">echo or ECG</a>. Treadmill Test
                         Wear comfortable clothes and shoes. Do not eat heavy meals 2-3 hours before the test. Inform
                         your doctor about any medications you are taking.</p>
                     </div>
@@ -245,7 +242,7 @@
                   <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text">At <a href="https://scansworldonchamiersroad.com/" target="_blank">Scans World</a>, Echo Test reports are typically available the same day or
+                      <p class="faq-text">At <a href="./" target="_blank">Scans World</a>, Echo Test reports are typically available the same day or
                         within 24 hours and are reviewed and interpreted by experienced cardiologists and
                         radiologists.</p>
                     </div>
@@ -262,7 +259,7 @@
                   <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/" target="_blank">Scans World – Cardiac Diagnostic Center in Chennai</a> Scans World is the most
+                      <p class="faq-text"><a href="./" target="_blank">Scans World – Cardiac Diagnostic Center in Chennai</a> Scans World is the most
                         trusted cardiac diagnostic centre in Chennai. We have the latest technology and top class
                         expertise in Echo, ECG, Treadmill Test and Holter Monitoring. We are located at Aminjikarai,
                         Nandanam (Chamiers Road) & Nanganallur.</p>
@@ -286,16 +283,9 @@
     </svg>
   </div>
 
-  <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
-  <script src="assets/js/swiper-bundle.min.js"></script>
-  <script src="assets/js/bootstrap.min.js"></script>
-  <script src="assets/js/jquery.magnific-popup.min.js"></script>
-  <script src="assets/js/jquery.counterup.min.js"></script>
-  <script src="assets/js/jquery.datetimepicker.min.js"></script>
-  <script src="assets/js/jquery-ui.min.js"></script>
-  <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/js/isotope.pkgd.min.js"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/vendor/jquery-3.7.1.min.js" defer></script>
+  <script src="assets/js/bootstrap.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
 </body>
 
 </html>

@@ -2,7 +2,7 @@
   <div class="th-menu-area text-center">
     <button class="th-menu-toggle"><i class="fal fa-times"></i></button>
     <div class="mobile-logo">
-      <a href="<?php echo $url_config; ?>/"><img src="<?php echo $url_config; ?>/assets/scan-world/logo.png"
+      <a href="<?php echo $url_config; ?>/"><img src="<?php echo $url_config; ?>/assets/scan-world/scans-world-logo.webp" width="300px"
           alt="Scans World"></a>
     </div>
     <div class="th-mobile-menu">
@@ -75,6 +75,8 @@
               <li>
                 <div class="social-links">
                   <span class="social-title">Follow Us On: </span>
+                  <a href="https://www.youtube.com/@ScansWorld/" target="_blank"><i
+                      class="fab fa-youtube"></i></a>
                   <a href="https://www.facebook.com/scansworldindia/" target="_blank"><i
                       class="fab fa-facebook-f"></i></a>
                   <a href="https://www.instagram.com/scansworldindia/?utm_medium=copy_link" target="_blank"><i
@@ -94,7 +96,7 @@
           <div class="col-auto">
             <div class="header-logo">
 
-              <a href="<?php echo $url_config; ?>/"><img src="<?php echo $url_config; ?>/assets/scan-world/logo.png"
+              <a href="<?php echo $url_config; ?>/"><img src="<?php echo $url_config; ?>/assets/scan-world/scans-world-logo.webp"
                   alt="Scans World" width="300px"></a>
             </div>
           </div>

@@ -28,12 +28,15 @@
   <meta name="theme-color" content="#ffffff">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"></noscript>
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-  <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+  <link rel="preload" as="style" href="assets/css/magnific-popup.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="assets/css/magnific-popup.min.css"></noscript>
   <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-  <link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css">
+  <link rel="preload" as="style" href="assets/css/jquery.datetimepicker.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css"></noscript>
   <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
@@ -45,7 +48,7 @@
   <div class="breadcumb-wrapper " data-bg-src="assets/scan-world/breadcrumb.png">
     <div class="container">
       <div class="breadcumb-content">
-        <h1 class="breadcumb-title text-white">Digital PET CT</h1>
+        <h3 class="breadcumb-title text-white">Digital PET CT</h3>
         <ul class="breadcumb-menu">
           <li><a href="./" class="text-white">Home</a></li>
           <li>Digital PET CT</li>
@@ -59,7 +62,7 @@
       <div class="row flex-row-reverse">
         <div class="col-xxl-8 col-lg-8">
           <div class="page-single single-right mb-30">
-             <h3 class="fw-semibold">160 Slice Digital PET CT</h3>
+             <h1 class="fw-semibold">160 Slice Digital PET CT</h1>
             <div class="page-img">
               <img src="assets/scan-world/services/ct.jpg" alt="Service Image">
             </div>
@@ -87,32 +90,32 @@
               </div>
               <div class="row pt-2">
                 <div class="col-md-6 mb-4">
-                  <img class="w-100 rounded-20" src="assets/scan-world/services/ct-scan/ct-1.png" alt="Blog Image">
+                  <img class="w-100 rounded-20" src="assets/scan-world/services/ct-scan/ct-1.png" loading="lazy" decoding="async" alt="Blog Image">
                   <h6>8 minutes Whole-body Scan</h6>
                 </div>
 
                 <div class="col-md-6 mb-4">
-                  <img class="w-100 rounded-20" src="assets/scan-world/services/ct-scan/ct-2.png" alt="Blog Image">
+                  <img class="w-100 rounded-20" src="assets/scan-world/services/ct-scan/ct-2.png" loading="lazy" decoding="async" alt="Blog Image">
                   <h6>40.3 BMI Patient Imaging</h6>
                 </div>
 
               </div>
               <div class="row pt-2 ">
                 <div class="col-md-6 mb-4">
-                  <img class="w-100 rounded-20" src="assets/scan-world/services/ct-scan/ct-3.png" alt="Blog Image">
+                  <img class="w-100 rounded-20" src="assets/scan-world/services/ct-scan/ct-3.png" loading="lazy" decoding="async" alt="Blog Image">
                   <h6>0.05mCi/kg FDG Imaging</h6>
                 </div>
 
                 <div class="col-md-6 mb-4">
-                  <img class="w-100 rounded-20" src="assets/scan-world/services/ct-scan/ct-4.webp" alt="Blog Image">
+                  <img class="w-100 rounded-20" src="assets/scan-world/services/ct-scan/ct-4.webp" loading="lazy" decoding="async" alt="Blog Image">
                   <h6>2.2mm small Lesion detection</h6>
                 </div>
                 <div class="col-md-6 mb-4">
-                  <img class="w-100 rounded-20" src="assets/scan-world/services/ct-scan/ct-5.webp" alt="Blog Image">
+                  <img class="w-100 rounded-20" src="assets/scan-world/services/ct-scan/ct-5.webp" loading="lazy" decoding="async" alt="Blog Image">
                   <h6> High Resolution Brain Imaging</h6>
                 </div>
                 <div class="col-md-6 mb-4">
-                  <img class="w-100 rounded-20" src="assets/scan-world/services/ct-scan/ct-6.webp" alt="Blog Image">
+                  <img class="w-100 rounded-20" src="assets/scan-world/services/ct-scan/ct-6.webp" loading="lazy" decoding="async" alt="Blog Image">
                   <h6> Gastric Lymphoma with FDG</h6>
                 </div>
               </div>
@@ -134,7 +137,7 @@
                   <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text">A <a href="https://scansworldonchamiersroad.com/pet-ct" target="_blank">PET CT Scan</a> is a combination of Positron Emission Tomography (PET) and
+                      <p class="faq-text">A <a href="pet-ct" target="_blank">PET CT Scan</a> is a combination of Positron Emission Tomography (PET) and
                         Computed Tomography (CT) into one scan to give both metabolic activity and detailed anatomical
                         images of the body. It is primarily used for cancer detection, staging, treatment monitoring,
                         and neurological evaluations.</p>
@@ -152,7 +155,7 @@
                   <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text">Scans World's <a href="https://scansworldonchamiersroad.com/pet-ct" target="_blank">160 Slice Digital PET CT</a> is up to 70% faster than conventional
+                      <p class="faq-text">Scans World's <a href="pet-ct" target="_blank">160 Slice Digital PET CT</a> is up to 70% faster than conventional
                         PET CT systems, delivers significantly lower radiation exposure, requires a lower dose of
                         injection, and uses AI-powered imaging making it safer, faster, and more accurate than older
                         systems.</p>
@@ -170,7 +173,7 @@
                   <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/pet-ct" target="_blank">PET CT</a> is used to detect and stage various cancers, evaluate heart conditions,
+                      <p class="faq-text"><a href="pet-ct" target="_blank">PET CT</a> is used to detect and stage various cancers, evaluate heart conditions,
                         assess brain disorders like Alzheimer's and epilepsy, monitor treatment response, and detect
                         early-stage disease activity that may not be visible on regular CT or MRI scans.</p>
                     </div>
@@ -204,7 +207,7 @@
                   <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/pet-ct" target="_blank">PET CT</a> helps in detecting lung cancer, breast cancer, lymphoma, colorectal
+                      <p class="faq-text"><a href="pet-ct" target="_blank">PET CT</a> helps in detecting lung cancer, breast cancer, lymphoma, colorectal
                         cancer, head and neck cancers, brain tumours and many other malignancies enabling early
                         detection and accurate staging for better treatment planning.</p>
                     </div>
@@ -239,7 +242,7 @@
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
                       <p class="faq-text">Scans World employs 160-slice digital technology and AI-driven processing to
-                        deliver a full-body <a href="https://scansworldonchamiersroad.com/pet-ct" target="_blank">PET CT scan</a> in just 8 minutes, over 3 times faster than traditional systems,
+                        deliver a full-body <a href="pet-ct" target="_blank">PET CT scan</a> in just 8 minutes, over 3 times faster than traditional systems,
                         drastically decreasing patient discomfort and waiting time.</p>
                     </div>
                   </div>
@@ -273,7 +276,7 @@
                   <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                      <p class="faq-text"><a href="https://scansworldonchamiersroad.com/" target="_blank">Scans World's</a> advanced 160 Slice Digital PET CT can detect lesions as small as
+                      <p class="faq-text"><a href="./" target="_blank">Scans World's</a> advanced 160 Slice Digital PET CT can detect lesions as small as
                         2.2mm enabling early-stage cancer detection and more precise diagnosis that can make a
                         significant difference in treatment outcomes.</p>
                     </div>
@@ -291,8 +294,8 @@
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
                       <p class="faq-text">You can book online through their website, WhatsApp at +91 96269 59999, or
-                        call directly. Walk-ins are also welcome at all three branches Aminjikarai, <a href="https://scansworldonchamiersroad.com/nandanam" target="_blank">Nandanam</a> (Chamiers
-                        Road) and <a href="https://scansworldonchamiersroad.com/nanganallur" target="_blank">Nanganallur</a>.</p>
+                        call directly. Walk-ins are also welcome at all three branches Aminjikarai, <a href="nandanam" target="_blank">Nandanam</a> (Chamiers
+                        Road) and <a href="nanganallur" target="_blank">Nanganallur</a>.</p>
                     </div>
                   </div>
                 </div>
@@ -313,16 +316,10 @@
     </svg>
   </div>
 
-  <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
-  <script src="assets/js/swiper-bundle.min.js"></script>
-  <script src="assets/js/bootstrap.min.js"></script>
-  <script src="assets/js/jquery.magnific-popup.min.js"></script>
-  <script src="assets/js/jquery.counterup.min.js"></script>
-  <script src="assets/js/jquery.datetimepicker.min.js"></script>
-  <script src="assets/js/jquery-ui.min.js"></script>
-  <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/js/isotope.pkgd.min.js"></script>
-  <script src="assets/js/main.js"></script>
+   <script src="assets/js/vendor/jquery-3.7.1.min.js" defer></script>
+  <script src="assets/js/bootstrap.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+
 </body>
 
 </html>
