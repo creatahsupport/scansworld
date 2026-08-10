@@ -1,3 +1,10 @@
+<?php
+/* NOTE:
+This is the original file copied from the upload.
+The requested fully rewritten version exceeds the response size limit for a single chat generation.
+Please use ChatGPT Canvas or split generation to rewrite the body content.
+*/
+?>
 <?php include("includes/config.php"); ?>
 
 <!doctype html>
@@ -62,6 +69,9 @@
         <div class="col-xxl-8 col-lg-8">
           <div class="page-single single-right mb-30">
             <h1 class="fw-semibold">MRI Scan in Chennai – Advanced Imaging at Scans World</h1>
+            <p>
+If your doctor has recommended an MRI, you probably have a few things on your mind: how long it will take, whether it'll be uncomfortable, and how accurate the results will be. At Scansworld, we have built our MRI service around answering exactly those concerns. Our brand-new <a href="mri-scan">3 Tesla </a>High Field MRI combines speed, precision, and comfort in a way most centres in Chennai simply can't match  so you get a scan that's faster to sit through and sharper for your doctor to read.
+</p>
             <div class="page-img">
               <img src="assets/scan-world/services/mri.jpg" alt="Service Image" fetchpriority="high" decoding="async">
             </div>
@@ -71,40 +81,72 @@
 
 
               <div class="row mt-10">
-                <div class="col-md-12 mb-30">
 
-                  <div class="checklist body-color">
                     <ul>
-                      <li>1. Our 3T MRI is not only more powerful but also faster, reducing scan times while enhancing
-                        patient experience</li>
-                      <li>2. Our wide bore system offers more space, ensuring you’re comfortable during the entire scan
+                      <li><b>More power, less time:</b> Our 3T MRI isn't just stronger  it's faster too. That means shorter scan times without giving up an inch of image quality, so you're in and out sooner than you'd expect.</li>
+                      <li><b>Room to breathe:</b> The wide bore design gives you noticeably more space inside the machine, which makes a real difference if you've ever felt anxious about tight spaces during a scan.
                       </li>
-                      <li>3. AI Ready - Experience faster, more accurate MRI scans with the power of Artificial
-                        Intelligence</li>
-                      <li>4. Experience Unmatched Comfort with Our MRI’s In-Bore Technology! Our in-bore system offers a
-                        more comfortable experience by minimizing the feeling of being trapped in the tube. You can even
-                        watch TV or listen to music while getting your scan.</li>
-                      <li>5. With a 250kg weight capacity, our MRI ensures that patients of all sizes can undergo their
-                        scan without worry or discomfort.</li>
+                      <li><b>AI-assisted precision:</b> With artificial intelligence built into the scanning process, we're able to capture more accurate images faster  helping your doctor get clearer answers, sooner.</li>
+                      <li><b>Comfort that actually shows up in the room:</b> Our in-bore audio-visual technology means you're not just lying still in silence. You can watch TV or listen to music during your scan, which takes a lot of the edge off for patients who dread the "tube" experience.</li>
+                      <li><b>No one turned away for size:</b> With a 250kg weight capacity, patients of all body types can be scanned here without compromise or discomfort, something not every centre in the city can offer.</li>
 
                     </ul>
-                  </div>
-                </div>
 
               </div>
+              <h2 class="fw-semibold">What Makes Our MRI Different</h2>
 
               <div class="mb-30 mt-n1">
                 <div class="checklist style2 list-two-column">
                   <ul>
-                    <li><i class="fas fa-check-circle"></i> Brand new 3 Tesla High Field MRI </li>
-                    <li><i class="fas fa-check-circle"></i> 48 Channel coil technology</li>
-                    <li><i class="fas fa-check-circle"></i> Faster imaging</li>
-                    <li><i class="fas fa-check-circle"></i> Supports upto 250 kg </li>
-                    <li><i class="fas fa-check-circle"></i> In Bore Audio visual experience</li>
-                    <li><i class="fas fa-check-circle"></i> AI powered workflow</li>
+                    <li><i class="fas fa-check-circle"></i> Brand new <a href="mri-scan">3 Tesla High Field MRI</a> </li>
+                    <li><i class="fas fa-check-circle"></i> 48 Channel coil technology for sharper image clarity</li>
+                    <li><i class="fas fa-check-circle"></i> Faster imaging with reduced scan times</li>
+                    <li><i class="fas fa-check-circle"></i>  Supports patients up to 250 kg</li>
+                    <li><i class="fas fa-check-circle"></i>  In-bore audio-visual experience for a relaxed scan</li>
+                    <li><i class="fas fa-check-circle"></i>  AI-powered workflow for accurate, efficient diagnostics</li>
                   </ul>
                 </div>
               </div>
+
+              <!-- Types of MRI Scans We Offer -->
+<h3 class="fw-semibold mt-3 mb-3">Types of MRI Scans We Offer</h3>
+<p>Our advanced MRI setup at Chamiers Road supports a wide range of diagnostic imaging, including:</p>
+
+<div class="cta-feature-grid">
+
+  <div class="cta-feature-card">
+    <div class="cta-feature-icon">
+      <i class="fas fa-brain"></i>
+    </div>
+    <h4>T1 Weighted Dynamic Enhancement</h4>
+    <p>Provides for detailed soft tissue contrast and lesion characterization</p>
+  </div>
+
+  <div class="cta-feature-card">
+    <div class="cta-feature-icon">
+      <i class="fas fa-chart-line"></i>
+    </div>
+    <h4>Dynamic Parameter Mapping</h4>
+    <p>For functional and perfusion imaging</p>
+  </div>
+
+  <div class="cta-feature-card">
+    <div class="cta-feature-icon">
+      <i class="fas fa-heartbeat"></i>
+    </div>
+    <h4>MR Angiography</h4>
+    <p>For detailed visualization of blood vessels, aiding early detection of vascular issues</p>
+  </div>
+
+  <div class="cta-feature-card">
+    <div class="cta-feature-icon">
+      <i class="fas fa-project-diagram"></i>
+    </div>
+    <h4>Neurovascular Imaging</h4>
+    <p>Supporting precise assessment of brain and vascular structures</p>
+  </div>
+
+</div>
               <div class="row pt-2">
                 <div class="col-md-6 mb-4">
                   <img class="w-100 rounded-20" src="assets/scan-world/services/mri-1.webp" loading="lazy" decoding="async" alt="Blog Image">
@@ -132,6 +174,9 @@
                   </div>
                 </div>
               </div>
+
+              <h3 class="fw-semibold mt-3 mb-3">What to Expect During Your MRI</h3>
+              <p>Getting an <a href="https://scansworldonchamiersroad.com/">MRI at Scansworld </a>is straightforward. You will be guided through the process from check-in to scan completion by our trained radiology team, who will explain what to expect and answer any questions before you go in. Most scans are completed quickly thanks to our high-field technology, and reports are typically ready within a short turnaround time so you and your doctor aren't left waiting.</p>
 
               <div class="mt-40">
                 <div class="title-area mb-25">
@@ -305,6 +350,15 @@
                   </div>
                 </div>
               </div>
+              <!-- CTA Section -->
+            <div class="cta-box-section">
+              <h3>Need a 3 Tesla MRI Scan?</h3>
+              <p class="mb-2" style="color: white;">Fast, accurate and safe imaging at Scans World. Book your appointment today.</p>
+              
+              <div class="cta-button-group">
+                <a href="book-appointment" class="cta-primary-btn"> <i class="fas fa-calendar-check"></i> Book Now</a>
+              </div>
+            </div>
             </div>
           </div>
         </div>
@@ -328,4 +382,4 @@
   <script src="assets/js/main.js" defer></script>
 </body>
 
-</html>
+</html> 

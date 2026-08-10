@@ -65,6 +65,7 @@
         <div class="col-xxl-8 col-lg-8">
           <div class="page-single single-right mb-30"> 
             <h1 class="fw-semibold">160 Slice Cardiac CT Scan in Chennai – Advanced Heart Imaging</h1>
+            <p>When it comes to your heart, the clarity of the scan can make all the difference in catching a problem early. At Scansworld, our <a href="160-slice-cardiac-ct">160 slice Cardiac CT</a> scanner is built specifically to capture the kind of detail cardiologists rely on  sharper images, faster scans, and results that support quicker, more confident diagnosis.</p>
             <div class="page-img">
               <img src="assets/scan-world/160-slice-cardiac-ct.jpg" alt="Service Image" fetchpriority="high" decoding="async"
                 style="height: 600px; width: 800px; object-fit: cover;">
@@ -72,16 +73,17 @@
             <div class="page-content">
              <h2 class="fw-semibold">Why Choose Scans World Cardiac CT Scan Services?</h2>
 
-              <p>1. Clearer Heart Images with Higher Slice Count: </p>
-              <p>Our 160-slice Coronary CT scanner captures highly detailed, high-resolution images of your heart and blood vessels, helping your doctor see even tiny blockages with great accuracy.</p>
-              <p>2.Faster Scanning, Less Waiting: </p>
-              <p>Thanks to advanced technology, the 160-slice CT completes the heart scan quickly, reducing the time you spend in the machine while providing fast and reliable results.</p>
-              <p>3.Advanced Technology for Better Diagnosis:</p>
-              <p>This state-of-the-art cardiac CT system ensures precise imaging of coronary arteries, supporting earlier detection and better management of heart conditions.</p>
-
-
+              <p>Clearer heart images with higher slice count. Our <a href="160-slice-cardiac-ct">160 slice Coronary CT</a> scanner captures highly detailed, high-resolution images of your heart and blood vessels helping your doctor spot even the smallest blockages with real accuracy.</p>
+              <p>Faster scanning, less waiting. Thanks to advanced technology the 160 slice CT completes your heart scan quickly cutting down the time you spend in the machine while still delivering fast, reliable results.</p>
+              <p>Advanced technology for better diagnosis. This advanced cardiac CT system, helps doctors detect and manage heart conditions sooner by providing accurate images of your coronary arteries.</p>
             </div>
-            
+            <h2 class="fw-semibold">Who Should Consider a Cardiac CT Scan</h2>
+            <p>Your doctor may recommend a <a href="160-slice-cardiac-ct">160 Slice Cardiac CT</a> scan if you have chest pain risk factors for heart disease a family history of coronary artery issues or if they need a clear look at your coronary arteries before deciding on further treatment. It is also commonly used to evaluate blockages calcium buildup and overall heart and vessel health.</p>
+
+            <h2 class="fw-semibold">What to Expect During Your Scan</h2>
+            <p>A <a href="https://scansworldonchamiersroad.com">Cardiac CT scan at Scansworld</a> is quick and non-invasive. Our team will walk you through any preparation needed, guide you through the scan itself and ensure your comfort throughout. Thanks to the speed of our 160 slice system, you will spend less time on the table without any compromise on image quality  and your report is reviewed promptly so your doctor can act on it without delay.</p>
+
+
             <div class="page-img">
               <img src="assets/scan-world/160-slice.webp" loading="lazy" decoding="async" alt="Service Image"
                 style="height: auto; width: 800px; object-fit: cover;">
@@ -258,6 +260,15 @@
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+            <!-- CTA Section -->
+            <div class="cta-box-section">
+              <h3>Need a 160 Slice Cardiac CT Scan ?</h3>
+              <p class="mb-2" style="color: white;">Fast, accurate and safe imaging at Scans World. Book your appointment today.</p>
+              
+              <div class="cta-button-group">
+                <a href="book-appointment" class="cta-primary-btn"> <i class="fas fa-calendar-check"></i> Book Now</a>
               </div>
             </div>
           </div>

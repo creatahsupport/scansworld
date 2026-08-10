@@ -57,7 +57,7 @@
           <div class="page-single single-right mb-30">
             <h1 class="fw-semibold">Digital X-ray</h1>
             <div class="page-img">
-    <img src="assets/scan-world/xray_service.jpg"
+    <img src="assets/scan-world/digital-xray.jpg"
          alt="Service Image"
          class="xray-img">
 </div>

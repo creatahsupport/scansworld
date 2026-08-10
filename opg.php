@@ -66,8 +66,10 @@
             </div> -->
             <div class="page-content">
              
-              <p>OPG  (Orthopantomogram) a panoramic dental X-ray that provides a comprehensive image of your teeth, jaws, and surrounding structures. </p>
-             <p>This essential diagnostic tool helps in the early detection of dental and jaw-related issues such as tooth decay, impacted teeth, jawbone abnormalities, dental infections, and more.</p>
+              <p>An <a href="opg">OPG</a>, or Orthopantomogram, is a panoramic dental X-ray that captures a single, comprehensive image of your teeth, jaws and the surrounding structures  all in one scan. Instead of piecing together several individual X-rays, your dentist gets the full picture at once, which makes spotting problems early a lot easier than it would otherwise be.
+</p>
+              <p>This is often the test that catches things before they become painful. Tooth decay, impacted teeth, jawbone abnormalities, dental infections  a lot of these issues stay hidden until they're further along, and an OPG is what brings them into view while there's still time to act on them.
+</p>
               <h3 class="h5 mt-1">Why Choose OPG ?</h3>
              
               <div class="checklist mb-25">
@@ -80,7 +82,12 @@
                 </ul>
               </div>
               <p>Ensure your dental health is in good hands with our advanced OPG services.</p>
-         
+              <p>What makes an <a href="opg">OPG</a> especially useful is how much ground it covers without asking much of the patient in return  no discomfort, very little radiation, and a scan that's done in minutes. Whether your dentist is planning a procedure, checking on wisdom teeth, or just doing a routine evaluation, this single image usually tells them what they need to know.</p>
+         <h3 class="h5 mt-1">Who Should Consider an OPG</h3>
+         Your dentist may recommend an <a href="opg">OPG </a>if you are due for a routine dental check-up, being evaluated for wisdom teeth or impacted teeth, planning orthodontic treatment, or preparing for any kind of dental surgery. It's also useful for detecting issues that aren't visible during a regular dental exam, like early jawbone changes or infections tucked away beneath the gumline.
+
+         <h3 class="h5 mt-1">What to Expect During Your Scan</h3>
+         There's really nothing to prepare for. You'll be asked to stand or sit in position for a few moments while the machine captures a full panoramic image no discomfort, no waiting around. Once the scan is done, your report is reviewed promptly and shared with your dentist, so there's no unnecessary delay between the X-ray and the next steps in your treatment.
             </div>
 
             <div class="mt-40">
@@ -259,6 +266,15 @@
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+            <!-- CTA Section -->
+            <div class="cta-box-section">
+              <h3>Need a Orthopantomogram Scan?</h3>
+              <p class="mb-2" style="color: white;">Fast, accurate and safe imaging at Scans World. Book your appointment today.</p>
+              
+              <div class="cta-button-group">
+                <a href="book-appointment" class="cta-primary-btn"> <i class="fas fa-calendar-check"></i> Book Now</a>
               </div>
             </div>
           </div>

@@ -56,13 +56,15 @@
       <div class="row flex-row-reverse">
         <div class="col-xxl-8 col-lg-8">
           <div class="page-single single-right mb-30">
+            <h1 class="h5 mt-1">Color Doppler Ultrasound</h1>
+            <p>If your doctor has asked for a <a href="color-doppler">Color Doppler</a> test, it is usually to get a closer look at how blood is actually moving through your body  not just what your organs look like, but how well they're functioning in real time. At Scansworld we use the Resona I9 <a href="color-doppler">Ultrasound</a> system, one of the most advanced diagnostic tools available today to give you results that are detailed, accurate and fast.</p>
           <div class="page-img">
               <img src="assets/scan-world/colour-doppler.webp" alt="Service Image"
                 style="height: 600px; width: 800px; object-fit: cover;">
             </div>
             <div class="page-content">
-              <h1 class="h5 mt-1">What is Color Doppler Ultrasound? </h1>
-              <p>Color Doppler is a non-invasive diagnostic tool that allows us to assess blood flow, tissue movement, and vascular health in real time. This is crucial for detecting conditions such as:</p>
+             <h3 class="h5 mt-1">What is Color Doppler Ultrasound?</h3>
+              <p>Color Doppler is a non-invasive diagnostic tool that lets us assess blood flow tissue movement, and vascular health in real time. It is especially useful for detecting conditions such as:</p>
               <div class="mb-30 mt-n1">
                 <div class="checklist style2 list-two-column">
                   <ul>
@@ -74,17 +76,23 @@
                   </ul>
                 </div>
               </div>
-              <p>At Scans world , we are proud to offer the Resona I9 Ultrasound, one of the most advanced diagnostic tools available. With its state-of-the-art Color Doppler technology, we provide highly detailed and accurate imaging to help detect and monitor various health conditions.</p>
+              <p>At Scans world , we are proud to offer the Resona I9 <a href="color-doppler">Ultrasound</a>, one of the most advanced diagnostic tools available. With its state-of-the-art Color Doppler technology, we provide highly detailed and accurate imaging to help detect and monitor various health conditions.</p>
               <h3 class="h5 mt-1">Benefits of Color Doppler Ultrasound: </h3>
               <div class="checklist mb-25">
                 <ul>
                   <li><i class="fas fa-check-circle"></i> Non-invasive & Safe: No radiation exposure, making it safe for all patients, including pregnant women.</li>
-                  <li><i class="fas fa-check-circle"></i> Real-time Imaging: Get accurate, detailed, and immediate results for faster diagnosis.</li>
+                  <li><i class="fas fa-check-circle"></i> Real-time Imaging: Get accurate, detailed, and immediate results so diagnosis doesn't get delayed.</li>
                   <li><i class="fas fa-check-circle"></i> Comprehensive Health Monitoring: From heart health to pregnancy care, Color Doppler gives us a complete picture of your vascular system.</li>
                 </ul>
               </div>
 
             </div>
+
+            <h3 class="h5 mt-1">Who Should Consider a Color Doppler Scan</h3>
+            <p>Your doctor may recommend this scan if you are experiencing symptoms like leg swelling, unexplained pain varicose veins or if you are being monitored for heart or vascular conditions. It is also commonly used during pregnancy to check blood flow to the baby and for patients being evaluated for blood clots or circulation issues.</p>
+
+            <h3 class="h5 mt-1">What to Expect</h3>
+            <p>A <a href="color-doppler">Color Doppler scan</a> at Scansworld is quick, painless, and requires no special preparation in most cases. Our trained sonographers guide you through the process and your results are reviewed and reported promptly, so your doctor has what they need without unnecessary delay.</p>
 
             <div class="mt-40">
               <div class="title-area mb-25">
@@ -260,6 +268,15 @@
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+            <!-- CTA Section -->
+            <div class="cta-box-section">
+              <h3>Need a Color Doppler Ultrasound Scan?</h3>
+              <p class="mb-2" style="color: white;">Fast, accurate and safe imaging at Scans World. Book your appointment today.</p>
+              
+              <div class="cta-button-group">
+                <a href="book-appointment" class="cta-primary-btn"> <i class="fas fa-calendar-check"></i> Book Now</a>
               </div>
             </div>
           </div>

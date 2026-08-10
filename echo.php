@@ -56,15 +56,16 @@
       <div class="row flex-row-reverse">
         <div class="col-xxl-8 col-lg-8">
           <div class="page-single single-right mb-30">
+            <h1 class="h5 mt-1">Prioritize Your Heart Health with an Echocardiogram at Scans world </h1>
+              <p>Your heart deserves the best care, and sometimes the clearest way to understand what's going on with it is to actually see it in motion. An <a href="echo">Echocardiogram</a> is a non-invasive diagnostic test that does exactly that  it gives your doctor detailed, real-time images of your heart, so problems can be caught early and your treatment plan can be shaped around what's actually happening, not just what your symptoms suggest.</p>
           <div class="page-img">
               <img src="assets/scan-world/echo.webp" alt="Service Image"
                 style="height: 600px; width: 800px; object-fit: cover;">
             </div>
             <div class="page-content">
-              <h1 class="h5 mt-1">Prioritize Your Heart Health with an Echocardiogram at Scans world </h1>
-              <p>Your heart deserves the best care.  Echocardiogram, an advanced, non-invasive diagnostic test that provides detailed images of your heart, allowing us to detect potential issues early and guide your treatment plan effectively.</p>
+              
               <h3 class="h5 mt-1">What is an Echocardiogram? </h3>
-              <p>An Echocardiogram (or echo) uses high-frequency sound waves to produce real-time images of the heart’s structure and function. This valuable test helps us assess your heart’s health and diagnose a wide range of cardiovascular conditions, including:</p>
+              <p>An <a href="echo" target="_blank">Echocardiogram</a> or echo as it is often called, uses high-frequency sound waves to create real-time images of your heart's structure and how it's functioning. It is a test that quietly does a lot  helping assess a wide range of cardiovascular conditions including:</p>
               <div class="mb-30 mt-n1">
                 <div class="checklist style2 list-two-column">
                   <ul>
@@ -77,7 +78,9 @@
                   </ul>
                 </div>
               </div>
+              <p>What makes this test valuable isn't just what it detects but how much it reveals without ever needing to be invasive. For a lot of patients, an echo is the test that finally puts a clear picture behind symptoms that have been hard to explain.</p>
               <h3 class="h5 mt-1">Who Should Consider an Echocardiogram? </h3>
+              <p>You don't need to already have a heart condition for this test to matter. Doctors often recommend an echo for:</p>
               <div class="checklist mb-25">
                 <ul>
                   <li><i class="fas fa-check-circle"></i> Individuals with a family history of heart disease</li>
@@ -87,8 +90,11 @@
                   <li><i class="fas fa-check-circle"></i> Pregnant women at risk of heart complications</li>
                 </ul>
               </div>
-
             </div>
+            <p>If any of this sounds familiar a lingering tiredness that doesn't add up, breathlessness that shows up too easily, or just a family history that's been on your mind an echocardiogram is often the test that brings clarity, without putting you through anything invasive to get there.</p>
+            <h3 class="h5 mt-1">What to Expect During Your Scan</h3>
+            <p>There's nothing to dread about an <a href="echo">echocardiogram</a>. It is a painless, non-invasive test and our team makes sure you are comfortable throughout, explaining each step so nothing feels unfamiliar. Once your scan is complete your report is reviewed promptly and shared with your doctor so there's no unnecessary wait between the test and the answers you actually need.</p>
+
 
             <div class="mt-40">
               <div class="title-area mb-25">
@@ -266,6 +272,15 @@
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+            <!-- CTA Section -->
+            <div class="cta-box-section">
+              <h3>Need a Echocardiogram Scan?</h3>
+              <p class="mb-2" style="color: white;">Fast, accurate and safe imaging at Scans World. Book your appointment today.</p>
+              
+              <div class="cta-button-group">
+                <a href="book-appointment" class="cta-primary-btn"> <i class="fas fa-calendar-check"></i> Book Now</a>
               </div>
             </div>
           </div>

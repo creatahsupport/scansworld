@@ -60,6 +60,9 @@
           <div class="page-single single-right mb-30">
           
             <h1 class="fw-semibold">Nuclear Scans / Gamma camera</h1>
+            <p>Some conditions don't show up clearly on a regular scan  they need imaging that looks at how organs and tissues are actually functioning, not just what they look like structurally. That is where nuclear scans come in. Our <a href="gamma-camera">Gamma Camera / SPECT CT</a> combines cutting-edge technology to deliver superior high-resolution images with faster results, giving doctors the kind of clarity that is hard to get any other way.
+</p><p>From detecting cancer and heart disease to providing clear insight into neurological conditions this advanced system offers a level of precision that makes a real difference in diagnosis  especially for conditions that are otherwise difficult to catch early.
+</p>
             <div class="page-img">
               <img src="assets/scan-world/gamma-camera.webp" alt="Service Image"
                 style="height: 400px; width: 800px; object-fit: cover;">
@@ -68,9 +71,27 @@
               <p>Our Gamma Camera / SPECT CT combines cutting-edge technology to deliver superior, high-resolution
                 images with faster results. From detecting cancer and heart disease to providing clear insights into
                 neurological conditions, our advanced system offers unparalleled precision</p>
-
-
             </div>
+            <h3 class="h5 mt-1">What Nuclear Scans Can Show</h3>
+             <p>A <a href="gamma-camera">Gamma Camera / SPECT CT</a> scan involves the injection of a small amount of radioactive tracer that shows how organs and tissues are functioning at a cellular level.This makes it particularly useful for:</p>
+              <div class="checklist mb-25">
+                <ul>
+                  <li><i class="fas fa-check-circle"></i> Cancer detection and monitoring of treatment response</li>
+                  <li><i class="fas fa-check-circle"></i> Assess heart disease and blood flow to heart muscle</li>
+                  <li><i class="fas fa-check-circle"></i> Assess neurological conditions including brain function and activity</li>
+                  <li><i class="fas fa-check-circle"></i> Identify bone infections, fractures or abnormalities not visible on standard X-rays.</li>
+                  <li><i class="fas fa-check-circle"></i> Monitor thyroid function and related disorders</li>
+             
+                </ul>
+              </div>
+              <h3 class="h5 mt-1">Why this scan is important</h3>
+              <p>What makes a nuclear scan different is that it doesn't just show structure it shows function . Two organs can look identical on a regular CT or <a href="mri-scan">MRI</a>, but a nuclear scan can reveal that one isn't working the way it should. That functional insight is often what helps doctors catch problems early, before they show up as visible damage on other imaging.</p>
+
+              <h3 class="h5 mt-1">Who Should Consider a Nuclear Scan</h3>
+              <p>Your doctor may recommend a <a href="gamma-camera">Gamma Camera / SPECT CT</a> scan if you are being evaluated for cancer, monitored during cancer treatment, assessed for heart disease, or investigated for neurological symptoms that haven't been explained by other tests. It's also commonly used for bone pain that doesn't show up clearly elsewhere, or for thyroid conditions that need a closer look.</p>
+
+              <h3 class="h5 mt-1">What to Expect During Your Scan</h3>
+              <p>Our team walks you through the process from start to finish including any preparation needed before your tracer injection and scan. The real procedure is safe and well tolerated and our experienced technicians will make sure your comfort at all times. Once the scan is complete, your report is quickly reviewed and sent to your doctor so you don’t have to wait any longer than you need to get your answers.</p>
 
             <div class="mt-40">
               <div class="title-area mb-25">
@@ -251,6 +272,15 @@
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+            <!-- CTA Section -->
+            <div class="cta-box-section">
+              <h3>Need a Nuclear Scans?</h3>
+              <p class="mb-2" style="color: white;">Fast, accurate and safe imaging at Scans World. Book your appointment today.</p>
+              
+              <div class="cta-button-group">
+                <a href="book-appointment" class="cta-primary-btn"> <i class="fas fa-calendar-check"></i> Book Now</a>
               </div>
             </div>
           </div>

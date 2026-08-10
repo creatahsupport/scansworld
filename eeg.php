@@ -55,10 +55,12 @@
         <div class="col-xxl-8 col-lg-8">
           <div class="page-single single-right mb-30">
             <h1 class="fw-semibold">EEG, EMG, and NCS</h1>
+            <p>When something feels off with your nerves or muscles  a tingling that just won't go away, sudden weakness or seizures that need real answers  the frustrating part is that you usually can't see what is happening underneath. That's exactly where <a href="eeg">EEG, EMG and NCS</a> testing come in. At Scansworld, we offer all three under one roof: EEG (Electroencephalogram), EMG (Electromyography), and NCS (Nerve Conduction Studies), giving you and your doctor crucial insight into how your nervous system and muscles are actually functioning.</p>
             <div class="page-img">
               <img src="assets/scan-world/ncs-service.webp" alt="Service Image"
                 style="height: 600px; width: 800px; object-fit: cover;">
             </div>
+            <p>These are not just routine checks tucked away in a lab report. For a lot of patients, these three tests are what finally connect the dots between vague symptoms and a real diagnosis, and that clarity is often what lets treatment actually start working the way it should.</p>
             <div class="page-content">
              
               <p>We offer advanced EEG (Electroencephalogram), EMG (Electromyography), and NCS (Nerve Conduction Studies) to provide crucial insights into your nervous system and muscle health. </p>
@@ -66,13 +68,18 @@
               <h3 class="h5 mt-1">Our Services Include:</h3>
               <div class="checklist mb-25">
                 <ul>
-                  <li><i class="fas fa-check-circle"></i> EEG (Electroencephalogram): EEG measures the electrical activity in your brain useful in detecting abnormal brain function and aiding in effective treatment planning .It is used to diagnose conditions like  epilepsy, seizure disorders, sleep disorders, and brain injuries.</li>
-                  <li><i class="fas fa-check-circle"></i> EMG (Electromyography)EMG tests the electrical activity in your muscles and nerves, helping diagnose muscle disorders, nerve damage, neuromuscular diseases, and conditions like carpal tunnel syndrome. It provides important data for assessing the health of your muscles and nerves.</li>
-                  <li><i class="fas fa-check-circle"></i> NCS (Nerve Conduction Studies): NCS measures how well electrical impulses travel through your nerves, helping diagnose nerve damage, neuropathy, and muscle weakness. It’s particularly useful for conditions like diabetic neuropathy and peripheral nerve damage.</li>             
+                  <li><i class="fas fa-check-circle"></i> An EEG works by picking up the electrical activity happening in your brain  patterns that point toward things like epilepsy, seizure disorders, sleep issues, or the lingering effects of a brain injury. For neurologists, it's often the difference between treating symptoms blindly and actually understanding what's causing them, which is why it plays such a central role in shaping the right treatment plan.</li>
+                  <li><i class="fas fa-check-circle"></i> An EMG looks a little further out, at your muscles and the nerves that control them. If you've been living with unexplained muscle weakness, nerve damage, or something like carpal tunnel syndrome, this test helps pinpoint exactly where the problem is coming from. It's often the missing piece that turns "something's wrong" into "here's what's wrong, and here's what we do about it."</li>
+                  <li><i class="fas fa-check-circle"></i> NCS takes a slightly different angle. It checks how well electrical signals are actually traveling along your nerves, which is especially useful for people managing diabetic neuropathy or peripheral nerve damage conditions where catching a slowdown early can make a real difference down the line.</li>             
                 </ul>
-              </div>
-              
+              </div>             
             </div>
+
+            <h3 class="h5 mt-1">When to Get Tested and What to Expect </h3>
+            <p>If you have been having seizures, unexplained numbness, muscle weakness, or chronic tingling in your hands and feet or you're managing something like diabetes that puts your nerves at risk these are usually the tests your doctor turns to next. Instead of piecing symptoms together from the outside, <a href="eeg">EEG, EMG, and NCS </a> let them see what's actually going on beneath the surface.
+</p><p>There's nothing intimidating about the visit itself, even though the equipment might look a little unfamiliar at first glance. Our technicians walk you through every step, explain what you will feel (and what you won't), and make sure you're comfortable the whole way through. And once your test is done, we don't sit on the results your report gets reviewed and passed along to your doctor quickly, because we know you're not looking for more waiting you are looking for answers.
+</p><p>If your doctor has asked for an <a href="eeg"> EEG, EMG, or NCS,</a> you can get it done right here at Scansworld with experienced hands, reliable equipment, and reports you and your doctor can actually trust.</p>
+
 
             <div class="mt-40">
               <div class="title-area mb-25">
@@ -250,6 +257,15 @@
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+            <!-- CTA Section -->
+            <div class="cta-box-section">
+              <h3>Need a EEG, EMG, and NCS Scan ?</h3>
+              <p class="mb-2" style="color: white;">Fast, accurate and safe imaging at Scans World. Book your appointment today.</p>
+              
+              <div class="cta-button-group">
+                <a href="book-appointment" class="cta-primary-btn"> <i class="fas fa-calendar-check"></i> Book Now</a>
               </div>
             </div>
           </div>
