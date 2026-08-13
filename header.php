@@ -77,9 +77,9 @@
                   <span class="social-title">Follow Us On: </span>
                   <a href="https://www.youtube.com/@ScansWorld/" target="_blank"><i
                       class="fab fa-youtube"></i></a>
-                  <a href="https://www.facebook.com/scansworldindia/" target="_blank"><i
+                  <a href="https://www.facebook.com/scansworld.official" target="_blank"><i
                       class="fab fa-facebook-f"></i></a>
-                  <a href="https://www.instagram.com/scansworldindia/?utm_medium=copy_link" target="_blank"><i
+                  <a href="https://www.instagram.com/scansworldofficial" target="_blank"><i
                       class="fab fa-instagram"></i></a>
                 </div>
               </li>
