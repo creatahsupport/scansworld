@@ -141,52 +141,52 @@ Scans World Nandanam delivers expert imaging. Accurate reports. Trusted for 15+ 
 
  
      <!-- Existing Services Section (unchanged dynamic) -->
-    <section class="overflow-hidden bg-smoke space" id="service-sec">
+     <section class="overflow-hidden bg-smoke space" id="service-sec">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-6 col-md-8">
                     <div class="title-area text-center">
-                        <span class="sub-title"><img src="assets/scan-world/icon.webp" alt="Icon">Our Services</span>
+                        <span class="sub-title"><img src="assets/scan-world/icon.webp" loading="lazy" decoding="async" alt="Icon">Our Services</span>
                         <h2 class="sec-title">Scans & Blood Tests</h2>
                     </div>
                 </div>
             </div>
-            <div class="row gy-4 justify-content-center">
+             <div class="row gy-4 justify-content-center">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-3 col-sm-6 col-12"><a href="mri-scan"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/wine-barrel.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">MRI Scan </h3></div></div></a></div>
-                        <div class="col-md-3 col-sm-6 col-12"><a href="ct-scan"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/ct-scan.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">PET CT</h3></div></div></a></div>
-                        <div class="col-md-3 col-sm-6 col-12"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/heart-attack.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Cardiac CT</h3></div></div></div>
-                        <div class="col-md-3 col-sm-6 col-12"><a href="#"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/ct-scan.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Nuclear Scans</h3></div></div></a></div>
+                        <div class="col-md-3 col-sm-6 col-12"><a href="mri-scan"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/wine-barrel.png" loading="lazy" decoding="async" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">MRI Scan </h3></div></div></a></div>
+                        <div class="col-md-3 col-sm-6 col-12"><a href="pet-ct"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/ct-scan.png" loading="lazy" decoding="async" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">PET CT</h3></div></div></a></div>
+                        <div class="col-md-3 col-sm-6 col-12"><a href="160-slice-cardiac-ct"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/heart-attack.png" loading="lazy" decoding="async" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Cardiac CT</h3></div></div></a></div>
+                        <div class="col-md-3 col-sm-6 col-12"><a href="gamma-camera"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/ct-scan.png" loading="lazy" decoding="async" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Nuclear Scans</h3></div></div></a></div>
                     </div>
                     <div class="row">
-                        <div class="col-md-3 col-sm-6 col-12"><a href="ct-scan"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/brain-imaging.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title"> CT Scan (Multislice)</h3></div></div></a></div>
-                        <div class="col-md-3 col-sm-6 col-12"><a href="digital-mammography"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/mammography.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Digital Mammography</h3></div></div></a></div>
-                        <div class="col-md-3 col-sm-6 col-12"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/radiotherapy.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Fibro Scan</h3></div></div></div>
-                        <div class="col-md-3 col-sm-6 col-12"><a href="echo"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/monitor.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">ECHO</h3></div></div></a></div>
+                        <div class="col-md-3 col-sm-6 col-12"><a href="multislice-ct-scan"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/brain-imaging.png" loading="lazy" decoding="async" alt="icon"></div><div class="media-body text-start"><h3 class="box-title"> CT Scan (Multislice)</h3></div></div></a></div>
+                        <div class="col-md-3 col-sm-6 col-12"><a href="digital-mammography"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/mammography.png" loading="lazy" decoding="async" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Digital Mammography</h3></div></div></a></div>
+                        <div class="col-md-3 col-sm-6 col-12"><a href="color-doppler"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/radiotherapy.png" loading="lazy" decoding="async" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Fibro Scan</h3></div></div></a></div>
+                        <div class="col-md-3 col-sm-6 col-12"><a href="echo"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/monitor.png" loading="lazy" decoding="async" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">ECHO</h3></div></div></a></div>
                     </div>
                     <div class="row">
-                        <div class="col-md-3 col-sm-6 col-12"><a href="eeg"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/eeg.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">EEG / EMG / NCS / PFT</h3></div></div></a></div>
-                        <div class="col-md-3 col-sm-6 col-12"><a href="dexa"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/bone.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">DEXA</h3></div></div></a></div>
-                        <div class="col-md-3 col-sm-6 col-12"><a href="digital-xray"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/clinic.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Digital X-Ray</h3></div></div></a></div>
-                        <div class="col-md-3 col-sm-6 col-12"><a href="opg"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/show.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">OPG</h3></div></div></a></div>
+                        <div class="col-md-3 col-sm-6 col-12"><a href="eeg"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/eeg.png" loading="lazy" decoding="async" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">EEG / EMG / NCS / PFT</h3></div></div></a></div>
+                        <div class="col-md-3 col-sm-6 col-12"><a href="dexa"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/bone.png" loading="lazy" decoding="async" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">DEXA</h3></div></div></a></div>
+                        <div class="col-md-3 col-sm-6 col-12"><a href="digital-xray"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/clinic.png" loading="lazy" decoding="async" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Digital X-Ray</h3></div></div></a></div>
+                        <div class="col-md-3 col-sm-6 col-12"><a href="opg"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/show.png" loading="lazy" decoding="async" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">OPG</h3></div></div></a></div>
                     </div>
                     <div class="row">
-                        <div class="col-md-3 col-sm-6 col-12"><a href="colonoscopy-and-endoscopy"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/endoscopy.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Endoscopy / Colonoscopy</h3></div></div></a></div>
-                        <div class="col-md-3 col-sm-6 col-12"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/biopsy.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Image-guided Biopsy / FNAC</h3></div></div></div>
-                        <div class="col-md-3 col-sm-6 col-12"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/measuring-device.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Automated Laboratory</h3></div></div></div>
-                        <div class="col-md-3 col-sm-6 col-12"><a href="master-health-check-packages"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/stethoscope.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Master Health Packages</h3></div></div></a></div>
+                        <div class="col-md-3 col-sm-6 col-12"><a href="colonoscopy-and-endoscopy"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/endoscopy.png" loading="lazy" decoding="async" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Endoscopy / Colonoscopy</h3></div></div></a></div>
+                        <div class="col-md-3 col-sm-6 col-12"><a href="fnac"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/biopsy.png" loading="lazy" decoding="async" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Image-guided Biopsy / FNAC</h3></div></div></a></div>
+                        <div class="col-md-3 col-sm-6 col-12"><a href="automated-laboratory"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/measuring-device.png" loading="lazy" decoding="async" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Automated Laboratory</h3></div></div></a></div>
+                        <div class="col-md-3 col-sm-6 col-12"><a href="master-health-check-packages"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/stethoscope.png" loading="lazy" decoding="async" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Master Health Packages</h3></div></div></a></div>
                     </div>
                     <div class="row">
-                        <div class="col-md-3 col-sm-6 col-12"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/eeg.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Coronary Angiogram</h3></div></div></a></div>
-                        <div class="col-md-3 col-sm-6 col-12"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/clinic.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Treadmill</h3></div></div></div>
-                        <div class="col-md-3 col-sm-6 col-12"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/measuring-device.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Holter</h3></div></div></div>
-                        <div class="col-md-3 col-sm-6 col-12"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/bone.png" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Bone Densitomery</h3></div></div></a></div>
+                        <div class="col-md-3 col-sm-6 col-12"><a href="160-slice-cardiac-ct"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/eeg.png" loading="lazy" decoding="async" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Coronary Angiogram</h3></div></div></a></div>
+                        <div class="col-md-3 col-sm-6 col-12"><a href="echo"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/clinic.png" loading="lazy" decoding="async" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Treadmill</h3></div></div></a></div>
+                        <div class="col-md-3 col-sm-6 col-12"><a href="echo"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/measuring-device.png" loading="lazy" decoding="async" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Holter</h3></div></div></a></div>
+                        <div class="col-md-3 col-sm-6 col-12"><a href="dexa"><div class="feature-box text-center"><div class="box-icon"><img src="assets/scan-world/service-icon/bone.png" loading="lazy" decoding="async" alt="icon"></div><div class="media-body text-start"><h3 class="box-title">Bone Densitomery</h3></div></div></a></div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </section>  
         <!-- Meet Our Experts (dynamic unchanged) -->
     <section class="space">
         <div class="container">
