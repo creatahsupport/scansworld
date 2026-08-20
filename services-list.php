@@ -10,6 +10,12 @@ $current_page = basename($_SERVER['REQUEST_URI'], ".php"); // Get current page n
                 <li class="<?= ($current_page == 'mri-scan') ? 'active' : ''; ?>">
                     <a href="mri-scan">3 Tesla MRI</a>
                 </li>
+                <li class="<?= ($current_page == 'open-mri-scan') ? 'active' : ''; ?>">
+                    <a href="open-mri-scan">Open MRI</a>
+                </li>
+                <li class="<?= ($current_page == 'cardiac-mri-scan') ? 'active' : ''; ?>">
+                    <a href="cardiac-mri-scan">Cardiac MRI</a>
+                </li>
                 <li class="<?= ($current_page == 'pet-ct') ? 'active' : ''; ?>">
                     <a href="pet-ct">160 Slice Digital PET CT</a>
                 </li>

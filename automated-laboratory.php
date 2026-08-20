@@ -78,8 +78,8 @@
             <!-- ========= NEW LAB CONTENT ADDED ABOVE EXISTING CONTENT ========= -->
             
             <!-- Hero Paragraph -->
-            <p>A blood test result is only as good as the laboratory that processes it. At Scans World, our fully <a href="automated-laboratory">automated laboratory</a> uses advanced diagnostic analysers to process blood, urine and other samples with a level of precision that manual testing simply cannot match — eliminating human error, reducing processing time and delivering results you and your doctor can trust completely.</p>
-            <p>Available at all four of our centres — Aminjikarai, Nandanam, Nanganallur and Vellore — our lab is open 24 hours a day, handling everything from a routine CBC to complex immunology and hormone panels. Same-day results for most tests.</p>
+            <p>A blood test result is only as good as the laboratory that processes it. At Scans World, our fully <a href="automated-laboratory">automated laboratory</a> uses advanced diagnostic analysers to process blood, urine and other samples with a level of precision that manual testing simply cannot match eliminating human error, reducing processing time and delivering results you and your doctor can trust completely.</p>
+            <p>Available at all four of our centres Aminjikarai, Nandanam, Nanganallur and Vellore our lab is open 24 hours a day, handling everything from a routine CBC to complex immunology and hormone panels. Same-day results for most tests.</p>
             <div class="col-auto">
                 <div class="header-button">
                   <a href="book-appointment" class="th-btn" target="_blank">Book Now</a>
@@ -89,7 +89,7 @@
                  <!-- What is an automated laboratory? -->
             <h3 class="fw-semibold mt-3">What is an automated laboratory?</h3>
             <p>An automated laboratory uses computerised analysers rather than manual processes to test blood, urine and other biological samples. Each sample is processed by a precision machine that measures hundreds of parameters simultaneously, cross-checks results internally and flags any abnormalities for review.</p>
-            <p>This means fewer errors, faster processing and results that are consistent regardless of when your sample was collected. At Scans World, our automated lab is integrated with a digital reporting system — results are reviewed by our lab specialists and delivered to you quickly and accurately.</p>
+            <p>This means fewer errors, faster processing and results that are consistent regardless of when your sample was collected. At Scans World, our automated lab is integrated with a digital reporting system results are reviewed by our lab specialists and delivered to you quickly and accurately.</p>
             
 
             <!-- Why Choose Scans World for Your Blood Tests in Chennai -->
@@ -123,11 +123,11 @@
             <div class="info-box-lab">
               <strong><i class="fas fa-clipboard-list me-1"></i> BEFORE YOUR TEST:</strong>
               <ul class="mt-2 mb-0" style="padding-left: 20px;">
-                <li>Most tests require fasting for 8-12 hours — your doctor will specify if fasting is needed</li>
+                <li>Most tests require fasting for 8-12 hours your doctor will specify if fasting is needed</li>
                 <li>Drink water normally before your test</li>
                 <li>Inform our team about any medications you are taking</li>
                 <li>Bring your doctor's prescription if available</li>
-                <li>Walk-ins welcome — no appointment needed for most tests</li>
+                <li>Walk-ins welcome no appointment needed for most tests</li>
               </ul>
             </div>
 
@@ -315,6 +315,7 @@
             <!-- CTA Section -->
             <div class="lab-cta-box">
               <h3 style="color: white;">Ready to book your test?</h3>
+              <p style="color: white;">Book your appointment at Scansworld comfortable, accurate, and stress free imaging.</p>
               <div class="mt-3">
                 <a href="book-appointment" class="cta-btn-lab"><i class="fas fa-calendar-check"></i> Book Now</a>
                

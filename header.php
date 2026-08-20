@@ -13,6 +13,8 @@
           <a href="#">Our Services</a>
           <ul class="sub-menu">
             <li><a href="<?php echo $url_config; ?>/mri-scan">3 Tesla MRI</a></li>
+            <li><a href="<?php echo $url_config; ?>/open-mri-scan">Open MRI</a></li>
+            <li><a href="<?php echo $url_config; ?>/cardiac-mri-scan">Cardiac MRI</a></li>
             <li><a href="<?php echo $url_config; ?>/pet-ct">160 Slice Digital PET CT</a></li>
             <li><a href="<?php echo $url_config; ?>/160-slice-cardiac-ct">160 Slice Cardiac CT / Coronary angiogram</a></li>
             <li><a href="<?php echo $url_config; ?>/gamma-camera">Nuclear Scans / Gamma camera</a></li>
@@ -119,6 +121,8 @@
                   <a href="#">Our Services</a>
                   <ul class="sub-menu two-column">
                     <li><a href="<?php echo $url_config; ?>/mri-scan">3 Tesla MRI</a></li>
+                    <li><a href="<?php echo $url_config; ?>/open-mri-scan">Open MRI</a></li>
+                    <li><a href="<?php echo $url_config; ?>/cardiac-mri-scan">Cardiac MRI</a></li>
                     <li><a href="<?php echo $url_config; ?>/pet-ct">160 Slice Digital PET CT</a></li>
                     <li><a href="<?php echo $url_config; ?>/160-slice-cardiac-ct">160 Slice Cardiac CT / Coronary
                         angiogram</a></li>
