@@ -94,26 +94,27 @@ $latest_testimonial = mysqli_query($con, $testimonial_query);
 
             <!-- Select Center -->
             <div class="form-group col-12">
-              <select name="branch" class="form-select" required>
-                <option value="" disabled selected hidden>Select Center</option>
-                <option value="1">Nandanam</option>
-                <option value="2">Nanganallur</option>
-                <option value="3">Aminjikarai</option>
-                  <option value="4">Vellore</option>
+              <select name="branch" id="branch" class="form-select" required>
+                <option value="" disabled <?php echo empty($_GET['branch']) ? 'selected' : ''; ?> hidden>Select Center</option>
+                <option value="1" <?php echo (isset($_GET['branch']) && $_GET['branch'] == '1') ? 'selected' : ''; ?>>Nandanam</option>
+                <option value="2" <?php echo (isset($_GET['branch']) && $_GET['branch'] == '2') ? 'selected' : ''; ?>>Nanganallur</option>
+                <option value="3" <?php echo (isset($_GET['branch']) && $_GET['branch'] == '3') ? 'selected' : ''; ?>>Aminjikarai</option>
+                <option value="4" <?php echo (isset($_GET['branch']) && $_GET['branch'] == '4') ? 'selected' : ''; ?>>Vellore</option>
               </select>
               <i class="fal fa-chevron-down"></i>
             </div>
 
             <!-- Select Service -->
             <div class="form-group col-12">
-              <select name="service" class="form-select" required>
-                <option value="" disabled selected hidden>Select Service</option>
-                <option value="1">Wide Bore 3 Tesla MRI Scan</option>
-                <option value="2">MRI Scan</option>
-                <option value="3">X-Ray</option>
-                <option value="4">ECG</option>
-                <option value="5">CT Scan</option>
-                <option value="6">PET - CT Scan</option>
+              <select name="service" id="service" class="form-select" required>
+                <option value="" disabled <?php echo empty($_GET['service']) ? 'selected' : ''; ?> hidden>Select Service</option>
+                <option value="1" <?php echo (isset($_GET['service']) && $_GET['service'] == '1') ? 'selected' : ''; ?>>Wide Bore 3 Tesla MRI Scan</option>
+                <option value="2" <?php echo (isset($_GET['service']) && $_GET['service'] == '2') ? 'selected' : ''; ?>>MRI Scan</option>
+                <option value="3" <?php echo (isset($_GET['service']) && $_GET['service'] == '3') ? 'selected' : ''; ?>>X-Ray</option>
+                <option value="4" <?php echo (isset($_GET['service']) && $_GET['service'] == '4') ? 'selected' : ''; ?>>ECG</option>
+                <option value="5" <?php echo (isset($_GET['service']) && $_GET['service'] == '5') ? 'selected' : ''; ?>>CT Scan</option>
+                <option value="6" <?php echo (isset($_GET['service']) && $_GET['service'] == '6') ? 'selected' : ''; ?>>PET - CT Scan</option>
+                <option value="7" <?php echo (isset($_GET['service']) && $_GET['service'] == '7') ? 'selected' : ''; ?>>3nethra Classic+</option>
               </select>
               <i class="fal fa-chevron-down"></i>
             </div>
@@ -241,6 +242,25 @@ $latest_testimonial = mysqli_query($con, $testimonial_query);
           </div>
         </div>
       </form>
+      <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          var branchSelect = document.getElementById('branch');
+          var serviceSelect = document.getElementById('service');
+          if (branchSelect && serviceSelect) {
+              serviceSelect.addEventListener('change', function() {
+                  if (serviceSelect.value === '7') {
+                      branchSelect.value = '1';
+                  }
+              });
+              branchSelect.addEventListener('change', function() {
+                  if (serviceSelect.value === '7' && branchSelect.value !== '1') {
+                      alert('3nethra Classic+ is only available at the Nandanam branch.');
+                      branchSelect.value = '1';
+                  }
+              });
+          }
+      });
+      </script>
 
     </div>
   </div>
