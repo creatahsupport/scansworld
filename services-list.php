@@ -59,6 +59,11 @@ $current_page = basename($_SERVER['REQUEST_URI'], ".php"); // Get current page n
                     <li class="<?= ($current_page == 'automated-laboratory') ? 'active' : ''; ?>">
                     <a href="automated-laboratory">Automated Laboratory</a>
                 </li>
+                </li>
+                      </li>
+                    <li class="<?= ($current_page == '3nethra-classic-plus') ? 'active' : ''; ?>">
+                    <a href="3nethra-classic-plus">3nethra Classic+</a>
+                </li>
               
             </ul>
         </div>

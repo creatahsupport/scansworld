@@ -29,6 +29,7 @@
             <li><a href="<?php echo $url_config; ?>/colonoscopy-and-endoscopy">Endoscopy / Colonoscopy</a></li>
             <li><a href="<?php echo $url_config; ?>/fnac">Image-guided biopsy /FNAC / Drainage procedures</a></li>
             <li><a href="<?php echo $url_config; ?>/automated-laboratory">Automated Laboratory</a></li>
+            <li><a href="<?php echo $url_config; ?>/3nethra-classic-plus">3nethra Classic+ Eye Screening</a></li>
           </ul>
         </li>
         <li><a href="<?php echo $url_config; ?>/master-health-check-packages">Health Packages</a></li>
@@ -140,6 +141,7 @@
                     <li><a href="<?php echo $url_config; ?>/fnac">Image-guided biopsy /FNAC / Drainage procedures</a>
                     </li>
                     <li><a href="<?php echo $url_config; ?>/automated-laboratory">Automated Laboratory</a></li>
+                    <li><a href="<?php echo $url_config; ?>/3nethra-classic-plus">3nethra Classic+</a></li>
 
                   </ul>
                 </li>

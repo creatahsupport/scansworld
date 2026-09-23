@@ -20614,7 +20614,7 @@ h1.breadcumb-title.text-white{
     .comparison-wrapper {
       overflow-x: auto;
       margin: 30px 0 25px;
-      border-radius: 20px;
+      border-radius: 0px;
       box-shadow: 0 8px 25px rgba(0,0,0,0.06);
     }
     .xray-comparison-table {
@@ -22463,4 +22463,260 @@ h1.breadcumb-title.text-white{
     max-width: 1100px;      /* Change as needed */
     width: 90%;
     margin: 40px auto;
+}
+
+
+    .tnc-gallery-section {
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+      padding: 32px;
+      margin-top: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      align-items: center;
+    }
+
+    .tnc-gallery-intro {
+      flex: 0 0 200px;
+      max-width: 260px;
+    }
+
+    .tnc-gallery-intro h2 {
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .tnc-gallery-viewport {
+      position: relative;
+      flex: 1 1 400px;
+      min-width: 0;
+      overflow: hidden;
+    }
+
+    .tnc-gallery-track {
+      display: flex;
+      gap: 18px;
+      transition: transform 0.45s ease;
+      will-change: transform;
+    }
+
+    .tnc-gallery-slide {
+      flex: 0 0 calc(33.333% - 12px);
+      min-width: 0;
+    }
+
+    .tnc-gallery-slide img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 18px;
+      display: block;
+    }
+
+    .tnc-gallery-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 2;
+      color: #111827;
+    }
+
+    .tnc-gallery-arrow:hover {
+      background: var(--theme-color, #0d6efd);
+      color: #ffffff;
+    }
+
+    .tnc-gallery-arrow.tnc-prev { left: -6px; }
+    .tnc-gallery-arrow.tnc-next { right: -6px; }
+
+    .tnc-gallery-dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .tnc-gallery-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #d1d5db;
+      cursor: pointer;
+      border: none;
+      padding: 0;
+    }
+
+    .tnc-gallery-dot.active {
+      background: var(--theme-color, #0d6efd);
+      width: 22px;
+      border-radius: 5px;
+      transition: width 0.25s ease;
+    }
+
+    @media (max-width: 767px) {
+
+    .tnc-gallery-section {
+        padding: 22px 16px;
+        margin-top: 30px;
+        display: block;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .tnc-gallery-intro {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 18px;
+    }
+
+    .tnc-gallery-intro h2 {
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    .tnc-gallery-viewport {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .tnc-gallery-track {
+        display: flex;
+        gap: 18px;
+    }
+
+    /* ONE IMAGE PER SLIDE ON MOBILE */
+    .tnc-gallery-slide {
+        flex: 0 0 100%;
+        width: 100%;
+        min-width: 100%;
+    }
+
+    .tnc-gallery-slide img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 16px;
+        display: block;
+    }
+
+    .tnc-gallery-arrow {
+        width: 34px;
+        height: 34px;
+        top: 50%;
+    }
+
+    .tnc-gallery-arrow.tnc-prev {
+        left: 8px;
+    }
+
+    .tnc-gallery-arrow.tnc-next {
+        right: 8px;
+    }
+
+    .tnc-gallery-dots {
+        margin-top: 14px;
+        gap: 7px;
+    }
+
+    .tnc-gallery-dot {
+        width: 7px;
+        height: 7px;
+    }
+
+    .tnc-gallery-dot.active {
+        width: 20px;
+    }
+}
+
+    /* ---------- Clinical Highlights section ---------- */
+    .tnc-highlights-section {
+      margin-top: 40px;
+    }
+
+    .tnc-highlights-marquee {
+      overflow: hidden;
+      position: relative;
+      -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+      mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+    }
+
+    .tnc-highlights-track {
+      display: flex;
+      gap: 16px;
+      width: max-content;
+      animation: tnc-scroll 32s linear infinite;
+    }
+
+    .tnc-highlights-marquee:hover .tnc-highlights-track {
+      animation-play-state: paused;
+    }
+
+    @keyframes tnc-scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .tnc-highlight-card {
+      flex: 0 0 240px;
+      background: #ffffff;
+      border: 1px solid #eef0f2;
+      border-radius: 14px;
+      padding: 18px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    }
+
+    .tnc-highlight-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: rgba(13, 110, 253, 0.08);
+      color: #0d6efd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    .tnc-highlight-card h4 {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .tnc-highlight-card p {
+      font-size: 13px;
+      color: #6b7280;
+      line-height: 1.5;
+      margin-bottom: 0;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .tnc-highlights-track {
+        animation: none;
+        flex-wrap: wrap;
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .tnc-highlight-card { flex: 0 0 200px; }
+    }
+    @media (max-width: 767px) {
+    .xray-feature-grid {
+        grid-template-columns: 1fr !important;
+    }
 }
