@@ -13,6 +13,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $description = mysqli_real_escape_string($con, $_POST['description']);
     $content = mysqli_real_escape_string($con, $_POST['content']);
     $category = mysqli_real_escape_string($con, $_POST['category']);
+    $meta_description = mysqli_real_escape_string($con,$_POST['meta_description']);
+    $canonical_url = mysqli_real_escape_string( $con,$_POST['canonical_url']);
 
     // Fetch current image
     $sql_fetch = "SELECT image FROM blog WHERE id = '$id'";
@@ -39,13 +41,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     // ✅ Use properly escaped values
-    $check_query = "SELECT id FROM blog WHERE title = '$title' AND id != '$id'";
-    $check_result = mysqli_query($con, $check_query);
-    if (mysqli_num_rows($check_result) > 0) {
-        echo "<script>alert('Blog title already exists!'); window.history.back();</script>";
-        exit();
-    }
-
     $sql_update = "
         UPDATE blog SET 
             title = '$title',
@@ -57,7 +52,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             content = '$content',
             image = '$image',
             user_id = '$user_id',
-            category = '$category'
+            category = '$category',
+            meta_description = '$meta_description',
+            canonical_url = '$canonical_url'
+
         WHERE id = '$id'
     ";
 
