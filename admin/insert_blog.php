@@ -12,7 +12,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $content = $_POST['content'];
     $created_date = date("Y-m-d H:i:s");
     $meta_description = $_POST['meta_description'];  
-    $canonical_url = $_POST['canonical_url']; 
     $file_name = '';
     
     if (isset($_FILES['image']) && $_FILES['image']['error'] == UPLOAD_ERR_OK) {
@@ -46,8 +45,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo "<script>alert('Image upload error.');</script>";
         exit();
     }
-    $query = "INSERT INTO blog (title, slug, image, image_title, meta_title, description, content ,created_date,image_alt_tag,user_id,category, meta_description,canonical_url) 
-              VALUES ('$title', '$slug', '$file_name', '$image_title', '$meta_title', '$description', '$content','$created_date','$image_alt_tag','$user_id','$category', '$meta_description', '$canonical_url')";
+    $query = "INSERT INTO blog (title, slug, image, image_title, meta_title, description, content ,created_date,image_alt_tag,user_id,category, meta_description) 
+              VALUES ('$title', '$slug', '$file_name', '$image_title', '$meta_title', '$description', '$content','$created_date','$image_alt_tag','$user_id','$category', '$meta_description')";
 
     if (mysqli_query($con, $query)) {
         echo "<script>alert('Blog post added successfully.');</script>";

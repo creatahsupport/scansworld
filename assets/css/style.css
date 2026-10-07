@@ -22720,3 +22720,8 @@ h1.breadcumb-title.text-white{
         grid-template-columns: 1fr !important;
     }
 }
+ .sidebar-area {
+    position: sticky !important;
+    top: 120px;              
+    align-self: flex-start;
+}

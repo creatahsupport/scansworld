@@ -14,7 +14,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $content = mysqli_real_escape_string($con, $_POST['content']);
     $category = mysqli_real_escape_string($con, $_POST['category']);
     $meta_description = mysqli_real_escape_string($con,$_POST['meta_description']);
-    $canonical_url = mysqli_real_escape_string( $con,$_POST['canonical_url']);
 
     // Fetch current image
     $sql_fetch = "SELECT image FROM blog WHERE id = '$id'";
@@ -53,8 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             image = '$image',
             user_id = '$user_id',
             category = '$category',
-            meta_description = '$meta_description',
-            canonical_url = '$canonical_url'
+            meta_description = '$meta_description'
 
         WHERE id = '$id'
     ";

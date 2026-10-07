@@ -133,12 +133,6 @@
                 <input type="text" class="form-control" name="meta_description" required placeholder="Meta Description" title="Only alphanumerics and dashes are allowed" aria-label="Username" aria-describedby="basic-addon1">
             </div>
         </div>
-        <div class="col-sm-12 col-md-6 col-lg-4">
-            <div class="mb-3">
-                <label class="form-label">Canonical URL</label>
-                <input type="text" class="form-control" name="canonical_url" required placeholder="Canonical URL" title="Only alphanumerics and dashes are allowed" aria-label="Username" aria-describedby="basic-addon1">
-            </div>
-        </div>
     </div>
 
     <div class="row">

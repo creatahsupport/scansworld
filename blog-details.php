@@ -1,7 +1,4 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
 include("includes/config.php");
 
 if (!isset($con) || !$con) {
@@ -22,7 +19,6 @@ if (isset($_GET['bid'])) {
         $image_title = $BLOG_ROW['image_title'];
         $created_at = $BLOG_ROW['created_at'] ?? '';
         $meta_description = $BLOG_ROW['meta_description'];
-        $canonical_url = $BLOG_ROW['canonical_url']; // optional date
     } else {
          echo "<h1>Blog not found</h1>";
         header("Location: http://" . $_SERVER['HTTP_HOST']);
@@ -76,8 +72,7 @@ $latest_category = mysqli_query($con, $category_query);
     <link rel="stylesheet" href="<?php echo $url_config ; ?>/assets/css/jquery.datetimepicker.min.css">
     <link rel="stylesheet" href="<?php echo $url_config ; ?>/assets/css/style.css">
     <meta name="description" content="<?php echo htmlspecialchars($meta_description); ?>">
-    <link rel="canonical" href="<?php echo htmlspecialchars($canonical_url); ?>">
-
+    <link rel="canonical" href="https://scansworldonchamiersroad.com/blog-details/<?php echo htmlspecialchars($slug); ?>">
 </head>
 
 <body>
@@ -141,12 +136,6 @@ echo stripslashes($display_content);
                 </div>
                 <div class="col-xxl-4 col-lg-5">
                     <aside class="sidebar-area">
-                        <div class="widget widget_search  ">
-                            <form class="search-form" action="<?php echo $url_config; ?>/blog_search.php" method="GET" onsubmit="return validateSearch()">
-                                <input type="text" id="search-input" name="q" onkeyup="fetchSearchSuggestions()" placeholder="Enter Keyword">
-                                <button type="submit" value="Search"><i class="far fa-search"></i></button>
-                            </form>
-                        </div>
                         <div class="widget widget_categories  ">
                             <h3 class="widget_title">Categories</h3>
                          <ul>
