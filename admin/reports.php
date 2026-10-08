@@ -291,6 +291,7 @@ if (isset($_GET['export']) && $_GET['export'] == 'pptx') {
             $presXml = str_replace($matches[0], "<p:sldIdLst>{$newSldIdLst}</p:sldIdLst>", $presXml);
             $zip->addFromString('ppt/presentation.xml', $presXml);
         }
+        $cachedPresXml = $presXml;
 
         // Determine dynamic date string
         $mainTitle = date('F Y');
@@ -483,15 +484,41 @@ if (isset($_GET['export']) && $_GET['export'] == 'pptx') {
             $branches = [];
             $services = [];
 
-            $aptSql = "SELECT ba.patient_name, ba.phone, b.branch_name, s.service_name, ba.enquiry_date, ba.appointment_date 
-                       FROM book_appointment ba 
-                       LEFT JOIN branch b ON ba.branch = b.id 
-                       LEFT JOIN service s ON ba.service = s.id 
-                       WHERE DATE(ba.enquiry_date) >= '$startDate' AND DATE(ba.enquiry_date) <= '$endDate' 
-                       ORDER BY ba.enquiry_date DESC";
+            // Fetch mappings for branch and service
+            $branch_map = [];
+            $b_res = mysqli_query($con, "SELECT id, branch_name FROM branch");
+            if ($b_res) {
+                while ($b_row = mysqli_fetch_assoc($b_res)) {
+                    $branch_map[(string) $b_row['id']] = $b_row['branch_name'];
+                }
+            }
+
+            $service_map = [];
+            $s_res = mysqli_query($con, "SELECT id, service_name FROM service");
+            if ($s_res) {
+                while ($s_row = mysqli_fetch_assoc($s_res)) {
+                    $service_map[(string) $s_row['id']] = $s_row['service_name'];
+                }
+            }
+
+            $mysqlStartDate = $startDate;
+            if ($startDate === '7daysAgo') {
+                $mysqlStartDate = date('Y-m-d', strtotime('-7 days'));
+            }
+            $mysqlEndDate = $endDate;
+            if ($endDate === 'today') {
+                $mysqlEndDate = date('Y-m-d');
+            }
+            $aptSql = "SELECT patient_name, phone, branch, service, enquiry_date, appointment_date 
+                       FROM book_appointment 
+                       WHERE DATE(enquiry_date) >= '$mysqlStartDate' AND DATE(enquiry_date) <= '$mysqlEndDate' 
+                       ORDER BY enquiry_date DESC";
             $aptRes = mysqli_query($con, $aptSql);
             if ($aptRes) {
                 while ($row = mysqli_fetch_assoc($aptRes)) {
+                    $row['branch_name'] = $branch_map[(string) $row['branch']] ?? $row['branch'];
+                    $row['service_name'] = $service_map[(string) $row['service']] ?? $row['service'];
+
                     $bookAppointments[] = $row;
                     if (!empty($row['branch_name']))
                         $branches[$row['branch_name']] = true;
@@ -516,56 +543,177 @@ if (isset($_GET['export']) && $_GET['export'] == 'pptx') {
             }
             $serviceMixSubtitle = !empty($serviceMixSubtitleArr) ? implode(' · ', $serviceMixSubtitleArr) : 'N/A';
 
-            $slide9Xml = preg_replace('/<a:t>6<\/a:t>/', '<a:t>' . $totalEnquiries . '</a:t>', $slide9Xml, 1);
-            $slide9Xml = preg_replace('/<a:t>3<\/a:t>/', '<a:t>' . $branchesReached . '</a:t>', $slide9Xml, 1);
-            $slide9Xml = preg_replace('/<a:t>MRI \/ CT \/ X-Ray<\/a:t>/', '<a:t>' . htmlspecialchars($serviceMixTitle) . '</a:t>', $slide9Xml, 1);
-            $slide9Xml = preg_replace('/<a:t>3 MRI · 2 CT · 1 X-Ray<\/a:t>/', '<a:t>' . htmlspecialchars($serviceMixSubtitle) . '</a:t>', $slide9Xml, 1);
+            // Calculate pagination
+            $rows_per_slide = 6;
+            $total_slides = ceil(max($totalEnquiries, 1) / $rows_per_slide);
+            $slide9OriginalXml = $slide9Xml;
 
-            // Populate Table
-            $dom = new DOMDocument();
-            @$dom->loadXML($slide9Xml);
-            $tables = $dom->getElementsByTagName('tbl');
-            if ($tables->length > 0) {
-                $table = $tables->item(0);
-                $rows = $table->getElementsByTagName('tr');
+            $slide9Rels = $zip->getFromName('ppt/slides/_rels/slide9.xml.rels');
 
-                for ($r = 1; $r <= 6; $r++) {
-                    if ($r < $rows->length) {
-                        $row = $rows->item($r);
-                        $cells = $row->getElementsByTagName('tc');
-                        if ($cells->length >= 8) {
-                            if (isset($bookAppointments[$r - 1])) {
-                                $apt = $bookAppointments[$r - 1];
-                                $pName = htmlspecialchars(trim($apt['patient_name'] ?? ''));
-                                $phone = htmlspecialchars(trim($apt['phone'] ?? ''));
-                                $branch = htmlspecialchars(trim($apt['branch_name'] ?? ''));
-                                $srv = htmlspecialchars(trim($apt['service_name'] ?? ''));
-                                $enq = date('d-m-Y', strtotime($apt['enquiry_date']));
-                                $appt = !empty($apt['appointment_date']) ? date('d-m-Y', strtotime($apt['appointment_date'])) : '-';
-                                $time = !empty($apt['enquiry_date']) ? date('g:i A', strtotime($apt['enquiry_date'])) : '-';
+            if ($total_slides > 1) {
+                // 1. Update [Content_Types].xml
+                $contentTypesXml = $zip->getFromName('[Content_Types].xml');
+                $domCT = new DOMDocument();
+                @$domCT->loadXML($contentTypesXml);
+                for ($i = 2; $i <= $total_slides; $i++) {
+                    $newOverride = $domCT->createElementNS('http://schemas.openxmlformats.org/package/2006/content-types', 'Override');
+                    $newOverride->setAttribute('PartName', '/ppt/slides/slide9_clone' . $i . '.xml');
+                    $newOverride->setAttribute('ContentType', 'application/vnd.openxmlformats-officedocument.presentationml.slide+xml');
+                    $domCT->documentElement->appendChild($newOverride);
+                }
+                $zip->addFromString('[Content_Types].xml', $domCT->saveXML());
 
-                                $vals = [$pName, $phone, $branch, $srv, $srv, $enq, $appt, $time];
-                            } else {
-                                $vals = ['-', '-', '-', '-', '-', '-', '-', '-'];
-                            }
+                // 2. Update presentation.xml.rels
+                $relsXml = $zip->getFromName('ppt/_rels/presentation.xml.rels');
+                $domRels = new DOMDocument();
+                @$domRels->loadXML($relsXml);
+                $slide9RId = '';
+                foreach ($domRels->getElementsByTagName('Relationship') as $rel) {
+                    if ($rel->getAttribute('Target') == 'slides/slide9.xml') {
+                        $slide9RId = $rel->getAttribute('Id');
+                        break;
+                    }
+                }
+                $newRIds = [];
+                for ($i = 2; $i <= $total_slides; $i++) {
+                    $newRId = 'rIdSlide9Clone' . $i . '_' . time(); // Make ID unique
+                    $newRIds[$i] = $newRId;
+                    $newRel = $domRels->createElementNS('http://schemas.openxmlformats.org/package/2006/relationships', 'Relationship');
+                    $newRel->setAttribute('Id', $newRId);
+                    $newRel->setAttribute('Type', 'http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide');
+                    $newRel->setAttribute('Target', 'slides/slide9_clone' . $i . '.xml');
+                    $domRels->documentElement->appendChild($newRel);
+                }
+                $zip->addFromString('ppt/_rels/presentation.xml.rels', $domRels->saveXML());
 
-                            for ($c = 0; $c < 8; $c++) {
-                                // Only replace the first text node in the cell to preserve formatting
-                                $tNodes = $cells->item($c)->getElementsByTagName('t');
-                                if ($tNodes->length > 0) {
-                                    $tNodes->item(0)->nodeValue = $vals[$c];
-                                    for ($extra = 1; $extra < $tNodes->length; $extra++) {
-                                        $tNodes->item($extra)->nodeValue = '';
+                // 3. Update presentation.xml
+                $presXml = $cachedPresXml;
+                $domPres = new DOMDocument();
+                @$domPres->loadXML($presXml);
+                $maxSldId = 0;
+                $slide9Node = null;
+                $sldIdLst = $domPres->getElementsByTagName('sldIdLst')->item(0);
+                foreach ($sldIdLst->getElementsByTagName('sldId') as $sldId) {
+                    $id = (int) $sldId->getAttribute('id');
+                    if ($id > $maxSldId)
+                        $maxSldId = $id;
+                    if ($sldId->getAttribute('r:id') == $slide9RId) {
+                        $slide9Node = $sldId;
+                    }
+                }
+                if ($slide9Node) {
+                    $lastNode = $slide9Node;
+                    for ($i = 2; $i <= $total_slides; $i++) {
+                        $maxSldId++;
+                        $newSldNode = $slide9Node->cloneNode(true);
+                        $newSldNode->setAttribute('id', $maxSldId);
+                        $newSldNode->setAttributeNS('http://schemas.openxmlformats.org/officeDocument/2006/relationships', 'r:id', $newRIds[$i]);
+                        $lastNode->parentNode->insertBefore($newSldNode, $lastNode->nextSibling);
+                        $lastNode = $newSldNode;
+                    }
+                }
+                $zip->addFromString('ppt/presentation.xml', $domPres->saveXML());
+
+                // 4. Update docProps/app.xml
+                $appXml = $zip->getFromName('docProps/app.xml');
+                if ($appXml) {
+                    $actualSlides = 4 + $total_slides;
+                    $newVectorSize = 3 + $actualSlides;
+
+                    $appXml = preg_replace('/<Slides>\d+<\/Slides>/', '<Slides>' . $actualSlides . '</Slides>', $appXml);
+                    $appXml = preg_replace('/<Notes>\d+<\/Notes>/', '<Notes>' . $actualSlides . '</Notes>', $appXml);
+
+                    $appXml = preg_replace('/<vt:variant><vt:lpstr>Slide Titles<\/vt:lpstr><\/vt:variant>\s*<vt:variant><vt:i4>\d+<\/vt:i4><\/vt:variant>/', '<vt:variant><vt:lpstr>Slide Titles</vt:lpstr></vt:variant><vt:variant><vt:i4>' . $actualSlides . '</vt:i4></vt:variant>', $appXml);
+
+                    $newTitles = "<vt:lpstr>Arial</vt:lpstr><vt:lpstr>Calibri</vt:lpstr><vt:lpstr>Office Theme</vt:lpstr>";
+                    for ($s = 1; $s <= $actualSlides; $s++) {
+                        $newTitles .= "<vt:lpstr>Slide $s</vt:lpstr>";
+                    }
+                    $appXml = preg_replace('/<vt:vector size="\d+" baseType="lpstr">.*?<\/vt:vector>/s', '<vt:vector size="' . $newVectorSize . '" baseType="lpstr">' . $newTitles . '</vt:vector>', $appXml);
+
+                    $zip->addFromString('docProps/app.xml', $appXml);
+                }
+            }
+
+            for ($s = 1; $s <= $total_slides; $s++) {
+                $slideXml = $slide9OriginalXml;
+
+                $slideXml = preg_replace('/<a:t>6<\/a:t>/', '<a:t>' . $totalEnquiries . '</a:t>', $slideXml, 1);
+                $slideXml = preg_replace('/<a:t>3<\/a:t>/', '<a:t>' . $branchesReached . '</a:t>', $slideXml, 1);
+                $slideXml = preg_replace('/<a:t>MRI \/ CT \/ X-Ray<\/a:t>/', '<a:t>' . htmlspecialchars($serviceMixTitle) . '</a:t>', $slideXml, 1);
+                $slideXml = preg_replace('/<a:t>3 MRI · 2 CT · 1 X-Ray<\/a:t>/', '<a:t>' . htmlspecialchars($serviceMixSubtitle) . '</a:t>', $slideXml, 1);
+
+                $dom = new DOMDocument();
+                @$dom->loadXML($slideXml);
+                $tables = $dom->getElementsByTagName('tbl');
+                if ($tables->length > 0) {
+                    $table = $tables->item(0);
+
+                    // Dynamically remove the 5th column (Test Name) which is at index 4
+                    $tblGrids = $table->getElementsByTagName('tblGrid');
+                    if ($tblGrids->length > 0) {
+                        $gridCols = $tblGrids->item(0)->getElementsByTagName('gridCol');
+                        if ($gridCols->length > 4) {
+                            $tblGrids->item(0)->removeChild($gridCols->item(4));
+                        }
+                    }
+                    $rows = $table->getElementsByTagName('tr');
+                    for ($r = 0; $r < $rows->length; $r++) {
+                        $cells = $rows->item($r)->getElementsByTagName('tc');
+                        if ($cells->length > 4) {
+                            $rows->item($r)->removeChild($cells->item(4));
+                        }
+                    }
+
+                    // Re-fetch rows as DOM has updated
+                    $rows = $table->getElementsByTagName('tr');
+
+                    $startIdx = ($s - 1) * $rows_per_slide;
+                    for ($r = 1; $r <= $rows_per_slide; $r++) {
+                        if ($r < $rows->length) {
+                            $row = $rows->item($r);
+                            $cells = $row->getElementsByTagName('tc');
+                            if ($cells->length >= 7) {
+                                $aptIdx = $startIdx + ($r - 1);
+                                if (isset($bookAppointments[$aptIdx])) {
+                                    $apt = $bookAppointments[$aptIdx];
+                                    $pName = htmlspecialchars(trim($apt['patient_name'] ?? ''));
+                                    $phone = htmlspecialchars(trim($apt['phone'] ?? ''));
+                                    $branch = htmlspecialchars(trim($apt['branch_name'] ?? ''));
+                                    $srv = htmlspecialchars(trim($apt['service_name'] ?? ''));
+                                    $enq = date('d-m-Y', strtotime($apt['enquiry_date']));
+                                    $appt = !empty($apt['appointment_date']) ? date('d-m-Y', strtotime($apt['appointment_date'])) : '-';
+                                    $time = !empty($apt['enquiry_date']) ? date('g:i A', strtotime($apt['enquiry_date'])) : '-';
+
+                                    $vals = [$pName, $phone, $branch, $srv, $enq, $appt, $time];
+                                } else {
+                                    $vals = ['-', '-', '-', '-', '-', '-', '-'];
+                                }
+
+                                for ($c = 0; $c < 7; $c++) {
+                                    $tNodes = $cells->item($c)->getElementsByTagName('t');
+                                    if ($tNodes->length > 0) {
+                                        $tNodes->item(0)->nodeValue = $vals[$c];
+                                        for ($extra = 1; $extra < $tNodes->length; $extra++) {
+                                            $tNodes->item($extra)->nodeValue = '';
+                                        }
                                     }
                                 }
                             }
                         }
                     }
+                    $slideXml = $dom->saveXML();
                 }
-                $slide9Xml = $dom->saveXML();
-            }
 
-            $zip->addFromString('ppt/slides/slide9.xml', $slide9Xml);
+                if ($s == 1) {
+                    $zip->addFromString('ppt/slides/slide9.xml', $slideXml);
+                } else {
+                    $zip->addFromString('ppt/slides/slide9_clone' . $s . '.xml', $slideXml);
+                    if ($slide9Rels) {
+                        $zip->addFromString('ppt/slides/_rels/slide9_clone' . $s . '.xml.rels', $slide9Rels);
+                    }
+                }
+            }
         }
         $updateChart = function ($xmlStr, $dataMap, $is12Month, $monthHeaders, $force1Month) {
             $dom = new DOMDocument();
