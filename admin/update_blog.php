@@ -14,6 +14,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $content = mysqli_real_escape_string($con, $_POST['content']);
     $category = mysqli_real_escape_string($con, $_POST['category']);
     $meta_description = mysqli_real_escape_string($con,$_POST['meta_description']);
+    $status = isset($_POST['status']) ? mysqli_real_escape_string($con, $_POST['status']) : 1;
+    $schedule_date = isset($_POST['schedule_date']) && !empty($_POST['schedule_date']) ? "'" . mysqli_real_escape_string($con, $_POST['schedule_date']) . "'" : "NULL";
 
     // Fetch current image
     $sql_fetch = "SELECT image FROM blog WHERE id = '$id'";
@@ -52,7 +54,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             image = '$image',
             user_id = '$user_id',
             category = '$category',
-            meta_description = '$meta_description'
+            meta_description = '$meta_description',
+            status = '$status',
+            schedule_date = $schedule_date
 
         WHERE id = '$id'
     ";

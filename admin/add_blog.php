@@ -136,6 +136,28 @@
     </div>
 
     <div class="row">
+        <!-- Status -->
+        <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="mb-3">
+                <label class="form-label">Status</label>
+                <select class="form-control" name="status" id="blogStatus" required>
+                    <option value="1" selected>Publish</option>
+                    <option value="0">Draft</option>
+                    <option value="2">Schedule</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Schedule Date -->
+        <div class="col-sm-12 col-md-6 col-lg-4" id="scheduleDateContainer" style="display: none;">
+            <div class="mb-3">
+                <label class="form-label">Schedule Date & Time</label>
+                <input type="datetime-local" class="form-control" name="schedule_date" id="scheduleDate">
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
 
         <!-- Content -->
         <div class="col-sm-12">
@@ -193,6 +215,39 @@
 </script>
 <script>
   preset_change('preset-1');
+</script>
+<script>
+    <?php
+        $tz = new DateTimeZone('Asia/Kolkata');
+        $date = new DateTime('now', $tz);
+        $min_date = $date->format('Y-m-d\TH:i');
+    ?>
+    // Prevent selecting past date and time (Asia/Kolkata)
+    const minDateTime = "<?= $min_date ?>";
+    const scheduleInput = document.getElementById('scheduleDate');
+    if (scheduleInput) {
+        scheduleInput.min = minDateTime;
+
+        scheduleInput.addEventListener('change', function() {
+            if (this.value && this.value < minDateTime) {
+                alert("Please select a future date and time.");
+                this.value = minDateTime;
+            }
+        });
+    }
+
+    const blogStatus = document.getElementById('blogStatus');
+    if (blogStatus) {
+        blogStatus.addEventListener('change', function() {
+            if (this.value == '2') {
+                document.getElementById('scheduleDateContainer').style.display = 'block';
+                document.getElementById('scheduleDate').required = true;
+            } else {
+                document.getElementById('scheduleDateContainer').style.display = 'none';
+                document.getElementById('scheduleDate').required = false;
+            }
+        });
+    }
 </script>
   </body>
 </html>

@@ -11,7 +11,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $user_id = $_POST['user_id'];
     $content = $_POST['content'];
     $created_date = date("Y-m-d H:i:s");
-    $meta_description = $_POST['meta_description'];  
+    $meta_description = $_POST['meta_description'];
+    $status = isset($_POST['status']) ? mysqli_real_escape_string($con, $_POST['status']) : 1;
+    $schedule_date = isset($_POST['schedule_date']) && !empty($_POST['schedule_date']) ? "'" . mysqli_real_escape_string($con, $_POST['schedule_date']) . "'" : "NULL";  
     $file_name = '';
     
     if (isset($_FILES['image']) && $_FILES['image']['error'] == UPLOAD_ERR_OK) {
@@ -45,8 +47,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo "<script>alert('Image upload error.');</script>";
         exit();
     }
-    $query = "INSERT INTO blog (title, slug, image, image_title, meta_title, description, content ,created_date,image_alt_tag,user_id,category, meta_description) 
-              VALUES ('$title', '$slug', '$file_name', '$image_title', '$meta_title', '$description', '$content','$created_date','$image_alt_tag','$user_id','$category', '$meta_description')";
+    $query = "INSERT INTO blog (title, slug, image, image_title, meta_title, description, content ,created_date,image_alt_tag,user_id,category, meta_description, status, schedule_date) 
+              VALUES ('$title', '$slug', '$file_name', '$image_title', '$meta_title', '$description', '$content','$created_date','$image_alt_tag','$user_id','$category', '$meta_description', '$status', $schedule_date)";
 
     if (mysqli_query($con, $query)) {
         echo "<script>alert('Blog post added successfully.');</script>";

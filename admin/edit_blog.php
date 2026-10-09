@@ -149,6 +149,32 @@
         </div>
     </div>
 
+    <div class="row">
+        <?php
+        $status = isset($row['status']) ? $row['status'] : 1;
+        $schedule_date = isset($row['schedule_date']) ? $row['schedule_date'] : '';
+        ?>
+        <!-- Status -->
+        <div class="col-sm-12 col-md-4">
+            <div class="mb-3">
+                <label class="form-label">Status</label>
+                <select class="form-control" name="status" id="blogStatus" required>
+                    <option value="1" <?= $status == 1 ? 'selected' : '' ?>>Publish</option>
+                    <option value="0" <?= $status == 0 ? 'selected' : '' ?>>Draft</option>
+                    <option value="2" <?= $status == 2 ? 'selected' : '' ?>>Schedule</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Schedule Date -->
+        <div class="col-sm-12 col-md-4" id="scheduleDateContainer" style="display: <?= $status == 2 ? 'block' : 'none' ?>;">
+            <div class="mb-3">
+                <label class="form-label">Schedule Date & Time</label>
+                <input type="datetime-local" class="form-control" name="schedule_date" id="scheduleDate" value="<?= $schedule_date ? date('Y-m-d\TH:i', strtotime($schedule_date)) : '' ?>">
+            </div>
+        </div>
+    </div>
+
         <!-- Content Field -->
         <div class="col-sm-12 col-md-12">
             <div class="mb-3">
@@ -203,6 +229,39 @@
 </script>
 <script>
   preset_change('preset-1');
+</script>
+<script>
+    <?php
+        $tz = new DateTimeZone('Asia/Kolkata');
+        $date = new DateTime('now', $tz);
+        $min_date = $date->format('Y-m-d\TH:i');
+    ?>
+    // Prevent selecting past date and time (Asia/Kolkata)
+    const minDateTime = "<?= $min_date ?>";
+    const scheduleInput = document.getElementById('scheduleDate');
+    if (scheduleInput) {
+        scheduleInput.min = minDateTime;
+
+        scheduleInput.addEventListener('change', function() {
+            if (this.value && this.value < minDateTime) {
+                alert("Please select a future date and time.");
+                this.value = minDateTime;
+            }
+        });
+    }
+
+    const blogStatus = document.getElementById('blogStatus');
+    if (blogStatus) {
+        blogStatus.addEventListener('change', function() {
+            if (this.value == '2') {
+                document.getElementById('scheduleDateContainer').style.display = 'block';
+                document.getElementById('scheduleDate').required = true;
+            } else {
+                document.getElementById('scheduleDateContainer').style.display = 'none';
+                document.getElementById('scheduleDate').required = false;
+            }
+        });
+    }
 </script>
   </body>
 </html>
