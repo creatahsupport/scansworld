@@ -1,0 +1,3 @@
+ALTER TABLE `blog` 
+ADD COLUMN `status` INT(11) DEFAULT 1, 
+ADD COLUMN `schedule_date` DATETIME DEFAULT NULL;

@@ -227,17 +227,17 @@ if ($stmtCount)
         <div class="th-pagination text-center">
             <ul>
                 <?php if ($prevPage): ?>
-                    <li><a href="?bids=<?= urlencode($bids) ?>&page=<?= $prevPage ?>"><i class="fas fa-angle-left"></i></a>
+                    <li><a href="<?php echo $url_config ?>/blog/page/<?= $prevPage ?>"><i class="fas fa-angle-left"></i></a>
                     </li>
                 <?php endif; ?>
 
                 <?php for ($i = 1; $i <= $totalPages; $i++): ?>
-                    <li><a href="?bids=<?= urlencode($bids) ?>&page=<?= $i ?>"
+                    <li><a href="<?php echo $url_config ?>/blog/page/<?= $i ?>"
                             class="<?= ($i == $page) ? 'active' : '' ?>"><?= $i ?></a></li>
                 <?php endfor; ?>
 
                 <?php if ($nextPage): ?>
-                    <li><a href="?bids=<?= urlencode($bids) ?>&page=<?= $nextPage ?>"><i class="fas fa-angle-right"></i></a>
+                    <li><a href="<?php echo $url_config ?>/blog/page/<?= $nextPage ?>"><i class="fas fa-angle-right"></i></a>
                     </li>
                 <?php endif; ?>
             </ul>
