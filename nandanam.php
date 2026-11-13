@@ -395,16 +395,14 @@ Scans World Nandanam delivers expert imaging. Accurate reports. Trusted for 15+ 
             <div class="accordion-header" id="headingOne">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                    1. Is Scans World Nandanam open 24 hours?
+                    1. Which is the best scan centre in Nandanam, Chennai?
                 </button>
             </div>
             <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
                 data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
                     <p class="faq-text">
-                        Yes. Our Nandanam centre on Chamiers Road is open 24 hours a day, 7 days a week,
-                        including all public holidays. Whether it is an urgent scan late at night or an
-                        early-morning appointment, we are always available.
+                        <a href="nandanam">Scans World on Chamiers Road</a> is one of the most complete scan centres in Nandanam. MRI, PET CT, Cardiac CT, nuclear scans, ultrasound, mammography and a fully automated lab are all here, and we're open 24 hours. A panel of specialist radiologists reviews every scan, so you get a careful, accurate report, not a rushed one.
                     </p>
                 </div>
             </div>
@@ -415,17 +413,14 @@ Scans World Nandanam delivers expert imaging. Accurate reports. Trusted for 15+ 
             <div class="accordion-header" id="headingTwo">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    2. What is the address of Scans World Nandanam?
+                    2. Is there a 24 hours scan centre near T. Nagar?
                 </button>
             </div>
             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                 data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
                     <p class="faq-text">
-                        We are located at <strong>No. 127, Basement, Chamiers Road, <a href="nandanam.php">Nandanam</a>,
-                        Chennai – 600 035.</strong> The centre is easily reachable by Nandanam Metro
-                        Station (Green Line), MTC bus, auto, and personal vehicle with dedicated
-                        parking on site.
+                        Yes. <a href="nandanam">Scans World Nandanam</a> is open 24/7, including Sundays and public holidays, and it's just a short drive from T. Nagar via Chamiers Road. Whether your doctor needs an urgent CT at night or you want an early-morning MRI before work, you can walk in at any hour.
                     </p>
                 </div>
             </div>
@@ -436,17 +431,14 @@ Scans World Nandanam delivers expert imaging. Accurate reports. Trusted for 15+ 
             <div class="accordion-header" id="headingThree">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    3. Is PET CT available at Scans World Nandanam?
+                    3. Where can I get an MRI scan in Nandanam?
                 </button>
             </div>
             <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                 data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
                     <p class="faq-text">
-                        Yes. Whole-body <a href="pet-ct.php">PET CT</a> is available at our Nandanam centre, primarily used
-                        for cancer diagnosis, staging and treatment response monitoring. We also
-                        offer PET MRI, combining metabolic imaging with high-resolution structural
-                        detail for greater diagnostic precision.
+                        You can get your MRI scan at <a href="nandanam">Scans World, No. 127, Basement, Chamiers Road, Nandanam, Chennai – 600 035</a>. We do brain, spine, joint, abdominal, cardiac and whole-body MRI. Specialist radiologists report every scan, including neuro and musculoskeletal experts, so subtle findings don't get missed.
                     </p>
                 </div>
             </div>
@@ -457,16 +449,14 @@ Scans World Nandanam delivers expert imaging. Accurate reports. Trusted for 15+ 
             <div class="accordion-header" id="headingFour">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                    4. Is MRI available at Scans World Nandanam?
+                    4. Where can I get a PET CT scan in Central Chennai?
                 </button>
             </div>
             <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                 data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
                     <p class="faq-text">
-                        Yes. MRI scanning is available at our Nandanam centre, covering brain,
-                        spine, musculoskeletal, abdominal and whole-body imaging. All reports are
-                        reviewed by our specialist radiologist panel.
+                        Scans World Nandanam offers <a href="pet-ct">160 Slice Digital PET CT</a>, along with PET MRI, right in Central Chennai. PET CT is mainly used to detect cancer, stage it and check how well treatment is working. Our onco-imaging and nuclear medicine specialists read every study, and we'll guide you through the fasting and preparation beforehand.
                     </p>
                 </div>
             </div>
@@ -477,16 +467,14 @@ Scans World Nandanam delivers expert imaging. Accurate reports. Trusted for 15+ 
             <div class="accordion-header" id="headingFive">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                    5. How far is Scans World Nandanam from T. Nagar?
+                    5. Is there a scan centre near Mylapore or Alwarpet?
                 </button>
             </div>
             <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
                 data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
                     <p class="faq-text">
-                        Our Chamiers Road centre is approximately <strong>2 kilometres</strong> from
-                        T. Nagar, around a <strong>5 to 10 minute drive</strong>. It is also easily
-                        reachable by auto or directly from Nandanam Metro Station on the Green Line.
+                        Yes. <a href="nandanam">Scans World Nandanam</a> is one of the closest full-service diagnostic centres for people living in Mylapore, Alwarpet, Teynampet and Gopalapuram. Rather than travelling across the city, you can have your scan, blood tests and ECG done at one place close to home, at any time of day.
                     </p>
                 </div>
             </div>
@@ -497,17 +485,14 @@ Scans World Nandanam delivers expert imaging. Accurate reports. Trusted for 15+ 
             <div class="accordion-header" id="headingSix">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                    6. How far is Scans World Nandanam from Adyar?
+                    6. Where can I get a CT scan near Saidapet or Adyar?
                 </button>
             </div>
             <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
                 data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
                     <p class="faq-text">
-                        Our<a href="nandanam.php"> Nandanam centre on Chamiers Road </a>is approximately
-                        <strong>3 kilometres</strong> from Adyar, about a
-                        <strong>10 minute drive</strong>. Chamiers Road directly connects
-                        Nandanam and Adyar, making travel quick and convenient.
+                        Our Nandanam centre on Chamiers Road is easy to reach from both Saidapet and Adyar. We offer <a href="multislice-ct-scan">Multislice CT</a>, 160 Slice Cardiac CT and CT coronary angiogram. Most CT scans take only a few minutes, and because we're open round the clock, emergency CT scans can be done whenever you need them.
                     </p>
                 </div>
             </div>
@@ -518,16 +503,14 @@ Scans World Nandanam delivers expert imaging. Accurate reports. Trusted for 15+ 
             <div class="accordion-header" id="headingSeven">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                    7. How soon will I receive my scan report?
+                    7. Where can I get a cardiac CT or CT coronary angiogram in Chennai?
                 </button>
             </div>
             <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
                 data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
                     <p class="faq-text">
-                        Most reports are ready the same day or the following day. For urgent cases,
-                        please inform our front desk team during registration and we will prioritise
-                        your report accordingly.
+                        Scans World Nandanam does <a href="160-slice-cardiac-ct">160 Slice Cardiac CT</a> and CT coronary angiograms. It's a quick, non-invasive way to look at the heart's blood vessels and check for blockages, often without the need for a catheter test. For complete heart check-ups we also offer ECHO, ECG, Treadmill (TMT) and Holter monitoring.
                     </p>
                 </div>
             </div>
@@ -538,17 +521,50 @@ Scans World Nandanam delivers expert imaging. Accurate reports. Trusted for 15+ 
             <div class="accordion-header" id="headingEight">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                    8. Which is the best diagnostic centre near Mylapore or Alwarpet?
+                    8. Where can I get a diabetic eye screening in Chennai?
                 </button>
             </div>
             <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
                 data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
                     <p class="faq-text">
-                        <a href="https://scansworldonchamiersroad.com">Scans World </a> Nandanam on Chamiers Road is one of the closest and most
-                        comprehensive diagnostic centres for residents of Mylapore, Alwarpet,
-                        Teynampet, Gopalapuram and Saidapet. We offer MRI, PET CT, CT Scan,
-                        Ultrasound, Laboratory Tests and more, with 24/7 service.
+                        Scans World Nandanam has the <a href="3nethra-classic-plus">3nethra Classic+ retinal screening machine</a>. It can check for diabetic and hypertensive eye damage, glaucoma, cataract and macular degeneration, usually without dilating drops. It's quick and painless, and it's a sensible yearly check if you have diabetes or high BP. This screening is available only at our Nandanam branch.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ 9 -->
+        <div class="accordion-card">
+            <div class="accordion-header" id="headingNine">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                    9. Is there a blood test lab in Nandanam?
+                </button>
+            </div>
+            <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    <p class="faq-text">
+                        Yes. Our <a href="automated-laboratory">fully automated laboratory</a> handles everything from routine tests like CBC, sugar, thyroid and lipid profile to liver, kidney and other specialised tests. If you're coming for a scan, you can get your blood drawn in the same visit, which saves you another trip.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ 10 -->
+        <div class="accordion-card">
+            <div class="accordion-header" id="headingTen">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                    10. What is the cost of an MRI or PET CT scan in Nandanam?
+                </button>
+            </div>
+            <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    <p class="faq-text">
+                        Scan cost depends on the type of scan, the body part and whether contrast is needed, so it varies from patient to patient. For the exact price of your scan, call us on <strong>044-4069 9999</strong> or WhatsApp <strong>+91 96269 59999</strong>. Our team will give you a clear quote before your <a href="book-appointment">appointment</a>.
                     </p>
                 </div>
             </div>

@@ -474,17 +474,18 @@ $latest_doctors = mysqli_query($con, $doctors_query);
                 <button class="accordion-button collapsed" type="button"
                     data-bs-toggle="collapse" data-bs-target="#collapseOne"
                     aria-expanded="false" aria-controls="collapseOne">
-                    1. What is the address of Scans World Aminjikarai?
+                    1. Which is the best scan centre in Aminjikarai?
                 </button>
             </div>
             <div id="collapseOne" class="accordion-collapse collapse"
                 aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
                     <p class="faq-text">
-                        <a href="aminjikarai">Scans World Aminjikarai</a> is located at
-                        <strong>No. 575, Rakhi Plaza, Poonamallee High Road, Aminjikarai,
-                        Chennai - 600 029</strong>, easily accessible from major areas
-                        across North and Central Chennai.
+                        <a href="aminjikarai">Scans World on Poonamallee High Road</a> is one of the
+                        best-equipped scan centres in Aminjikarai. You'll find 3 Tesla MRI, Open MRI,
+                        <a href="pet-ct">PET CT</a>, Cardiac CT, nuclear scans and a full laboratory in
+                        one building. We're open 24 hours, and specialist radiologists report every scan,
+                        so you don't need to visit different places for different tests.
                     </p>
                 </div>
             </div>
@@ -496,17 +497,17 @@ $latest_doctors = mysqli_query($con, $doctors_query);
                 <button class="accordion-button collapsed" type="button"
                     data-bs-toggle="collapse" data-bs-target="#collapseTwo"
                     aria-expanded="false" aria-controls="collapseTwo">
-                    2. What are the working hours of Scans World Aminjikarai?
+                    2. Is there a 24 hours scan centre near Aminjikarai?
                 </button>
             </div>
             <div id="collapseTwo" class="accordion-collapse collapse"
                 aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
                     <p class="faq-text">
-                        Scans World Aminjikarai is open 24 hours a day, 7 days a week,
-                        providing round-the-clock diagnostic services for emergencies,
-                        urgent scans and scheduled appointments at any time convenient
-                        for you.
+                        Yes. <a href="aminjikarai">Scans World Aminjikarai</a> is open 24 hours a day,
+                        7 days a week, including Sundays and public holidays. You can come for an MRI,
+                        CT scan, X-ray or blood test at any time of the day or night. That makes it a
+                        dependable choice for emergencies and late-night referrals from nearby hospitals.
                     </p>
                 </div>
             </div>
@@ -518,18 +519,16 @@ $latest_doctors = mysqli_query($con, $doctors_query);
                 <button class="accordion-button collapsed" type="button"
                     data-bs-toggle="collapse" data-bs-target="#collapseThree"
                     aria-expanded="false" aria-controls="collapseThree">
-                    3. What scans and services are available at Scans World Aminjikarai?
+                    3. Where can I get an MRI scan in Aminjikarai?
                 </button>
             </div>
             <div id="collapseThree" class="accordion-collapse collapse"
                 aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
                     <p class="faq-text">
-                        Scans World Aminjikarai offers 3 Tesla MRI, <a href="pet-ct.php">160 Slice Digital
-                        PET CT</a>, PET MRI, 160 Slice Cardiac CT, Dual Head Gamma Camera /
-                        Nuclear Scans, Ultrasound, Digital Mammography, DEXA Scan,
-                        ECHO, EEG, Digital X-Ray, OPG, Endoscopy, FNAC and a fully
-                        Automated Laboratory under one roof.
+                        You can get an MRI scan at Scans World, No. Rakhi Plaza, 575, Poonamallee High Road,
+                        Aminjikarai. We have <a href="mri-scan">3 Tesla MRI</a> up to 250 kg. We also have
+                        Open MRI for claustrophobic patients and Cardiac MRI for an inside look at the heart.
                     </p>
                 </div>
             </div>
@@ -541,17 +540,17 @@ $latest_doctors = mysqli_query($con, $doctors_query);
                 <button class="accordion-button collapsed" type="button"
                     data-bs-toggle="collapse" data-bs-target="#collapseFour"
                     aria-expanded="false" aria-controls="collapseFour">
-                    4. Which is the nearest diagnostic centre on Poonamallee High Road, Chennai?
+                    4. Is Open MRI available in Chennai?
                 </button>
             </div>
             <div id="collapseFour" class="accordion-collapse collapse"
                 aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
                     <p class="faq-text">
-                        Scans World Aminjikarai, located on Poonamallee High Road,
-                        is one of Chennai's most advanced and accessible diagnostic
-                        centres offering a full range of imaging, nuclear medicine,
-                        cardiac and laboratory services at a single location.
+                        Yes, Open MRI is available at <a href="aminjikarai">Scans World's Aminjikarai branch
+                        on Poonamallee High Road</a>. It suits patients with claustrophobia or anxiety, larger
+                        patients, and children who find a regular MRI tunnel uncomfortable. The scanner is open
+                        at the sides, so it feels far less closed in, and you're never fully enclosed during the scan.
                     </p>
                 </div>
             </div>
@@ -563,18 +562,17 @@ $latest_doctors = mysqli_query($con, $doctors_query);
                 <button class="accordion-button collapsed" type="button"
                     data-bs-toggle="collapse" data-bs-target="#collapseFive"
                     aria-expanded="false" aria-controls="collapseFive">
-                    5. Which expert radiologists are available at Scans World Aminjikarai?
+                    5. Where can I get a PET CT scan near Anna Nagar?
                 </button>
             </div>
             <div id="collapseFive" class="accordion-collapse collapse"
                 aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
                     <p class="faq-text">
-                        Scans World Aminjikarai has a team of highly experienced
-                        specialists including expert radiologists, a neuro and vascular
-                        radiology consultant, a paediatric neuroradiology specialist
-                        and an onco-imaging specialist ensuring accurate diagnosis
-                        across all specialties.
+                        Scans World Aminjikarai is only a short drive from Anna Nagar and offers 160 Slice
+                        Digital PET CT. A <a href="pet-ct">PET CT scan</a> is mainly used to detect cancer,
+                        check how far it has spread, and see how well treatment is working. Our onco-imaging
+                        and nuclear medicine specialists report every PET CT study.
                     </p>
                 </div>
             </div>
@@ -586,17 +584,17 @@ $latest_doctors = mysqli_query($con, $doctors_query);
                 <button class="accordion-button collapsed" type="button"
                     data-bs-toggle="collapse" data-bs-target="#collapseSix"
                     aria-expanded="false" aria-controls="collapseSix">
-                    6. Which specialised scans are unique to Scans World Aminjikarai in Chennai?
+                    6. Where can I get a CT scan in Aminjikarai?
                 </button>
             </div>
             <div id="collapseSix" class="accordion-collapse collapse"
                 aria-labelledby="headingSix" data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
                     <p class="faq-text">
-                        Scans World Aminjikarai is one of the very few centres in
-                        Chennai offering PET MRI,<a href="pet-ct.php"> 160 Slice Digital PET CT,</a>
-                        Dual Head Gamma Camera/Nuclear Scans and 3 Tesla MRI,
-                        all available at a single 24/7 centre.
+                        Scans World Aminjikarai offers Multislice CT and <a href="160-slice-cardiac-ct">160 Slice
+                        Cardiac CT</a>, including CT coronary angiogram. CT scans are quick, often done within a
+                        few minutes, and are useful for checking the head, chest, abdomen, bones and blood vessels.
+                        Because we are open round the clock, urgent CT scans can be done at any hour.
                     </p>
                 </div>
             </div>
@@ -608,17 +606,18 @@ $latest_doctors = mysqli_query($con, $doctors_query);
                 <button class="accordion-button collapsed" type="button"
                     data-bs-toggle="collapse" data-bs-target="#collapseSeven"
                     aria-expanded="false" aria-controls="collapseSeven">
-                    7. How do I reach Scans World Aminjikarai by phone or WhatsApp?
+                    7. What is the MRI scan cost in Aminjikarai?
                 </button>
             </div>
             <div id="collapseSeven" class="accordion-collapse collapse"
                 aria-labelledby="headingSeven" data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
                     <p class="faq-text">
-                        You can contact Scans World Aminjikarai at
-                        <strong>+91 94454 39999</strong> or
-                        <strong>044 – 3507 9999</strong>.
-                        Appointments can also be booked through WhatsApp or online.
+                        <a href="mri-scan">MRI scan</a> cost depends on the body part being scanned and whether
+                        contrast is needed. A brain MRI and a whole-spine MRI, for example, are priced differently.
+                        For the exact cost of your scan, <a href="book-appointment">Book an appointment</a> or
+                        WhatsApp us on <strong>+91 94454 39999</strong> and our team will give you a clear quote
+                        before you come in.
                     </p>
                 </div>
             </div>
@@ -630,16 +629,17 @@ $latest_doctors = mysqli_query($con, $doctors_query);
                 <button class="accordion-button collapsed" type="button"
                     data-bs-toggle="collapse" data-bs-target="#collapseEight"
                     aria-expanded="false" aria-controls="collapseEight">
-                    8. How do I book an appointment at Scans World Aminjikarai?
+                    8. Is there a blood test lab near Aminjikarai?
                 </button>
             </div>
             <div id="collapseEight" class="accordion-collapse collapse"
                 aria-labelledby="headingEight" data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
                     <p class="faq-text">
-                        Appointments can be booked online through the website,
-                        by calling <strong>+91 94454 39999</strong>, or through
-                        WhatsApp. The centre is open 24/7 and walk-ins are welcome.
+                        Yes. Scans World Aminjikarai has a <a href="automated-laboratory">fully automated
+                        laboratory</a> for routine and specialised blood tests, including CBC, sugar, thyroid,
+                        lipid profile, liver and kidney function tests. You can do your blood tests and scans
+                        in the same visit, which saves a second trip.
                     </p>
                 </div>
             </div>
@@ -651,17 +651,17 @@ $latest_doctors = mysqli_query($con, $doctors_query);
                 <button class="accordion-button collapsed" type="button"
                     data-bs-toggle="collapse" data-bs-target="#collapseNine"
                     aria-expanded="false" aria-controls="collapseNine">
-                    9. How long has Scans World been providing diagnostic services in Chennai?
+                    9. Do you offer full body health checkup packages in Aminjikarai?
                 </button>
             </div>
             <div id="collapseNine" class="accordion-collapse collapse"
                 aria-labelledby="headingNine" data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
                     <p class="faq-text">
-                        Scans World has more than <strong>15 years of experience</strong>
-                        in medical imaging and diagnostic services and is trusted by
-                        thousands of patients and doctors across Chennai for accurate,
-                        reliable and timely results.
+                        Yes. We offer <a href="master-health-check-packages">master health checkup packages</a>
+                        that combine blood tests, ECG, ECHO, ultrasound, X-ray and other screenings based on your
+                        age and health needs. They're a simple way to catch problems early, especially if you have
+                        diabetes, high BP or a family history of heart disease.
                     </p>
                 </div>
             </div>
@@ -673,18 +673,18 @@ $latest_doctors = mysqli_query($con, $doctors_query);
                 <button class="accordion-button collapsed" type="button"
                     data-bs-toggle="collapse" data-bs-target="#collapseTen"
                     aria-expanded="false" aria-controls="collapseTen">
-                    10. How is Scans World Aminjikarai different from other diagnostic centres in Chennai?
+                    10. Where can I get an ultrasound scan in Aminjikarai?
                 </button>
             </div>
             <div id="collapseTen" class="accordion-collapse collapse"
                 aria-labelledby="headingTen" data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
                     <p class="faq-text">
-                        Scans World Aminjikarai stands out with 24/7 service,
-                        over 15 years of experience, advanced technologies like
-                        PET MRI and 3 Tesla MRI, specialist radiologists,
-                        ample parking and an eco-friendly environment, all
-                        under one roof on Poonamallee High Road.
+                        <a href="aminjikarai">Scans World Aminjikarai</a> offers 2D and 4D ultrasound, Colour
+                        Doppler and FibroScan. <a href="color-doppler">Ultrasound</a> is commonly used for the
+                        abdomen, pelvis, thyroid and pregnancy, and Doppler checks blood flow in the arms, legs
+                        and neck. Some scans need a full bladder or fasting, and we'll tell you exactly what to
+                        do when you book.
                     </p>
                 </div>
             </div>

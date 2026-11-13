@@ -377,16 +377,14 @@ $latest_doctors = mysqli_query($con, $doctors_query);
                 <button class="accordion-button collapsed" type="button"
                     data-bs-toggle="collapse" data-bs-target="#collapseOne"
                     aria-expanded="false" aria-controls="collapseOne">
-                    1. Is Scans World Nanganallur open 24 hours?
+                    1. Which is the best scan centre in Nanganallur?
                 </button>
             </div>
             <div id="collapseOne" class="accordion-collapse collapse"
                 aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
                     <p class="faq-text">
-                        Yes. Our Nanganallur centre on 29th Street is open 24 hours a day,
-                        7 days a week, including Sundays and public holidays. You can come
-                        in for an emergency scan or a pre-planned check-up at any time.
+                        <a href="nanganallur">Scans World</a> on 29th Street is one of the most complete scan centres in Nanganallur. MRI, CT, ultrasound, mammography, X-ray, ECHO and a fully automated laboratory are all under one roof, and we are open 24 hours. A panel of specialist radiologists reviews every report, so you can trust the results your doctor receives.
                     </p>
                 </div>
             </div>
@@ -398,16 +396,14 @@ $latest_doctors = mysqli_query($con, $doctors_query);
                 <button class="accordion-button collapsed" type="button"
                     data-bs-toggle="collapse" data-bs-target="#collapseTwo"
                     aria-expanded="false" aria-controls="collapseTwo">
-                    2. What is the address of Scans World Nanganallur?
+                    2. Is there a 24 hours scan centre in South Chennai?
                 </button>
             </div>
             <div id="collapseTwo" class="accordion-collapse collapse"
                 aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
                     <p class="faq-text">
-                        We are located at <strong>No. 19, 29th Street, Nanganallur,
-                        Chennai – 600 061.</strong> The centre is easily reachable by
-                        auto, bus and personal vehicle. Parking is available on site.
+                        Yes. <a href="nanganallur">Scans World Nanganallur</a> is open 24 hours a day, every day of the year, including Sundays and festival holidays. If you're in Nanganallur, Madipakkam, Adambakkam or Alandur and need an urgent scan late at night, you don't have to travel into the city. We're right here.
                     </p>
                 </div>
             </div>
@@ -419,17 +415,14 @@ $latest_doctors = mysqli_query($con, $doctors_query);
                 <button class="accordion-button collapsed" type="button"
                     data-bs-toggle="collapse" data-bs-target="#collapseThree"
                     aria-expanded="false" aria-controls="collapseThree">
-                    3. Is MRI available at Scans World Nanganallur?
+                    3. Where can I get an MRI scan in Nanganallur?
                 </button>
             </div>
             <div id="collapseThree" class="accordion-collapse collapse"
                 aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
                     <p class="faq-text">
-                        Yes. MRI scanning is available at our Nanganallur centre.
-                        For patients requiring our 3 Tesla high-field MRI,
-                        our <a href="aminjikarai">Aminjikarai</a> flagship centre
-                        is equipped with this advanced system and is easily accessible.
+                        You can get your <a href="mri-scan">MRI scan</a> at Scans World, No. 19, 29th Street, Nanganallur, Chennai – 600 061. We scan the brain, spine, joints, abdomen and pelvis, and specialist radiologists report each one. For certain advanced MRI studies, we may refer you to our Aminjikarai centre, and our team will tell you when you book.
                     </p>
                 </div>
             </div>
@@ -441,17 +434,14 @@ $latest_doctors = mysqli_query($con, $doctors_query);
                 <button class="accordion-button collapsed" type="button"
                     data-bs-toggle="collapse" data-bs-target="#collapseFour"
                     aria-expanded="false" aria-controls="collapseFour">
-                    4. Are blood tests and lab services available at Nanganallur?
+                    4. Is there a CT scan centre near Madipakkam or Adambakkam?
                 </button>
             </div>
             <div id="collapseFour" class="accordion-collapse collapse"
                 aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
                     <p class="faq-text">
-                        Yes. Our Nanganallur centre has a fully automated laboratory
-                        offering blood tests, CBC, lipid profile, thyroid, liver
-                        function, kidney function and other investigations with
-                        fast turnaround and accurate results.
+                        Yes. <a href="nanganallur">Scans World Nanganallur</a> is only a few minutes from Madipakkam and Adambakkam and offers multislice CT scanning. CT is quick, usually done in a few minutes, and helps diagnose head injuries, chest and lung problems, kidney stones, abdominal pain and bone fractures. Emergency CT scans are available round the clock.
                     </p>
                 </div>
             </div>
@@ -463,17 +453,14 @@ $latest_doctors = mysqli_query($con, $doctors_query);
                 <button class="accordion-button collapsed" type="button"
                     data-bs-toggle="collapse" data-bs-target="#collapseFive"
                     aria-expanded="false" aria-controls="collapseFive">
-                    5. Do I need an appointment, or can I walk in?
+                    5. Where can I get a scan near Pallavaram or Chromepet?
                 </button>
             </div>
             <div id="collapseFive" class="accordion-collapse collapse"
                 aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
                     <p class="faq-text">
-                        Walk-ins are welcome at Scans World Nanganallur.
-                        For advanced scans like MRI, CT or cardiac imaging,
-                        booking an appointment in advance ensures your preferred
-                        time slot. Call <strong>+91 72000 48999</strong> to reserve.
+                        If you live in Pallavaram, Chromepet, Pammal or Meenambakkam, our Nanganallur centre is one of the nearest places with MRI, CT, <a href="color-doppler">ultrasound</a> and lab tests in one building. It saves you the trip into central Chennai, and since we're open 24/7, you can come whenever it suits you.
                     </p>
                 </div>
             </div>
@@ -485,17 +472,14 @@ $latest_doctors = mysqli_query($con, $doctors_query);
                 <button class="accordion-button collapsed" type="button"
                     data-bs-toggle="collapse" data-bs-target="#collapseSix"
                     aria-expanded="false" aria-controls="collapseSix">
-                    6. How soon will I receive my scan report?
+                    6. Where can I get an ultrasound scan in Nanganallur?
                 </button>
             </div>
             <div id="collapseSix" class="accordion-collapse collapse"
                 aria-labelledby="headingSix" data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
                     <p class="faq-text">
-                        Most scan reports are available the same day or the
-                        following day. If you need an urgent report, please
-                        inform our front desk team at registration and we
-                        will prioritise accordingly.
+                        Scans World Nanganallur offers abdominal, pelvic, thyroid, pregnancy and <a href="color-doppler">Colour Doppler ultrasound</a>, as well as FibroScan for checking liver health. Some ultrasounds need a full bladder or a few hours of fasting, and we'll explain exactly what to do when you book, so you don't have to come back another day.
                     </p>
                 </div>
             </div>
@@ -507,17 +491,14 @@ $latest_doctors = mysqli_query($con, $doctors_query);
                 <button class="accordion-button collapsed" type="button"
                     data-bs-toggle="collapse" data-bs-target="#collapseSeven"
                     aria-expanded="false" aria-controls="collapseSeven">
-                    7. Is digital mammography available at Nanganallur?
+                    7. Is mammography available in Nanganallur?
                 </button>
             </div>
             <div id="collapseSeven" class="accordion-collapse collapse"
                 aria-labelledby="headingSeven" data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
                     <p class="faq-text">
-                        Yes. Digital mammography for breast cancer screening
-                        and diagnosis is available at our Nanganallur centre.
-                        We recommend all women above 40 include a mammogram
-                        as part of their annual health check-up.
+                        Yes. We offer digital mammography at our <a href="nanganallur">Nanganallur centre</a>. Women over 40, or younger women with a family history of breast cancer, are usually advised to have a mammogram as part of a yearly check-up. The test takes only a few minutes, and our women's imaging specialists report the results.
                     </p>
                 </div>
             </div>
@@ -529,19 +510,52 @@ $latest_doctors = mysqli_query($con, $doctors_query);
                 <button class="accordion-button collapsed" type="button"
                     data-bs-toggle="collapse" data-bs-target="#collapseEight"
                     aria-expanded="false" aria-controls="collapseEight">
-                    8. Which is the best diagnostic centre near Pallavaram or Chromepet?
+                    8. Is there a blood test lab near Nanganallur?
                 </button>
             </div>
             <div id="collapseEight" class="accordion-collapse collapse"
                 aria-labelledby="headingEight" data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
                     <p class="faq-text">
-                        <a href="nanganallur">Scans World Nanganallur</a>,
-                        located on 29th Street, is one of the closest and most
-                        comprehensive diagnostic centres for residents of
-                        Pallavaram, Chromepet, Pammal, Tambaram, Adambakkam
-                        and Madipakkam, offering MRI, CT, Ultrasound,
-                        Lab Tests and more under one roof, open 24/7.
+                        Yes. Our <a href="automated-laboratory">fully automated laboratory</a> handles CBC, blood sugar, HbA1c, thyroid, lipid profile, liver and kidney function and many other tests. Fasting tests can be done early in the morning, and if you're also here for a scan, you can give your blood sample in the same visit.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ 9 -->
+        <div class="accordion-card">
+            <div class="accordion-header" id="headingNine">
+                <button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapseNine"
+                    aria-expanded="false" aria-controls="collapseNine">
+                    9. Do you offer full body health checkup packages in Nanganallur?
+                </button>
+            </div>
+            <div id="collapseNine" class="accordion-collapse collapse"
+                aria-labelledby="headingNine" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    <p class="faq-text">
+                        Yes. Our <a href="master-health-check-packages">master health checkup packages</a> combine blood tests, ECG, ECHO, ultrasound, X-ray and other screenings to suit your age and health needs. They're especially useful if you have diabetes, high BP or a family history of heart disease, because problems caught early are much easier to treat.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ 10 -->
+        <div class="accordion-card">
+            <div class="accordion-header" id="headingTen">
+                <button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapseTen"
+                    aria-expanded="false" aria-controls="collapseTen">
+                    10. Can I get a PET CT or nuclear scan at the Nanganallur branch?
+                </button>
+            </div>
+            <div id="collapseTen" class="accordion-collapse collapse"
+                aria-labelledby="headingTen" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    <p class="faq-text">
+                        For <a href="pet-ct">PET CT</a> and nuclear scans, we usually direct patients to our Aminjikarai or Nandanam centres, which have the dedicated equipment. Our Nanganallur team can help you <a href="book-appointment">book the appointment</a>, explain the preparation and answer your questions, so the process is still simple for you.
                     </p>
                 </div>
             </div>

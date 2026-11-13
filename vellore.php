@@ -386,14 +386,14 @@ $latest_doctors = mysqli_query($con, $doctors_query);
                 <button class="accordion-button collapsed" type="button"
                     data-bs-toggle="collapse" data-bs-target="#collapseOne"
                     aria-expanded="false" aria-controls="collapseOne">
-                    1. Which is the best diagnostic centre in Vellore?
+                    1. Which is the best scan centre in Vellore?
                 </button>
             </div>
             <div id="collapseOne" class="accordion-collapse collapse"
                 aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
                     <p class="faq-text">
-                        Scans World Vellore at Dharmaraja Koil Street, Thottapalayam is one of the most comprehensive diagnostic centres in Vellore, offering MRI, PET CT, CT Scan, Ultrasound, Digital Mammography, Automated Laboratory and more under one roof, open 24/7. Reports are reviewed by the same specialist radiologist panel serving our Chennai branches.
+                        <a href="vellore">Scans World in Thottapalayam</a> is one of the most complete scan centres in Vellore. MRI, CT, ultrasound, digital X-ray, mammography and a fully automated laboratory are all in one building, and we're open 24 hours. The same specialist radiologist panel that reports for our Chennai branches reviews every scan, so you get city-level reporting without the long drive.
                     </p>
                 </div>
             </div>
@@ -405,15 +405,14 @@ $latest_doctors = mysqli_query($con, $doctors_query);
                 <button class="accordion-button collapsed" type="button"
                     data-bs-toggle="collapse" data-bs-target="#collapseTwo"
                     aria-expanded="false" aria-controls="collapseTwo">
-                    2. What scans are available at Scans World Vellore?
+                    2. Is there a 24 hours scan centre in Vellore?
                 </button>
             </div>
             <div id="collapseTwo" class="accordion-collapse collapse"
                 aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
                     <p class="faq-text">
-                        Scans World Vellore offers MRI, PET CT, CT Scan, Cardiac CT, Nuclear Scans, Digital Mammography, Ultrasound, FibroScan,
-                        <a href="color-doppler">Color Doppler</a>, ECHO, ECG, EEG, DEXA, Digital X-Ray, OPG, Endoscopy, Image-Guided Biopsy, Automated Laboratory and Master Health Packages, all under one roof at Thottapalayam, open 24/7.
+                        Yes. <a href="vellore">Scans World Vellore</a> is open 24 hours a day, 7 days a week, including Sundays and public holidays. Whether it's an accident case at midnight or a scan your doctor needs before an early-morning consultation, you can come in at any hour and we'll take care of it.
                     </p>
                 </div>
             </div>
@@ -425,19 +424,14 @@ $latest_doctors = mysqli_query($con, $doctors_query);
                 <button class="accordion-button collapsed" type="button"
                     data-bs-toggle="collapse" data-bs-target="#collapseThree"
                     aria-expanded="false" aria-controls="collapseThree">
-                    3. How far is Scans World Vellore from Katpadi Railway Station?
+                    3. Where can I get an MRI scan in Vellore?
                 </button>
             </div>
             <div id="collapseThree" class="accordion-collapse collapse"
                 aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
                     <p class="faq-text">
-                        Scans World Vellore at Thottapalayam is approximately
-                        <strong>5 kilometres</strong> from Katpadi Junction—around a
-                        <strong>10 to 15 minute drive</strong> by auto or cab.
-                        Katpadi is the main railway station serving Vellore, making our
-                        centre easily accessible for patients travelling from Chennai,
-                        Bangalore and other cities.
+                        You can get your <a href="mri-scan">MRI scan at Scans World</a>, No. 54/3, Dharmaraja Koil Street, Thottapalayam, Vellore – 632 004. We do brain, spine, joint, abdominal and pelvic MRI, and specialist radiologists, including neuro and musculoskeletal experts, report each one. Call us before you come and we'll explain the preparation.
                     </p>
                 </div>
             </div>
@@ -449,17 +443,14 @@ $latest_doctors = mysqli_query($con, $doctors_query);
                 <button class="accordion-button collapsed" type="button"
                     data-bs-toggle="collapse" data-bs-target="#collapseFour"
                     aria-expanded="false" aria-controls="collapseFour">
-                    4. Where is Scans World Vellore located?
+                    4. Where can I get a CT scan in Vellore?
                 </button>
             </div>
             <div id="collapseFour" class="accordion-collapse collapse"
                 aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
                     <p class="faq-text">
-                        Scans World Vellore is located at
-                        <strong>No. 54/3, Dharmaraja Koil Street, Thottapalayam, Vellore – 632 004.</strong>
-                        The centre is centrally located and easily reachable from all parts of Vellore and nearby towns like Katpadi, Ranipet, Ambur and Gudiyatham. Parking is available on site. Call
-                        <strong>+91 99447 17999</strong>.
+                        Scans World Vellore offers <a href="multislice-ct-scan">multislice CT</a> scanning for the head, chest, abdomen, kidneys, bones and blood vessels. Most CT scans take only a few minutes, and the report reaches your doctor quickly. Because we're open round the clock, emergency CT for head injuries and accidents can be done at any time.
                     </p>
                 </div>
             </div>
@@ -471,17 +462,14 @@ $latest_doctors = mysqli_query($con, $doctors_query);
                 <button class="accordion-button collapsed" type="button"
                     data-bs-toggle="collapse" data-bs-target="#collapseFive"
                     aria-expanded="false" aria-controls="collapseFive">
-                    5. How do I book a scan at Scans World Vellore?
+                    5. Is there a scan centre near CMC Vellore?
                 </button>
             </div>
             <div id="collapseFive" class="accordion-collapse collapse"
                 aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
                     <p class="faq-text">
-                        You can book a scan at
-                        <a href="vellore">Scans World Vellore</a>
-                        by calling or WhatsApping
-                        <strong>+91 99447 17999</strong>, using our online appointment form, or by walking in directly—we are open 24 hours a day, 7 days a week. For advanced scans like MRI or PET CT, prior booking ensures your preferred time slot is available.
+                        Our Thottapalayam centre is a short auto ride from the main hospital area in Vellore town. Many patients who come to Vellore for treatment get their scans and blood tests done with us. We're an independent <a href="./">diagnostic centre</a>, and your reports can be shared with whichever doctor or hospital is treating you.
                     </p>
                 </div>
             </div>
@@ -493,15 +481,90 @@ $latest_doctors = mysqli_query($con, $doctors_query);
                 <button class="accordion-button collapsed" type="button"
                     data-bs-toggle="collapse" data-bs-target="#collapseSix"
                     aria-expanded="false" aria-controls="collapseSix">
-                    6. What are the working hours of Scans World Vellore?
+                    6. Is there a scan centre near Katpadi?
                 </button>
             </div>
             <div id="collapseSix" class="accordion-collapse collapse"
                 aria-labelledby="headingSix" data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
                     <p class="faq-text">
-                        Scans World Vellore is open
-                        <strong>24 hours a day, 7 days a week</strong>, including Sundays and public holidays. Whether you need an urgent scan late at night or a planned health check-up, our team is always available.
+                        Yes. <a href="vellore">Scans World Vellore</a> is about 5 km from Katpadi Junction, roughly 10 to 15 minutes by auto or cab. Patients arriving by train from Chennai, Bengaluru or Andhra Pradesh can come straight from the station, and people living in Katpadi, Gandhi Nagar and VIT area can reach us easily.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ 7 -->
+        <div class="accordion-card">
+            <div class="accordion-header" id="headingSeven">
+                <button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapseSeven"
+                    aria-expanded="false" aria-controls="collapseSeven">
+                    7. Do people from Ranipet, Arcot, Gudiyatham or Ambur come here for scans?
+                </button>
+            </div>
+            <div id="collapseSeven" class="accordion-collapse collapse"
+                aria-labelledby="headingSeven" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    <p class="faq-text">
+                        Yes, regularly. Our centre is in central Vellore, so it's easy to reach from Ranipet, Arcot, Walajapet, Gudiyatham, Ambur, Vaniyambadi and even Chittoor. You can get MRI, CT, <a href="color-doppler">ultrasound</a> and blood tests done in one visit instead of travelling all the way to Chennai.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ 8 -->
+        <div class="accordion-card">
+            <div class="accordion-header" id="headingEight">
+                <button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapseEight"
+                    aria-expanded="false" aria-controls="collapseEight">
+                    8. Where can I get an ultrasound scan in Vellore?
+                </button>
+            </div>
+            <div id="collapseEight" class="accordion-collapse collapse"
+                aria-labelledby="headingEight" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    <p class="faq-text">
+                        <a href="vellore">Scans World Vellore</a> offers abdominal, pelvic, thyroid, pregnancy and Colour Doppler ultrasound, as well as FibroScan for liver health. Some scans need a full bladder or a few hours of fasting, and we'll explain exactly what to do when you book, so your scan happens on the first visit.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ 9 -->
+        <div class="accordion-card">
+            <div class="accordion-header" id="headingNine">
+                <button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapseNine"
+                    aria-expanded="false" aria-controls="collapseNine">
+                    9. Is mammography available in Vellore?
+                </button>
+            </div>
+            <div id="collapseNine" class="accordion-collapse collapse"
+                aria-labelledby="headingNine" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    <p class="faq-text">
+                        Yes. We offer digital mammography at our <a href="vellore">Vellore centre</a>. Women over 40, or those with a family history of breast cancer, are usually advised to have a mammogram every year or two. It takes just a few minutes, and our women's imaging specialists review the report.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ 10 -->
+        <div class="accordion-card">
+            <div class="accordion-header" id="headingTen">
+                <button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapseTen"
+                    aria-expanded="false" aria-controls="collapseTen">
+                    10. How do I book a scan appointment in Vellore?
+                </button>
+            </div>
+            <div id="collapseTen" class="accordion-collapse collapse"
+                aria-labelledby="headingTen" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    <p class="faq-text">
+                        Call us on <strong>0416-350 9999</strong>, call or WhatsApp <strong>+91 99447 17999</strong>, or <a href="book-appointment">book online</a> through the website. Walk-ins are welcome 24/7. If you're travelling from another town, booking ahead for MRI and CT means your slot is ready when you arrive.
                     </p>
                 </div>
             </div>
